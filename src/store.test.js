@@ -1,0 +1,56 @@
+// @vitest-environment happy-dom
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import * as store from './store.js'
+import { custo } from './creditos.js'
+
+beforeEach(() => localStorage.clear())
+
+describe('store', () => {
+  it('cadastro ganha o bônus de 10 créditos', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    expect(store.getSaldo()).toBe(10)
+    expect(store.getUsuario()).toEqual({ nome: 'Ana', email: 'ana@x.com' })
+  })
+
+  it('entrar sem conta cria o usuário demo com 45 créditos', () => {
+    store.entrar({ email: 'demo@x.com' })
+    expect(store.getUsuario().nome).toBe('Camila Silva')
+    expect(store.getSaldo()).toBe(45)
+  })
+
+  it('entrar com o e-mail cadastrado mantém a conta', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.entrar({ email: 'ana@x.com' })
+    expect(store.getUsuario().nome).toBe('Ana')
+    expect(store.getSaldo()).toBe(10)
+  })
+
+  it('salvarFoto devolve false e mantém a foto anterior quando a cota estoura', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.salvarFoto('data:image/jpeg;base64,AAA')
+    const espiao = vi.spyOn(localStorage, 'setItem').mockImplementation(() => {
+      throw new DOMException('cheio', 'QuotaExceededError')
+    })
+    expect(store.salvarFoto('data:image/jpeg;base64,BBB')).toBe(false)
+    espiao.mockRestore()
+    expect(store.getFoto()).toBe('data:image/jpeg;base64,AAA')
+  })
+
+  it('apagar a foto zera o consentimento', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.salvarFoto('data:image/jpeg;base64,AAA')
+    store.setConsentimento(true)
+    store.apagarFoto()
+    expect(store.getFoto()).toBeNull()
+    expect(store.getConsentimento()).toBe(false)
+  })
+})
+
+describe('custo', () => {
+  it('segue a tabela única', () => {
+    expect(custo({ tipo: 'clipe' })).toBe(5)
+    expect(custo({ tipo: 'video', duracao: 5 })).toBe(5)
+    expect(custo({ tipo: 'video', duracao: 10 })).toBe(8)
+    expect(custo({ tipo: 'foto' })).toBe(2)
+  })
+})

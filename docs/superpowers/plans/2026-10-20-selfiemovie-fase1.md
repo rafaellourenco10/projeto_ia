@@ -80,13 +80,15 @@
   - `getCriacoes() -> Criacao[]` (mais recente primeiro), `getCriacao(id)`, `addCriacao(c)`, `updateCriacao(id, patch)`.
   - `Criacao = { id, tipo: 'clipe'|'video'|'foto', titulo, img, custo, proporcao: '9:16'|'16:9', status: 'gerando'|'pronto'|'falhou', criadoEm: ms, falhar: boolean, clipId?, prompt?, estilo?, duracao?, avaliacao? }`
   - `onChange(fn)` — avisa o shell para atualizar o saldo.
+  - `concluirCriacao(id, sucesso)` — fecha o job uma vez (sucesso debita). `registrarCompra(c)`, `getCompras()`.
 - Regra de crédito: iniciar reserva (reduz o disponível), sucesso debita o saldo, falha só libera a reserva ("crédito devolvido").
 - `src/api.js`:
   - `FASES = ['Na fila...', 'Detectando traços faciais...', 'Adequando iluminação da cena...', 'Finalizando renderização...']`, `DURACAO_MS = 20000` (4 fases de 5 s).
   - `gerarClipe(clipId, { proporcao }) -> Promise<{ jobId }>`; `gerarComTexto({ modo: 'video'|'foto', prompt, estilo, duracao, proporcao }) -> Promise<{ jobId }>`. Rejeitam com `Error('SEM_FOTO')`, `Error('SEM_SALDO')` ou `Error('CLIPE_INEXISTENTE')`. `falhar = location.search` contém `debug=falha`.
   - `statusJob(jobId, agora = Date.now()) -> Promise<{ status, fase: 0..3, progresso: 0..100, restanteSeg, criacao } | null>`; calcula pelo `criadoEm`; ao atingir o fim grava `pronto` (debita) ou `falhou` uma única vez (idempotente).
+  - `refazer(jobId) -> Promise<{ jobId }>` — repete o pedido ("Tentar de novo", "Gerar variação").
 
-- [ ] Step 1: Testes (`// @vitest-environment happy-dom`, `localStorage.clear()` em `beforeEach`):
+- [x] Step 1: Testes (`// @vitest-environment happy-dom`, `localStorage.clear()` em `beforeEach`):
   - `cadastrar` → `getSaldo() === 10`; `entrar` sem usuário → nome `'Camila Silva'`, saldo 45.
   - `custo({tipo:'video',duracao:10}) === 8`, `custo({tipo:'foto'}) === 2`, `custo({tipo:'clipe'}) === 5`.
   - Com foto e saldo 10: `gerarClipe` → `getSaldoDisponivel() === 5`, `getSaldo() === 10`; `statusJob(id, t0+20000)` → `pronto`, `getSaldo() === 5`; chamar de novo não debita outra vez.
@@ -96,10 +98,10 @@
   - `statusJob(id, t0+7000)` → `fase === 1`, `progresso === 35`.
   - `statusJob('xyz')` → `null`.
   - `salvarFoto` com `setItem` lançando `QuotaExceededError` → `false` e `getFoto()` igual à anterior.
-- [ ] Step 2: `npm test` → falha (módulos inexistentes).
-- [ ] Step 3: Implementar `creditos.js`, `store.js`, `api.js`.
-- [ ] Step 4: `npm test` → tudo passa.
-- [ ] Step 5: Commit `feat: store e API simulada com reserva de créditos`.
+- [x] Step 2: `npm test` → falha (módulos inexistentes).
+- [x] Step 3: Implementar `creditos.js`, `store.js`, `api.js`.
+- [x] Step 4: `npm test` → tudo passa.
+- [x] Step 5: Commit `feat: store e API simulada com reserva de créditos`.
 
 ### Task 3: Shell compartilhado
 
