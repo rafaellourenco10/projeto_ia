@@ -6,4 +6,6 @@
 @layer base {
   html, body { margin: 0; padding: 0; }
   body { overscroll-behavior: none; }
+  /* O atributo hidden precisa vencer utilitários de display como .flex. */
+  [hidden] { display: none !important; }
 }
