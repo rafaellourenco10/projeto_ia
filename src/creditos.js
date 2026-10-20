@@ -8,9 +8,9 @@ export function custo({ tipo, duracao = 5 }) {
 }
 
 export const PLANOS = [
-  { id: 'basico', nome: 'Básico', preco: 29, creditos: 50 },
-  { id: 'pro', nome: 'Pro Creator', preco: 69, creditos: 180, destaque: true },
-  { id: 'ultra', nome: 'Ultra Studio', preco: 149, creditos: 500 },
+  { id: 'basico', nome: 'Básico', preco: 29, creditos: 50, descricao: 'Para testar e criar seus primeiros vídeos.' },
+  { id: 'pro', nome: 'Pro Creator', preco: 69, creditos: 180, destaque: true, descricao: 'Para criadores de conteúdo que postam toda semana.' },
+  { id: 'ultra', nome: 'Ultra Studio', preco: 149, creditos: 500, descricao: 'Para quem publica todo dia ou cria para clientes.' },
 ]
 
 // Valores escolhidos na fase 1, revisáveis antes do pagamento real.

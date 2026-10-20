@@ -3,25 +3,263 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SelfieMovie</title>
+  <title>SelfieMovie · Seja o protagonista de qualquer vídeo</title>
+  <meta name="description" content="Envie uma selfie e apareça em clipes prontos ou em cenas que você descreve em texto." />
+  <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
-  <script type="module" src="/src/pages/teste.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script type="module" src="/src/pages/landing.js"></script>
 </head>
 <body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
-  <!-- Página de teste da Tarefa 0; a Landing substitui este arquivo na Tarefa 4. -->
-  <main class="min-h-screen p-margin-mobile md:p-margin flex flex-col gap-space-lg">
-    <h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero">SelfieMovie</h1>
-    <p class="text-on-surface-variant">Plus Jakarta Sans, tokens do Stitch e Material Symbols.</p>
-    <div class="flex flex-wrap gap-space-md">
-      <span class="w-16 h-16 rounded-xl bg-primary"></span>
-      <span class="w-16 h-16 rounded-xl bg-secondary"></span>
-      <span class="w-16 h-16 rounded-xl bg-tertiary"></span>
-      <span class="w-16 h-16 rounded-xl bg-surface-container-highest"></span>
-    </div>
-    <span class="material-symbols-outlined text-tertiary text-[48px]" style="font-variation-settings: 'FILL' 1;">movie</span>
-    <button class="self-start px-space-lg py-space-sm rounded-full bg-gradient-to-r from-primary-container to-secondary-container font-label-lg text-label-lg text-white">Seja o protagonista</button>
+<div class="relative w-full overflow-hidden">
+  <!-- Glow orbs decorativos -->
+  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[480px] bg-primary-container/20 blur-[140px] pointer-events-none rounded-full"></div>
+  <div class="absolute top-[35%] -left-32 w-[420px] h-[420px] bg-secondary-container/20 blur-[130px] pointer-events-none rounded-full"></div>
+  <div class="absolute top-[60%] -right-32 w-[460px] h-[460px] bg-tertiary-container/15 blur-[140px] pointer-events-none rounded-full"></div>
+
+  <header class="relative z-10 w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-space-sm">
+      <img alt="" class="h-8 w-8 object-contain" src="/img/logo.png" />
+      <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SelfieMovie</span>
+    </a>
+    <a data-cta="entrar" href="/entrar" class="px-space-md py-2 rounded-xl bg-surface-container-high/80 hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors">Entrar</a>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-lg md:py-space-xl flex flex-col items-center">
+      <div class="inline-flex items-center gap-space-xs bg-surface-container-high/70 backdrop-blur-md px-space-md py-1.5 rounded-full shadow-md">
+        <span class="material-symbols-outlined text-secondary text-sm" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+        <span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase">Vídeos com IA a partir de uma selfie</span>
+      </div>
+      <h1 class="mt-space-lg text-center font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface max-w-4xl tracking-tight leading-[1.08]">
+        Seja o protagonista de <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">qualquer vídeo</span>
+      </h1>
+      <p class="mt-space-md text-center font-body-lg text-body-lg text-on-surface-variant max-w-2xl text-balance">
+        Envie uma selfie e coloque seu rosto em clipes prontos de ação, dança e aventura, ou descreva a cena que imaginar e receba um vídeo ou uma foto com você.
+      </p>
+      <div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-md w-full sm:w-auto">
+        <a data-cta="cadastro" href="/entrar#cadastro" class="group relative flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded-xl font-label-lg text-label-lg text-surface-container-lowest bg-gradient-to-r from-primary via-primary-container to-secondary shadow-lg transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]">
+          <span class="material-symbols-outlined text-lg" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">movie_filter</span>
+          <span class="font-bold tracking-wide">Começar grátis</span>
+          <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-0.5" aria-hidden="true">arrow_forward</span>
+        </a>
+        <a href="#exemplos" class="flex items-center justify-center gap-space-xs px-space-lg py-3.5 rounded-xl font-label-lg text-label-lg text-on-surface bg-surface-container-high/80 hover:bg-surface-container-highest backdrop-blur-sm transition-all duration-200 shadow-sm">
+          <span class="material-symbols-outlined text-tertiary text-lg" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+          <span>Ver exemplos</span>
+        </a>
+      </div>
+      <ul class="mt-space-lg flex flex-wrap items-center justify-center gap-y-2 gap-x-space-lg text-on-surface-variant font-label-md text-label-md">
+        <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-sm" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">video_library</span>Clipes prontos ou texto livre</li>
+        <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-sm" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">bolt</span><span><span data-custo="bonusCadastro">10</span> créditos grátis no cadastro</span></li>
+        <li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-sm" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">undo</span>Falhou? Os créditos voltam</li>
+      </ul>
+
+      <!-- Player de exemplo -->
+      <div class="mt-space-xl w-full max-w-5xl relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-primary/30 via-secondary/30 to-tertiary/30 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
+        <div class="relative bg-surface-container-lowest rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+          <div class="bg-surface-container-high/90 backdrop-blur-md px-space-md py-3 flex items-center justify-between gap-space-sm">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="w-3 h-3 shrink-0 rounded-full bg-secondary-container"></span>
+              <span class="w-3 h-3 shrink-0 rounded-full bg-surface-bright"></span>
+              <span class="w-3 h-3 shrink-0 rounded-full bg-surface-bright"></span>
+              <span class="ml-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Exemplo: Fuga Noturna</span>
+            </div>
+            <span class="shrink-0 px-2.5 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm">Imagem ilustrativa</span>
+          </div>
+          <div class="relative aspect-video w-full bg-surface-container overflow-hidden">
+            <!-- Fase 1 sem vídeo: o poster faz o papel do clipe. -->
+            <video class="absolute inset-0 w-full h-full object-cover" poster="/img/landing-hero.jpg" muted playsinline loop preload="none" aria-label="Exemplo de clipe: perseguição de carro à noite em uma cidade neon"></video>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+            <div class="absolute top-3 left-3 md:top-4 md:left-4 z-20 bg-surface-container-lowest/85 backdrop-blur-md p-2 rounded-xl shadow-xl flex items-center gap-2 md:gap-3">
+              <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden bg-surface-container-high">
+                <img class="w-full h-full object-cover" alt="Exemplo de selfie enviada" src="/img/landing-selfie.jpg" />
+              </div>
+              <div class="hidden sm:flex flex-col pr-2">
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Foto enviada</span>
+                <span class="font-label-md text-label-md text-on-surface font-semibold">1 selfie</span>
+              </div>
+              <span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">arrow_forward</span>
+              <div class="flex flex-col pr-2">
+                <span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Resultado</span>
+                <span class="font-label-md text-label-md text-on-surface font-semibold">Fuga Noturna</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-xl">
+      <div class="text-center max-w-2xl mx-auto mb-space-xl">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Magia sem complicação</span>
+        <h2 class="mt-2 font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">Como funciona em 3 passos simples</h2>
+        <p class="mt-2 font-body-md text-body-md text-on-surface-variant">Sem programas pesados e sem edição manual. A IA cuida de colocar seu rosto na cena.</p>
+      </div>
+      <ol class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+        <li class="relative bg-surface-container-low hover:bg-surface-container p-space-lg rounded-2xl transition-all duration-300 shadow-md flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl" aria-hidden="true">add_a_photo</span></div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider mb-2">Passo 01</div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Envie sua foto</h3>
+            <p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">Tire uma selfie na hora ou escolha da galeria. Rosto de frente e boa luz dão o melhor resultado.</p>
+          </div>
+          <div class="mt-space-lg bg-surface-container-lowest/60 p-space-sm rounded-xl flex items-center gap-2">
+            <span class="material-symbols-outlined text-tertiary text-sm" aria-hidden="true">check_circle</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Câmera ou galeria</span>
+          </div>
+        </li>
+        <li class="relative bg-surface-container-low hover:bg-surface-container p-space-lg rounded-2xl transition-all duration-300 shadow-md flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-space-md group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl" aria-hidden="true">auto_fix_high</span></div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-2">Passo 02</div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Escolha ou descreva</h3>
+            <p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">Escolha um clipe pronto da biblioteca ou descreva em texto a cena que você quer viver.</p>
+          </div>
+          <div class="mt-space-lg bg-surface-container-lowest/60 p-space-sm rounded-xl flex items-center gap-2">
+            <span class="material-symbols-outlined text-tertiary text-sm" aria-hidden="true">library_add_check</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Vídeo ou foto</span>
+          </div>
+        </li>
+        <li class="relative bg-surface-container-low hover:bg-surface-container p-space-lg rounded-2xl transition-all duration-300 shadow-md flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-space-md group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl" aria-hidden="true">download_for_offline</span></div>
+            <div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm uppercase tracking-wider mb-2">Passo 03</div>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Receba seu vídeo</h3>
+            <p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">Em poucos minutos o resultado em HD fica pronto para baixar e postar no TikTok, Reels e Shorts.</p>
+          </div>
+          <div class="mt-space-lg bg-surface-container-lowest/60 p-space-sm rounded-xl flex items-center gap-2">
+            <span class="material-symbols-outlined text-tertiary text-sm" aria-hidden="true">aspect_ratio</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Formatos 9:16 e 16:9</span>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="exemplos" class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-xl scroll-mt-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+        <div>
+          <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Biblioteca</span>
+          <h2 class="mt-1 font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">Clipes para você estrelar</h2>
+        </div>
+        <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filtrar clipes">
+          <button data-filtro="todos" aria-pressed="true" class="px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors">Todos</button>
+          <button data-filtro="cinema" aria-pressed="false" class="px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors">Cinema</button>
+          <button data-filtro="danca" aria-pressed="false" class="px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors">Dança</button>
+          <button data-filtro="aventura" aria-pressed="false" class="px-4 py-1.5 rounded-full font-label-md text-label-md transition-colors">Aventura</button>
+        </div>
+      </div>
+      <div id="galeria" class="grid grid-cols-2 md:grid-cols-4 gap-space-md"></div>
+      <p class="mt-space-md font-body-sm text-body-sm text-outline">Imagens ilustrativas.</p>
+    </section>
+
+    <!-- PLANOS -->
+    <section id="planos" class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-xl scroll-mt-4">
+      <div class="text-center max-w-2xl mx-auto mb-space-xl">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Investimento simples</span>
+        <h2 class="mt-1 font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">Planos flexíveis para cada criador</h2>
+        <p class="mt-2 font-body-md text-body-md text-on-surface-variant">Créditos mensais para gerar vídeos e fotos. Precisa de mais? Compre pacotes avulsos quando quiser.</p>
+      </div>
+      <div id="lista-planos" class="grid grid-cols-1 md:grid-cols-3 gap-space-lg md:gap-space-md items-stretch"></div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="w-full max-w-4xl mx-auto px-gutter-mobile md:px-gutter py-space-xl">
+      <div class="text-center mb-space-xl">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Tire suas dúvidas</span>
+        <h2 class="mt-1 font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">Perguntas frequentes</h2>
+      </div>
+      <div class="space-y-space-sm">
+        <details class="group bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+          <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer w-full p-space-md flex items-center justify-between gap-space-sm text-on-surface font-headline-sm text-base md:text-headline-sm font-semibold transition-colors hover:text-primary">
+            <span>É seguro enviar minha foto?</span>
+            <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200 group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md">Sua foto é usada só para gerar os vídeos e fotos que você pedir. Ela fica salva na sua conta até você apagá-la no Perfil, e nunca é vendida.</div>
+        </details>
+        <details class="group bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+          <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer w-full p-space-md flex items-center justify-between gap-space-sm text-on-surface font-headline-sm text-base md:text-headline-sm font-semibold transition-colors hover:text-primary">
+            <span>Quanto tempo demora para gerar um vídeo?</span>
+            <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200 group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md">Normalmente alguns minutos. Você não precisa esperar com a tela aberta: o resultado fica guardado em Minhas criações.</div>
+        </details>
+        <details class="group bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+          <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer w-full p-space-md flex items-center justify-between gap-space-sm text-on-surface font-headline-sm text-base md:text-headline-sm font-semibold transition-colors hover:text-primary">
+            <span>Posso cancelar minha assinatura?</span>
+            <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200 group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md">Sim, a qualquer momento, sem fidelidade. Os créditos do mês continuam valendo até o fim do ciclo pago.</div>
+        </details>
+        <details class="group bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+          <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer w-full p-space-md flex items-center justify-between gap-space-sm text-on-surface font-headline-sm text-base md:text-headline-sm font-semibold transition-colors hover:text-primary">
+            <span>Como funcionam os créditos?</span>
+            <span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200 group-open:rotate-180" aria-hidden="true">expand_more</span>
+          </summary>
+          <div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md">
+            Cada geração usa créditos: clipe da biblioteca, <span data-custo="clipe">5</span>; vídeo a partir de texto, <span data-custo="video5">5</span> (5 s) ou <span data-custo="video10">8</span> (10 s); foto a partir de texto, <span data-custo="foto">2</span>. Se a geração falhar, os créditos voltam para você. No cadastro você ganha <span data-custo="bonusCadastro">10</span> créditos.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-xl">
+      <div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-space-lg md:p-space-xl text-center flex flex-col items-center shadow-2xl">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-tertiary/10 pointer-events-none"></div>
+        <span class="material-symbols-outlined text-secondary text-4xl mb-2" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">videocam</span>
+        <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold max-w-2xl tracking-tight">Pronto para se ver na tela do cinema?</h2>
+        <p class="mt-2 font-body-lg text-body-lg text-on-surface-variant max-w-xl">Crie sua conta, envie sua foto e ganhe <span data-custo="bonusCadastro">10</span> créditos para testar.</p>
+        <a data-cta="cadastro" href="/entrar#cadastro" class="relative mt-space-lg inline-flex items-center gap-space-xs px-space-xl py-4 rounded-xl font-label-lg text-label-lg text-surface-container-lowest bg-gradient-to-r from-primary via-primary-container to-secondary shadow-xl transition-transform hover:scale-105 active:scale-95 font-bold">
+          <span class="material-symbols-outlined text-xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">bolt</span>
+          <span>Criar conta grátis</span>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <footer class="relative w-full bg-surface-container-lowest mt-space-xl py-space-xl">
+    <div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter flex flex-col gap-space-xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-lg">
+        <div class="space-y-space-sm">
+          <div class="flex items-center gap-2">
+            <img alt="" class="h-7 w-7 object-contain" src="/img/logo.png" />
+            <span class="font-headline-sm text-headline-sm text-on-surface font-extrabold tracking-tight">SelfieMovie</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Seu rosto em clipes e cenas criadas com inteligência artificial.</p>
+        </div>
+        <nav aria-label="Produto">
+          <h2 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-space-sm">Produto</h2>
+          <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="#exemplos">Biblioteca de clipes</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#planos">Planos e preços</a></li>
+            <li><a class="hover:text-primary transition-colors" data-cta="cadastro" href="/entrar#cadastro">Criar com texto</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Legal">
+          <h2 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-space-sm">Legal</h2>
+          <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="/termos">Termos de Uso</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/privacidade">Política de Privacidade (LGPD)</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Atendimento">
+          <h2 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-space-sm">Atendimento</h2>
+          <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" href="/ajuda-faq">Central de Ajuda</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bg-surface-container/30 p-space-md rounded-xl text-on-surface-variant font-body-sm text-body-sm">
+        © <span id="ano">2026</span> SelfieMovie. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+</div>
 </body>
 </html>

@@ -121,7 +121,7 @@
 
 Mesmo procedimento para cada uma: copiar o markup do `code.html` correspondente para o HTML da rota (ou para template string no JS da página quando houver lista dinâmica), trocar URLs de imagem pelo mapa da Task 1, remover sidebar/header/bottom nav duplicados (o shell faz isso), aplicar a seção 5, ligar ao store/api. Cada tarefa: build, 390/1440, console limpo, commit `feat: tela <nome>`.
 
-**Task 4 — Landing (`index.html`, `src/pages/landing.js`)**: sem shell (header próprio da landing). Hero com `<video poster>` (sem `src`), 3 passos, galeria com filtros funcionando por categoria, planos de `PLANOS`, FAQ com `<details>`, CTA final. Todo CTA → `/entrar` (ou `/inicio` se já houver usuário). Textos de crédito batendo com `CUSTOS`.
+**[x] Task 4 — Landing (`index.html`, `src/pages/landing.js`)**: sem shell (header próprio da landing). Hero com `<video poster>` (sem `src`), 3 passos, galeria com filtros funcionando por categoria, planos de `PLANOS`, FAQ com `<details>`, CTA final. Todo CTA → `/entrar` (ou `/inicio` se já houver usuário). Textos de crédito batendo com `CUSTOS`.
 
 **Task 5 — Login/Cadastro (`entrar.html`, `src/pages/entrar.js`)**: abas com `role="tablist"`; `#cadastro` na URL abre a aba Criar conta. Senha com mostrar/ocultar, mínimo 8 caracteres com mensagem inline; e-mail via `type="email"` + `checkValidity()`. Google: botão visual que mostra aviso "em breve". Cadastro → `store.cadastrar` → `/perfil-rosto/foto`; login → `store.entrar` → `/inicio`.
 
