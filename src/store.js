@@ -30,7 +30,7 @@ function alterar(fn) {
   return gravar(estado)
 }
 
-const novoEstado = (usuario, saldo) => ({ usuario, logado: true, saldo, foto: null, consentimento: false, criacoes: [], compras: [] })
+const novoEstado = (usuario, saldo, plano = null) => ({ usuario, logado: true, plano, saldo, foto: null, consentimento: false, criacoes: [], compras: [] })
 
 export function onChange(fn) {
   ouvintes.add(fn)
@@ -54,10 +54,12 @@ export function entrar({ email }) {
     e.logado = true
     gravar(e)
   } else {
-    gravar(novoEstado({ nome: 'Camila Silva', email }, 45))
+    gravar(novoEstado({ nome: 'Camila Silva', email }, 45, 'Pro Creator'))
   }
   return getUsuario()
 }
+
+export const getPlano = () => ler()?.plano ?? null
 
 export const sair = () => alterar((e) => (e.logado = false))
 

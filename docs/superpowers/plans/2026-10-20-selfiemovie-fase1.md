@@ -113,9 +113,9 @@
 - Produces: `montarShell({ rota: 'inicio'|'criar-com-texto'|'minhas-criacoes'|'creditos-planos'|'perfil-rosto'|'ajuda-faq'|null, exigirLogin = true }) -> HTMLElement` (o `<main>` onde a página renderiza). Sem usuário e `exigirLogin` → `location.replace('/entrar')`. Marca `aria-current="page"` no link ativo. Markup copiado da sidebar/header/bottom nav do `in_cio_biblioteca_de_clipes`, com `href` reais no lugar de `data-path`.
 - Header: busca (só na rota `inicio` age; nas outras leva a `/inicio?q=`), badge de saldo (link para `/creditos-planos`), ajuda, "Novo Vídeo" (→ `/criar-com-texto`), avatar com a foto do store ou ícone.
 
-- [ ] Step 1: Implementar `shell.js`; `inicio.js` provisório só monta o shell com um texto.
-- [ ] Step 2: Verificar em 390/1440: sidebar só ≥ md, bottom nav só < md, rota ativa destacada, saldo e nome do store. Aba sem usuário → `/entrar`.
-- [ ] Step 3: Commit `feat: shell compartilhado`.
+- [x] Step 1: Implementar `shell.js`; `inicio.js` provisório só monta o shell com um texto.
+- [x] Step 2: Verificar em 390/1440: sidebar só ≥ md, bottom nav só < md, rota ativa destacada, saldo e nome do store. Aba sem usuário → `/entrar`.
+- [x] Step 3: Commit `feat: shell compartilhado`.
 
 ### Tasks 4–12: Porte das telas
 
