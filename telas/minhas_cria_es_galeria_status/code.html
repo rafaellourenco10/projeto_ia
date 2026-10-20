@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#1c1b21", "on-tertiary": "#003640", "secondary": "#ffb0cd", "on-tertiary-fixed": "#001f26", "on-tertiary-container": "#002f38", "on-secondary": "#640039", "inverse-on-surface": "#312f36", "on-primary-container": "#340080", "surface-dim": "#141319", "surface-container-highest": "#35343b", "tertiary": "#4cd7f6", "primary-fixed": "#e9ddff", "tertiary-container": "#009eb9", "on-secondary-container": "#ffbad3", "surface": "#141319", "on-background": "#e5e1ea", "background": "#141319", "secondary-fixed": "#ffd9e4", "surface-container-high": "#2b2930", "outline-variant": "#494454", "on-primary-fixed": "#23005c", "inverse-surface": "#e5e1ea", "on-primary": "#3c0091", "surface-bright": "#3a383f", "surface-container": "#201f25", "secondary-container": "#aa0266", "primary-fixed-dim": "#d0bcff", "on-tertiary-fixed-variant": "#004e5c", "primary-container": "#a078ff", "surface-container-lowest": "#0e0d13", "outline": "#958ea0", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#5516be", "on-surface-variant": "#cbc3d7", "tertiary-fixed": "#acedff", "surface-variant": "#35343b", "on-secondary-fixed-variant": "#8c0053", "secondary-fixed-dim": "#ffb0cd", "on-surface": "#e5e1ea", "error-container": "#93000a", "primary": "#d0bcff", "inverse-primary": "#6d3bd7", "on-secondary-fixed": "#3e0022", "tertiary-fixed-dim": "#4cd7f6", "error": "#ffb4ab", "on-error": "#690005", "surface-tint": "#d0bcff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "margin": "3rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-xl": "2.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.015em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="hidden md:flex fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex-col justify-between py-space-md shadow-[0_4px_30px_rgba(0,0,0,0.6)]"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SelfieMovie Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwWrCERTXCXBT0C-xZB_Rx3pfRXf4LRLtZZQ5vCqoFp0ELzLHAnJPzpD1jUy9pq-Z_kBYF7Q3Be-s29cWTxhpz5qP9LFCiIilF5Z7F3F7dCW0wVpQkLdCDIwryF6L1SfSVofSWC0IF4rN7oZnPN9-cI7DsA-7T0m9KZLL_Pc2gtgOu3-v-sqXy94T4C84SHM6OdvL9JPgF2BH4nxhITbILmpJugvNX4dr-tjpL-wkNgtenk3eBZ_6shhw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SelfieMovie</span></div></div><div class="mx-space-md p-space-sm rounded-xl bg-surface-container/60 backdrop-blur-md flex items-center justify-between shadow-[0_0_20px_rgba(160,120,255,0.15)]"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-lg">auto_awesome</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Saldo Ativo</span><span class="font-label-md text-label-md text-on-surface">45 Créditos</span></div></div><a class="px-space-sm py-1 rounded-lg bg-secondary-container text-on-secondary-container font-label-sm text-label-sm hover:bg-secondary hover:text-on-secondary transition-all flex items-center gap-1 shadow-[0_0_12px_rgba(170,2,102,0.4)]" data-path="creditos-planos" href="#"><span class="material-symbols-outlined text-xs">add</span>Recarregar</a></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-high text-primary font-bold rounded-xl shadow-[0_0_16px_rgba(208,188,255,0.15)]"><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="inicio" href="#"><span class="material-symbols-outlined">movie</span>Início</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined">magic_button</span>Criar com Texto</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined">video_library</span>Minhas Criações</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="creditos-planos" href="#"><span class="material-symbols-outlined">diamond</span>Créditos & Planos</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="perfil-rosto" href="#"><span class="material-symbols-outlined">face</span>Perfil & Rosto</a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low/70 flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d0ZfWGNE2AIbmhXSMVYyhvyh-WCicelbKqEGOqAksctHGTGPqPe2IxM-xHqcMriTy8jRyW_ZuIfB8sbzbu1IXhdx1sHMyWHBdLb2hcwYxiJQHy-AUHcCufVlcli98QUexKax93WWESjrVoJwdZj8Mfv_75qi-nuVS1se7czdWTquyDZeXr1euW11XEizJPamzqy3AGzAJj-ALXN_ONkRzfCveXlkv9utQ4XSdiRcTvKs93J01P532w"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">Camila Silva</span><span class="font-label-sm text-label-sm text-tertiary">Plano Pro</span></div></div><a class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="perfil-rosto" href="#" title="Configurações"><span class="material-symbols-outlined text-lg">settings</span></a></div></div></aside><div class="md:pl-72"><header class="fixed top-0 left-0 md:left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)] z-40 flex items-center justify-between px-gutter-mobile md:px-gutter"><div class="flex items-center gap-space-sm md:hidden"><img alt="SelfieMovie Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwWrCERTXCXBT0C-xZB_Rx3pfRXf4LRLtZZQ5vCqoFp0ELzLHAnJPzpD1jUy9pq-Z_kBYF7Q3Be-s29cWTxhpz5qP9LFCiIilF5Z7F3F7dCW0wVpQkLdCDIwryF6L1SfSVofSWC0IF4rN7oZnPN9-cI7DsA-7T0m9KZLL_Pc2gtgOu3-v-sqXy94T4C84SHM6OdvL9JPgF2BH4nxhITbILmpJugvNX4dr-tjpL-wkNgtenk3eBZ_6shhw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SelfieMovie</span></div><div class="hidden sm:flex items-center flex-1 max-w-md mx-space-md"><div class="w-full flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-low/90 text-on-surface-variant"><span class="material-symbols-outlined text-sm">search</span><span class="font-body-sm text-body-sm text-outline">Buscar modelos cinematográficos, atores, épocas...</span></div></div><div class="flex items-center gap-space-sm"><a class="hidden sm:flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-container-highest transition-colors" data-path="creditos-planos" href="#"><span class="material-symbols-outlined text-secondary text-sm">bolt</span><span class="font-label-md text-label-md">45</span></a><a class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="ajuda-faq" href="#" title="Ajuda e Suporte"><span class="material-symbols-outlined text-xl">help</span></a><a class="px-space-md py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-all flex items-center gap-space-xs shadow-[0_0_20px_rgba(160,120,255,0.4)]" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-base">movie_edit</span><span class="hidden sm:inline">Novo Vídeo</span></a><div class="md:hidden flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d0ZfWGNE2AIbmhXSMVYyhvyh-WCicelbKqEGOqAksctHGTGPqPe2IxM-xHqcMriTy8jRyW_ZuIfB8sbzbu1IXhdx1sHMyWHBdLb2hcwYxiJQHy-AUHcCufVlcli98QUexKax93WWESjrVoJwdZj8Mfv_75qi-nuVS1se7czdWTquyDZeXr1euW11XEizJPamzqy3AGzAJj-ALXN_ONkRzfCveXlkv9utQ4XSdiRcTvKs93J01P532w"/></div></div></header><main class="w-full pt-16 pb-24 md:pb-8 bg-surface min-h-screen"><div class="flex flex-col w-full px-gutter-mobile md:px-gutter py-space-md max-w-[1440px] mx-auto gap-space-lg">
+<!-- Top Header with Kinetic Aura -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-space-md md:p-space-lg shadow-xl">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute right-40 -bottom-20 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-sm">video_library</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Cofre de Mídia Generativa</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Minhas Criações</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Todos os seus vídeos e fotos gerados por inteligência artificial em um só lugar. Arquivamento automático em 4K e ProRes na nuvem.
+        </p>
+</div>
+<!-- Cloud Space / Quality Counter Pill -->
+<div class="flex items-center gap-space-md p-space-sm px-space-md bg-surface-container-high/80 rounded-xl backdrop-blur-md self-start md:self-auto shadow-md">
+<div class="relative flex items-center justify-center">
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path>
+<path class="text-tertiary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="35, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<span class="absolute material-symbols-outlined text-tertiary text-xs">cloud_done</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">6 criações salvas</span>
+<span class="text-xs px-1.5 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm">Alta Qualidade</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">420 MB de 5 GB utilizados</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter & Utility Toolbar -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md">
+<!-- Filter Segmented Tabs -->
+<div class="flex items-center bg-surface-container-low p-1.5 rounded-xl shadow-inner gap-1" id="filter-container">
+<button class="filter-btn px-space-md py-1.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md font-bold shadow-md transition-all flex items-center gap-1.5" id="filter-todos" onclick="setFilter('todos')">
+<span class="material-symbols-outlined text-sm">auto_awesome_motion</span>
+<span>Todos (6)</span>
+</button>
+<button class="filter-btn px-space-md py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" id="filter-videos" onclick="setFilter('videos')">
+<span class="material-symbols-outlined text-sm">smart_display</span>
+<span>Vídeos (4)</span>
+</button>
+<button class="filter-btn px-space-md py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" id="filter-fotos" onclick="setFilter('fotos')">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+<span>Fotos (2)</span>
+</button>
+</div>
+<!-- Right Controls: Sort & Empty State Demo Toggle -->
+<div class="flex items-center gap-space-sm justify-between sm:justify-end">
+<div class="flex items-center gap-1 text-on-surface-variant bg-surface-container-low px-space-sm py-1.5 rounded-xl">
+<span class="material-symbols-outlined text-sm text-outline">sort</span>
+<span class="font-label-sm text-label-sm text-outline">Ordenar:</span>
+<select class="bg-transparent text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer pr-2">
+<option class="bg-surface-container-low text-on-surface" value="recentes">Mais Recentes</option>
+<option class="bg-surface-container-low text-on-surface" value="antigos">Mais Antigos</option>
+<option class="bg-surface-container-low text-on-surface" value="nome">Título (A-Z)</option>
+</select>
+</div>
+<button class="px-space-sm py-1.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors" onclick="toggleEmptyState()" title="Alternar visão simulada de galeria vazia para onboarding">
+<span class="material-symbols-outlined text-sm text-tertiary">visibility</span>
+<span id="preview-state-label">Simular Galeria Vazia</span>
+</button>
+</div>
+</div>
+<!-- GALLERY GRID -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-space-md" id="gallery-grid">
+<!-- ITEM 1: Vídeo - Agente Secreto em Mônaco (Pronto) -->
+<div class="media-card group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_40px_-10px_rgba(160,120,255,0.3)]" data-type="video">
+<!-- Media Aspect 9:16 Vertical Reel Style -->
+<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A dashing secret agent dressed in a sleek black tuxedo walking nonchalantly away from an exploding yacht harbor in Monaco under a neon twilight sky, photorealistic cinematographic still with dramatic lens flare, purple and teal ambient color grading." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX_4qvPo4lsF0sK05KoHGdbOWOXJWcdBU-4X6Vpa85VgEkzYkuKD09OVGfZ8u52oi0LU72IYRUAwOHKP1m46Qackk00kgClqRFLZW23bCQBXO5Mjm3iffKefUjZ3yqBzR_SJbEnTOkIqAMPWYRHL6MlsNizh_OSiE6No4X5ukcpPardQ7wzUbLfNYyUXUSemZMGFdEIZwTnO2aCgxoQm3vh64pnxxzcCkj2lMeK8NN5CH6AtinW609lA"/>
+<!-- Top Badges Overlay -->
+<div class="absolute top-space-sm left-space-sm right-space-sm flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md text-emerald-300 font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">check_circle</span> Pronto
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm tracking-wide">
+            00:18
+          </span>
+</div>
+<!-- Center Hover Play Trigger -->
+<button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-lowest/40 backdrop-blur-xs cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.6)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-3xl ml-0.5">play_arrow</span>
+</div>
+</button>
+<!-- Bottom Scrim -->
+<div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent pointer-events-none"></div>
+<!-- Media Floating Action Icons -->
+<div class="absolute bottom-space-sm right-space-sm flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high/90 hover:bg-surface-bright text-on-surface flex items-center justify-center transition-colors shadow-sm" title="Baixar MP4 em 4K">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high/90 hover:bg-surface-bright text-on-surface flex items-center justify-center transition-colors shadow-sm" title="Compartilhar">
+<span class="material-symbols-outlined text-base">share</span>
+</button>
+</div>
+</div>
+<!-- Metadata & Info -->
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">Blockbuster Ação</span>
+<span class="font-label-sm text-label-sm text-outline">Há 2 horas</span>
+</div>
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Agente Secreto em Mônaco</h2>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">face</span> FaceSwap Camila
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1080p 60fps</span>
+</div>
+</div>
+</div>
+<!-- ITEM 2: Vídeo - Surfista no Havaí (Gerando 68%) -->
+<div class="media-card group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-lg transition-all duration-300" data-type="video">
+<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-60 filter blur-[1px]" data-alt="A silhouette of a big-wave surfer cutting through a golden-hour crystal turquoise pipeline barrel in Oahu Hawaii, intense atmospheric water spray, warm amber cinematic twilight glow, stylized generative render composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATFTRRfFaylh1O5_PAIGMJnfQM1rmceAzbxMkqixitLaIFf73YxL7QvO63Dp6XU6JaaBJwvZByljgg-U2xU_H6RrvE-u0icMR1-3KOxzMQ0ivdxZdVwA3LPpIuQMW_c3Sn0f3a1BsXZAEuE3Szd9N1ExqCteuqga7onywP4Lgb7dVjxJ-wWVBWrRnQSFPkbyuCDw7aPShzELIyC11aMR74Dy9vqatPjMeQOJx-zLgsq4c1YiuW25o5yg"/>
+<!-- Animated Processing Overlay -->
+<div class="absolute inset-0 bg-primary-container/20 backdrop-blur-xs flex flex-col items-center justify-center p-space-md text-center gap-space-sm">
+<div class="relative flex items-center justify-center">
+<div class="w-16 h-16 rounded-full border-4 border-primary/20 border-t-primary animate-spin"></div>
+<span class="absolute material-symbols-outlined text-primary text-xl animate-pulse">auto_videocam</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">68%</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-[180px]">Sincronizando iluminação solar no rosto...</p>
+</div>
+<!-- Top Badges Overlay -->
+<div class="absolute top-space-sm left-space-sm right-space-sm flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1.5 shadow-[0_0_16px_rgba(160,120,255,0.4)]">
+<span class="material-symbols-outlined text-xs animate-spin">progress_activity</span> Gerando (68%)
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+            ~45s rest.
+          </span>
+</div>
+<!-- Bottom Integrated Progress Bar -->
+<div class="absolute inset-x-0 bottom-0 h-1.5 bg-surface-container-highest">
+<div class="h-full bg-gradient-to-r from-tertiary via-primary to-secondary w-[68%] transition-all duration-500"></div>
+</div>
+</div>
+<!-- Metadata & Info -->
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">Esporte & Aventura</span>
+<span class="font-label-sm text-label-sm text-tertiary animate-pulse font-bold">Na Fila IA</span>
+</div>
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Surfista no Havaí ao Pôr do Sol</h2>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">face</span> FaceSwap Camila
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-outline">Renderizando 9:16</span>
+</div>
+</div>
+</div>
+<!-- ITEM 3: Vídeo - Dança Cyberpunk Neo-Tokyo (Falhou – Crédito Devolvido) -->
+<div class="media-card group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-lg transition-all duration-300" data-type="video">
+<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover grayscale opacity-30" data-alt="Cyberpunk dancers on an elevated neon highway in Neo Tokyo under pouring acid rain with holographic billboards and flying skycars, intense electric magenta and violet hues, dark cinematic visual tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5CDBVNNKMY1SdYMpHsStZ1a4KnFgDeZjzTZ6ddXn3j6TFxOIUeZcxIcBumbTzH6kpQVhWOtMSlkVYPQge07Zxw3TiGrBdIsBOZ-9P2f1fUB_omFWWztLkCOgraTECv8kQjv-cb8jObVsIfDTlg4ygJd9lkhFzn7M-236yvOcN9M-GavstITRkaxSjNM7A3X0HNtXIg-i-l_AnlUEtCVQGm07CV765qb5DRJ0zfm2OxRmAA2jARLYFJw"/>
+<!-- Failure Scrim & Explanation -->
+<div class="absolute inset-0 bg-surface-container-lowest/85 backdrop-blur-xs flex flex-col items-center justify-center p-space-md text-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center shadow-lg mb-1">
+<span class="material-symbols-outlined text-2xl">error_outline</span>
+</div>
+<span class="font-label-md text-label-md text-error font-bold">Falha na Oclusão Facial</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[200px] text-xs">
+            O rosto ficou coberto por fumaça densa no template. O crédito foi reembolsado.
+          </p>
+<button class="mt-space-xs px-space-md py-2 rounded-xl bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1.5 transition-all shadow-md">
+<span class="material-symbols-outlined text-sm">refresh</span> Tentar novamente grátis
+          </button>
+</div>
+<!-- Top Badges Overlay -->
+<div class="absolute top-space-sm left-space-sm right-space-sm flex items-center justify-between">
+<span class="px-2.5 py-1 rounded-full bg-error-container/90 backdrop-blur-md text-error font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">cancel</span> Falhou – crédito devolvido
+          </span>
+</div>
+</div>
+<!-- Metadata & Info -->
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider font-bold">Sci-Fi Futurista</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">+1 Crédito Estornado</span>
+</div>
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Dança Cyberpunk Neo-Tokyo</h2>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="font-body-sm text-body-sm text-outline">Tentativa cancelada</span>
+<span class="text-outline-variant">•</span>
+<button class="font-label-sm text-label-sm text-primary hover:underline">Ver detalhes</button>
+</div>
+</div>
+</div>
+<!-- ITEM 4: Vídeo - Piloto de F1 Sob Chuva (Pronto) -->
+<div class="media-card group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_40px_-10px_rgba(160,120,255,0.3)]" data-type="video">
+<div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A focused Formula 1 race car driver in a high-tech illuminated racing helmet and race suit standing in the pit lane during heavy night rain, high contrast wet asphalt reflections, hyper-detailed carbon fiber gear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpTo_OEpYg7q9qw-wgp7lIA7uSDatzYLlm1ZoGz0iM8uqxQFUVZnXGi_w_GUZWdBZwy4HszTXmu4MP2hSN66ya0VEkWMWK1gEIXzd39za1UXmZCkvWGUJwFbmk_YgQpFxQOrjIB5AYF9ItF4DGwy_D8C1GSEF46SSxa7hf-xLG87R6sysd9S6ShXj09RmrbinzGsVyBKLzP4vZNCC_XuKO0PNDrwzGPc_ZQww0pgQ49GaEVWYgOlD2nw"/>
+<!-- Top Badges Overlay -->
+<div class="absolute top-space-sm left-space-sm right-space-sm flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md text-emerald-300 font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">check_circle</span> Pronto
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm tracking-wide">
+            00:14
+          </span>
+</div>
+<!-- Center Hover Play Trigger -->
+<button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-lowest/40 backdrop-blur-xs cursor-pointer">
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.6)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-3xl ml-0.5">play_arrow</span>
+</div>
+</button>
+<div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent pointer-events-none"></div>
+<!-- Floating Action Icons -->
+<div class="absolute bottom-space-sm right-space-sm flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high/90 hover:bg-surface-bright text-on-surface flex items-center justify-center transition-colors shadow-sm" title="Baixar Vídeo">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high/90 hover:bg-surface-bright text-on-surface flex items-center justify-center transition-colors shadow-sm" title="Mais Opções">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Metadata & Info -->
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Velocidade & Adrenalina</span>
+<span class="font-label-sm text-label-sm text-outline">Ontem</span>
+</div>
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Piloto de F1 Sob Chuva</h2>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">face</span> FaceSwap Camila
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4K UHD</span>
+</div>
+</div>
+</div>
+<!-- ITEM 5: Foto 1:1 - Retrato Imperial Renascentista (Pronto) -->
+<div class="media-card group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_40px_-10px_rgba(160,120,255,0.3)]" data-type="foto">
+<div class="relative aspect-square w-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An ornate Renaissance portrait of an empress in opulent royal velvet garments with gold filigree and pearls, Caravaggio chiaroscuro lighting with dramatic dark background and regal poise, photorealistic oil painting texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxQxoM6a-rcrS0NLayoOdjJVQjPLggF3reFfXf5E0lb24xrw9ks0lhiO9crgnQc85NIy7R6SD_RZRa6SwM2k6vKuWShmr3fbG8Mwe9Bw3M8YNigRURY6a663D6GNepshnYdT1HLkO1Fv8FVIkJjCuUD-QZGewlzpE1BY4wohBc-ATC_MUOXLQqucoNs8egYeZ_f8hfik7ONwcl3nDY4sjxFsNHKY6ga8vufDvvO4WGYLoIZz94dVgaQw"/>
+<!-- Top Badges Overlay -->
+<div class="absolute top-space-sm left-space-sm right-space-sm flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md text-emerald-300 font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">check_circle</span> Pronto
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">crop_square</span> 1:1 Foto
+          </span>
+</div>
+<!-- Center View Image Trigger -->
+<button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-lowest/40 backdrop-blur-xs cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl">zoom_in</span>
+</div>
+</button>
+<div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent pointer-events-none"></div>
+<!-- Floating Action Icons -->
+<div class="absolute bottom-space-sm right-space-sm flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high/90 hover:bg-surface-bright text-on-surface flex items-center justify-center transition-colors shadow-sm" title="Baixar PNG Alta Resolução">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</div>
+<!-- Metadata & Info -->
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">Época & Pintura</span>
+<span class="font-label-sm text-label-sm text-outline">3 dias atrás</span>
+</div>
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Retrato Imperial Renascentista</h2>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">face</span> FaceSwap Camila
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4096 × 4096</span>
+</div>
+</div>
+</div>
+<!-- ITEM 6: Foto 1:1 - Capitão Espacial em Marte (Pronto) -->
+<div class="media-card group relative flex flex-col bg-surface-container-low rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_40px_-10px_rgba(160,120,255,0.3)]" data-type="foto">
+<div class="relative aspect-square w-full overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An astronaut commander standing upon the red Martian dunes with a reflective visor helmet, deep crimson landscape and two tiny moons in a dark star-filled sky, cinematic hard shadows and photorealistic spacesuit texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMWYomCIONAOrUKTLpn8zbv-wo7BpYGwnVybhLYJ0Ii2CGI9TBqdH9eqVOXXKZLAaVIHafqHQVeE0qSIHOG638IYM9o0As2OgtfdR7LgvYr_J6BdmTs_9PujiICMhfKVjV4LpGxlpfoHV9u1SjvsuBMhdGgUoLB9XQ79BOmdiXYQf5DhnjnEz7UJDV-uRSnSeHyHeKV8fnZCGT2b5Y6pXR6j6nB1MZ5S6Dcz8UAKCpD9ILWiS_XRoLxg"/>
+<!-- Top Badges Overlay -->
+<div class="absolute top-space-sm left-space-sm right-space-sm flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md text-emerald-300 font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">check_circle</span> Pronto
+          </span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">crop_square</span> 1:1 Foto
+          </span>
+</div>
+<!-- Center View Image Trigger -->
+<button class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-surface-container-lowest/40 backdrop-blur-xs cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl">zoom_in</span>
+</div>
+</button>
+<div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent pointer-events-none"></div>
+<!-- Floating Action Icons -->
+<div class="absolute bottom-space-sm right-space-sm flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high/90 hover:bg-surface-bright text-on-surface flex items-center justify-center transition-colors shadow-sm" title="Baixar Imagem">
+<span class="material-symbols-outlined text-base">download</span>
+</button>
+</div>
+</div>
+<!-- Metadata & Info -->
+<div class="p-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-bold">Exploração Espacial</span>
+<span class="font-label-sm text-label-sm text-outline">5 dias atrás</span>
+</div>
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Capitão Espacial em Marte</h2>
+<div class="flex items-center gap-space-sm pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">face</span> FaceSwap Camila
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4096 × 4096</span>
+</div>
+</div>
+</div>
+</div>
+<!-- EMPTY STATE CONTAINER (Toggleable & Interactive Demonstration) -->
+<div class="hidden flex-col items-center justify-center text-center p-space-lg md:p-space-xl bg-surface-container-low rounded-3xl relative overflow-hidden shadow-2xl" id="empty-state-card">
+<!-- Neon Backdrop Aura -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary-container/25 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-secondary-container/30 rounded-full blur-[60px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center max-w-lg mx-auto">
+<!-- Cine Clapperboard Stylized Graphic -->
+<div class="relative w-28 h-28 mb-space-md flex items-center justify-center">
+<div class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary-container/40 to-secondary-container/40 blur-xl"></div>
+<div class="relative w-24 h-24 rounded-2xl bg-surface-container-high/90 backdrop-blur-xl flex flex-col items-center justify-center shadow-[0_0_30px_rgba(208,188,255,0.2)]">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 1;">movie_creation</span>
+<span class="material-symbols-outlined absolute top-2 right-2 text-secondary text-sm animate-pulse">auto_awesome</span>
+<span class="material-symbols-outlined absolute bottom-2 left-2 text-tertiary text-xs">flare</span>
+</div>
+</div>
+<!-- Text Group -->
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold mb-1">Inicie Seu Portfólio</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mb-2">Você ainda não tem criações salvas</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+        Escolha um clipe pronto na nossa biblioteca ou digite uma ideia para ver seu primeiro vídeo com IA em menos de 2 minutos.
+      </p>
+<!-- Primary Action CTA -->
+<a class="px-space-lg py-3.5 rounded-xl bg-gradient-to-r from-primary-container via-inverse-primary to-secondary text-on-primary font-label-lg text-label-lg font-bold hover:scale-105 transition-all duration-200 shadow-[0_0_30px_rgba(160,120,255,0.5)] flex items-center gap-2" data-path="criar-com-texto" href="#">
+<span class="material-symbols-outlined text-xl">magic_button</span>
+<span>Criar meu primeiro vídeo agora</span>
+</a>
+<!-- Quick Template Inspiration Badges -->
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center justify-center gap-space-xs text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-outline">Ideias Populares:</span>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-sm text-label-sm transition-colors">🔥 Trailer Cyberpunk</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-sm text-label-sm transition-colors">👑 Tapete Vermelho</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-sm text-label-sm transition-colors">🏎️ Grande Prêmio Noturno</button>
+</div>
+</div>
+</div>
+<!-- Educational Empty State Showcase Collapsible Bar (For context clarity) -->
+<div class="p-space-md rounded-2xl bg-surface-container-low/60 backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-space-md mt-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl">help</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">O que acontece quando você gera uma mídia?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Seus vídeos ficam disponíveis para streaming ilimitado e download imediato sem perda de qualidade.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-stretch md:self-auto justify-end">
+<a class="px-space-md py-2 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors flex items-center gap-1.5" data-path="criar-com-texto" href="#">
+<span class="material-symbols-outlined text-sm">add</span> Nova Renderização
+      </a>
+</div>
+</div>
+</div>
+<script>
+  let isSimulatedEmpty = false;
+
+  function setFilter(type) {
+    if (isSimulatedEmpty) return;
+
+    // Reset button states
+    const tabs = ['todos', 'videos', 'fotos'];
+    tabs.forEach(t => {
+      const btn = document.getElementById(`filter-${t}`);
+      if (btn) {
+        btn.className = "filter-btn px-space-md py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5";
+      }
+    });
+
+    // Active button style
+    const activeBtn = document.getElementById(`filter-${type}`);
+    if (activeBtn) {
+      activeBtn.className = "filter-btn px-space-md py-1.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md font-bold shadow-md transition-all flex items-center gap-1.5";
+    }
+
+    // Filter card elements
+    const cards = document.querySelectorAll('.media-card');
+    cards.forEach(card => {
+      const cardType = card.getAttribute('data-type');
+      if (type === 'todos') {
+        card.style.display = 'flex';
+      } else if (type === 'videos' && cardType === 'video') {
+        card.style.display = 'flex';
+      } else if (type === 'fotos' && cardType === 'foto') {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  function toggleEmptyState() {
+    isSimulatedEmpty = !isSimulatedEmpty;
+    const galleryGrid = document.getElementById('gallery-grid');
+    const emptyStateCard = document.getElementById('empty-state-card');
+    const previewLabel = document.getElementById('preview-state-label');
+
+    if (isSimulatedEmpty) {
+      galleryGrid.classList.add('hidden');
+      emptyStateCard.classList.remove('hidden');
+      emptyStateCard.classList.add('flex');
+      previewLabel.textContent = "Restaurar Criações";
+    } else {
+      galleryGrid.classList.remove('hidden');
+      emptyStateCard.classList.add('hidden');
+      emptyStateCard.classList.remove('flex');
+      previewLabel.textContent = "Simular Galeria Vazia";
+      setFilter('todos');
+    }
+  }
+</script></main></div><nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl z-50 flex items-center justify-around px-gutter-mobile shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-bold"><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="inicio" href="#"><span class="material-symbols-outlined text-xl">movie</span><span>Início</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-xl">magic_button</span><span>Criar</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-xl">video_library</span><span>Criações</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="perfil-rosto" href="#"><span class="material-symbols-outlined text-xl">face</span><span>Perfil</span></a></nav></body></html>

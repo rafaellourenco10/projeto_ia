@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#1c1b21", "on-tertiary": "#003640", "secondary": "#ffb0cd", "on-tertiary-fixed": "#001f26", "on-tertiary-container": "#002f38", "on-secondary": "#640039", "inverse-on-surface": "#312f36", "on-primary-container": "#340080", "surface-dim": "#141319", "surface-container-highest": "#35343b", "tertiary": "#4cd7f6", "primary-fixed": "#e9ddff", "tertiary-container": "#009eb9", "on-secondary-container": "#ffbad3", "surface": "#141319", "on-background": "#e5e1ea", "background": "#141319", "secondary-fixed": "#ffd9e4", "surface-container-high": "#2b2930", "outline-variant": "#494454", "on-primary-fixed": "#23005c", "inverse-surface": "#e5e1ea", "on-primary": "#3c0091", "surface-bright": "#3a383f", "surface-container": "#201f25", "secondary-container": "#aa0266", "primary-fixed-dim": "#d0bcff", "on-tertiary-fixed-variant": "#004e5c", "primary-container": "#a078ff", "surface-container-lowest": "#0e0d13", "outline": "#958ea0", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#5516be", "on-surface-variant": "#cbc3d7", "tertiary-fixed": "#acedff", "surface-variant": "#35343b", "on-secondary-fixed-variant": "#8c0053", "secondary-fixed-dim": "#ffb0cd", "on-surface": "#e5e1ea", "error-container": "#93000a", "primary": "#d0bcff", "inverse-primary": "#6d3bd7", "on-secondary-fixed": "#3e0022", "tertiary-fixed-dim": "#4cd7f6", "error": "#ffb4ab", "on-error": "#690005", "surface-tint": "#d0bcff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "margin": "3rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-xl": "2.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.015em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><main class="w-full min-h-screen bg-surface flex items-center justify-center p-gutter-mobile"><div class="flex flex-col w-full">
+<!-- Glow orbs background decorativo -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[480px] bg-primary-container/20 blur-[140px] pointer-events-none rounded-full"></div>
+<div class="absolute top-[35%] -left-32 w-[420px] h-[420px] bg-secondary-container/20 blur-[130px] pointer-events-none rounded-full"></div>
+<div class="absolute top-[60%] -right-32 w-[460px] h-[460px] bg-tertiary-container/15 blur-[140px] pointer-events-none rounded-full"></div>
+<!-- HERO SECTION -->
+<section class="relative w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-lg md:py-space-xl flex flex-col items-center">
+<!-- Badge de Tecnologia -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high/70 backdrop-blur-md px-space-md py-1.5 rounded-full shadow-md transition-all hover:bg-surface-container-highest cursor-default">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase">Nova tecnologia de IA Generativa de Vídeo 2.0</span>
+</div>
+<!-- Headline Principal -->
+<h1 class="mt-space-lg text-center font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface max-w-4xl tracking-tight leading-[1.08]">
+        Seja o protagonista de <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">qualquer vídeo</span>
+</h1>
+<!-- Subtítulo -->
+<p class="mt-space-md text-center font-body-lg text-body-lg text-on-surface-variant max-w-2xl text-balance">
+        Envie uma única selfie e coloque seu rosto em cenas épicas de filmes, danças virais, aventuras pelo mundo ou crie vídeos inteiros a partir da sua imaginação com IA hiper-realista.
+      </p>
+<!-- CTAs Hero -->
+<div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-md w-full sm:w-auto">
+<a class="group relative flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded-xl font-label-lg text-label-lg text-surface-container-lowest bg-gradient-to-r from-primary via-primary-container to-secondary shadow-lg transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]" href="#planos">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">movie_filter</span>
+<span class="font-bold tracking-wide">Começar grátis</span>
+<span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+</a>
+<a class="flex items-center justify-center gap-space-xs px-space-lg py-3.5 rounded-xl font-label-lg text-label-lg text-on-surface bg-surface-container-high/80 hover:bg-surface-container-highest backdrop-blur-sm transition-all duration-200 shadow-sm" href="#exemplos">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span>Ver exemplos ao vivo</span>
+</a>
+</div>
+<!-- Métricas / Social Proof Rápida -->
+<div class="mt-space-lg flex flex-wrap items-center justify-center gap-y-2 gap-x-space-lg text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>+480 mil vídeos renderizados</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9/5 estrelas de satisfação</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span>Biometria 100% segura</span>
+</div>
+</div>
+<!-- Visual Interativo do Vídeo / Player Showcase Mockup -->
+<div class="mt-space-xl w-full max-w-5xl relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/30 via-secondary/30 to-tertiary/30 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative bg-surface-container-lowest rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+<!-- Top bar do player -->
+<div class="bg-surface-container-high/90 backdrop-blur-md px-space-md py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="w-3 h-3 rounded-full bg-surface-bright"></span>
+<span class="w-3 h-3 rounded-full bg-surface-bright"></span>
+<span class="ml-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cena 04: Cyberpunk Neo-Tokyo Chase</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                Ao vivo / Exemplo
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm">Face-Swap IA</span>
+</div>
+</div>
+<!-- Janela do Vídeo com Comparação Interativa -->
+<div class="relative aspect-video w-full bg-surface-container overflow-hidden" id="videoPreviewBox">
+<!-- Background da Cena de Ação -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A cinematic cyberpunk high-speed chase through Tokyo neon-lit streets at rainy night, wet asphalt reflecting purple and cyan neon lights, an athletic woman driver looking intensely at the camera, highly detailed 8k cinematic lighting, anamorphic lens blur, realistic motion blur" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDX2Lelut64vI-5tPjgUxHiRCcv5cojJFo2HjDwV2WTigFucOOU2S7NRCvtXou1GNUVKUwEsCiDK2TjpmYEW4MCXr4q4PCbEkRGAg8-nb48WNIgUoYErzZSRQ4tzmjf0dkpp_AaE16Ls9YEXYmlxoezozzd7Krwp5xK9LNpJh3qvnGIbVgOUxAdUVZdMrnFz1elU2RKP4K1NnjS6DQ_aBz6LQ1cFK99SNdNnD_arLrdVqtiwnDxLxiPkQ')"></div>
+<!-- Overlay Gradiente Escuro Cinematográfico -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+<!-- Miniatura da Selfie Original (Antes / Fonte) -->
+<div class="absolute top-4 left-4 z-20 bg-surface-container-lowest/85 backdrop-blur-md p-2 rounded-xl shadow-xl flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="A natural smartphone selfie of a young brazilian woman with warm smile, clean skin, daylight illumination in a casual room, sharp face focus portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeZtqnkFancFo2iuo29KX5V9xehjg01Y25KRJGcC-OTZ18ty4YAc2CIwEg034RtW_WkG0W9lOA78Rwru9kNnAklu558szCeXv3kIAr6S9DWbmUZkq6TQGId-xe729OzoDlYQhqsrfRKy2Xwa2zUbWsUzh7asiq6PJS8Xx-ZNVi4NROye60dfDu6cbSeHgwnrvs3mMyDM1nVMbpxXR_2vtWFvS7xQbfL_4pGqBcpEM9hD28qVuCaLBsKQ"/>
+</div>
+<div class="flex flex-col pr-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Foto Enviada</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">1 Selfie Natural</span>
+</div>
+<span class="material-symbols-outlined text-primary text-xl">arrow_forward</span>
+<div class="flex flex-col pr-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Resultado 4K</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Piloto de Fuga</span>
+</div>
+</div>
+<!-- Badge Flutuante de Processamento -->
+<div class="absolute top-4 right-4 z-20 bg-surface-container-low/90 backdrop-blur-md px-3 py-1.5 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm animate-spin">sync</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Renderização em 94s • 60 FPS</span>
+</div>
+<!-- Controles do Vídeo Overlay -->
+<div class="absolute bottom-0 inset-x-0 p-space-md bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/90 to-transparent flex flex-col gap-2 z-20">
+<!-- Barra de Progresso com Shimmer -->
+<div class="relative w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden cursor-pointer" id="progressBar">
+<div class="h-full bg-gradient-to-r from-primary via-secondary to-tertiary w-3/4 rounded-full relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-on-surface rounded-full shadow-md"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<div class="flex items-center gap-space-md">
+<button class="text-on-surface hover:text-primary transition-colors flex items-center" id="playBtn">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">pause_circle</span>
+</button>
+<span class="text-on-surface font-medium">00:14 / 00:22</span>
+<span class="hidden sm:inline-block px-2 py-0.5 rounded bg-surface-container-high text-xs text-on-surface-variant">4K UHD Cinema</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">volume_up</span>
+</button>
+<button class="hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-lg">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO COMO FUNCIONA (3 PASSOS SIMPLES) -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-xl">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Magia sem complicação</span>
+<h2 class="mt-2 font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">
+          Como funciona em 3 passos simples
+        </h2>
+<p class="mt-2 font-body-md text-body-md text-on-surface-variant">
+          Sem softwares pesados, sem edição manual. A nossa IA faz todo o trabalho pesado de iluminação, rotação e expressividade facial.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md relative">
+<!-- Passo 1 -->
+<div class="relative bg-surface-container-low hover:bg-surface-container p-space-lg rounded-2xl transition-all duration-300 shadow-md flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider mb-2">
+              Passo 01
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">1. Envie sua foto</h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+              Tire uma selfie na hora pelo celular ou escolha da galeria com boa iluminação natural. Apenas um ângulo frontal basta.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-lowest/60 p-space-sm rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Detecção facial instantânea</span>
+</div>
+</div>
+<!-- Passo 2 -->
+<div class="relative bg-surface-container-low hover:bg-surface-container p-space-lg rounded-2xl transition-all duration-300 shadow-md flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">auto_fix_high</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-2">
+              Passo 02
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">2. Escolha ou descreva</h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+              Escolha um clipe pronto da nossa biblioteca de blockbusters ou digite qualquer cena que sonhar no gerador de texto para vídeo.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-lowest/60 p-space-sm rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">library_add_check</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+2.500 modelos cinematográficos</span>
+</div>
+</div>
+<!-- Passo 3 -->
+<div class="relative bg-surface-container-low hover:bg-surface-container p-space-lg rounded-2xl transition-all duration-300 shadow-md flex flex-col justify-between group">
+<div>
+<div class="w-14 h-14 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-space-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">download_for_offline</span>
+</div>
+<div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm uppercase tracking-wider mb-2">
+              Passo 03
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">3. Receba seu vídeo</h3>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant">
+              Em menos de 2 minutos, seu vídeo cinematográfico em 4K está pronto para baixar sem marca d'água e viralizar no TikTok, Reels e Shorts.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-lowest/60 p-space-sm rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">bolt</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Exportação direta em 9:16 e 16:9</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SHOWCASE / GRID DE VÍDEOS EM ALTA -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-xl" id="exemplos">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Galeria Dinâmica</span>
+<h2 class="mt-1 font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">
+            Vídeos em alta criados com IA
+          </h2>
+</div>
+<!-- Filtros Rápidos -->
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-4 py-1.5 rounded-full bg-primary/20 text-on-surface font-label-md text-label-md font-semibold">Todos</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors">Cinema</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors">Danças Virais</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-colors">Ação & Ficção</button>
+</div>
+</div>
+<!-- Grid com formato 9:16 Reels/TikTok -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<!-- Item 1: Espião / 007 -->
+<div class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-md transition-all duration-300 hover:scale-[1.02] flex flex-col">
+<div class="relative aspect-[9/16] w-full bg-surface-container overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated secret agent in a black tuxedo walking through a luxurious casino in Monaco, dramatic cinematic golden hour lighting, 35mm film style, high fidelity facial features, shallow depth of field" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqPZi5kaOYGiticV2AXqbW6Ag39xmTEr8TseBGXA_sPgtJVH8QpGUcsBKVx5XEWhPLnfR2lgUlUiOiGrUj-AaWHNY_uC5AuOOjEiuqvfhiwGaU2Tx1zdKtCSEq0BDmo2I06oW5WV8tN8Ty_94lLLFVlj2pH9J7BTlv4QXpvHfB0fn3c-b_KiZPdVcA1U7PB5go-yCxklLC-rWkt36V62QYvtSxUMu0sk-50inIX-zeuOgQrivcCAEIYw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+<!-- Badges -->
+<div class="absolute top-3 left-3">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/90 text-on-secondary font-label-sm text-label-sm font-bold">Popular</span>
+</div>
+<div class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded-full flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>5 créditos</span>
+</div>
+<!-- Botão Play Flutuante -->
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-on-surface/90 text-surface-container-lowest flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<!-- Info Inferior -->
+<div class="absolute bottom-3 inset-x-3 text-on-surface">
+<h4 class="font-headline-sm text-sm font-bold truncate">Agente Secreto em Mônaco</h4>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>00:18 • 4K</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">visibility</span> 142k
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Viagem Espacial Sci-Fi -->
+<div class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-md transition-all duration-300 hover:scale-[1.02] flex flex-col">
+<div class="relative aspect-[9/16] w-full bg-surface-container overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An astronaut wearing a futuristic sleek helmet exploring a bioluminescent alien planet, vibrant purple and turquoise cosmic vegetation, distant nebula in sky, ultra-realistic sci-fi cinematic portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnsCU4bBGbOXtXhhmc81vLCTO6RbS0-DbjgteITguaVCv_KcYpKzM5_53xt-2J4slUj6q8FO3OlclwR4b1vsKKnCX5RJnmhsZeYCgxNyf0RM2TGZeMlnXz6Z9Z_gGc2uvHSAohfG0N2qKDbafWawQrN_XaOoSZrivc0qR_OruGRyvXiOoBycrTjOj6YnmDETXpTACoHekUaDK6n2ob_IORmtAzp8W9F-wmTxfYohsbInlazQ1zilyb2g')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+<div class="absolute top-3 left-3">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/90 text-on-tertiary font-label-sm text-label-sm font-bold">Novo</span>
+</div>
+<div class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded-full flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>5 créditos</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-on-surface/90 text-surface-container-lowest flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 inset-x-3 text-on-surface">
+<h4 class="font-headline-sm text-sm font-bold truncate">Explorador Intergaláctico</h4>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>00:25 • 4K</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">visibility</span> 98k
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Dança e Festival Viral -->
+<div class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-md transition-all duration-300 hover:scale-[1.02] flex flex-col">
+<div class="relative aspect-[9/16] w-full bg-surface-container overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A dancer performing energetic choreography on a main stage of an electronic music festival, huge laser beams and warm stage smoke, glowing festival clothing, cinematic slow-motion capture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUK9_liZFtMFU-JnwtaFCufBpYFaZlHS2P7YQ31XkVN03yY5lVMgPebTY3QhyGmD01bzwdb_SC3v5HkM0Q7BuI9Bs3ou1W1oHZ59kaOYoVItnVUmaySZsWo0E00LHCvJneNpr2vX5bO5MIjGXckkJN9rUGDqJYCMcYgBajFc-i3E648tL8oYCWYqcOSvx-NHMkMjjAG5Wa5Id3sQ2hVPRSGoq0xTBhwV_LC_7amlPAQ7_38Zg5xja3ug')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+<div class="absolute top-3 left-3">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/90 text-on-secondary font-label-sm text-label-sm font-bold">Trending</span>
+</div>
+<div class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded-full flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>5 créditos</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-on-surface/90 text-surface-container-lowest flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 inset-x-3 text-on-surface">
+<h4 class="font-headline-sm text-sm font-bold truncate">Dançarino em Festival Elétrico</h4>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>00:15 • 60 FPS</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">visibility</span> 315k
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 4: Medieval Fantasia Épica -->
+<div class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-md transition-all duration-300 hover:scale-[1.02] flex flex-col">
+<div class="relative aspect-[9/16] w-full bg-surface-container overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An epic warrior in ornate steel armor standing on a misty medieval battlefield at dawn, holding a shining broadsword, burning banners and castle silhouette in background, hyper-detailed cinema style" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDf6U2T0vwhDi7_e-gJSu9srpG6cUD5AZuP7x8jjEAtb2stWpYtTUxUdtXVxULj2608oGmkqJ3TB_v8B3kHe2okCAfHRjJQBlFSz6Njz3zaN3EPywUXkZqfibbIYEGBqP6NHklh9cVnV_oGP5ZSGaEbtte6JqQ2D2aM6XtDMD_sI_aUDZP6aKcO_HiQONtwLvBy2Tt63Rzpl6Pz30Ibb3ewKscw9KezcyUK8C8CedK97Eeok-5Dc6bzgA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+<div class="absolute top-3 left-3">
+<span class="px-2 py-0.5 rounded-full bg-surface-bright text-on-surface font-label-sm text-label-sm font-bold">Épico</span>
+</div>
+<div class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded-full flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>5 créditos</span>
+</div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="w-12 h-12 rounded-full bg-on-surface/90 text-surface-container-lowest flex items-center justify-center shadow-lg transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-3 inset-x-3 text-on-surface">
+<h4 class="font-headline-sm text-sm font-bold truncate">Guerreiro do Trono de Cinzas</h4>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mt-1">
+<span>00:20 • 4K</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">visibility</span> 210k
+                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PREVIEW DE PLANOS & CRÉDITOS -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-xl" id="planos">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Investimento simples</span>
+<h2 class="mt-1 font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">
+          Planos flexíveis para cada criador
+        </h2>
+<p class="mt-2 font-body-md text-body-md text-on-surface-variant">
+          Comece agora mesmo. Cancele com 1 clique a qualquer momento sem taxas ocultas.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md items-stretch">
+<!-- Plano Básico -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between shadow-md">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">Básico</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Para quem quer testar e criar seus primeiros vídeos virais.</p>
+<div class="mt-space-md flex items-baseline gap-1">
+<span class="text-on-surface font-display-hero-mobile font-extrabold">R$ 29</span>
+<span class="text-on-surface-variant font-body-sm">/mês</span>
+</div>
+<div class="mt-2 text-primary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-base">bolt</span>
+<span><strong>50 Créditos</strong> mensais</span>
+</div>
+<ul class="mt-space-md space-y-2 text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check</span>
+<span>Até 10 vídeos em 1080p Full HD</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check</span>
+<span>Acesso a +500 templates prontos</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check</span>
+<span>Fila de renderização padrão</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check</span>
+<span>Sem marca d'água</span>
+</li>
+</ul>
+</div>
+<a class="mt-space-lg w-full py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-semibold text-center transition-colors" href="#">
+            Escolher Básico
+          </a>
+</div>
+<!-- Plano Pro (Destaque) -->
+<div class="relative bg-gradient-to-b from-surface-container to-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between shadow-2xl scale-105 z-10">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary to-secondary text-surface-container-lowest px-3 py-1 rounded-full font-label-sm text-label-sm font-extrabold uppercase tracking-wider shadow-md">
+            Mais Popular
+          </div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">Pro Creator</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Ideal para influenciadores, criadores de conteúdo e videomakers.</p>
+<div class="mt-space-md flex items-baseline gap-1">
+<span class="text-on-surface font-display-hero-mobile font-extrabold">R$ 69</span>
+<span class="text-on-surface-variant font-body-sm">/mês</span>
+</div>
+<div class="mt-2 text-secondary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-base">bolt</span>
+<span><strong>180 Créditos</strong> mensais</span>
+</div>
+<ul class="mt-space-md space-y-2 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Vídeos cinematográficos em <strong>4K Ultra HD</strong></span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Criação livre de cenas por texto (Prompt)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Fila Turbo prioritária (render em < 90s)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Biblioteca completa com 2.500+ clipes</span>
+</li>
+</ul>
+</div>
+<a class="mt-space-lg w-full py-3.5 rounded-xl bg-gradient-to-r from-primary via-primary-container to-secondary text-surface-container-lowest font-label-lg text-label-lg font-bold text-center shadow-lg transition-transform hover:scale-[1.02]" href="#">
+            Assinar Pro
+          </a>
+</div>
+<!-- Plano Ultra -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between shadow-md">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">Ultra Studio</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Para agências e criadores de alta frequência de postagens diárias.</p>
+<div class="mt-space-md flex items-baseline gap-1">
+<span class="text-on-surface font-display-hero-mobile font-extrabold">R$ 149</span>
+<span class="text-on-surface-variant font-body-sm">/mês</span>
+</div>
+<div class="mt-2 text-tertiary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-base">bolt</span>
+<span><strong>500 Créditos</strong> mensais</span>
+</div>
+<ul class="mt-space-md space-y-2 text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check</span>
+<span>Resolução 4K em até 60 quadros por segundo</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check</span>
+<span>Treinamento de múltiplos perfis faciais</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check</span>
+<span>Renderização instantânea VIP dedicada</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm">check</span>
+<span>Acesso antecipado a novos modelos neurais</span>
+</li>
+</ul>
+</div>
+<a class="mt-space-lg w-full py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-semibold text-center transition-colors" href="#">
+            Escolher Ultra
+          </a>
+</div>
+</div>
+<div class="mt-space-lg text-center">
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary font-label-md text-label-md transition-colors" href="#planos">
+<span>Dúvidas sobre pacotes avulsos ou recargas? Ver tabela completa de planos</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- FAQ SECTION (PERGUNTAS FREQUENTES) -->
+<section class="w-full max-w-4xl mx-auto px-gutter-mobile md:px-gutter py-space-xl">
+<div class="text-center mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Tire suas dúvidas</span>
+<h2 class="mt-1 font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">
+          Perguntas Frequentes
+        </h2>
+</div>
+<div class="space-y-space-sm" id="faqAccordion">
+<!-- Pergunta 1 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md text-left flex items-center justify-between text-on-surface font-headline-sm text-base md:text-headline-sm font-semibold transition-colors hover:text-primary faq-toggle" onclick="toggleFaq(this)">
+<span>É seguro enviar minha foto?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md">
+            Sim, total segurança e privacidade. Seus dados biométricos e fotos enviadas são criptografados com padrões bancários (AES-256). As fotos servem única e exclusivamente para a renderização do seu clipe requisitado e nunca são comercializadas, vendidas ou utilizadas para alimentar modelos públicos sem o seu consentimento explícito.
+          </div>
+</div>
+<!-- Pergunta 2 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md text-left flex items-center justify-between text-on-surface font-headline-sm text-base md:text-headline-sm font-semibold transition-colors hover:text-primary faq-toggle" onclick="toggleFaq(this)">
+<span>Quanto tempo demora para gerar um vídeo?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md">
+            Em média, o processamento completo de vídeo leva entre 90 a 120 segundos. Você não precisa ficar esperando com a tela aberta: enviamos uma notificação e o clipe fica salvo automaticamente no seu painel para download em alta definição quando quiser.
+          </div>
+</div>
+<!-- Pergunta 3 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md text-left flex items-center justify-between text-on-surface font-headline-sm text-base md:text-headline-sm font-semibold transition-colors hover:text-primary faq-toggle" onclick="toggleFaq(this)">
+<span>Posso cancelar minha assinatura a qualquer momento?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md">
+            Sim, com apenas 1 clique no menu de configurações da sua conta. Não temos fidelidade obrigatória nem contratos longos. Se cancelar, você mantém o acesso integral a todos os seus créditos e funcionalidades até o encerramento do seu ciclo mensal vigente.
+          </div>
+</div>
+<!-- Pergunta 4 -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md text-left flex items-center justify-between text-on-surface font-headline-sm text-base md:text-headline-sm font-semibold transition-colors hover:text-primary faq-toggle" onclick="toggleFaq(this)">
+<span>Como funcionam os créditos?</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-200">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-md text-body-md">
+            Cada geração consome uma quantidade específica de créditos: usar um clipe pronto do catálogo consome 5 créditos, enquanto uma criação original gerada a partir de descrição em texto (Prompt IA) consome 8 créditos. Seus créditos renovam todo mês no plano escolhido e você também pode adquirir pacotes avulsos a qualquer instante.
+          </div>
+</div>
+</div>
+</section>
+<!-- BANNER FINAL DE CONVERSÃO -->
+<section class="w-full max-w-7xl mx-auto px-gutter-mobile md:px-gutter py-space-xl">
+<div class="relative rounded-3xl overflow-hidden bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-space-lg md:p-space-xl text-center flex flex-col items-center shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-tertiary/10 pointer-events-none"></div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">videocam</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold max-w-2xl tracking-tight">
+          Pronto para ver você mesmo na tela do cinema?
+        </h2>
+<p class="mt-2 font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Crie seu primeiro vídeo em menos de 2 minutos. Envie sua foto agora e ganhe 10 créditos de teste gratuitos.
+        </p>
+<div class="mt-space-lg">
+<a class="inline-flex items-center gap-space-xs px-space-xl py-4 rounded-xl font-label-lg text-label-lg text-surface-container-lowest bg-gradient-to-r from-primary via-primary-container to-secondary shadow-xl transition-transform hover:scale-105 active:scale-95 font-bold" href="#planos">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>Experimentar Agora Sem Custo</span>
+</a>
+</div>
+</div>
+</section>
+<!-- RODAPÉ COMPLETO -->
+<footer class="w-full bg-surface-container-lowest mt-space-xl py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter-mobile md:px-gutter flex flex-col gap-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg">
+<!-- Coluna 1: Marca & Descrição -->
+<div class="space-y-space-sm md:col-span-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">movie_filter</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold tracking-tight">SelfieMovie</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              A plataforma de inteligência artificial pioneira em colocar seu rosto em superproduções e vídeos virais com hiper-realismo.
+            </p>
+<!-- Redes Sociais -->
+<div class="flex items-center gap-space-sm pt-2">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank" title="Instagram">
+<span class="material-symbols-outlined text-xl">camera_alt</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" href="https://tiktok.com" rel="noopener noreferrer" target="_blank" title="TikTok">
+<span class="material-symbols-outlined text-xl">music_note</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-tertiary hover:bg-surface-container-high transition-colors" href="https://whatsapp.com" rel="noopener noreferrer" target="_blank" title="WhatsApp Suporte">
+<span class="material-symbols-outlined text-xl">chat</span>
+</a>
+</div>
+</div>
+<!-- Coluna 2: Produto -->
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-space-sm">Produto</h5>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#exemplos">Galeria de Modelos</a></li>
+<li><a class="hover:text-primary transition-colors" href="#planos">Tabela de Preços</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Gerador Texto-para-Vídeo</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API para Desenvolvedores</a></li>
+</ul>
+</div>
+<!-- Coluna 3: Empresa & Ética -->
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-space-sm">Ética e Segurança</h5>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Diretrizes de IA Ética</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Governança Biométrica</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Termos de Uso</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Política de Privacidade (LGPD)</a></li>
+</ul>
+</div>
+<!-- Coluna 4: Suporte e Status -->
+<div>
+<h5 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-space-sm">Atendimento</h5>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Central de Ajuda</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Fale com o Suporte</a></li>
+<li class="flex items-center gap-2 pt-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-tertiary font-label-sm text-label-sm font-semibold">Servidores de Render 100% Online</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Copyright & Aviso Legal -->
+<div class="pt-space-md border-t-0 bg-surface-container/30 p-space-md rounded-xl flex flex-col md:flex-row items-center justify-between text-on-surface-variant font-body-sm text-body-sm gap-2">
+<span>© 2025 SelfieMovie Brasil Tecnologia Ltda. Todos os direitos reservados. CNPJ 00.000.000/0001-00.</span>
+<span class="text-xs text-outline">Protegido por criptografia biométrica ponta a ponta.</span>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<script>
+  function toggleFaq(btn) {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (content.style.display === 'none') {
+      content.style.display = 'block';
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.style.display = 'none';
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  // Microinteração do Player no Hero
+  const playBtn = document.getElementById('playBtn');
+  if (playBtn) {
+    let isPlaying = true;
+    playBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      const icon = playBtn.querySelector('.material-symbols-outlined');
+      if (isPlaying) {
+        icon.textContent = 'pause_circle';
+      } else {
+        icon.textContent = 'play_circle';
+      }
+    });
+  }
+</script></main></body></html>

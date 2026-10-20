@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#1c1b21", "on-tertiary": "#003640", "secondary": "#ffb0cd", "on-tertiary-fixed": "#001f26", "on-tertiary-container": "#002f38", "on-secondary": "#640039", "inverse-on-surface": "#312f36", "on-primary-container": "#340080", "surface-dim": "#141319", "surface-container-highest": "#35343b", "tertiary": "#4cd7f6", "primary-fixed": "#e9ddff", "tertiary-container": "#009eb9", "on-secondary-container": "#ffbad3", "surface": "#141319", "on-background": "#e5e1ea", "background": "#141319", "secondary-fixed": "#ffd9e4", "surface-container-high": "#2b2930", "outline-variant": "#494454", "on-primary-fixed": "#23005c", "inverse-surface": "#e5e1ea", "on-primary": "#3c0091", "surface-bright": "#3a383f", "surface-container": "#201f25", "secondary-container": "#aa0266", "primary-fixed-dim": "#d0bcff", "on-tertiary-fixed-variant": "#004e5c", "primary-container": "#a078ff", "surface-container-lowest": "#0e0d13", "outline": "#958ea0", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#5516be", "on-surface-variant": "#cbc3d7", "tertiary-fixed": "#acedff", "surface-variant": "#35343b", "on-secondary-fixed-variant": "#8c0053", "secondary-fixed-dim": "#ffb0cd", "on-surface": "#e5e1ea", "error-container": "#93000a", "primary": "#d0bcff", "inverse-primary": "#6d3bd7", "on-secondary-fixed": "#3e0022", "tertiary-fixed-dim": "#4cd7f6", "error": "#ffb4ab", "on-error": "#690005", "surface-tint": "#d0bcff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "margin": "3rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-xl": "2.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.015em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="hidden md:flex fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex-col justify-between py-space-md shadow-[0_4px_30px_rgba(0,0,0,0.6)]"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SelfieMovie Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwWrCERTXCXBT0C-xZB_Rx3pfRXf4LRLtZZQ5vCqoFp0ELzLHAnJPzpD1jUy9pq-Z_kBYF7Q3Be-s29cWTxhpz5qP9LFCiIilF5Z7F3F7dCW0wVpQkLdCDIwryF6L1SfSVofSWC0IF4rN7oZnPN9-cI7DsA-7T0m9KZLL_Pc2gtgOu3-v-sqXy94T4C84SHM6OdvL9JPgF2BH4nxhITbILmpJugvNX4dr-tjpL-wkNgtenk3eBZ_6shhw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SelfieMovie</span></div></div><div class="mx-space-md p-space-sm rounded-xl bg-surface-container/60 backdrop-blur-md flex items-center justify-between shadow-[0_0_20px_rgba(160,120,255,0.15)]"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-lg">auto_awesome</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Saldo Ativo</span><span class="font-label-md text-label-md text-on-surface">45 Créditos</span></div></div><a class="px-space-sm py-1 rounded-lg bg-secondary-container text-on-secondary-container font-label-sm text-label-sm hover:bg-secondary hover:text-on-secondary transition-all flex items-center gap-1 shadow-[0_0_12px_rgba(170,2,102,0.4)]" data-path="creditos-planos" href="#"><span class="material-symbols-outlined text-xs">add</span>Recarregar</a></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-high text-primary font-bold rounded-xl shadow-[0_0_16px_rgba(208,188,255,0.15)]"><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="inicio" href="#"><span class="material-symbols-outlined">movie</span>Início</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined">magic_button</span>Criar com Texto</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined">video_library</span>Minhas Criações</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="creditos-planos" href="#"><span class="material-symbols-outlined">diamond</span>Créditos & Planos</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="perfil-rosto" href="#"><span class="material-symbols-outlined">face</span>Perfil & Rosto</a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low/70 flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d0ZfWGNE2AIbmhXSMVYyhvyh-WCicelbKqEGOqAksctHGTGPqPe2IxM-xHqcMriTy8jRyW_ZuIfB8sbzbu1IXhdx1sHMyWHBdLb2hcwYxiJQHy-AUHcCufVlcli98QUexKax93WWESjrVoJwdZj8Mfv_75qi-nuVS1se7czdWTquyDZeXr1euW11XEizJPamzqy3AGzAJj-ALXN_ONkRzfCveXlkv9utQ4XSdiRcTvKs93J01P532w"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">Camila Silva</span><span class="font-label-sm text-label-sm text-tertiary">Plano Pro</span></div></div><a class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="perfil-rosto" href="#" title="Configurações"><span class="material-symbols-outlined text-lg">settings</span></a></div></div></aside><div class="md:pl-72"><header class="fixed top-0 left-0 md:left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)] z-40 flex items-center justify-between px-gutter-mobile md:px-gutter"><div class="flex items-center gap-space-sm md:hidden"><img alt="SelfieMovie Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwWrCERTXCXBT0C-xZB_Rx3pfRXf4LRLtZZQ5vCqoFp0ELzLHAnJPzpD1jUy9pq-Z_kBYF7Q3Be-s29cWTxhpz5qP9LFCiIilF5Z7F3F7dCW0wVpQkLdCDIwryF6L1SfSVofSWC0IF4rN7oZnPN9-cI7DsA-7T0m9KZLL_Pc2gtgOu3-v-sqXy94T4C84SHM6OdvL9JPgF2BH4nxhITbILmpJugvNX4dr-tjpL-wkNgtenk3eBZ_6shhw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SelfieMovie</span></div><div class="hidden sm:flex items-center flex-1 max-w-md mx-space-md"><div class="w-full flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-low/90 text-on-surface-variant"><span class="material-symbols-outlined text-sm">search</span><span class="font-body-sm text-body-sm text-outline">Buscar modelos cinematográficos, atores, épocas...</span></div></div><div class="flex items-center gap-space-sm"><a class="hidden sm:flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-container-highest transition-colors" data-path="creditos-planos" href="#"><span class="material-symbols-outlined text-secondary text-sm">bolt</span><span class="font-label-md text-label-md">45</span></a><a class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="ajuda-faq" href="#" title="Ajuda e Suporte"><span class="material-symbols-outlined text-xl">help</span></a><a class="px-space-md py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-all flex items-center gap-space-xs shadow-[0_0_20px_rgba(160,120,255,0.4)]" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-base">movie_edit</span><span class="hidden sm:inline">Novo Vídeo</span></a><div class="md:hidden flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d0ZfWGNE2AIbmhXSMVYyhvyh-WCicelbKqEGOqAksctHGTGPqPe2IxM-xHqcMriTy8jRyW_ZuIfB8sbzbu1IXhdx1sHMyWHBdLb2hcwYxiJQHy-AUHcCufVlcli98QUexKax93WWESjrVoJwdZj8Mfv_75qi-nuVS1se7czdWTquyDZeXr1euW11XEizJPamzqy3AGzAJj-ALXN_ONkRzfCveXlkv9utQ4XSdiRcTvKs93J01P532w"/></div></div></header><main class="w-full pt-16 pb-24 md:pb-8 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Navigation & Breadcrumbs -->
+<div class="px-gutter-mobile md:px-gutter py-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<a class="group inline-flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#">
+<span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-label-md text-label-md">Voltar para a biblioteca</span>
+</a>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm shadow-sm transition-all" title="Salvar clipe nos favoritos" type="button">
+<span class="material-symbols-outlined text-base text-secondary">bookmark</span>
+<span>Favoritar</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/60 hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm shadow-sm transition-all" title="Compartilhar modelo" type="button">
+<span class="material-symbols-outlined text-base">share</span>
+<span class="hidden sm:inline">Compartilhar</span>
+</button>
+</div>
+</div>
+<!-- Main Showcase Bento / 2-Column Split -->
+<div class="px-gutter-mobile md:px-gutter pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Immersive Cinematic Video Studio Player (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Player Shell Container -->
+<div class="relative w-full rounded-2xl bg-surface-container-lowest/90 overflow-hidden shadow-2xl flex flex-col">
+<!-- Aspect Ratio Toggle Bar & Metadata Pills -->
+<div class="flex items-center justify-between px-space-md py-2.5 bg-surface-container/80 backdrop-blur-md">
+<div class="flex items-center gap-space-xs">
+<span class="flex h-2 w-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary tracking-wider uppercase">Pré-visualização 4K</span>
+</div>
+<!-- Format Selector Switcher -->
+<div class="flex items-center p-1 rounded-xl bg-surface-container-lowest/80 text-on-surface-variant font-label-sm text-label-sm">
+<button class="px-space-sm py-1 rounded-lg bg-surface-container-high text-primary font-bold shadow-sm transition-all flex items-center gap-1" id="btn-aspect-169" type="button">
+<span class="material-symbols-outlined text-sm">crop_16_9</span>
+<span>Cinema 16:9</span>
+</button>
+<button class="px-space-sm py-1 rounded-lg text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="btn-aspect-916" type="button">
+<span class="material-symbols-outlined text-sm">crop_portrait</span>
+<span>Stories 9:16</span>
+</button>
+</div>
+</div>
+<!-- Video Surface Area -->
+<div class="relative w-full aspect-video bg-surface-container-lowest overflow-hidden flex items-center justify-center transition-all duration-300" id="video-frame">
+<!-- Cinematic Scene Visual -->
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Hyper-realistic high octane nighttime sports car chase scene in Monaco winding streets, neon city reflections on wet asphalt, motion blur headlights, camera locked on the driver through windshield, Michael Bay cinematic tone, deep indigo purple and magenta atmospheric lighting, anamorphic lens flares, blockbuster film still 4k" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5rarjCBNG7d0coUVe0yB1zLPdN89S___F52Y9JtIh6FzcnAoUEiqohTJYsOwrUC9qeet5Koq4X1Rwq2XkjQYezGv4aMOlWanivQu_Zny8fE8IMm_QMyGh92Kv-a7Ik-puoCtzEQLMbCIBRf8xiXQ9eFTMczi-cCdSjYi8bcejl1FzmEWpgxxRSB5QgKe_rMDKs9OTeYivPlyJAPOER1DqgK3J0nYfdZpcZa7G8fwEGuC3HRVXqSdK8g"/>
+<!-- Atmospheric Dark Scrim Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/30 pointer-events-none"></div>
+<!-- Face-Swap Tracking Reticle Overlay (Decorative Technological Scanner) -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-32 h-44 rounded-3xl pointer-events-none flex flex-col justify-between p-2">
+<div class="flex justify-between items-start">
+<span class="w-3 h-3 border-t-2 border-l-2 border-tertiary/80 rounded-tl-sm"></span>
+<span class="w-3 h-3 border-t-2 border-r-2 border-tertiary/80 rounded-tr-sm"></span>
+</div>
+<div class="flex items-center justify-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-[10px] text-tertiary font-label-sm tracking-wider uppercase shadow-lg">Scan Facial Ativo</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="w-3 h-3 border-b-2 border-l-2 border-tertiary/80 rounded-bl-sm"></span>
+<span class="w-3 h-3 border-b-2 border-r-2 border-tertiary/80 rounded-br-sm"></span>
+</div>
+</div>
+<!-- Big Center Play Button Overlay -->
+<button class="absolute w-16 h-16 rounded-full bg-primary/20 hover:bg-primary/30 backdrop-blur-md flex items-center justify-center text-primary-fixed shadow-[0_0_30px_rgba(160,120,255,0.45)] hover:scale-110 transition-all group" title="Reproduzir vídeo" type="button">
+<span class="material-symbols-outlined text-4xl ml-1 text-primary-fixed group-hover:text-white" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<!-- Neural Face-Swap 4.0 Floating Badge -->
+<div class="absolute top-4 left-4 flex items-center gap-space-xs px-space-sm py-1 rounded-xl bg-surface-container-lowest/85 backdrop-blur-md text-on-surface shadow-lg">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">neurology</span>
+<span class="font-label-sm text-label-sm text-on-surface">Face-Swap Neural 4.0</span>
+</div>
+<!-- Scene Timestamp Pill -->
+<div class="absolute top-4 right-4 flex items-center gap-1.5 px-space-sm py-1 rounded-xl bg-surface-container-lowest/85 backdrop-blur-md text-on-surface-variant shadow-lg font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs text-secondary">hd</span>
+<span>4K Ultra HD</span>
+</div>
+<!-- Active Playback Bar Bottom Area -->
+<div class="absolute bottom-0 left-0 right-0 p-space-md flex flex-col gap-2 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent">
+<!-- Timeline Track -->
+<div class="w-full h-1.5 bg-surface-container-highest/80 rounded-full cursor-pointer relative group">
+<div class="h-full w-[44%] bg-gradient-to-r from-tertiary via-primary-container to-secondary rounded-full relative">
+<span class="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] scale-0 group-hover:scale-100 transition-transform"></span>
+</div>
+</div>
+<!-- Media Control Buttons -->
+<div class="flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-space-md">
+<button class="text-on-surface hover:text-primary transition-colors flex items-center" type="button">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center" type="button">
+<span class="material-symbols-outlined text-xl">volume_up</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">00:08 <span class="text-outline">/ 00:18</span></span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center p-1" title="Loop de prévia" type="button">
+<span class="material-symbols-outlined text-lg">repeat</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center p-1" title="Tela cheia" type="button">
+<span class="material-symbols-outlined text-xl">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Film Metadata Strip & Sound Wave Visualizer -->
+<div class="p-space-md rounded-2xl bg-surface-container-low/70 backdrop-blur-xl flex flex-wrap items-center justify-between gap-space-md shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl">graphic_eq</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Trilha Sonora Ativa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chase in Monte Carlo (Sinfônica Épica)</span>
+</div>
+</div>
+<!-- Mini Audio Waveform inline SVG -->
+<div class="flex items-center gap-1 h-6 px-space-sm">
+<span class="w-1 h-3 bg-tertiary rounded-full animate-pulse"></span>
+<span class="w-1 h-5 bg-tertiary-container rounded-full animate-bounce"></span>
+<span class="w-1 h-6 bg-primary rounded-full"></span>
+<span class="w-1 h-2 bg-secondary rounded-full animate-pulse"></span>
+<span class="w-1 h-4 bg-secondary-container rounded-full"></span>
+<span class="w-1 h-6 bg-primary-container rounded-full animate-bounce"></span>
+<span class="w-1 h-3 bg-tertiary rounded-full"></span>
+<span class="w-1 h-5 bg-secondary rounded-full animate-pulse"></span>
+<span class="w-1 h-2 bg-primary rounded-full"></span>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+<span>Áudio Masterizado com Sincronia Labial</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Clip Details, Customization & Primary Generation CTA (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Header & Category Badges -->
+<div class="p-space-lg rounded-2xl bg-surface-container/70 backdrop-blur-xl flex flex-col gap-space-sm shadow-xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 shadow-[0_0_12px_rgba(170,2,102,0.3)]">
+<span class="material-symbols-outlined text-xs">local_fire_department</span>
+              Popular
+            </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Ação</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Cinema Noir</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">speed</span>
+              Alta Adrenalina
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+            Agente Secreto em Mônaco
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Coloque seu rosto nesta perseguição de tirar o fôlego pelas ruas sinuosas de Mônaco em um carro esportivo clássico, com explosões e reflexos de neon noturnos.
+          </p>
+<!-- Technical Specs Matrix -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">timer</span>
+                Duração
+              </span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5">18s</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary">aspect_ratio</span>
+                Resolução
+              </span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5">4K (2160p)</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">graphic_eq</span>
+                Trilha
+              </span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5">Inclusa</span>
+</div>
+</div>
+</div>
+<!-- Protagonist Face Calibration Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-low/90 backdrop-blur-xl flex flex-col gap-space-sm shadow-xl">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Rosto do Protagonista</span>
+<span class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+              Pronto para Render
+            </span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container/80">
+<div class="flex items-center gap-space-sm">
+<!-- Selected Face Avatar with Radiant Aura -->
+<div class="relative w-12 h-12 rounded-xl overflow-hidden shadow-[0_0_16px_rgba(208,188,255,0.45)]">
+<img alt="Camila Silva - Rosto Selecionado" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d0ZfWGNE2AIbmhXSMVYyhvyh-WCicelbKqEGOqAksctHGTGPqPe2IxM-xHqcMriTy8jRyW_ZuIfB8sbzbu1IXhdx1sHMyWHBdLb2hcwYxiJQHy-AUHcCufVlcli98QUexKax93WWESjrVoJwdZj8Mfv_75qi-nuVS1se7czdWTquyDZeXr1euW11XEizJPamzqy3AGzAJj-ALXN_ONkRzfCveXlkv9utQ4XSdiRcTvKs93J01P532w"/>
+<div class="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-primary to-secondary"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface truncate">Camila Silva</span>
+<span class="material-symbols-outlined text-tertiary text-xs" title="Face calibrada com ângulo 3D">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Rosto calibrado com iluminação de estúdio</span>
+</div>
+</div>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-sm text-label-sm transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-xs">cached</span>
+<span>Trocar foto</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-xs">
+            Seus dados faciais são mantidos em segurança e utilizados exclusivamente para calcular a correspondência de malha muscular e luz desta renderização.
+          </p>
+</div>
+<!-- Generation Checkout & Action Panel -->
+<div class="p-space-lg rounded-2xl bg-gradient-to-b from-surface-container-high/90 to-surface-container/95 backdrop-blur-2xl flex flex-col gap-space-md shadow-2xl">
+<!-- Credit Breakdown Table -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">monetization_on</span>
+                Custo desta geração:
+              </span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">5 Créditos</span>
+</div>
+<!-- Balances Bar -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest/70 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Seu saldo atual: <strong class="text-on-surface font-label-md">45 Créditos</strong></span>
+<span class="text-outline">Restarão: <strong class="text-tertiary font-label-md">40 Créditos</strong></span>
+</div>
+</div>
+<!-- High-Voltage Primary Action Button -->
+<button class="relative group w-full py-4 px-space-lg rounded-xl bg-gradient-to-r from-inverse-primary via-primary-container to-secondary-container text-white font-label-lg text-label-lg shadow-[0_0_32px_rgba(170,2,102,0.45)] hover:shadow-[0_0_48px_rgba(208,188,255,0.7)] hover:scale-[1.02] active:scale-[0.99] transition-all duration-200 flex items-center justify-center gap-space-sm overflow-hidden" id="btn-generate" type="button">
+<!-- Animated shimmer highlight -->
+<span class="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-[300%] transition-transform duration-1000 ease-in-out pointer-events-none"></span>
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-bold tracking-wide">Gerar com meu rosto (5 Créditos)</span>
+</button>
+<!-- Speed & Ethical Guarantee Notice -->
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-base mt-0.5">bolt</span>
+<span class="font-body-sm text-body-sm text-outline">
+<strong class="text-on-surface">Tempo estimado: ~90 segundos.</strong> Seus créditos só são debitados após a conclusão bem-sucedida e inspeção de render.
+            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Processing Modal Simulation Drawer (Initially Hidden) -->
+<div class="fixed inset-0 z-50 bg-surface-dim/80 backdrop-blur-2xl hidden items-center justify-center p-gutter-mobile" id="render-modal">
+<div class="max-w-lg w-full rounded-2xl bg-surface-container-high/95 p-space-xl flex flex-col items-center text-center shadow-[0_24px_64px_rgba(0,0,0,0.8),0_0_32px_rgba(160,120,255,0.3)]">
+<div class="w-20 h-20 rounded-2xl bg-surface-container-lowest flex items-center justify-center text-tertiary shadow-[0_0_24px_rgba(76,215,246,0.4)] mb-space-md">
+<span class="material-symbols-outlined text-4xl animate-spin">sync</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Dirigindo sua cena...</h3>
+<p class="font-body-md text-body-md text-tertiary mb-space-lg" id="render-step-label">Detectando traços e expressões faciais...</p>
+<!-- Progress Track -->
+<div class="w-full h-2.5 rounded-full bg-surface-container-lowest overflow-hidden mb-space-md">
+<div class="h-full w-1/4 bg-gradient-to-r from-tertiary via-primary to-secondary rounded-full transition-all duration-700" id="render-progress-bar"></div>
+</div>
+<div class="flex items-center justify-between w-full font-label-sm text-label-sm text-outline mb-space-lg">
+<span>Fila prioritária (Plano Pro)</span>
+<span id="render-pct">25% concluído</span>
+</div>
+<button class="px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm transition-colors" id="btn-cancel-render" type="button">
+        Cancelar geração
+      </button>
+</div>
+</div>
+<!-- SECTION: Outros clipes semelhantes nesta categoria -->
+<div class="px-gutter-mobile md:px-gutter pt-space-lg pb-space-xl flex flex-col gap-space-md">
+<div class="flex flex-wrap items-end justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-xs">local_movies</span>
+<span>Mais Ação Cinematográfica</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Outros clipes semelhantes nesta categoria</h2>
+</div>
+<a class="flex items-center gap-1 text-primary hover:text-primary-fixed font-label-md text-label-md transition-colors" data-path="inicio" href="#">
+<span>Ver catálogo completo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Similar Clips Bento Carousel Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-lg hover:shadow-[0_12px_40px_-10px_rgba(139,92,246,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Futuristic cyberpunk detective in rainy Tokyo street walking through holographic neon signs with long black trench coat, dramatic cinematic lighting, deep magenta and cyan color grading, ultra realistic movie scene" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJmT1Odg0C4GMJOAqYwm6IDGCXNmZ1HgjoUcHNgDG8NCCz4lyh6IMTEfGIGf1xdERBMGdBt8hpr1osCkbkbByL3TLShxV6DWp6Qa7wVsJ9Md5e9Bm5l6kcOQWUtkFUDk6DgzCqk4vPeQ-4pmYzWfAn1psn2OTDxgsxp8a3rv8wqndZlnBzc0n_HayzxNvlXbOE30SGqO1Y1emQwWMy0aqQvVJgaSceiVB2SAgrE8FPGNe6anXWep5pWg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<!-- Cost Badge -->
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">bolt</span>
+<span>4 Créditos</span>
+</div>
+<!-- Bottom Card Meta -->
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Detetive Cyberpunk Neo-Tokyo</span>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Sci-Fi • 15s</span>
+<span class="flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-xs text-secondary">star</span> 4.9
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-lg hover:shadow-[0_12px_40px_-10px_rgba(139,92,246,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Epic medieval knight battlefield scene standing on misty hilltop holding glowing sword at sunset, dramatic storm clouds, golden hour cinematic backlight, ultra high detail epic fantasy movie scene" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQu6evckW-M_MAde4IBdXJA4NA3KZJuyxMOQpLG3bNwVyicdQGUPn_5kiQDyMaKwYInkIlQe51z6BTkG-zh5bM20oqEyh7R8QSYM1B2hXizGyE266CiVtaAI7BYmHX0bt3L4Bym9DXXM8DbOiWfkykZCjCHf7jJVbG3iu3ZEeiZIVptr2IgCikVPOEEITZCcdkqO6M137qoXUB3nr5DMARjBF1L43943fWFJN3G2yPPNY7HPi8yAcksw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">bolt</span>
+<span>5 Créditos</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">O Último Guardião do Reino</span>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Épico • 20s</span>
+<span class="flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-xs text-secondary">star</span> 4.8
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-lg hover:shadow-[0_12px_40px_-10px_rgba(139,92,246,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vintage 1960s Hollywood red carpet movie premiere paparazzi flashes retro tuxedo glamour stylish confident walk celebrity moment luxury atmosphere cinematic grain film" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT3iFBs05aM5P1j9HO-R15W9jn1oj1Hz0BgqDeb3KUqXq0vEifED1l92FjwsUtp5ITX4ZxMcNjZmRCvyKFdlPUpsyOknjJWA_u4ajmxzIXeUpHUqHyH1OCeWAQeLdEXpFgrG97AxGoL21mEYThpT0_BBPCihphfy_uHMlUpBuUJM-ynx1WVTcT6L0fWaKo3Ez_BMzx6nPjH1go4cieDW9pBOB18AA2vztB1WQ4sIJKRoJ17wALufkhcw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">bolt</span>
+<span>3 Créditos</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Noite de Estreia em Cannes</span>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Glamour • 12s</span>
+<span class="flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-xs text-secondary">star</span> 5.0
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-lg hover:shadow-[0_12px_40px_-10px_rgba(139,92,246,0.35)] transition-all duration-300 flex flex-col cursor-pointer">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Interstellar astronaut walking slowly on alien mineral planet with glowing crystalline ground, dual moons in purple starry sky, reflective spacesuit visor, high sci-fi cinematography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0z9_HV-EckGQrKEhSUq63J0tTVROGrcgYUweZl_6C3Q_fbhUseH209FTGEfnyWBgw4lutIE-OTC4Q5HGILk0clKgZv_2zkvg0bgKyLiM5QJ1Mm8oqqT-YcHH79wrHGtTyGk0yubRnlCZgm95Xm_GCFi1eah9ByN3b_oSRwk2pqcE_i0GenoGxpUoB_DqUZcBPf30deAWsJhSRvZvlgEr1enrEBkAnsXr7VYXqRYdu-mYTgr9vO3sokQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">bolt</span>
+<span>5 Créditos</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface line-clamp-1 group-hover:text-primary transition-colors">Horizonte Alienígena Cósmico</span>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Espacial • 18s</span>
+<span class="flex items-center gap-0.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-xs text-secondary">star</span> 4.9
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    (function() {
+      const btn169 = document.getElementById('btn-aspect-169');
+      const btn916 = document.getElementById('btn-aspect-916');
+      const videoFrame = document.getElementById('video-frame');
+      
+      if (btn169 && btn916 && videoFrame) {
+        btn169.addEventListener('click', function() {
+          videoFrame.classList.remove('aspect-[9/16]', 'max-w-xs', 'mx-auto');
+          videoFrame.classList.add('aspect-video');
+          btn169.classList.add('bg-surface-container-high', 'text-primary', 'font-bold');
+          btn169.classList.remove('text-on-surface-variant');
+          btn916.classList.remove('bg-surface-container-high', 'text-primary', 'font-bold');
+          btn916.classList.add('text-on-surface-variant');
+        });
+
+        btn916.addEventListener('click', function() {
+          videoFrame.classList.remove('aspect-video');
+          videoFrame.classList.add('aspect-[9/16]', 'max-w-xs', 'mx-auto');
+          btn916.classList.add('bg-surface-container-high', 'text-primary', 'font-bold');
+          btn916.classList.remove('text-on-surface-variant');
+          btn169.classList.remove('bg-surface-container-high', 'text-primary', 'font-bold');
+          btn169.classList.add('text-on-surface-variant');
+        });
+      }
+
+      // Render Modal Simulation
+      const btnGenerate = document.getElementById('btn-generate');
+      const renderModal = document.getElementById('render-modal');
+      const btnCancel = document.getElementById('btn-cancel-render');
+      const progressBar = document.getElementById('render-progress-bar');
+      const stepLabel = document.getElementById('render-step-label');
+      const pctLabel = document.getElementById('render-pct');
+
+      let timer = null;
+
+      if (btnGenerate && renderModal && btnCancel) {
+        btnGenerate.addEventListener('click', function() {
+          renderModal.classList.remove('hidden');
+          renderModal.classList.add('flex');
+          
+          let progress = 20;
+          const steps = [
+            "Mapeando traços 3D da Camila...",
+            "Casando iluminação noturna de Mônaco...",
+            "Renderizando reflexos e partículas em 4K...",
+            "Sincronizando áudio orquestral épico...",
+            "Finalizando clipe de cinema!"
+          ];
+          
+          let stepIdx = 0;
+          timer = setInterval(function() {
+            progress += 18;
+            stepIdx = Math.min(stepIdx + 1, steps.length - 1);
+            if (progressBar) progressBar.style.width = Math.min(progress, 100) + '%';
+            if (pctLabel) pctLabel.textContent = Math.min(progress, 100) + '% concluído';
+            if (stepLabel) stepLabel.textContent = steps[stepIdx];
+
+            if (progress >= 100) {
+              clearInterval(timer);
+              setTimeout(function() {
+                renderModal.classList.add('hidden');
+                renderModal.classList.remove('flex');
+                alert('✨ Seu clipe está pronto para o tapete vermelho! Acesse a aba "Minhas Criações".');
+              }, 600);
+            }
+          }, 800);
+        });
+
+        btnCancel.addEventListener('click', function() {
+          clearInterval(timer);
+          renderModal.classList.add('hidden');
+          renderModal.classList.remove('flex');
+          if (progressBar) progressBar.style.width = '25%';
+        });
+      }
+    })();
+  </script>
+</div></main></div><nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl z-50 flex items-center justify-around px-gutter-mobile shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-bold"><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="inicio" href="#"><span class="material-symbols-outlined text-xl">movie</span><span>Início</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-xl">magic_button</span><span>Criar</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-xl">video_library</span><span>Criações</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="perfil-rosto" href="#"><span class="material-symbols-outlined text-xl">face</span><span>Perfil</span></a></nav></body></html>

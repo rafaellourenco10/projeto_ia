@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#1c1b21", "on-tertiary": "#003640", "secondary": "#ffb0cd", "on-tertiary-fixed": "#001f26", "on-tertiary-container": "#002f38", "on-secondary": "#640039", "inverse-on-surface": "#312f36", "on-primary-container": "#340080", "surface-dim": "#141319", "surface-container-highest": "#35343b", "tertiary": "#4cd7f6", "primary-fixed": "#e9ddff", "tertiary-container": "#009eb9", "on-secondary-container": "#ffbad3", "surface": "#141319", "on-background": "#e5e1ea", "background": "#141319", "secondary-fixed": "#ffd9e4", "surface-container-high": "#2b2930", "outline-variant": "#494454", "on-primary-fixed": "#23005c", "inverse-surface": "#e5e1ea", "on-primary": "#3c0091", "surface-bright": "#3a383f", "surface-container": "#201f25", "secondary-container": "#aa0266", "primary-fixed-dim": "#d0bcff", "on-tertiary-fixed-variant": "#004e5c", "primary-container": "#a078ff", "surface-container-lowest": "#0e0d13", "outline": "#958ea0", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#5516be", "on-surface-variant": "#cbc3d7", "tertiary-fixed": "#acedff", "surface-variant": "#35343b", "on-secondary-fixed-variant": "#8c0053", "secondary-fixed-dim": "#ffb0cd", "on-surface": "#e5e1ea", "error-container": "#93000a", "primary": "#d0bcff", "inverse-primary": "#6d3bd7", "on-secondary-fixed": "#3e0022", "tertiary-fixed-dim": "#4cd7f6", "error": "#ffb4ab", "on-error": "#690005", "surface-tint": "#d0bcff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "margin": "3rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-xl": "2.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.015em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="hidden md:flex fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex-col justify-between py-space-md shadow-[0_4px_30px_rgba(0,0,0,0.6)]"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SelfieMovie Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwWrCERTXCXBT0C-xZB_Rx3pfRXf4LRLtZZQ5vCqoFp0ELzLHAnJPzpD1jUy9pq-Z_kBYF7Q3Be-s29cWTxhpz5qP9LFCiIilF5Z7F3F7dCW0wVpQkLdCDIwryF6L1SfSVofSWC0IF4rN7oZnPN9-cI7DsA-7T0m9KZLL_Pc2gtgOu3-v-sqXy94T4C84SHM6OdvL9JPgF2BH4nxhITbILmpJugvNX4dr-tjpL-wkNgtenk3eBZ_6shhw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SelfieMovie</span></div></div><div class="mx-space-md p-space-sm rounded-xl bg-surface-container/60 backdrop-blur-md flex items-center justify-between shadow-[0_0_20px_rgba(160,120,255,0.15)]"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-lg">auto_awesome</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Saldo Ativo</span><span class="font-label-md text-label-md text-on-surface">45 Créditos</span></div></div><a class="px-space-sm py-1 rounded-lg bg-secondary-container text-on-secondary-container font-label-sm text-label-sm hover:bg-secondary hover:text-on-secondary transition-all flex items-center gap-1 shadow-[0_0_12px_rgba(170,2,102,0.4)]" data-path="creditos-planos" href="#"><span class="material-symbols-outlined text-xs">add</span>Recarregar</a></div><nav class="flex flex-col gap-1 px-space-sm" data-active-classes="bg-surface-container-high text-primary font-bold rounded-xl shadow-[0_0_16px_rgba(208,188,255,0.15)]"><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="inicio" href="#"><span class="material-symbols-outlined">movie</span>Início</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined">magic_button</span>Criar com Texto</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined">video_library</span>Minhas Criações</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="creditos-planos" href="#"><span class="material-symbols-outlined">diamond</span>Créditos & Planos</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-xl text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-all" data-path="perfil-rosto" href="#"><span class="material-symbols-outlined">face</span>Perfil & Rosto</a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low/70 flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d0ZfWGNE2AIbmhXSMVYyhvyh-WCicelbKqEGOqAksctHGTGPqPe2IxM-xHqcMriTy8jRyW_ZuIfB8sbzbu1IXhdx1sHMyWHBdLb2hcwYxiJQHy-AUHcCufVlcli98QUexKax93WWESjrVoJwdZj8Mfv_75qi-nuVS1se7czdWTquyDZeXr1euW11XEizJPamzqy3AGzAJj-ALXN_ONkRzfCveXlkv9utQ4XSdiRcTvKs93J01P532w"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface">Camila Silva</span><span class="font-label-sm text-label-sm text-tertiary">Plano Pro</span></div></div><a class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="perfil-rosto" href="#" title="Configurações"><span class="material-symbols-outlined text-lg">settings</span></a></div></div></aside><div class="md:pl-72"><header class="fixed top-0 left-0 md:left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)] z-40 flex items-center justify-between px-gutter-mobile md:px-gutter"><div class="flex items-center gap-space-sm md:hidden"><img alt="SelfieMovie Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WwWrCERTXCXBT0C-xZB_Rx3pfRXf4LRLtZZQ5vCqoFp0ELzLHAnJPzpD1jUy9pq-Z_kBYF7Q3Be-s29cWTxhpz5qP9LFCiIilF5Z7F3F7dCW0wVpQkLdCDIwryF6L1SfSVofSWC0IF4rN7oZnPN9-cI7DsA-7T0m9KZLL_Pc2gtgOu3-v-sqXy94T4C84SHM6OdvL9JPgF2BH4nxhITbILmpJugvNX4dr-tjpL-wkNgtenk3eBZ_6shhw"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SelfieMovie</span></div><div class="hidden sm:flex items-center flex-1 max-w-md mx-space-md"><div class="w-full flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-low/90 text-on-surface-variant"><span class="material-symbols-outlined text-sm">search</span><span class="font-body-sm text-body-sm text-outline">Buscar modelos cinematográficos, atores, épocas...</span></div></div><div class="flex items-center gap-space-sm"><a class="hidden sm:flex items-center gap-space-xs px-space-md py-2 rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-container-highest transition-colors" data-path="creditos-planos" href="#"><span class="material-symbols-outlined text-secondary text-sm">bolt</span><span class="font-label-md text-label-md">45</span></a><a class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="ajuda-faq" href="#" title="Ajuda e Suporte"><span class="material-symbols-outlined text-xl">help</span></a><a class="px-space-md py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-all flex items-center gap-space-xs shadow-[0_0_20px_rgba(160,120,255,0.4)]" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-base">movie_edit</span><span class="hidden sm:inline">Novo Vídeo</span></a><div class="md:hidden flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2d0ZfWGNE2AIbmhXSMVYyhvyh-WCicelbKqEGOqAksctHGTGPqPe2IxM-xHqcMriTy8jRyW_ZuIfB8sbzbu1IXhdx1sHMyWHBdLb2hcwYxiJQHy-AUHcCufVlcli98QUexKax93WWESjrVoJwdZj8Mfv_75qi-nuVS1se7czdWTquyDZeXr1euW11XEizJPamzqy3AGzAJj-ALXN_ONkRzfCveXlkv9utQ4XSdiRcTvKs93J01P532w"/></div></div></header><main class="w-full pt-16 pb-24 md:pb-8 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Atmospheric Underglow (contained within canvas) -->
+<div class="relative w-full overflow-hidden px-gutter-mobile md:px-gutter">
+<div class="pointer-events-none absolute -top-40 left-1/4 w-96 h-96 rounded-full bg-primary-container/20 blur-[120px]"></div>
+<div class="pointer-events-none absolute top-20 right-10 w-80 h-80 rounded-full bg-secondary-container/15 blur-[100px]"></div>
+<!-- Search & Filtration Nexus -->
+<div class="relative z-10 pt-space-md pb-space-lg flex flex-col gap-space-md">
+<!-- Search Field + Sorting Bar -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Cinematic Search Input -->
+<div class="relative flex-1 group">
+<div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-on-surface-variant group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="w-full pl-12 pr-28 py-3.5 rounded-xl bg-surface-container-low/85 text-on-surface font-body-md text-body-md placeholder-outline focus:outline-none focus:bg-surface-container-high transition-all shadow-[0_4px_24px_rgba(0,0,0,0.4)]" id="clip-search" placeholder="Buscar cenas, filmes, tendências, danças, épocas..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-space-md flex items-center gap-1.5 pointer-events-none">
+<kbd class="px-2 py-0.5 rounded-lg bg-surface-container-highest/90 text-on-surface-variant font-label-sm text-label-sm shadow-sm">Ctrl</kbd>
+<span class="text-outline text-xs">+</span>
+<kbd class="px-2 py-0.5 rounded-lg bg-surface-container-highest/90 text-on-surface-variant font-label-sm text-label-sm shadow-sm">K</kbd>
+</div>
+</div>
+<!-- Metric & Order Selector -->
+<div class="flex items-center gap-space-sm self-end lg:self-auto">
+<div class="flex items-center gap-space-xs px-space-md py-3 rounded-xl bg-surface-container-low/80 shadow-md">
+<span class="material-symbols-outlined text-outline text-lg">sort</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider hidden sm:inline">Ordenar:</span>
+<select class="bg-transparent text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer">
+<option class="bg-surface-container-high text-on-surface" value="populares">Mais populares</option>
+<option class="bg-surface-container-high text-on-surface" value="recentes">Recentes</option>
+<option class="bg-surface-container-high text-on-surface" value="creditos">Custo de créditos</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Quick Filter Horizontal Chips -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none no-scrollbar">
+<button class="filter-chip active flex items-center gap-1.5 px-space-md py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md whitespace-nowrap shadow-[0_0_16px_rgba(160,120,255,0.35)] transition-all">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+          Todos
+        </button>
+<button class="filter-chip flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high/70 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-label-md text-label-md whitespace-nowrap transition-all">
+<span class="material-symbols-outlined text-sm">graphic_eq</span>
+          Dança
+        </button>
+<button class="filter-chip flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high/70 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-label-md text-label-md whitespace-nowrap transition-all">
+<span class="material-symbols-outlined text-sm">explore</span>
+          Aventura
+        </button>
+<button class="filter-chip flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high/70 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-label-md text-label-md whitespace-nowrap transition-all">
+<span class="material-symbols-outlined text-sm">flight</span>
+          Viagem
+        </button>
+<button class="filter-chip flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high/70 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-label-md text-label-md whitespace-nowrap transition-all">
+<span class="material-symbols-outlined text-sm">sports_motorsports</span>
+          Esportes
+        </button>
+<button class="filter-chip flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high/70 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-label-md text-label-md whitespace-nowrap transition-all">
+<span class="material-symbols-outlined text-sm">theaters</span>
+          Filme
+        </button>
+<button class="filter-chip flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high/70 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-label-md text-label-md whitespace-nowrap transition-all">
+<span class="material-symbols-outlined text-sm">mood</span>
+          Engraçado
+        </button>
+<button class="filter-chip flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high/70 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest font-label-md text-label-md whitespace-nowrap transition-all">
+<span class="material-symbols-outlined text-sm">favorite</span>
+          Romântico
+        </button>
+</div>
+</div>
+<!-- Featured Release Spotlight Banner -->
+<div class="relative w-full rounded-2xl overflow-hidden mb-space-xl bg-surface-container-low shadow-[0_16px_40px_rgba(0,0,0,0.6)]">
+<div class="absolute inset-0 bg-cover bg-center opacity-45 mix-blend-luminosity scale-105 hover:scale-100 transition-transform duration-700" data-alt="Cinematic Hollywood epic film set with a dramatic spaceship hangar, glowing purple lasers, haze atmosphere, anamorphic blue lens flare, highly detailed sci-fi protagonist silhouette in cinematic 8k resolution" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmQ6rfUTmoYbz4Vcqfntrznsya7GcDn8i-94N4lJuvtUnlTztl479gybQjrOIi6nwieVHZWIAptoxkODDWTFB7kvbusyKSh-_w9zecdIOL2YWDDW8uqxnROMaskxPbb7_fN12fY-HYO1mfq2ARZ1sWo5eLZYz2K9tvwTIDQFL79aRXc8inVJu2auE5wQsWttOhR5XAUHRr4iczOLTwC06RLP6AP4s3-t3hnzgMwHCRha4ulig5lPX9cA')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+<div class="relative z-10 p-space-md md:p-space-xl flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-space-xs w-max px-space-sm py-1 rounded-full bg-secondary-container/80 text-on-secondary-container backdrop-blur-md shadow-[0_0_16px_rgba(170,2,102,0.5)]">
+<span class="material-symbols-outlined text-xs">local_fire_department</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Novidade da Semana</span>
+</div>
+<h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight mt-1">
+            Pack Especial: Cinema Hollywoodiano
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Seja o herói ou heroína no novo épico de ficção científica intergaláctico. Alta fidelidade de renderização 4K com iluminação volumétrica dinâmica sincronizada com sua foto.
+          </p>
+<div class="flex items-center gap-space-md mt-space-sm">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-base">verified</span>
+              Qualidade Ultra-HD
+            </span>
+<span class="text-outline text-xs">•</span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-base">bolt</span>
+              Render Turbo 12s
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<a class="px-space-lg py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-white font-label-lg text-label-lg shadow-[0_0_28px_rgba(160,120,255,0.45)] hover:shadow-[0_0_36px_rgba(255,176,205,0.6)] hover:scale-[1.02] transition-all flex items-center gap-space-sm" data-path="criar-com-texto" href="#">
+<span class="material-symbols-outlined text-xl">star</span>
+<span>Estrelar Estreia</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Section Header Meta -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-baseline gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Galeria de Cenas & Clipes</h3>
+<span class="font-label-sm text-label-sm text-outline">128 modelos disponíveis</span>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span>Atualizado a cada 24 horas</span>
+</div>
+</div>
+<!-- Master Clip Grid (4 to 5 Columns fluid on desktop) -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-space-md pb-space-xl">
+<!-- CARD 1: Agente Secreto em Mônaco -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300">
+<!-- Vertical Video Container (9:16 Aspect) -->
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Handsome secret agent in luxury tuxedo walking out of a high-stakes Monaco casino at night, wet ground reflecting neon magenta and violet lights, intense cinematic movie action scene, film grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADXf8Qys99vr8qvqBYdde2A6Oiy1cd5s4Sz3AoweCPi8eNMyc01UcSBcrlP9p7gmC8IxI-_zpR_rHeHjgQNj2OoYytRe7DKHozOFEpBUjShcKinAurdGSwkfoDveB3mXJbjWi7Nq3uWveMvPr56D6RucdYkUf192vZBX6yaLMAWzbZk-oiNy3bRmJTeB1BYEJJ3d_68_NualWG-xqDY6FFwoKpti9kX8oHYoPtxYUe0V56RpjuvdZQQQ"/>
+<!-- Gradient Scrim Overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+<!-- Top Overlays: Tag & Credit Cost Badge -->
+<div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-md bg-gradient-to-r from-secondary-container to-primary-container text-white font-label-sm text-label-sm shadow-md">
+              Popular
+            </span>
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5 Créditos</span>
+</div>
+</div>
+<!-- Hover Play Center Indicator -->
+<div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/40 backdrop-blur-xs">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.8)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              Prévia com som
+            </span>
+</div>
+<!-- Bottom Overlays: Duration -->
+<div class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>00:18</span>
+</div>
+<!-- Favorite Quick Button -->
+<button class="absolute bottom-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<!-- Meta Details & Action -->
+<div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Filme de Ação</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate mt-0.5">Agente Secreto em Mônaco</h4>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1 group/btn shadow-sm">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Estrelar este clipe</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: Explorador Intergaláctico -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heroic cosmic space explorer in reflective visor helmet standing on an alien crystalline purple planet with nebulae and planetary rings in deep space background, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_kWzZP-rM2bmp7TocaL4AyMIk8EqdtX_gnnMCD9HEYj_sI1f6Wxy6Q5Gz9o7rASgLqPaHce_2VMF7DdSv2d0nwhsBR4gclQXKJVjj6opMeeInL4tlIOdkJWJjSbVd_3P3FjKw3z-2Tb2WbOQTH3bUc5lg1A8ZxqReGEygrvmyjE7F-2ksC_C-D8e692mqaxKORVURZ07-OgPZCphdNRxQ4pNI_065oucI0O-4CvanJqLSJmfyRDdQ6g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-md bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow-md">
+              Novo
+            </span>
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5 Créditos</span>
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/40 backdrop-blur-xs">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.8)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              Prévia com som
+            </span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>00:25</span>
+</div>
+<button class="absolute bottom-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Ficção Científica</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate mt-0.5">Explorador Intergaláctico</h4>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1 group/btn shadow-sm">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Estrelar este clipe</span>
+</button>
+</div>
+</div>
+<!-- CARD 3: Dançarino em Festival Elétrico -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Charismatic electronic music dancer moving dynamically in front of giant neon laser stage festival, vivid magenta and cyan lasers piercing through smoke, energetic concert vibes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDxrHpA_RPhKUf9lJPde6t7cfRHFLQfmWdd3pTPAmw0_RHtq7AFY3e8Mzq50CBsU8zuqoGi-6e7ViCUPBcBZ98sJpQx-aOl-jfCUY2BCbcoW58jtYXFhaITMHZYfQObiAyaQc79PU4MhV-Fw_PmzAM0a9kzCEUKSm1eIlyf12EJmPwwG51mQSrtU8lPeK_MuIG7PaL18nLeqgU-CgUqXXDWTVWgysLxNZN2OjGZF5zIAA-kH4spKlomQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow-md">
+              Trending
+            </span>
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5 Créditos</span>
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/40 backdrop-blur-xs">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.8)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              Prévia com som
+            </span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>00:15</span>
+</div>
+<button class="absolute bottom-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Dança & Música</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate mt-0.5">Dançarino em Festival</h4>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1 group/btn shadow-sm">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Estrelar este clipe</span>
+</button>
+</div>
+</div>
+<!-- CARD 4: Guerreiro do Trono de Cinzas -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Epic medieval warrior clad in obsidian carved plate armor sitting upon an ashen stone throne surrounded by glowing embers and torch fire, cinematic fantasy drama aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM2WlGv5_95bGUBpHMHehkWCfpPlS9zSL8IfC-B28N7TDkUdPzUpTBc5LIWqhVkJoIWPeLtnzVdpZAjuWJsRWa3Qt6wrFHGcIVXyUvMcHibwvGBmQFp7bSSmw_AhBs42GsjiraV7AMjeMhBBl8p1GHVTqCki5zSHL1ch9tSQgw5u5bLnXYFJmCh26x43jcBlJB40f8fLgYzujkk21jzWFdx7w2UNXsAokG2tT6_dpOppmcpd8IVIxA1g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-highest text-primary font-label-sm text-label-sm shadow-md">
+              Épico
+            </span>
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5 Créditos</span>
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/40 backdrop-blur-xs">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.8)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              Prévia com som
+            </span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>00:20</span>
+</div>
+<button class="absolute bottom-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Fantasia Épica</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate mt-0.5">Trono de Cinzas</h4>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1 group/btn shadow-sm">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Estrelar este clipe</span>
+</button>
+</div>
+</div>
+<!-- CARD 5: Piloto de Fórmula Alta Velocidade -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-speed Formula 1 racing driver inside cockpit reaching 320km/h on a rainy night grand prix track, motion blur neon lights and water droplets glistening on the visor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfFbLmMvF2oJ3htknXhQdECBioX-FCqHVSWuA0YMExx6BawqmnGqb2toVL4WiRFAO9E8wYZJsr_GMKBStxqArfZMlPlRpuZ7cxPjQ2zkok0ICi_JsYTOATYmUuEMoXpt013DjQYY_peqPGpSEcC-EFIjBDVckifrgnuDw7imhFSAvoqiH5MyWFLQjI6r9nXvnik0y3xomy41z-n8YnpnoiszMjoczUNjYHJ1YC_XFihMk2NxOpbpeCsA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-md bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow-md">
+              Novo
+            </span>
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5 Créditos</span>
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/40 backdrop-blur-xs">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.8)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              Prévia com som
+            </span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>00:14</span>
+</div>
+<button class="absolute bottom-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Velocidade & Esportes</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate mt-0.5">Piloto de Fórmula</h4>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1 group/btn shadow-sm">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Estrelar este clipe</span>
+</button>
+</div>
+</div>
+<!-- CARD 6: Férias Tropicais em Santorini -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Chic elegant woman smiling and turning around on a sunlit Santorini balcony overlooking golden sunset infinity pool and azure Aegean sea, warm Mediterranean romantic cinematic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Eyxt4PeaEPKMUE1Dk3PC3imIY_rBjBVvMB5bN6R3B0DjOWSAvhY74_d5Vx6ily61CuUaUFJP00kzBExmm8w0t86_2lPz3X96PZIHIRHvsxvAbvfEtR0LUGOZrZF3Fhowwjbag0TDTMwK7VJtQqfFDc58U7qtFm2JSb_AuSX4GwuDbGOtUQ6FGJ83yMbThGPP2OGFrd_CxJJDWER5KcRK8czNvLcTItkw8TabqUL_POZAkL9Xyz_AQg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-highest text-secondary font-label-sm text-label-sm shadow-md">
+              Romântico
+            </span>
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5 Créditos</span>
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/40 backdrop-blur-xs">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.8)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              Prévia com som
+            </span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>00:16</span>
+</div>
+<button class="absolute bottom-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Viagem & Lifestyle</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate mt-0.5">Férias em Santorini</h4>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1 group/btn shadow-sm">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Estrelar este clipe</span>
+</button>
+</div>
+</div>
+<!-- CARD 7: Duelo Samurai sob as Cerejeiras -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Master samurai warrior unsheathing gleaming katana blade under falling pink cherry blossom petals at dusk, traditional pagodas in background, moody cinematic mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArgBz1H4237WkINh2D60O3DOHTxbKSMOUtQ3wx5fOKyEmF4XCUsrzpZ32iDlPPsTKFI5KxxjqXZiIbJD8TXktP1pj9eTPd5spGxYY6mMzNJBPohlwghCSElGb-o1cZg0B_beMO95Y6DWV4vqEESYRPcDQNHxhr4QT--0Ox8vO5tR9DT7HKgCHU27sEqz24gymHPullKV2SOInF746KwSTSQxuzp5GJTr1-dQaXZUAOwKBXPvDED2hQNw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-md bg-gradient-to-r from-secondary-container to-primary-container text-white font-label-sm text-label-sm shadow-md">
+              Popular
+            </span>
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5 Créditos</span>
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/40 backdrop-blur-xs">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.8)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              Prévia com som
+            </span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>00:22</span>
+</div>
+<button class="absolute bottom-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Ação Oriental</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate mt-0.5">Duelo sob Cerejeiras</h4>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1 group/btn shadow-sm">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Estrelar este clipe</span>
+</button>
+</div>
+</div>
+<!-- CARD 8: Comédia: O Trapalhão da Cozinha -->
+<div class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300">
+<div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Funny chaotic gourmet chef covered in white flour laughing hysterically as a pan bursts into colorful comedic cartoon-like flames in high-end restaurant kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIX_VTdadzwbmVOBDWZXFY6rea_eBBj5FsxwxWpaN6kvMcQMRHzP0sQlKZXXqp_Ghj7TVnri61Nx1cteEOsUBGnq71l6sFOMXbv7CCttrge8ksJUps3Rfy5OyepH6nW4aKgfeB8jOBpa7a3vFGkU_9sb9FG0lzGNxN7A0nmg7bMzbuvPxzalWapUXHSG06Ff8CooHwIejmJlWmUwKTLfmTyPQE8-hcltBkjEdARRAyV2yXtWP19TftyQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+<div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between z-10">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-highest text-tertiary font-label-sm text-label-sm shadow-md">
+              Engraçado
+            </span>
+<div class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>3 Créditos</span>
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-surface-container-lowest/40 backdrop-blur-xs">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_0_24px_rgba(160,120,255,0.8)] transform scale-90 group-hover:scale-100 transition-transform">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<span class="mt-2 font-label-sm text-label-sm text-on-surface bg-surface-container-lowest/80 px-2 py-0.5 rounded-full backdrop-blur-sm">
+              Prévia com som
+            </span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">timer</span>
+<span>00:12</span>
+</div>
+<button class="absolute bottom-2.5 right-2.5 z-10 w-7 h-7 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</button>
+</div>
+<div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Comédia & Memes</span>
+<h4 class="font-label-lg text-label-lg text-on-surface truncate mt-0.5">Trapalhão na Cozinha</h4>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-1 group/btn shadow-sm">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Estrelar este clipe</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Render Stats & Face-Swap Pipeline Trust Anchor -->
+<div class="w-full p-space-md md:p-space-lg rounded-2xl bg-surface-container-low/60 backdrop-blur-xl mb-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-2xl bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0 shadow-[0_0_20px_rgba(160,120,255,0.3)]">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Privacidade & Fidelidade Biométrica</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+            Sua selfie é descartada após a sincronização de luz e expressões faciais da cena. Nenhum dado é repassado a terceiros ou utilizado para treino contínuo.
+          </p>
+</div>
+</div>
+<!-- Live Processing Indicator -->
+<div class="flex items-center gap-space-lg self-stretch lg:self-auto justify-between lg:justify-end">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+            Fila Ultrarrápida
+          </span>
+<span class="font-headline-sm text-headline-sm text-on-surface">~14 segundos</span>
+</div>
+<a class="px-space-md py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5" data-path="perfil-rosto" href="#">
+<span class="material-symbols-outlined text-base">face</span>
+<span>Gerenciar Meu Rosto</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Keyboard Shortcut listener for Ctrl+K
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      const searchInput = document.getElementById('clip-search');
+      if (searchInput) {
+        searchInput.focus();
+        searchInput.select();
+      }
+    }
+  });
+
+  // Filter chip dynamic toggle
+  const chips = document.querySelectorAll('.filter-chip');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => {
+        c.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-[0_0_16px_rgba(160,120,255,0.35)]');
+        c.classList.add('bg-surface-container-high/70', 'text-on-surface-variant');
+      });
+      chip.classList.remove('bg-surface-container-high/70', 'text-on-surface-variant');
+      chip.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-[0_0_16px_rgba(160,120,255,0.35)]');
+    });
+  });
+</script></main></div><nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-xl z-50 flex items-center justify-around px-gutter-mobile shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-bold"><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="inicio" href="#"><span class="material-symbols-outlined text-xl">movie</span><span>Início</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-xl">magic_button</span><span>Criar</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-xl">video_library</span><span>Criações</span></a><a class="flex flex-col items-center gap-0.5 text-on-surface-variant font-label-sm text-label-sm" data-path="perfil-rosto" href="#"><span class="material-symbols-outlined text-xl">face</span><span>Perfil</span></a></nav></body></html>
