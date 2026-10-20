@@ -1,0 +1,190 @@
+[
+  {
+    "id": "agente-secreto",
+    "titulo": "Agente Secreto no Cassino",
+    "categoria": "filme",
+    "genero": "Ação",
+    "duracaoSeg": 18,
+    "custo": 5,
+    "img": "/img/clipe-agente-secreto.jpg",
+    "popularidade": 98,
+    "criadoEm": "2026-09-02"
+  },
+  {
+    "id": "explorador",
+    "titulo": "Explorador Intergaláctico",
+    "categoria": "aventura",
+    "genero": "Ficção científica",
+    "duracaoSeg": 25,
+    "custo": 5,
+    "img": "/img/clipe-explorador.jpg",
+    "popularidade": 91,
+    "criadoEm": "2026-10-12"
+  },
+  {
+    "id": "danca-festival",
+    "titulo": "Dançarino em Festival",
+    "categoria": "danca",
+    "genero": "Dança & Música",
+    "duracaoSeg": 15,
+    "custo": 5,
+    "img": "/img/clipe-danca-festival.jpg",
+    "popularidade": 94,
+    "criadoEm": "2026-10-05"
+  },
+  {
+    "id": "trono-de-cinzas",
+    "titulo": "Trono de Cinzas",
+    "categoria": "filme",
+    "genero": "Fantasia épica",
+    "duracaoSeg": 20,
+    "custo": 5,
+    "img": "/img/clipe-trono-de-cinzas.jpg",
+    "popularidade": 88,
+    "criadoEm": "2026-09-20"
+  },
+  {
+    "id": "piloto-corrida",
+    "titulo": "Piloto de Corrida",
+    "categoria": "esportes",
+    "genero": "Velocidade",
+    "duracaoSeg": 14,
+    "custo": 5,
+    "img": "/img/clipe-piloto-corrida.jpg",
+    "popularidade": 86,
+    "criadoEm": "2026-10-15"
+  },
+  {
+    "id": "ferias-santorini",
+    "titulo": "Férias em Santorini",
+    "categoria": "viagem",
+    "genero": "Viagem & Lifestyle",
+    "duracaoSeg": 16,
+    "custo": 5,
+    "img": "/img/clipe-ferias-santorini.jpg",
+    "popularidade": 83,
+    "criadoEm": "2026-09-28"
+  },
+  {
+    "id": "duelo-cerejeiras",
+    "titulo": "Duelo sob Cerejeiras",
+    "categoria": "aventura",
+    "genero": "Ação oriental",
+    "duracaoSeg": 22,
+    "custo": 5,
+    "img": "/img/clipe-duelo-cerejeiras.jpg",
+    "popularidade": 90,
+    "criadoEm": "2026-08-30"
+  },
+  {
+    "id": "trapalhao-cozinha",
+    "titulo": "Trapalhão na Cozinha",
+    "categoria": "engracado",
+    "genero": "Comédia",
+    "duracaoSeg": 12,
+    "custo": 5,
+    "img": "/img/clipe-trapalhao-cozinha.jpg",
+    "popularidade": 80,
+    "criadoEm": "2026-10-01"
+  },
+  {
+    "id": "fuga-noturna",
+    "titulo": "Fuga Noturna",
+    "categoria": "filme",
+    "genero": "Ação",
+    "duracaoSeg": 20,
+    "custo": 5,
+    "img": "/img/clipe-fuga-noturna.jpg",
+    "popularidade": 89,
+    "criadoEm": "2026-10-18",
+    "destaque": true
+  },
+  {
+    "id": "detetive-cyberpunk",
+    "titulo": "Detetive Cyberpunk",
+    "categoria": "filme",
+    "genero": "Ficção científica",
+    "duracaoSeg": 15,
+    "custo": 5,
+    "img": "/img/clipe-detetive-cyberpunk.jpg",
+    "popularidade": 84,
+    "criadoEm": "2026-09-14"
+  },
+  {
+    "id": "guardiao-reino",
+    "titulo": "O Último Guardião do Reino",
+    "categoria": "aventura",
+    "genero": "Épico",
+    "duracaoSeg": 20,
+    "custo": 5,
+    "img": "/img/clipe-guardiao-reino.jpg",
+    "popularidade": 82,
+    "criadoEm": "2026-08-21"
+  },
+  {
+    "id": "noite-de-estreia",
+    "titulo": "Noite de Estreia",
+    "categoria": "romantico",
+    "genero": "Glamour",
+    "duracaoSeg": 12,
+    "custo": 5,
+    "img": "/img/clipe-noite-de-estreia.jpg",
+    "popularidade": 79,
+    "criadoEm": "2026-09-08"
+  },
+  {
+    "id": "horizonte-alienigena",
+    "titulo": "Horizonte Alienígena",
+    "categoria": "aventura",
+    "genero": "Ficção científica",
+    "duracaoSeg": 18,
+    "custo": 5,
+    "img": "/img/clipe-horizonte-alienigena.jpg",
+    "popularidade": 85,
+    "criadoEm": "2026-10-09"
+  },
+  {
+    "id": "piloto-orbital",
+    "titulo": "Piloto da Frota Orbital",
+    "categoria": "aventura",
+    "genero": "Ficção científica",
+    "duracaoSeg": 15,
+    "custo": 5,
+    "img": "/img/clipe-piloto-orbital.jpg",
+    "popularidade": 77,
+    "criadoEm": "2026-10-19"
+  },
+  {
+    "id": "detetive-noir",
+    "titulo": "Detetive de Sombras",
+    "categoria": "filme",
+    "genero": "Mistério noir",
+    "duracaoSeg": 14,
+    "custo": 5,
+    "img": "/img/clipe-detetive-noir.jpg",
+    "popularidade": 81,
+    "criadoEm": "2026-09-25"
+  },
+  {
+    "id": "campeao-podio",
+    "titulo": "Campeão no Pódio",
+    "categoria": "esportes",
+    "genero": "Velocidade",
+    "duracaoSeg": 12,
+    "custo": 5,
+    "img": "/img/clipe-campeao-podio.jpg",
+    "popularidade": 78,
+    "criadoEm": "2026-10-03"
+  },
+  {
+    "id": "herdeira-trono",
+    "titulo": "Herdeira do Trono",
+    "categoria": "filme",
+    "genero": "Épico medieval",
+    "duracaoSeg": 16,
+    "custo": 5,
+    "img": "/img/clipe-herdeira-trono.jpg",
+    "popularidade": 76,
+    "criadoEm": "2026-08-15"
+  }
+]

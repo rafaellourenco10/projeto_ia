@@ -58,10 +58,10 @@
 - Produces: `src/data/clips.json` = array de `{ id: string, titulo: string, categoria: string, duracaoSeg: number, custo: 5, img: "/img/<nome>.jpg", popularidade: number, criadoEm: "YYYY-MM-DD", destaque?: true }`. Categorias e títulos tirados de `in_cio_biblioteca_de_clipes` e dos "semelhantes" de `detalhe_do_clipe_agente_secreto`. Títulos de marca/famoso (007, F1 Petronas, Red Bull, Silverstone, Cannes) viram nomes genéricos ("Agente Secreto", "Piloto de Corrida").
 - Produces: `public/img/` com nomes legíveis derivados do `alt`/contexto (`clipe-agente-secreto.jpg`, `hero-landing.jpg`, `avatar-exemplo.jpg`...) e um mapa `url → arquivo` usado pelas tarefas de porte.
 
-- [ ] Step 1: Script baixa cada URL `lh3.googleusercontent.com` única dos 9 `code.html` e grava em `public/img/` com nome legível; imprime o mapa url→arquivo em `scripts/mapa-imagens.json`.
-- [ ] Step 2: Montar `clips.json`.
-- [ ] Step 3: Verificar: `grep -r googleusercontent --include=*.html --include=*.js --include=*.json . --exclude-dir=telas --exclude-dir=node_modules --exclude-dir=scripts` → vazio.
-- [ ] Step 4: Commit `feat: assets locais e catálogo de clipes`.
+- [x] Step 1: Script baixa cada URL `lh3.googleusercontent.com` única dos 9 `code.html` e grava em `public/img/` com nome legível; imprime o mapa url→arquivo em `scripts/mapa-imagens.json`.
+- [x] Step 2: Montar `clips.json`.
+- [x] Step 3: Verificar: `grep -r googleusercontent --include=*.html --include=*.js --include=*.json . --exclude-dir=telas --exclude-dir=node_modules --exclude-dir=scripts` → vazio.
+- [x] Step 4: Commit `feat: assets locais e catálogo de clipes`.
 
 ### Task 2: Store e API simulada (TDD)
 
@@ -139,12 +139,12 @@ Mesmo procedimento para cada uma: copiar o markup do `code.html` correspondente 
 
 ### Task 13: Telas que faltam
 
-- [ ] Step 1: **Perguntar ao usuário** se vai gerar Créditos & Planos, Perfil & Rosto, Ajuda/FAQ, Termos e Privacidade no Stitch. Se sim, esperar os arquivos em `telas/` e portar como nas Tasks 4–12.
-- [ ] Step 2 (se não): montar com o design system:
+- [x] Step 1: **Perguntar ao usuário** se vai gerar Créditos & Planos, Perfil & Rosto, Ajuda/FAQ, Termos e Privacidade no Stitch. Se sim, esperar os arquivos em `telas/` e portar como nas Tasks 4–12.
+- [x] Step 2 (se não): montar com o design system:
   - `creditos-planos.html`: saldo, `PLANOS` (Pro em destaque), `PACOTES`; comprar abre aviso "Pagamento disponível em breve" (nada é cobrado). Em `?debug`, comprar chama `adicionarCreditos`.
   - `perfil-rosto.html`: dados da conta, foto com "Trocar" e "Apagar minha foto" (confirmação inline, não `confirm()`), histórico de compras vazio, "Sair" e "Excluir conta" (confirmação inline) → `/`.
   - `ajuda-faq.html`, `termos.html`, `privacidade.html`: texto simples; termos e privacidade com faixa "Rascunho — pendente de revisão jurídica". Privacidade descreve a regra da foto salva até ser apagada.
-- [ ] Step 3: Links do rodapé da landing e do cadastro apontam para `/termos` e `/privacidade`. Commit.
+- [x] Step 3: Links do rodapé da landing e do cadastro apontam para `/termos` e `/privacidade`. Commit.
 
 ### Task 14: Revisão final
 
