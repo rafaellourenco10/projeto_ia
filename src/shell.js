@@ -13,7 +13,7 @@ const LINKS = [
 
 const ATIVO_SIDE = 'bg-surface-container-high !text-primary font-bold shadow-[0_0_16px_rgba(208,188,255,0.15)]'
 
-function avatar(tamanho) {
+export function avatar(tamanho) {
   const foto = store.getFoto()
   return foto
     ? `<img alt="Sua foto" class="${tamanho} rounded-full object-cover" src="${foto}"/>`

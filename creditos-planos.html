@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="dark" lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Créditos e planos · SelfieMovie</title>
+  <link rel="icon" type="image/png" href="/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script type="module" src="/src/pages/creditos-planos.js"></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<main>
+  <div class="flex flex-col w-full px-gutter-mobile md:px-gutter py-space-md max-w-7xl mx-auto gap-space-xl">
+    <section class="relative flex flex-col gap-space-lg">
+      <div class="absolute -top-12 left-1/4 w-72 md:w-96 max-w-[75%] h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative flex flex-col md:flex-row md:items-end md:justify-between gap-space-sm">
+        <div>
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Seu saldo e seus planos</span>
+          </div>
+          <h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight">Créditos &amp; Planos</h1>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Assine um plano mensal ou compre créditos avulsos quando precisar.</p>
+        </div>
+        <a href="/perfil-rosto#compras" class="inline-flex items-center gap-space-xs self-start md:self-auto px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+          <span class="material-symbols-outlined text-[18px] text-primary" aria-hidden="true">history</span><span>Histórico de compras</span>
+        </a>
+      </div>
+
+      <div class="relative overflow-hidden rounded-xl bg-surface-container/90 backdrop-blur-md p-space-lg md:p-space-xl shadow-xl">
+        <div class="absolute right-0 top-0 w-80 h-full bg-gradient-to-l from-primary-container/15 via-secondary-container/10 to-transparent pointer-events-none"></div>
+        <div class="relative flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+          <div class="flex flex-col gap-space-sm">
+            <div class="inline-flex items-center gap-2 self-start px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant">
+              <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              <span id="plano-atual" class="font-label-sm text-label-sm font-semibold"></span>
+            </div>
+            <div class="flex items-baseline gap-space-sm flex-wrap pt-1">
+              <span data-saldo class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero font-extrabold tracking-tight text-on-surface"></span>
+              <span class="font-headline-md text-headline-md font-semibold text-primary flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[28px] text-tertiary" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">bolt</span>créditos disponíveis
+              </span>
+            </div>
+            <div class="flex items-start gap-2.5 max-w-2xl mt-1 text-on-surface-variant">
+              <span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+              <p class="font-body-sm text-body-sm leading-relaxed">Créditos são usados para gerar clipes, vídeos e fotos. Se uma geração falhar, os créditos voltam para o seu saldo.</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1 min-w-[240px] bg-surface-container-low/80 p-space-md rounded-xl backdrop-blur-sm">
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Dá para gerar cerca de</span>
+            <span id="capacidade" class="font-headline-sm text-headline-sm text-tertiary font-bold"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-space-lg" aria-labelledby="titulo-planos">
+      <div class="flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">calendar_month</span>
+          <h2 id="titulo-planos" class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Planos mensais</h2>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant">Créditos novos todo mês. Cancele quando quiser.</p>
+      </div>
+      <div id="lista-planos" class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch pt-space-sm"></div>
+    </section>
+
+    <section class="flex flex-col gap-space-lg" aria-labelledby="titulo-pacotes">
+      <div class="flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-[20px]" aria-hidden="true">add_shopping_cart</span>
+          <h2 id="titulo-pacotes" class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Pacotes avulsos</h2>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant">Sem compromisso mensal. Compre créditos e use no seu ritmo.</p>
+      </div>
+      <div id="lista-pacotes" class="grid grid-cols-1 sm:grid-cols-3 gap-space-md"></div>
+    </section>
+
+    <section class="flex flex-col gap-space-md" aria-labelledby="titulo-custos">
+      <div class="flex flex-col gap-1">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary text-[20px]" aria-hidden="true">tune</span>
+          <h2 id="titulo-custos" class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Quanto custa cada criação</h2>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant">Os créditos só são descontados quando a criação fica pronta.</p>
+      </div>
+      <div class="rounded-xl bg-surface-container p-space-md md:p-space-lg shadow-lg flex flex-col gap-space-md">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="text-outline font-label-sm text-label-sm uppercase tracking-wider">
+              <th scope="col" class="pb-space-sm font-semibold">Tipo de criação</th>
+              <th scope="col" class="pb-space-sm font-semibold text-right">Custo</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-custos" class="divide-y divide-surface-container-highest/60 font-body-md text-body-md text-on-surface"></tbody>
+        </table>
+        <div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+          <span class="material-symbols-outlined text-tertiary text-[18px] shrink-0" aria-hidden="true">lock</span>
+          <span>Sua foto fica salva na sua conta até você apagá-la no Perfil.</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="rounded-xl bg-surface-container-low/90 backdrop-blur-md p-space-lg flex items-center gap-space-md shadow-lg">
+      <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+        <span class="material-symbols-outlined text-[24px]" aria-hidden="true">shield</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-label-lg text-label-lg font-bold text-on-surface">Os créditos avulsos não expiram.</span>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">O pagamento ainda não está disponível nesta versão: nada é cobrado.</span>
+      </div>
+    </footer>
+  </div>
+</main>
+</body>
+</html>

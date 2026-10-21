@@ -1,0 +1,67 @@
+import '../main.css'
+import { montarShell, avatar } from '../shell.js'
+import * as store from '../store.js'
+import { reais } from '../creditos.js'
+import { esc, avisar } from '../util.js'
+
+montarShell({ rota: 'perfil-rosto' })
+
+const $ = (id) => document.getElementById(id)
+const dataCurta = (ms) => new Date(ms).toLocaleDateString('pt-BR')
+
+function atualizar() {
+  const u = store.getUsuario()
+  if (!u) return
+  $('conta-avatar').innerHTML = avatar('w-14 h-14')
+  $('conta-nome').textContent = u.nome
+  $('conta-email').textContent = u.email
+  $('conta-plano').textContent = store.getPlano() ?? 'Sem plano ativo'
+
+  const foto = store.getFoto()
+  $('foto').hidden = !foto
+  if (foto) $('foto').src = foto
+  $('sem-foto').hidden = !!foto
+  $('trocar-texto').textContent = foto ? 'Trocar foto' : 'Enviar foto'
+  $('apagar-foto').hidden = !foto
+
+  const compras = store.getCompras()
+  $('sem-compras').hidden = compras.length > 0
+  $('lista-compras').innerHTML = compras
+    .map(
+      (c) => `<li class="flex items-center justify-between gap-space-md py-space-sm">
+  <div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">${esc(c.descricao)}</span><span class="font-body-sm text-body-sm text-outline">${dataCurta(c.data)} • +${c.creditos} créditos</span></div>
+  <span class="font-label-lg text-label-lg text-on-surface font-bold whitespace-nowrap">${reais(c.preco)}</span>
+</li>`,
+    )
+    .join('')
+}
+store.onChange(atualizar)
+atualizar()
+
+// Confirmação na própria página (sem confirm()).
+function alternar(botao, caixa, abrir) {
+  $(caixa).hidden = !abrir
+  $(botao).setAttribute('aria-expanded', abrir)
+  ;(abrir ? $(caixa).querySelector('button') : $(botao)).focus()
+}
+
+$('apagar-foto').addEventListener('click', () => alternar('apagar-foto', 'confirma-foto', true))
+$('apagar-foto-nao').addEventListener('click', () => alternar('apagar-foto', 'confirma-foto', false))
+$('apagar-foto-sim').addEventListener('click', () => {
+  $('confirma-foto').hidden = true
+  store.apagarFoto()
+  avisar('Sua foto foi apagada')
+  $('trocar').focus()
+})
+
+$('excluir').addEventListener('click', () => alternar('excluir', 'confirma-conta', true))
+$('excluir-nao').addEventListener('click', () => alternar('excluir', 'confirma-conta', false))
+$('excluir-sim').addEventListener('click', () => {
+  store.excluirConta()
+  location.replace('/')
+})
+
+$('sair').addEventListener('click', () => {
+  store.sair()
+  location.replace('/')
+})
