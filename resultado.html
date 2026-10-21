@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="dark" lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resultado · SelfieMovie</title>
+  <link rel="icon" type="image/png" href="/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script type="module" src="/src/pages/resultado.js"></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<main>
+  <div class="w-full px-gutter-mobile md:px-gutter py-space-md max-w-7xl mx-auto flex flex-col gap-space-lg">
+
+    <section id="nao-encontrado" hidden class="flex flex-col items-center text-center gap-space-sm py-space-xl rounded-2xl bg-surface-container-low/60">
+      <span class="material-symbols-outlined text-5xl text-outline" aria-hidden="true">search_off</span>
+      <h1 class="font-headline-md text-headline-md text-on-surface">Criação não encontrada</h1>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Essa criação não existe ou foi feita em outro aparelho.</p>
+      <a href="/inicio" class="mt-space-xs px-space-lg py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors">Ir para o início</a>
+    </section>
+
+    <div id="conteudo" hidden class="flex flex-col gap-space-lg">
+      <!-- Faixa de sucesso -->
+      <div class="w-full rounded-2xl bg-surface-container-high/90 backdrop-blur-xl p-space-md flex items-center gap-space-md shadow-xl relative overflow-hidden">
+        <div class="absolute -left-12 -top-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-secondary-container/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-secondary-container to-primary flex items-center justify-center text-on-primary shadow-[0_0_24px_rgba(208,188,255,0.4)] shrink-0 z-10">
+          <span class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">celebration</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-2 z-10">
+          <span id="faixa" class="font-headline-sm text-headline-sm text-on-surface"></span>
+          <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary font-label-sm text-label-sm">Pronto</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+        <!-- Player -->
+        <div class="lg:col-span-7 flex flex-col gap-space-md">
+          <div class="relative w-full rounded-2xl bg-surface-container-lowest overflow-hidden shadow-2xl flex flex-col">
+            <div class="flex flex-wrap items-center justify-between gap-space-xs px-space-md py-2.5 bg-surface-container/80 backdrop-blur-md">
+              <span class="px-2.5 py-1 rounded-md bg-surface-container-lowest/80 text-tertiary font-label-sm text-label-sm tracking-wider flex items-center gap-1"><span class="material-symbols-outlined text-xs" aria-hidden="true">hd</span>HD</span>
+              <div role="group" aria-label="Proporção" class="flex items-center p-1 rounded-xl bg-surface-container-lowest/80 text-on-surface-variant font-label-sm text-label-sm">
+                <button data-proporcao="9:16" type="button" class="px-space-sm py-1 rounded-lg transition-all flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"><span class="material-symbols-outlined text-sm" aria-hidden="true">crop_portrait</span>9:16</button>
+                <button data-proporcao="16:9" type="button" class="px-space-sm py-1 rounded-lg transition-all flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"><span class="material-symbols-outlined text-sm" aria-hidden="true">crop_16_9</span>16:9</button>
+              </div>
+            </div>
+            <div id="quadro" class="relative w-full mx-auto bg-black overflow-hidden"></div>
+          </div>
+
+          <dl id="dados" class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm"></dl>
+
+          <div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md shadow-md">
+            <div class="flex items-center gap-space-sm">
+              <div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">auto_fix_high</span>
+              </div>
+              <div class="flex flex-col">
+                <span id="rotulo-nota" class="font-headline-sm text-headline-sm text-on-surface">Como ficou o seu rosto?</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Sua nota nos ajuda a escolher as melhores cenas</span>
+              </div>
+            </div>
+            <div id="estrelas" role="radiogroup" aria-labelledby="rotulo-nota" class="flex items-center gap-1"></div>
+          </div>
+        </div>
+
+        <!-- Ações -->
+        <div class="lg:col-span-5 flex flex-col gap-space-lg">
+          <div class="p-space-md md:p-space-lg rounded-2xl bg-surface-container-high/80 backdrop-blur-xl flex flex-col gap-space-md shadow-xl">
+            <div class="flex flex-col gap-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <span id="tipo" class="px-2.5 py-0.5 rounded-full bg-primary/20 text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider"></span>
+                <span id="genero" class="font-body-sm text-body-sm text-outline"></span>
+              </div>
+              <h1 id="titulo" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight break-words"></h1>
+              <p id="descricao" class="font-body-md text-body-md text-on-surface-variant break-words"></p>
+            </div>
+            <a id="btn-baixar" download class="w-full py-4 px-space-lg rounded-xl bg-gradient-to-r from-inverse-primary via-primary-container to-secondary-container hover:brightness-110 text-white font-label-lg text-label-lg flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(208,188,255,0.4)] hover:shadow-[0_0_40px_rgba(255,176,205,0.6)] hover:scale-[1.01] active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+              <span class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">download</span><span id="btn-baixar-texto"></span>
+            </a>
+            <button id="btn-compartilhar" type="button" class="w-full py-3 px-space-lg rounded-xl bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+              <span class="material-symbols-outlined text-lg" aria-hidden="true">share</span>Compartilhar
+            </button>
+            <p class="font-body-sm text-body-sm text-outline">Fica salvo em <a class="text-tertiary hover:underline" href="/minhas-criacoes">Minhas criações</a>.</p>
+          </div>
+
+          <div class="p-space-md md:p-space-lg rounded-2xl bg-surface-container flex flex-col gap-space-md shadow-lg">
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">Próximos passos</h2>
+            <div class="flex flex-col gap-space-sm">
+              <button id="btn-variacao" type="button" class="w-full p-space-sm rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-all flex items-center justify-between text-left group disabled:opacity-60 disabled:cursor-wait focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                <span class="flex items-center gap-space-sm">
+                  <span class="w-10 h-10 rounded-xl bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 group-hover:rotate-180 transition-transform duration-500"><span class="material-symbols-outlined text-xl" aria-hidden="true">sync</span></span>
+                  <span class="flex flex-col">
+                    <span class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Gerar variação</span>
+                    <span class="font-body-sm text-body-sm text-outline">Faz o mesmo pedido de novo (<span data-custo></span> créditos)</span>
+                  </span>
+                </span>
+                <span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors" aria-hidden="true">arrow_forward</span>
+              </button>
+              <p id="msg" role="alert" class="hidden font-body-sm text-body-sm text-error"></p>
+              <a class="w-full p-space-sm rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-all flex items-center justify-between text-left group" href="/criar-com-texto">
+                <span class="flex items-center gap-space-sm">
+                  <span class="w-10 h-10 rounded-xl bg-primary-container/30 text-primary-fixed flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-xl" aria-hidden="true">magic_button</span></span>
+                  <span class="flex flex-col">
+                    <span class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Criar outro</span>
+                    <span class="font-body-sm text-body-sm text-outline">Descreva uma nova cena com texto</span>
+                  </span>
+                </span>
+                <span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors" aria-hidden="true">arrow_forward</span>
+              </a>
+              <div class="p-space-sm rounded-xl bg-surface-container-lowest/60 flex items-center justify-between gap-space-sm mt-1">
+                <span class="flex items-center gap-2 min-w-0">
+                  <span id="rosto" class="w-7 h-7 shrink-0 rounded-full overflow-hidden bg-surface-container-high flex items-center justify-center"></span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Rosto: <strong id="rosto-nome" class="text-on-surface"></strong></span>
+                </span>
+                <a id="link-foto" class="shrink-0 font-label-sm text-label-sm text-tertiary hover:underline">Trocar foto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recomendados -->
+      <section class="w-full flex flex-col gap-space-md pt-space-lg">
+        <div class="flex flex-wrap items-end justify-between gap-space-sm">
+          <div class="flex flex-col">
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">Outras cenas para você</h2>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">Clipes da biblioteca prontos para o seu rosto</span>
+          </div>
+          <a class="font-label-md text-label-md text-primary hover:text-primary-fixed flex items-center gap-1" href="/inicio">Ver biblioteca completa<span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span></a>
+        </div>
+        <div id="recomendados" class="grid grid-cols-2 md:grid-cols-4 gap-space-md"></div>
+      </section>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -3,7 +3,7 @@ import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
 import { custo as calcularCusto } from '../creditos.js'
-import { CATEGORIAS } from '../biblioteca.js'
+import { CATEGORIAS, miniCard } from '../biblioteca.js'
 import { esc, param, debug } from '../util.js'
 import clipes from '../data/clips.json'
 
@@ -99,21 +99,5 @@ function preencher() {
   const semelhantes = clipes.filter((c) => c.categoria === clipe.categoria && c.id !== clipe.id).slice(0, 4)
   $('semelhantes-secao').hidden = !semelhantes.length
   $('semelhantes-categoria').textContent = `Mais ${categoria}`
-  $('semelhantes').innerHTML = semelhantes
-    .map(
-      (c) => `<a href="/clipe?id=${encodeURIComponent(c.id)}" class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-lg md:hover:shadow-[0_12px_40px_-10px_rgba(139,92,246,0.35)] transition-all duration-300 flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
-  <div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
-    <img alt="" loading="lazy" src="${c.img}" class="w-full h-full object-cover transition-all duration-500 md:group-hover:scale-105 md:group-hover:brightness-110"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
-    <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 whitespace-nowrap shadow-md">
-      <span class="material-symbols-outlined text-xs" aria-hidden="true">bolt</span>${c.custo}<span class="sr-only sm:not-sr-only"> créditos</span>
-    </span>
-    <div class="absolute bottom-0 inset-x-0 p-space-sm flex flex-col gap-1">
-      <span class="font-label-md text-label-md text-on-surface line-clamp-1 md:group-hover:text-primary transition-colors">${esc(c.titulo)}</span>
-      <span class="text-outline font-label-sm text-label-sm">${esc(c.genero)} • ${c.duracaoSeg} s</span>
-    </div>
-  </div>
-</a>`,
-    )
-    .join('')
+  $('semelhantes').innerHTML = semelhantes.map(miniCard).join('')
 }
