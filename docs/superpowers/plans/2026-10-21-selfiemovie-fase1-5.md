@@ -40,13 +40,13 @@
 **Interfaces:**
 - Produces: `MSG_SEM_ESPACO` em `src/util.js` = `'Não foi possível salvar neste navegador. Libere espaço ou saia da janela anônima e tente de novo.'`. `criar()` em `src/api.js` lança `Error('SEM_ESPACO')` quando `store.addCriacao` devolve `false`.
 
-- [ ] **Step 1: Testes que falham**
+- [x] **Step 1: Testes que falham**
   - `api.test.js` › `gerarClipe recusa com SEM_ESPACO quando o navegador não grava`: cadastro + foto, depois `vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => { throw new Error('QuotaExceededError') })` → `await expect(api.gerarClipe('agente-secreto')).rejects.toThrow('SEM_ESPACO')`; com o mock removido, `store.getCriacoes()` tem tamanho 0.
   - `store.test.js` › `cadastrar devolve null quando o navegador não grava`: mesmo mock → `expect(store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })).toBe(null)`.
-- [ ] **Step 2:** `npm test` → o teste de api falha (o de store já passa: `cadastrar` devolve `getUsuario()`, que já é `null`; registrar isso como fato, não como falha).
-- [ ] **Step 3:** `criar()` checa o retorno de `addCriacao`. Em `entrar.js`, se `cadastrar`/`entrar` devolver `null`, chamar `falhar(MSG_SEM_ESPACO, $('email'))` e não navegar. Nas 4 páginas, o ramo genérico do `catch` usa `MSG_SEM_ESPACO` quando `e.message === 'SEM_ESPACO'`.
-- [ ] **Step 4:** `npm test` → tudo passa. No navegador, simular com `localStorage.setItem = () => { throw 1 }` no console em `/clipe?id=agente-secreto` e clicar Gerar → mensagem aparece, botão volta a ficar ativo.
-- [ ] **Step 5:** Commit `fix: avisar quando o navegador não consegue salvar`.
+- [x] **Step 2:** `npm test` → o teste de api falha (o de store já passa: `cadastrar` devolve `getUsuario()`, que já é `null`; registrar isso como fato, não como falha).
+- [x] **Step 3:** `criar()` checa o retorno de `addCriacao`. Em `entrar.js`, se `cadastrar`/`entrar` devolver `null`, chamar `falhar(MSG_SEM_ESPACO, $('email'))` e não navegar. Nas 4 páginas, o ramo genérico do `catch` usa `MSG_SEM_ESPACO` quando `e.message === 'SEM_ESPACO'`.
+- [x] **Step 4:** `npm test` → tudo passa. No navegador, simular com `localStorage.setItem = () => { throw 1 }` no console em `/clipe?id=agente-secreto` e clicar Gerar → mensagem aparece, botão volta a ficar ativo.
+- [x] **Step 5:** Commit `fix: avisar quando o navegador não consegue salvar`.
 
 ### Task 2: Shell sempre atual
 
@@ -57,11 +57,11 @@
 **Interfaces:**
 - Produces: `fecharVencidos(agora = Date.now()) -> Promise<void>` em `src/api.js`: roda `statusJob` em toda criação `gerando`.
 
-- [ ] **Step 1: Teste que falha** `api.test.js` › `fecharVencidos fecha só os jobs vencidos, uma vez`: saldo 10, `vi.useFakeTimers()`, dois `gerarClipe` criados com `vi.setSystemTime(t0)` e `vi.setSystemTime(t0 + 15000)` → depois de `fecharVencidos(t0 + 20000)`, o primeiro está `pronto`, o segundo `gerando` e `store.getSaldo() === 5`; chamar de novo com o mesmo `agora` mantém `getSaldo() === 5`.
-- [ ] **Step 2:** `npm test` → falha (`fecharVencidos` não existe).
-- [ ] **Step 3:** Implementar `fecharVencidos`. Em `montarShell`, depois de montar: chamar `fecharVencidos()` e repetir com `setInterval(..., 1000)`. Adicionar `addEventListener('pageshow', (e) => e.persisted && location.reload())` para o Voltar do navegador não mostrar página velha.
-- [ ] **Step 4:** `npm test` passa. No navegador: gerar um clipe, ir para `/inicio` e esperar 20 s → badge de saldo cai 5 sem recarregar. Gerar outro, apertar Voltar no `/gerando` → `/clipe` volta com o botão ativo e saldo certo.
-- [ ] **Step 5:** Commit `feat: shell fecha jobs vencidos e recarrega página restaurada pelo Voltar`.
+- [x] **Step 1: Teste que falha** `api.test.js` › `fecharVencidos fecha só os jobs vencidos, uma vez`: saldo 10, `vi.useFakeTimers()`, dois `gerarClipe` criados com `vi.setSystemTime(t0)` e `vi.setSystemTime(t0 + 15000)` → depois de `fecharVencidos(t0 + 20000)`, o primeiro está `pronto`, o segundo `gerando` e `store.getSaldo() === 5`; chamar de novo com o mesmo `agora` mantém `getSaldo() === 5`.
+- [x] **Step 2:** `npm test` → falha (`fecharVencidos` não existe).
+- [x] **Step 3:** Implementar `fecharVencidos`. Em `montarShell`, depois de montar: chamar `fecharVencidos()` e repetir com `setInterval(..., 1000)`. Adicionar `addEventListener('pageshow', (e) => e.persisted && location.reload())` para o Voltar do navegador não mostrar página velha.
+- [x] **Step 4:** `npm test` passa. No navegador: gerar um clipe, ir para `/inicio` e esperar 20 s → badge de saldo cai 5 sem recarregar. Gerar outro, apertar Voltar no `/gerando` → `/clipe` volta com o botão ativo e saldo certo.
+- [x] **Step 5:** Commit `feat: shell fecha jobs vencidos e recarrega página restaurada pelo Voltar`.
 
 ### Task 3: Consertos pontuais
 
@@ -72,15 +72,15 @@
 **Interfaces:**
 - Produces: `setPlano(nome: string) -> boolean` em `src/store.js` (grava o nome, ex.: `'Pro Creator'`; `getPlano()` já existe).
 
-- [ ] **Step 1: Teste que falha** `store.test.js` › `setPlano grava o plano`: cadastro → `store.setPlano('Pro Creator')` → `store.getPlano() === 'Pro Creator'`.
-- [ ] **Step 2:** `npm test` → falha.
-- [ ] **Step 3:** Mudanças:
+- [x] **Step 1: Teste que falha** `store.test.js` › `setPlano grava o plano`: cadastro → `store.setPlano('Pro Creator')` → `store.getPlano() === 'Pro Creator'`.
+- [x] **Step 2:** `npm test` → falha.
+- [x] **Step 3:** Mudanças:
   - `store.setPlano` via `alterar`. Em `creditos-planos.js`, compra de plano em `?debug` chama `store.setPlano(plano.nome)` e atualiza o texto `#plano-atual`.
   - `foto.js`: captura em `try/catch`; no erro, `mensagem('A câmera ainda está abrindo. Espere a imagem aparecer e tente de novo.')`.
   - `minhas-criacoes.js`: `SEM_FOTO` → foto; `SEM_SALDO` → `/creditos-planos`; `SEM_ESPACO` → `avisar(MSG_SEM_ESPACO)`; outro erro → `avisar('Não foi possível tentar de novo. Recarregue a página.')`. Nos dois últimos, reativar o botão.
   - `index.html:254`: link "Central de Ajuda" → `/#faq` (igual às páginas legais).
-- [ ] **Step 4:** `npm test` passa. Navegador: comprar plano com `?debug` → Perfil e sidebar mostram o plano.
-- [ ] **Step 5:** Commit `fix: plano em debug, captura cedo, erros de refazer e link de ajuda`.
+- [x] **Step 4:** `npm test` passa. Navegador: comprar plano com `?debug` → Perfil e sidebar mostram o plano.
+- [x] **Step 5:** Commit `fix: plano em debug, captura cedo, erros de refazer e link de ajuda`.
 
 ### Task 4: Apagar uma criação
 
@@ -91,13 +91,13 @@
 **Interfaces:**
 - Produces: `removerCriacao(id) -> boolean` em `src/store.js`: devolve `false` se a criação não existe ou está `gerando` (o crédito está reservado).
 
-- [ ] **Step 1: Testes que falham** `store.test.js`:
+- [x] **Step 1: Testes que falham** `store.test.js`:
   - `removerCriacao apaga criação pronta`: criação `pronto` → `removerCriacao(id) === true`, `getCriacao(id) === null`, saldo igual.
   - `removerCriacao recusa criação gerando`: criação `gerando` → `false`, ela continua lá, `getSaldoDisponivel()` igual.
-- [ ] **Step 2:** `npm test` → falha.
-- [ ] **Step 3:** `removerCriacao`. Em `/resultado`, botão "Apagar" (ícone `delete`) com dois cliques; o segundo diz "Confirmar: apagar esta criação" e leva a `location.replace('/minhas-criacoes')`. Em `/minhas-criacoes`, o card `falhou` ganha "Remover" ao lado de "Tentar de novo", com dois cliques, e a lista redesenha.
-- [ ] **Step 4:** `npm test` passa. Navegador 390/1440: apagar pelo resultado e pelo card falho; contadores das abas atualizam.
-- [ ] **Step 5:** Commit `feat: apagar criação`.
+- [x] **Step 2:** `npm test` → falha.
+- [x] **Step 3:** `removerCriacao`. Em `/resultado`, botão "Apagar" (ícone `delete`) com dois cliques; o segundo diz "Confirmar: apagar esta criação" e leva a `location.replace('/minhas-criacoes')`. Em `/minhas-criacoes`, o card `falhou` ganha "Remover" ao lado de "Tentar de novo", com dois cliques, e a lista redesenha.
+- [x] **Step 4:** `npm test` passa. Navegador 390/1440: apagar pelo resultado e pelo card falho; contadores das abas atualizam.
+- [x] **Step 5:** Commit `feat: apagar criação`.
 
 ### Task 5: Favoritos
 
@@ -108,14 +108,14 @@
 **Interfaces:**
 - Produces: `getFavoritos() -> string[]` (ids de clipe; `[]` em estado antigo sem o campo) e `alternarFavorito(clipId) -> boolean` (novo estado: `true` = favoritado) em `src/store.js`. `filtrarClipes(clipes, { q, categoria, ordem, ids = null })`: com `ids`, só clipes cujo `id` está na lista.
 
-- [ ] **Step 1: Testes que falham**
+- [x] **Step 1: Testes que falham**
   - `store.test.js` › `alternarFavorito liga e desliga`: `alternarFavorito('a') === true`, `getFavoritos()` = `['a']`, de novo → `false` e `[]`.
   - `store.test.js` › `estado antigo sem favoritos`: gravar no `localStorage` um estado sem `favoritos` → `getFavoritos()` = `[]` e `alternarFavorito('a') === true`.
   - `biblioteca.test.js` › `filtra por ids`: `filtrarClipes(clips, { ids: ['agente-secreto'] })` devolve só esse clipe.
-- [ ] **Step 2:** `npm test` → falha.
-- [ ] **Step 3:** Store e filtro. Em `/inicio`, chip "Favoritos" (ícone `favorite`) antes de "Todos" das categorias; estado vazio dele: "Você ainda não favoritou nenhum clipe. Toque no coração na página do clipe." Em `/clipe`, botão de coração com `aria-pressed` e `aria-label` "Favoritar"/"Remover dos favoritos" ao lado do título.
-- [ ] **Step 4:** `npm test` passa. Navegador: favoritar 2 clipes, filtrar, desfavoritar.
-- [ ] **Step 5:** Commit `feat: favoritos na biblioteca`.
+- [x] **Step 2:** `npm test` → falha.
+- [x] **Step 3:** Store e filtro. Em `/inicio`, chip "Favoritos" (ícone `favorite`) antes de "Todos" das categorias; estado vazio dele: "Você ainda não favoritou nenhum clipe. Toque no coração na página do clipe." Em `/clipe`, botão de coração com `aria-pressed` e `aria-label` "Favoritar"/"Remover dos favoritos" ao lado do título.
+- [x] **Step 4:** `npm test` passa. Navegador: favoritar 2 clipes, filtrar, desfavoritar.
+- [x] **Step 5:** Commit `feat: favoritos na biblioteca`.
 
 ### Task 6: Tema claro
 
@@ -126,12 +126,12 @@
 **Interfaces:**
 - Produces: tema salvo em `localStorage['selfiemovie:tema']` = `'escuro' | 'claro' | 'sistema'` (fora da conta, para valer também na landing e no login). Padrão `'escuro'`.
 
-- [ ] **Step 1:** Cada cor de `tailwind.config.js` vira `rgb(var(--c-<token>) / <alpha-value>)`. `main.css` define os valores atuais em `:root` (escuro) e os claros em `html.light`.
-- [ ] **Step 2:** Paleta clara: para cada token, manter matiz e croma do valor escuro (HCT, `@material/material-color-utilities` via `npx` no scratchpad, sem virar dependência) e trocar o tom pelo papel M3: primary/secondary/tertiary/error 40; on-* deles 100; *-container 90; on-*-container 10; *-fixed, *-fixed-dim, on-*-fixed, on-*-fixed-variant iguais ao escuro; surface/background 98; surface-dim 87; surface-bright 98; container-lowest 100; low 96; container 94; high 92; highest 90; on-surface/on-background 10; on-surface-variant 30; outline 50; outline-variant 80; inverse-surface 20; inverse-on-surface 95; inverse-primary 80; surface-variant 90.
-- [ ] **Step 3:** Script inline no `<head>` de cada HTML aplica `class="light"` ou `"dark"` antes de pintar (lê `selfiemovie:tema` e `prefers-color-scheme` em `'sistema'`), com `try/catch`. `html { color-scheme }` acompanha. Perfil ganha "Aparência": Escuro / Claro / Sistema (radiogroup).
-- [ ] **Step 4:** Texto sobre imagem (cards, banner, hero da landing, player) mantém o branco atual nos dois temas (usar classe fixa `text-white`/sombras onde hoje usa `on-surface` sobre foto).
-- [ ] **Step 5:** Verificar todas as rotas nos dois temas em 390/1440; Lighthouse acessibilidade ≥ 90 em 4 rotas no tema claro.
-- [ ] **Step 6:** Commit `feat: tema claro`.
+- [x] **Step 1:** Cada cor de `tailwind.config.js` vira `rgb(var(--c-<token>) / <alpha-value>)`. `main.css` define os valores atuais em `:root` (escuro) e os claros em `html.light`.
+- [x] **Step 2:** Paleta clara: para cada token, manter matiz e croma do valor escuro (HCT, `@material/material-color-utilities` via `npx` no scratchpad, sem virar dependência) e trocar o tom pelo papel M3: primary/secondary/tertiary/error 40; on-* deles 100; *-container 90; on-*-container 10; *-fixed, *-fixed-dim, on-*-fixed, on-*-fixed-variant iguais ao escuro; surface/background 98; surface-dim 87; surface-bright 98; container-lowest 100; low 96; container 94; high 92; highest 90; on-surface/on-background 10; on-surface-variant 30; outline 50; outline-variant 80; inverse-surface 20; inverse-on-surface 95; inverse-primary 80; surface-variant 90.
+- [x] **Step 3:** Script inline no `<head>` de cada HTML aplica `class="light"` ou `"dark"` antes de pintar (lê `selfiemovie:tema` e `prefers-color-scheme` em `'sistema'`), com `try/catch`. `html { color-scheme }` acompanha. Perfil ganha "Aparência": Escuro / Claro / Sistema (radiogroup).
+- [x] **Step 4:** Texto sobre imagem (cards, banner, hero da landing, player) mantém o branco atual nos dois temas (usar classe fixa `text-white`/sombras onde hoje usa `on-surface` sobre foto).
+- [x] **Step 5:** Verificar todas as rotas nos dois temas em 390/1440; Lighthouse acessibilidade ≥ 90 em 4 rotas no tema claro.
+- [x] **Step 6:** Commit `feat: tema claro`.
 
 ### Task 7: Demo pública na Vercel
 
@@ -145,8 +145,8 @@
 
 ### Task 8: Revisão final
 
-- [ ] Fluxos em 390 e 1440: todas as features novas + o fluxo completo da fase 1 (cadastro → foto → clipe → gerando → resultado → minhas criações).
-- [ ] Lighthouse acessibilidade nas rotas principais, nos dois temas; corrigir o que ficar < 90.
-- [ ] `grep` das palavras proibidas da seção 5 (fora de `telas/` e `src/store.js`) → vazio.
-- [ ] `npm test` e `npm run build` passam. Revisão do branch inteiro por um revisor novo; Critical e Important corrigidos com teste.
-- [ ] Commit; push só com o OK do usuário.
+- [x] Fluxos em 390 e 1440: todas as features novas + o fluxo completo da fase 1 (cadastro → foto → clipe → gerando → resultado → minhas criações).
+- [x] Lighthouse acessibilidade nas rotas principais, nos dois temas; corrigir o que ficar < 90.
+- [x] `grep` das palavras proibidas da seção 5 (fora de `telas/` e `src/store.js`) → vazio.
+- [x] `npm test` e `npm run build` passam. Revisão do branch inteiro por um revisor novo; Critical e Important corrigidos com teste.
+- [x] Commit; push só com o OK do usuário.
