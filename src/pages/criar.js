@@ -10,6 +10,8 @@ montarShell({ rota: 'criar-com-texto' })
 const $ = (id) => document.getElementById(id)
 const prompt = $('prompt')
 const estado = { modo: 'video', estilo: 'cinematic', duracao: '5', proporcao: '9:16' }
+// Rascunho só desta aba: o Voltar do /gerando recarrega a página e apagaria o que foi escrito.
+const RASCUNHO = 'selfiemovie:rascunho-texto'
 
 const SUGESTOES = [
   'eu descendo uma montanha nevada de esqui ao pôr do sol, com neve voando na câmera',
@@ -79,6 +81,10 @@ function render() {
         : ''
   $('btn-gerar').disabled = !!motivo
   $('motivo').innerHTML = motivo
+
+  try {
+    sessionStorage.setItem(RASCUNHO, JSON.stringify({ prompt: prompt.value, ...estado }))
+  } catch {}
 }
 
 document.addEventListener('click', (e) => {
@@ -115,5 +121,14 @@ $('btn-gerar').addEventListener('click', async () => {
     $('motivo').textContent = e.message === 'SEM_SALDO' ? 'Saldo insuficiente.' : e.message === 'SEM_ESPACO' ? MSG_SEM_ESPACO : 'Não foi possível começar a geração. Tente de novo.'
   }
 })
+
+// Só aplica o que ainda existe na tela (um estilo removido volta ao padrão).
+try {
+  const r = JSON.parse(sessionStorage.getItem(RASCUNHO)) ?? {}
+  if (typeof r.prompt === 'string') prompt.value = r.prompt
+  for (const campo of Object.keys(estado)) {
+    if (document.querySelector(`[data-grupo="${campo}"][data-valor="${CSS.escape(String(r[campo]))}"]`)) estado[campo] = r[campo]
+  }
+} catch {}
 
 render()

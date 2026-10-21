@@ -69,10 +69,10 @@
 **Interfaces:**
 - Produces: `sessionStorage['selfiemovie:rascunho-texto']` = JSON `{ prompt, modo, estilo, duracao, proporcao }`. Fica só na aba e não entra na conta.
 
-- [ ] **Step 1:** No fim de `render`, gravar o rascunho com `try/catch`, ignorando a falha. Antes do primeiro `render`, ler com `try/catch`: `prompt` volta para o textarea, e cada outro campo só é aplicado se existir o botão `[data-grupo="<campo>"][data-valor="<valor>"]`. O rascunho não é apagado depois de Gerar, porque é o Voltar do `/gerando` que precisa dele (o `pageshow` do shell recarrega a página).
-- [ ] **Step 2:** Navegador, conta com foto e `?debug`: escrever um prompt, escolher Foto e estilo Vintage, Gerar e depois Voltar → o prompt, Foto e Vintage voltam e o resumo e o custo batem.
-- [ ] **Step 3:** Rodar `sessionStorage.setItem('selfiemovie:rascunho-texto', '{"estilo":"xyz","modo":"foto"}')` e recarregar → abre sem erro no console, com estilo Cinematic e modo Foto. Com `sessionStorage.setItem = () => { throw 1 }` a página também funciona.
-- [ ] **Step 4:** `npm test` e `npm run build` passam. Commit `fix: guardar rascunho do criar com texto ao voltar`.
+- [x] **Step 1:** No fim de `render`, gravar o rascunho com `try/catch`, ignorando a falha. Antes do primeiro `render`, ler com `try/catch`: `prompt` volta para o textarea, e cada outro campo só é aplicado se existir o botão `[data-grupo="<campo>"][data-valor="<valor>"]`. O rascunho não é apagado depois de Gerar, porque é o Voltar do `/gerando` que precisa dele (o `pageshow` do shell recarrega a página).
+- [x] **Step 2:** Navegador, conta com foto e `?debug`: escrever um prompt, escolher Foto e estilo Vintage, Gerar e depois Voltar → o prompt, Foto e Vintage voltam e o resumo e o custo batem.
+- [x] **Step 3:** Rodar `sessionStorage.setItem('selfiemovie:rascunho-texto', '{"estilo":"xyz","modo":"foto"}')` e recarregar → abre sem erro no console, com estilo Cinematic e modo Foto. Com `sessionStorage.setItem = () => { throw 1 }` a página também funciona.
+- [x] **Step 4:** `npm test` e `npm run build` passam. Commit `fix: guardar rascunho do criar com texto ao voltar`.
 
 ### Task 4: Estado vazio de Favoritos e meta description
 
