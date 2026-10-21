@@ -34,6 +34,13 @@ describe('store', () => {
     expect(store.getFoto()).toBe('data:image/jpeg;base64,AAA')
   })
 
+  it('getEmailSalvo mostra a conta salva mesmo deslogado', () => {
+    expect(store.getEmailSalvo()).toBe(null)
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.sair()
+    expect(store.getEmailSalvo()).toBe('ana@x.com')
+  })
+
   it('cadastrar de novo não apaga a conta salva', () => {
     store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
     store.salvarFoto('data:image/jpeg;base64,AAA')

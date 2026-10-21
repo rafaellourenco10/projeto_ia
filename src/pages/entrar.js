@@ -29,6 +29,7 @@ function setModo(novo) {
   $('senha').autocomplete = cadastro ? 'new-password' : 'current-password'
   $('txt-enviar').textContent = cadastro ? `Criar conta e ganhar ${CUSTOS.bonusCadastro} créditos` : 'Entrar'
   erro.classList.add('hidden')
+  $('conta-salva').hidden = true
   history.replaceState(null, '', cadastro ? '#cadastro' : location.pathname)
 }
 
@@ -77,7 +78,25 @@ form.addEventListener('submit', (e) => {
   } catch {
     // CONTA_EXISTENTE: só uma conta por navegador na fase 1.
     falhar(modo === 'cadastro'
-      ? 'Já existe uma conta salva neste navegador. Entre com ela ou exclua-a no Perfil.'
-      : 'Este e-mail não é o da conta salva neste navegador. Confira o e-mail.', $('email'))
+      ? 'Já existe uma conta salva neste navegador. Entre com o e-mail dela ou apague-a abaixo.'
+      : 'Este e-mail não é o da conta salva neste navegador. Entre com o e-mail dela ou apague-a abaixo.', $('email'))
+    $('email-salvo').textContent = store.getEmailSalvo()
+    $('btn-apagar-salva').textContent = 'Apagar conta salva e começar de novo'
+    $('conta-salva').hidden = false
   }
+})
+
+// Saída para quem não lembra o e-mail salvo; pede um segundo clique para confirmar.
+$('btn-apagar-salva').addEventListener('click', (e) => {
+  const btn = e.currentTarget
+  if (!btn.dataset.confirmar) {
+    btn.dataset.confirmar = '1'
+    btn.textContent = 'Confirmar: apagar foto, criações e créditos'
+    return
+  }
+  delete btn.dataset.confirmar
+  store.excluirConta()
+  $('conta-salva').hidden = true
+  erro.classList.add('hidden')
+  avisar('Conta apagada. Agora você pode criar uma nova.')
 })

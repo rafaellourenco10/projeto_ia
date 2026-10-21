@@ -43,6 +43,9 @@ export const getUsuario = () => {
   return e?.logado ? e.usuario : null
 }
 
+// E-mail da conta guardada, mesmo deslogada (a tela de entrar mostra quando recusa outra conta).
+export const getEmailSalvo = () => ler()?.usuario.email ?? null
+
 // Fase 1 guarda uma conta por navegador: trocar de conta apagaria fotos, criações e créditos.
 export function cadastrar({ nome, email }) {
   if (ler()) throw new Error('CONTA_EXISTENTE')
