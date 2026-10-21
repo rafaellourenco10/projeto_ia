@@ -73,7 +73,7 @@ function header() {
       <input id="busca" name="q" type="search" autocomplete="off" placeholder="Buscar clipes, estilos, categorias..." class="w-full bg-transparent border-0 p-0 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none"/>
     </label>
   </form>
-  <div class="flex items-center gap-space-sm">
+  <div class="ml-auto flex items-center gap-space-sm">
     <a href="/creditos-planos" aria-label="Saldo de créditos" class="flex items-center gap-space-xs px-space-sm sm:px-space-md py-2 rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-container-highest transition-colors">
       <span class="material-symbols-outlined text-secondary text-sm" aria-hidden="true">bolt</span><span class="font-label-md text-label-md" data-saldo>${store.getSaldoDisponivel()}</span>
     </a>

@@ -12,8 +12,81 @@
   <script type="module" src="/src/pages/inicio.js"></script>
 </head>
 <body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
-  <main class="px-margin-mobile md:px-margin py-space-lg">
-    <h1 class="font-headline-lg-mobile text-headline-lg-mobile">Início (provisório)</h1>
-  </main>
+<main>
+  <div class="relative w-full overflow-hidden px-gutter-mobile md:px-gutter">
+    <div class="pointer-events-none absolute -top-40 left-1/4 w-96 h-96 rounded-full bg-primary-container/20 blur-[120px]"></div>
+    <div class="pointer-events-none absolute top-20 right-10 w-80 h-80 rounded-full bg-secondary-container/15 blur-[100px]"></div>
+    <h1 class="sr-only">Biblioteca de clipes</h1>
+
+    <!-- Busca, ordenação e filtros -->
+    <div class="relative z-10 pt-space-md pb-space-lg flex flex-col gap-space-md">
+      <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+        <div role="search" class="relative flex-1 group">
+          <label for="clip-search" class="sr-only">Buscar clipes</label>
+          <div class="absolute inset-y-0 left-0 pl-space-md flex items-center pointer-events-none text-on-surface-variant group-focus-within:text-primary transition-colors">
+            <span class="material-symbols-outlined text-xl" aria-hidden="true">search</span>
+          </div>
+          <input id="clip-search" type="search" autocomplete="off" placeholder="Buscar cenas, filmes, danças, viagens..." class="w-full pl-12 pr-space-md md:pr-28 py-3.5 rounded-xl bg-surface-container-low/85 text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-high transition-all shadow-[0_4px_24px_rgba(0,0,0,0.4)]"/>
+          <div class="absolute inset-y-0 right-0 pr-space-md hidden md:flex items-center gap-1.5 pointer-events-none" aria-hidden="true">
+            <kbd data-tecla-mod class="px-2 py-0.5 rounded-lg bg-surface-container-highest/90 text-on-surface-variant font-label-sm text-label-sm shadow-sm">Ctrl</kbd>
+            <span class="text-outline text-xs">+</span>
+            <kbd class="px-2 py-0.5 rounded-lg bg-surface-container-highest/90 text-on-surface-variant font-label-sm text-label-sm shadow-sm">K</kbd>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-sm self-end lg:self-auto">
+          <label class="flex items-center gap-space-xs px-space-md py-3 rounded-xl bg-surface-container-low/80 shadow-md focus-within:ring-2 focus-within:ring-primary">
+            <span class="material-symbols-outlined text-outline text-lg" aria-hidden="true">sort</span>
+            <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider hidden sm:inline">Ordenar:</span>
+            <span class="sr-only sm:hidden">Ordenar</span>
+            <select id="ordem" class="bg-transparent text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer">
+              <option class="bg-surface-container-high text-on-surface" value="populares">Mais populares</option>
+              <option class="bg-surface-container-high text-on-surface" value="recentes">Recentes</option>
+              <option class="bg-surface-container-high text-on-surface" value="custo">Custo de créditos</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div id="chips" role="group" aria-label="Categorias" class="flex items-center gap-space-xs overflow-x-auto pb-1 [scrollbar-width:none]"></div>
+    </div>
+
+    <!-- Clipe em destaque -->
+    <div id="destaque" class="relative w-full rounded-2xl overflow-hidden mb-space-xl bg-surface-container-low shadow-[0_16px_40px_rgba(0,0,0,0.6)]"></div>
+
+    <!-- Galeria -->
+    <div class="flex items-center justify-between mb-space-md">
+      <div class="flex items-baseline gap-space-sm">
+        <h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Galeria de clipes</h2>
+        <span id="contagem" class="font-label-sm text-label-sm text-outline" aria-live="polite"></span>
+      </div>
+    </div>
+    <div id="grade" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-space-md pb-space-xl"></div>
+
+    <div id="vazio" hidden class="flex flex-col items-center text-center gap-space-sm py-space-xl mb-space-xl rounded-2xl bg-surface-container-low/60">
+      <span class="material-symbols-outlined text-5xl text-outline" aria-hidden="true">search_off</span>
+      <h3 class="font-headline-sm text-headline-sm text-on-surface">Nenhum clipe encontrado</h3>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Tente outra palavra ou outra categoria.</p>
+      <button id="limpar" type="button" class="mt-space-xs px-space-lg py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base" aria-hidden="true">filter_alt_off</span>Limpar filtros
+      </button>
+    </div>
+
+    <!-- Privacidade -->
+    <div class="w-full p-space-md md:p-space-lg rounded-2xl bg-surface-container-low/60 backdrop-blur-xl mb-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+      <div class="flex items-center gap-space-md">
+        <div class="w-12 h-12 rounded-2xl bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0 shadow-[0_0_20px_rgba(160,120,255,0.3)]">
+          <span class="material-symbols-outlined text-2xl" aria-hidden="true">verified_user</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-label-lg text-label-lg text-on-surface">Privacidade da sua foto</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">Sua foto fica salva na sua conta até você apagá-la no Perfil. Ela é usada só para gerar os vídeos e fotos que você pedir e nunca é vendida a terceiros.</p>
+        </div>
+      </div>
+      <a class="self-stretch lg:self-auto justify-center px-space-md py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5" href="/perfil-rosto">
+        <span class="material-symbols-outlined text-base" aria-hidden="true">face</span>
+        <span>Gerenciar meu rosto</span>
+      </a>
+    </div>
+  </div>
+</main>
 </body>
 </html>
