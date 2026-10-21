@@ -39,7 +39,6 @@ function preencher() {
   function pintarFavorito() {
     const fav = store.getFavoritos().includes(clipe.id)
     $('btn-fav').setAttribute('aria-pressed', fav)
-    $('btn-fav').setAttribute('aria-label', fav ? 'Remover dos favoritos' : 'Favoritar')
     $('btn-fav').firstElementChild.style.fontVariationSettings = `'FILL' ${fav ? 1 : 0}`
   }
   $('btn-fav').addEventListener('click', () => {

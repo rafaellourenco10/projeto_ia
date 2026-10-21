@@ -99,12 +99,11 @@ async function render() {
   $('vazio-titulo').textContent = todas.length ? 'Nada nesta aba ainda' : 'Você ainda não tem criações'
 }
 
-// A cada 1 s: só mexe no % dos cards "gerando"; redesenha quando algum termina.
+// A cada 1 s: só mexe no % dos cards "gerando". Quem fecha o job grava no store, e o onChange redesenha.
 setInterval(async () => {
   const antes = store.getCriacoes().filter((c) => c.status === 'gerando').length
   if (!antes || simularVazia) return
   const status = await sincronizar()
-  if (Object.values(status).some((s) => s?.status !== 'gerando')) return render()
   for (const [id, s] of Object.entries(status)) {
     const pct = document.querySelector(`[data-pct="${id}"]`)
     if (pct) pct.textContent = `${s.progresso}%`
@@ -120,6 +119,7 @@ document.querySelectorAll('[data-aba]').forEach((b) =>
   }),
 )
 $('ordem').addEventListener('change', render)
+store.onChange(render)
 $('grade').addEventListener('click', async (e) => {
   const r = e.target.closest('[data-remover]')
   if (r) {

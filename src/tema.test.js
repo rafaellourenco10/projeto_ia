@@ -70,7 +70,9 @@ describe('script de tema', () => {
   })
 
   it('storage indisponível cai no escuro', () => {
-    vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => { throw new Error('bloqueado') })
+    localStorage.setItem('selfiemovie:tema', 'claro') // se o spy não pegar, o resultado vira light
+    vi.spyOn(localStorage, 'getItem').mockImplementation(() => { throw new Error('bloqueado') })
     expect(rodar({})).toBe('dark')
+    expect(localStorage.getItem).toHaveBeenCalled()
   })
 })

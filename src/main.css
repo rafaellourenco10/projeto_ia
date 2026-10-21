@@ -60,14 +60,14 @@
   html.light {
     color-scheme: light;
     --c-background: 252 248 255;
-    --c-error: 136 79 72;
+    --c-error: 186 26 26; /* M3 error-40 */
     --c-error-container: 255 218 214;
     --c-inverse-on-surface: 244 239 248;
     --c-inverse-primary: 208 188 255;
     --c-inverse-surface: 49 48 54;
     --c-on-background: 28 27 33;
     --c-on-error: 255 255 255;
-    --c-on-error-container: 42 22 20;
+    --c-on-error-container: 65 0 2;
     --c-on-primary: 255 255 255;
     --c-on-primary-container: 35 0 92;
     --c-on-primary-fixed: 35 0 92;
