@@ -102,9 +102,10 @@
 **Files:**
 - Modify: `entrar.html` ou `src/pages/entrar.js`, só se a checagem achar problema
 
-- [ ] **Step 1:** Navegador em 390 e 1440 px: criar a conta A e sair; na aba Entrar, usar outro e-mail → aparecem o erro e o bloco "Conta salva" com o e-mail de A; trocar de aba esconde o bloco; o botão apagar pede dois cliques e depois deixa criar uma conta nova. Repetir na aba Criar conta.
-- [ ] **Step 2:** Lighthouse em modo "snapshot" (o "navigation" apaga o `localStorage`) em `/entrar`: anotar cada auditoria que falhar, inclusive a "agentic" que a fase 1.5 apontou.
-- [ ] **Step 3:** Corrigir o que for problema real e anotar no relatório o que não for, com o motivo. Commit `fix: ...` só se algo mudou.
+- [x] **Step 1:** Navegador em 390 e 1440 px: criar a conta A e sair; na aba Entrar, usar outro e-mail → aparecem o erro e o bloco "Conta salva" com o e-mail de A; trocar de aba esconde o bloco; o botão apagar pede dois cliques e depois deixa criar uma conta nova. Repetir na aba Criar conta.
+- [x] **Step 2:** Lighthouse em modo "snapshot" (o "navigation" apaga o `localStorage`) em `/entrar`: anotar cada auditoria que falhar, inclusive a "agentic" que a fase 1.5 apontou.
+- [x] **Step 3:** Corrigir o que for problema real e anotar no relatório o que não for, com o motivo. Commit `fix: ...` só se algo mudou.
+- Resultado: corrigido o apagar que continuava armado depois de um novo erro (um clique só apagava a conta) e o foco perdido quando o botão some; `role="tabpanel"` saiu do `<form>` para um `div` em volta (falha `aria-allowed-role` da auditoria agentic). `robots-txt` e `llms-txt` só falham no Vite dev, que devolve o HTML para qualquer caminho; na Vercel os dois dão 404, que o Lighthouse aceita.
 
 ### Task 6: Revisão final
 

@@ -22,7 +22,7 @@ function setModo(novo) {
     aba.tabIndex = ativa ? 0 : -1
     aba.className = `py-2.5 px-4 rounded-lg font-label-lg text-label-lg transition-all duration-200 ${ativa ? ATIVA : INATIVA}`
   }
-  form.setAttribute('aria-labelledby', cadastro ? 'aba-cadastro' : 'aba-login')
+  $('painel-auth').setAttribute('aria-labelledby', cadastro ? 'aba-cadastro' : 'aba-login')
   $('grupo-nome').hidden = !cadastro
   $('bonus').hidden = !cadastro
   $('btn-esqueci').hidden = cadastro
@@ -81,6 +81,7 @@ form.addEventListener('submit', (e) => {
       ? 'Já existe uma conta salva neste navegador. Entre com o e-mail dela ou apague-a abaixo.'
       : 'Este e-mail não é o da conta salva neste navegador. Entre com o e-mail dela ou apague-a abaixo.', $('email'))
     $('email-salvo').textContent = store.getEmailSalvo()
+    delete $('btn-apagar-salva').dataset.confirmar // um novo erro desarma o apagar
     $('btn-apagar-salva').textContent = 'Apagar conta salva e começar de novo'
     $('conta-salva').hidden = false
   }
@@ -98,5 +99,6 @@ $('btn-apagar-salva').addEventListener('click', (e) => {
   store.excluirConta()
   $('conta-salva').hidden = true
   erro.classList.add('hidden')
+  $('email').focus() // o botão some com o foco nele
   avisar('Conta apagada. Agora você pode criar uma nova.')
 })

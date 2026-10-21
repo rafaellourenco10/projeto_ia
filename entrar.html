@@ -49,8 +49,8 @@
       <div class="w-full rounded-xl bg-surface-container/75 backdrop-blur-2xl shadow-2xl p-space-md sm:p-space-lg flex flex-col relative">
         <div class="absolute -top-[1px] inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-primary/60 to-transparent"></div>
         <div role="tablist" aria-label="Acesso" class="grid grid-cols-2 p-1 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md mb-space-lg">
-          <button role="tab" id="aba-cadastro" aria-controls="form-auth" type="button" class="py-2.5 px-4 rounded-lg font-label-lg text-label-lg transition-all duration-200">Criar conta</button>
-          <button role="tab" id="aba-login" aria-controls="form-auth" type="button" class="py-2.5 px-4 rounded-lg font-label-lg text-label-lg transition-all duration-200">Entrar</button>
+          <button role="tab" id="aba-cadastro" aria-controls="painel-auth" type="button" class="py-2.5 px-4 rounded-lg font-label-lg text-label-lg transition-all duration-200">Criar conta</button>
+          <button role="tab" id="aba-login" aria-controls="painel-auth" type="button" class="py-2.5 px-4 rounded-lg font-label-lg text-label-lg transition-all duration-200">Entrar</button>
         </div>
 
         <button id="btn-google" type="button" class="w-full h-12 rounded-xl bg-on-surface text-surface-container-lowest font-label-lg text-label-lg flex items-center justify-center gap-3 shadow-lg hover:bg-on-surface/90 hover:scale-[1.01] active:scale-[0.99] transition-all duration-150">
@@ -69,7 +69,8 @@
           <div class="flex-grow h-[1px] bg-outline-variant/40"></div>
         </div>
 
-        <form id="form-auth" role="tabpanel" novalidate class="flex flex-col gap-space-md">
+        <div id="painel-auth" role="tabpanel">
+        <form id="form-auth" novalidate class="flex flex-col gap-space-md">
           <div id="grupo-nome" class="flex flex-col gap-1.5">
             <label class="font-label-md text-label-md text-on-surface-variant" for="nome">Seu nome</label>
             <div class="relative flex items-center group">
@@ -130,6 +131,7 @@
             do SelfieMovie.
           </p>
         </form>
+        </div>
       </div>
 
       <footer class="w-full mt-space-lg flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-center">
