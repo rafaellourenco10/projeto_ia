@@ -2,13 +2,13 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Fechar as pontas soltas da fase 1 e somar favoritos, apagar criação, notificação, convite, tema claro e um link público de demonstração, ainda sem servidor.
+**Goal:** Fechar as pontas soltas da fase 1 e somar favoritos, apagar criação, tema claro e um link público de demonstração, ainda sem servidor.
 
-**Architecture:** Mesmo app Vite multi-page com HTML e JS puros. Estado continua no `localStorage` via `src/store.js`, e a geração continua simulada em `src/api.js`. O shell (`src/shell.js`) passa a fechar jobs vencidos em qualquer tela e a disparar a notificação.
+**Architecture:** Mesmo app Vite multi-page com HTML e JS puros. Estado continua no `localStorage` via `src/store.js`, e a geração continua simulada em `src/api.js`. O shell (`src/shell.js`) passa a fechar jobs vencidos em qualquer tela.
 
-**Tech Stack:** Vite (vanilla), Tailwind CSS v3, Vitest + happy-dom, Vercel (só na Task 9).
+**Tech Stack:** Vite (vanilla), Tailwind CSS v3, Vitest + happy-dom, Vercel (só na Task 7).
 
-**Spec:** `docs/superpowers/specs/2026-10-20-selfiemovie-design.md` (seções 4 e 5 valem para todas as tasks). As features novas (Tasks 4 a 9) não estão no spec: as decisões delas estão neste plano e valem a partir da aprovação do usuário.
+**Spec:** `docs/superpowers/specs/2026-10-20-selfiemovie-design.md` (seções 4 e 5 valem para todas as tasks). As features novas (Tasks 4 a 7) não estão no spec: as decisões delas estão neste plano e valem a partir da aprovação do usuário.
 
 ## Global Constraints
 
@@ -25,9 +25,9 @@
 
 1. Navegador que recusa gravar (janela anônima do Safari, armazenamento cheio) → toda ação que grava mostra `MSG_SEM_ESPACO` e nada fica pela metade. Teste na Task 1.
 2. Job que vence com o usuário em outra tela → saldo do header atualiza sozinho em até 1 s e o crédito não fica preso. Teste na Task 2.
-3. Duas abas abertas quando o job vence → no máximo uma notificação por job (`tag: jobId`). Checagem manual na Task 6.
-4. Estado salvo antes desta fase (sem `favoritos`, sem `codigoConvite`) → app abre sem erro e os campos novos começam vazios ou são criados na hora. Testes nas Tasks 5 e 7.
-5. Tema claro com texto sobre imagem (cards, banner, hero) → texto continua legível, contraste AA. Checagem manual e Lighthouse na Task 8.
+3. Duas abas abertas quando o job vence → o crédito é debitado uma vez só (`concluirCriacao` idempotente). Coberto pelo teste da Task 2.
+4. Estado salvo antes desta fase (sem `favoritos`) → app abre sem erro e a lista começa vazia. Teste na Task 5.
+5. Tema claro com texto sobre imagem (cards, banner, hero) → texto continua legível, contraste AA. Checagem manual e Lighthouse na Task 6.
 
 ---
 
@@ -55,9 +55,9 @@
 - Test: `src/api.test.js`
 
 **Interfaces:**
-- Produces: `fecharVencidos(agora = Date.now()) -> Promise<Criacao[]>` em `src/api.js`: roda `statusJob` em toda criação `gerando` e devolve as que fecharam nesta chamada (status `pronto` ou `falhou`). A Task 6 usa o retorno.
+- Produces: `fecharVencidos(agora = Date.now()) -> Promise<void>` em `src/api.js`: roda `statusJob` em toda criação `gerando`.
 
-- [ ] **Step 1: Teste que falha** `api.test.js` › `fecharVencidos fecha só os jobs vencidos, uma vez`: saldo 10, `vi.useFakeTimers()`, dois `gerarClipe` criados com `vi.setSystemTime(t0)` e `vi.setSystemTime(t0 + 15000)` → `fecharVencidos(t0 + 20000)` devolve 1 criação com `status: 'pronto'`; `store.getSaldo() === 5`; chamar de novo com o mesmo `agora` devolve `[]`.
+- [ ] **Step 1: Teste que falha** `api.test.js` › `fecharVencidos fecha só os jobs vencidos, uma vez`: saldo 10, `vi.useFakeTimers()`, dois `gerarClipe` criados com `vi.setSystemTime(t0)` e `vi.setSystemTime(t0 + 15000)` → depois de `fecharVencidos(t0 + 20000)`, o primeiro está `pronto`, o segundo `gerando` e `store.getSaldo() === 5`; chamar de novo com o mesmo `agora` mantém `getSaldo() === 5`.
 - [ ] **Step 2:** `npm test` → falha (`fecharVencidos` não existe).
 - [ ] **Step 3:** Implementar `fecharVencidos`. Em `montarShell`, depois de montar: chamar `fecharVencidos()` e repetir com `setInterval(..., 1000)`. Adicionar `addEventListener('pageshow', (e) => e.persisted && location.reload())` para o Voltar do navegador não mostrar página velha.
 - [ ] **Step 4:** `npm test` passa. No navegador: gerar um clipe, ir para `/inicio` e esperar 20 s → badge de saldo cai 5 sem recarregar. Gerar outro, apertar Voltar no `/gerando` → `/clipe` volta com o botão ativo e saldo certo.
@@ -117,38 +117,7 @@
 - [ ] **Step 4:** `npm test` passa. Navegador: favoritar 2 clipes, filtrar, desfavoritar.
 - [ ] **Step 5:** Commit `feat: favoritos na biblioteca`.
 
-### Task 6: Notificação quando fica pronto
-
-**Files:**
-- Modify: `src/shell.js`, `gerando.html`, `src/pages/gerando.js`
-
-**Interfaces:**
-- Consumes: `fecharVencidos()` da Task 2.
-
-- [ ] **Step 1:** Em `/gerando`, botão "Me avise quando ficar pronto" (ícone `notifications`), só se `'Notification' in window` e `Notification.permission === 'default'`. Clique → `Notification.requestPermission()`; com `granted`, o botão vira o texto "Vamos avisar quando ficar pronto."; com `denied`, some.
-- [ ] **Step 2:** No intervalo do shell, para cada criação devolvida por `fecharVencidos()`, se `Notification.permission === 'granted'` e `document.hidden`: `new Notification(pronto ? 'Seu vídeo está pronto' : 'A geração não deu certo', { body: c.titulo, icon: '/img/logo.png', tag: c.id })`; `onclick` foca a janela e abre `/resultado?job=` (pronto) ou `/gerando?job=` (falhou). Comentário: `// shortcut: só avisa com uma aba do app aberta; push de verdade precisa de servidor (fase 2).`
-- [ ] **Step 3:** Verificar: permitir notificação, gerar, trocar de aba → notificação aparece uma vez; com duas abas do app abertas, uma notificação só.
-- [ ] **Step 4:** Commit `feat: notificação do navegador quando a geração termina`.
-
-### Task 7: Convide um amigo
-
-**Files:**
-- Modify: `src/creditos.js`, `src/store.js`, `src/pages/entrar.js`, `entrar.html`, `perfil-rosto.html`, `src/pages/perfil-rosto.js`, `src/pages/landing.js` (texto do bônus, se citar o valor)
-- Test: `src/store.test.js`
-
-**Interfaces:**
-- Produces: `CUSTOS.bonusConvite = 5` em `src/creditos.js`. `cadastrar({ nome, email, convite })`: com `convite` não vazio, saldo = `bonusCadastro + bonusConvite`. `getCodigoConvite() -> string` (8 caracteres, criado na primeira chamada e salvo; estado antigo também ganha um).
-
-- [ ] **Step 1: Testes que falham** `store.test.js`:
-  - `cadastro com convite ganha 15`: `cadastrar({ nome, email, convite: 'abc12345' })` → `getSaldo() === 15`.
-  - `código de convite é estável`: `getCodigoConvite()` tem 8 caracteres e é igual na segunda chamada.
-- [ ] **Step 2:** `npm test` → falha.
-- [ ] **Step 3:** Perfil ganha a seção "Convide amigos": texto "Quem criar conta pelo seu link ganha 5 créditos a mais.", o link `${location.origin}/entrar?ref=<código>#cadastro` e o botão Compartilhar (mesmo padrão de `resultado.js:65-75`: `navigator.share`, senão `clipboard` + "Link copiado"). Em `/entrar` com `?ref=`, a faixa de bônus mostra "+15 créditos (10 do cadastro + 5 do convite)" e o cadastro passa `convite`.
-  Comentário: `// shortcut: quem convidou não ganha nada ainda; isso precisa de servidor (fase 2).`
-- [ ] **Step 4:** `npm test` passa. Navegador: abrir o link de convite numa janela anônima → cadastro com 15.
-- [ ] **Step 5:** Commit `feat: link de convite com bônus para quem chega`.
-
-### Task 8: Tema claro
+### Task 6: Tema claro
 
 **Files:**
 - Modify: `tailwind.config.js`, `src/main.css`, os 14 HTML (script de tema no `<head>`), `perfil-rosto.html`, `src/pages/perfil-rosto.js`
@@ -164,7 +133,7 @@
 - [ ] **Step 5:** Verificar todas as rotas nos dois temas em 390/1440; Lighthouse acessibilidade ≥ 90 em 4 rotas no tema claro.
 - [ ] **Step 6:** Commit `feat: tema claro`.
 
-### Task 9: Demo pública na Vercel
+### Task 7: Demo pública na Vercel
 
 **Files:**
 - Modify: `vercel.json` se o deploy pedir; nenhum código do app.
@@ -174,7 +143,7 @@
 - [ ] **Step 3:** **Parar e pedir confirmação ao usuário** antes de `npx vercel --prod`: o link fica público, e quem abrir vê a demo (os dados de cada pessoa ficam só no navegador dela).
 - [ ] **Step 4:** Commit só se `vercel.json` mudou (`.vercel/` vai para o `.gitignore`).
 
-### Task 10: Revisão final
+### Task 8: Revisão final
 
 - [ ] Fluxos em 390 e 1440: todas as features novas + o fluxo completo da fase 1 (cadastro → foto → clipe → gerando → resultado → minhas criações).
 - [ ] Lighthouse acessibilidade nas rotas principais, nos dois temas; corrigir o que ficar < 90.
