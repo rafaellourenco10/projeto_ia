@@ -648,15 +648,15 @@
     "semantic_hash": ""
   },
   "src/biblioteca.js": {
-    "mtime": 1792544126.4457343,
-    "seen": 1792544269.3747635,
-    "ast_hash": "a55039fe86d55b61a0a8eeb68f7158f3",
+    "mtime": 1792580677.082045,
+    "seen": 1792581323.9929492,
+    "ast_hash": "6c23256adfb554d650f6df820110f0ae",
     "semantic_hash": ""
   },
   "src/biblioteca.test.js": {
-    "mtime": 1792543491.7762618,
-    "seen": 1792543605.2680836,
-    "ast_hash": "d2c75e239b885db0e7d2296c9c50b039",
+    "mtime": 1792580677.0826318,
+    "seen": 1792581323.9929564,
+    "ast_hash": "b4e02f11f7a4c2e8c474a8d83ef233d8",
     "semantic_hash": ""
   },
   "src/creditos.js": {
@@ -696,9 +696,9 @@
     "semantic_hash": ""
   },
   "src/pages/inicio.js": {
-    "mtime": 1792543572.61558,
-    "seen": 1792543605.2680905,
-    "ast_hash": "77ef9748194bcc3b3bc99f570903183a",
+    "mtime": 1792580677.0860913,
+    "seen": 1792581323.9930158,
+    "ast_hash": "d56031a10f6367fd49098dfcd96a3541",
     "semantic_hash": ""
   },
   "src/pages/landing.js": {
@@ -708,21 +708,21 @@
     "semantic_hash": ""
   },
   "src/shell.js": {
-    "mtime": 1792578857.0833743,
-    "seen": 1792578943.2244196,
-    "ast_hash": "5af010de7abfd8ba09af653047b1006e",
+    "mtime": 1792580887.727924,
+    "seen": 1792581323.993045,
+    "ast_hash": "ce66eaa192548c68d789a6ab73a24959",
     "semantic_hash": ""
   },
   "src/store.js": {
-    "mtime": 1792579622.8847764,
-    "seen": 1792579935.1413968,
-    "ast_hash": "0470d0e431a33df9e5f33f617e57c196",
+    "mtime": 1792580677.087016,
+    "seen": 1792581323.993049,
+    "ast_hash": "f902dd0b6970a96f42f6e14032ce84ac",
     "semantic_hash": ""
   },
   "src/store.test.js": {
-    "mtime": 1792579585.560863,
-    "seen": 1792579935.141401,
-    "ast_hash": "9c58116fd27353486839576acb9c0801",
+    "mtime": 1792580677.087016,
+    "seen": 1792581323.9930525,
+    "ast_hash": "6aa78484618a512e912cd94f5c738fae",
     "semantic_hash": ""
   },
   "src/util.js": {
@@ -2406,9 +2406,9 @@
     "semantic_hash": ""
   },
   "inicio.html": {
-    "mtime": 1792548422.3700585,
-    "seen": 1792548706.8522234,
-    "ast_hash": "8b8a9be7954aaa07d6aaf016ae7e7050",
+    "mtime": 1792580677.0790546,
+    "seen": 1792581323.9942012,
+    "ast_hash": "721a3cd0839b77df3d302ab4f5f6fdc2",
     "semantic_hash": ""
   },
   "perfil-rosto/foto.html": {
@@ -2766,15 +2766,15 @@
     "semantic_hash": ""
   },
   "src/pages/clipe.js": {
-    "mtime": 1792578570.4865754,
-    "seen": 1792578689.183317,
-    "ast_hash": "83f8d5e8ba99210a7e94860c911850a3",
+    "mtime": 1792580677.0846481,
+    "seen": 1792581323.9929826,
+    "ast_hash": "c5efbcf80fa6c099c718ae72b56f0eec",
     "semantic_hash": ""
   },
   "clipe.html": {
-    "mtime": 1792543671.8824341,
-    "seen": 1792543781.1666994,
-    "ast_hash": "1ff48c54d1dd2eb773bba27c57c59a30",
+    "mtime": 1792580677.077293,
+    "seen": 1792581323.994167,
+    "ast_hash": "cfe0eaf1efca47b2b3f3b9fe55e5a5d8",
     "semantic_hash": ""
   },
   "src/pages/criar.js": {
