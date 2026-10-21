@@ -5,6 +5,11 @@
 /* Base herdada das telas do Stitch. */
 @layer base {
   html, body { margin: 0; padding: 0; }
+  /* Controles nativos (select, scrollbar) no tema escuro. */
+  html { color-scheme: dark; }
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  }
   body { overscroll-behavior: none; }
   /* O atributo hidden precisa vencer utilitários de display como .flex. */
   [hidden] { display: none !important; }

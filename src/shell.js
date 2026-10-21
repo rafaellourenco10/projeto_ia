@@ -70,12 +70,12 @@ function header() {
     <label class="w-full flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-low/90 text-on-surface-variant focus-within:ring-2 focus-within:ring-primary">
       <span class="material-symbols-outlined text-sm" aria-hidden="true">search</span>
       <span class="sr-only">Buscar clipes</span>
-      <input id="busca" name="q" type="search" autocomplete="off" placeholder="Buscar clipes, estilos, categorias..." class="w-full bg-transparent border-0 p-0 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none"/>
+      <input id="busca" name="q" type="search" autocomplete="off" placeholder="Buscar clipes, estilos, categorias…" class="w-full bg-transparent border-0 p-0 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none"/>
     </label>
   </form>
   <div class="ml-auto flex items-center gap-space-sm">
-    <a href="/creditos-planos" aria-label="Saldo de créditos" class="flex items-center gap-space-xs px-space-sm sm:px-space-md py-2 rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-container-highest transition-colors">
-      <span class="material-symbols-outlined text-secondary text-sm" aria-hidden="true">bolt</span><span class="font-label-md text-label-md" data-saldo>${store.getSaldoDisponivel()}</span>
+    <a href="/creditos-planos" class="flex items-center gap-space-xs px-space-sm sm:px-space-md py-2 rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-container-highest transition-colors">
+      <span class="material-symbols-outlined text-secondary text-sm" aria-hidden="true">bolt</span><span class="sr-only">Saldo:</span><span class="font-label-md text-label-md" data-saldo>${store.getSaldoDisponivel()}</span><span class="sr-only">créditos</span>
     </a>
     <a href="/ajuda-faq" title="Ajuda" aria-label="Ajuda" class="hidden sm:flex w-9 h-9 rounded-full items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-xl" aria-hidden="true">help</span></a>
     <a href="/criar-com-texto" aria-label="Novo vídeo" class="px-space-sm sm:px-space-md py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-all flex items-center gap-space-xs shadow-[0_0_20px_rgba(160,120,255,0.4)]"><span class="material-symbols-outlined text-base" aria-hidden="true">movie_edit</span><span class="hidden sm:inline">Novo Vídeo</span></a>
@@ -105,6 +105,9 @@ export function montarShell({ rota = null, exigirLogin = true } = {}) {
   coluna.append(main)
   document.body.insertAdjacentHTML('afterbegin', sidebar(rota))
   document.body.insertAdjacentHTML('beforeend', bottomNav(rota))
+  main.id ||= 'conteudo'
+  main.tabIndex = -1
+  document.body.insertAdjacentHTML('afterbegin', `<a href="#${main.id}" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-space-md focus:py-2 focus:rounded-xl focus:bg-primary-container focus:text-on-primary-container">Pular para o conteúdo</a>`)
 
   const atualizar = () => {
     document.querySelectorAll('[data-saldo]').forEach((el) => (el.textContent = store.getSaldoDisponivel()))
