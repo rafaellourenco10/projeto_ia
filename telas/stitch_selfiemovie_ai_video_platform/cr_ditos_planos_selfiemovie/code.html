@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#3e0022",
+          "secondary": "#ffb0cd",
+          "background": "#141319",
+          "on-error-container": "#ffdad6",
+          "tertiary-fixed-dim": "#4cd7f6",
+          "surface-container": "#201f25",
+          "on-tertiary-fixed-variant": "#004e5c",
+          "on-primary-container": "#594983",
+          "surface-container-low": "#1c1b21",
+          "surface-tint": "#d0bcff",
+          "on-surface-variant": "#cbc3d7",
+          "on-secondary": "#531d35",
+          "secondary-fixed-dim": "#ffb0cd",
+          "surface-variant": "#35343b",
+          "inverse-primary": "#6d3bd7",
+          "on-surface": "#e5e1ea",
+          "surface-container-highest": "#35343b",
+          "secondary-container": "#70364f",
+          "on-primary-fixed-variant": "#4d3d76",
+          "on-primary-fixed": "#23005c",
+          "surface-bright": "#3a383f",
+          "primary-container": "#a078ff",
+          "surface-container-lowest": "#0e0d13",
+          "on-tertiary": "#003640",
+          "error-container": "#93000a",
+          "surface-container-high": "#2b2930",
+          "inverse-on-surface": "#312f36",
+          "on-error": "#690005",
+          "on-secondary-fixed-variant": "#6e344c",
+          "error": "#ffb4ab",
+          "on-tertiary-container": "#002f38",
+          "outline-variant": "#494454",
+          "tertiary-fixed": "#acedff",
+          "inverse-surface": "#e5e1ea",
+          "surface": "#141319",
+          "on-tertiary-fixed": "#001f26",
+          "primary-fixed": "#e9ddff",
+          "outline": "#958ea0",
+          "secondary-fixed": "#ffd9e4",
+          "primary-fixed-dim": "#d0bcff",
+          "primary": "#d0bcff",
+          "surface-dim": "#141319",
+          "tertiary": "#4cd7f6",
+          "on-background": "#e5e1ea",
+          "on-secondary-container": "#efa2bf",
+          "on-primary": "#3c0091",
+          "tertiary-container": "#009eb9"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "margin": "3rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "space-xl": "2rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-lg": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "800"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="hidden md:flex fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex-col justify-between p-space-md border-r border-outline-variant/30 shadow-[4px_0_24px_rgba(0,0,0,0.5)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-container via-primary to-secondary flex items-center justify-center shadow-[0_0_16px_rgba(208,188,255,0.35)]"><span class="material-symbols-outlined text-on-primary text-[22px]">movie_filter</span></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight bg-gradient-to-r from-primary via-secondary to-secondary-fixed bg-clip-text text-transparent">SelfieMovie</span></div><div class="bg-surface-container-low rounded-xl p-space-md border border-outline-variant/40 relative overflow-hidden backdrop-blur-md"><div class="absolute -right-4 -top-4 w-16 h-16 bg-primary/10 rounded-full blur-xl pointer-events-none"></div><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-[18px]">bolt</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Saldo</span></div><span class="font-label-md text-label-md font-bold text-on-surface">45 créditos</span></div><a class="flex items-center justify-center w-full py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-on-surface font-label-md text-label-md transition-all duration-200 border border-outline-variant/30" data-path="creditos-e-planos" href="#">Recarregar</a></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary shadow-[inset_0_0_12px_rgba(208,188,255,0.06)] font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="inicio" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Início</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Criar com Texto</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-[20px]">video_library</span><span>Minhas Criações</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="creditos-e-planos" href="#"><span class="material-symbols-outlined text-[20px]">loyalty</span><span>Créditos &amp; Planos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[20px]">face</span><span>Perfil &amp; Rosto</span></a></nav></div><div class="pt-space-md border-t border-outline-variant/30"><div class="flex items-center gap-space-sm px-space-xs py-space-xs rounded-xl bg-surface-container/60"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(208,188,255,0.25)]"><span class="material-symbols-outlined text-on-primary text-[20px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Lucas Silva</span><span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Conta Ativa</span></div><a class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg transition-colors" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[18px]">settings</span></a></div></div></aside><div class="md:pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-0 md:left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.3)] z-40 px-space-gutter-mobile md:px-space-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm md:hidden"><div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary-container to-secondary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">movie_filter</span></div><span class="font-headline-sm text-headline-sm font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">SelfieMovie</span></div><div class="hidden sm:flex items-center flex-1 max-w-md bg-surface-container-lowest/80 rounded-full border border-outline-variant/40 px-space-md py-1.5 focus-within:border-primary transition-all"><span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span><input class="bg-transparent border-none outline-none text-on-surface placeholder:text-outline font-body-sm text-body-sm w-full" placeholder="Buscar criações, cenas ou estilos..." type="text"/></div><div class="flex items-center gap-space-sm md:gap-space-md ml-auto"><div class="flex items-center gap-1.5 bg-surface-container-high/70 backdrop-blur-md px-space-sm py-1 rounded-full border border-outline-variant/30 text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">bolt</span><span class="font-bold">45</span><span class="hidden xs:inline text-on-surface-variant">créditos</span></div><button class="hidden sm:flex items-center justify-center w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Central de Ajuda"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><a class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-gradient-to-r from-primary-container to-secondary-container hover:brightness-110 text-on-surface font-label-md text-label-md font-bold shadow-[0_0_20px_rgba(160,120,255,0.35)] transition-all" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span class="hidden sm:inline">Novo Vídeo</span><span class="sm:hidden">Criar</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 pb-20 md:pb-space-xl px-space-gutter-mobile md:px-space-gutter max-w-7xl mx-auto flex-1 bg-surface"><div class="flex flex-col w-full gap-space-xl">
+<!-- Ambient Light Accents (Contained) -->
+<div class="relative w-full">
+<div class="absolute -top-12 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-20 right-1/6 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Page Header & Current Balance Hero -->
+<section class="relative z-10 flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Gestão Financeira &amp; Recursos</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Créditos &amp; Planos</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Gerencie seu saldo, potencialize sua produção audiovisual com assinaturas recorrentes ou adquira recargas rápidas.
+          </p>
+</div>
+<button class="inline-flex items-center gap-space-xs self-start md:self-auto px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">history</span>
+<span>Histórico de Consumo</span>
+</button>
+</div>
+<!-- Current Balance Card Hero -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container/90 backdrop-blur-md p-space-lg md:p-space-xl shadow-xl">
+<div class="absolute right-0 top-0 w-80 h-full bg-gradient-to-l from-primary-container/15 via-secondary-container/10 to-transparent pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-2 self-start px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold">Conta ativa • 10 créditos de bônus recebidos no cadastro</span>
+</div>
+<div class="flex items-baseline gap-space-sm flex-wrap pt-1">
+<span class="font-display-hero text-display-hero font-extrabold tracking-tight text-on-surface">45</span>
+<span class="font-headline-md text-headline-md font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[28px] text-tertiary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                créditos disponíveis
+              </span>
+</div>
+<div class="flex items-start gap-2.5 max-w-2xl mt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<p class="font-body-sm text-body-sm leading-relaxed">
+                Créditos são usados para gerar clipes, vídeos e fotos. Se uma geração falhar, os créditos voltam integralmente para seu saldo.
+              </p>
+</div>
+</div>
+<!-- Micro visualizer of credit distribution -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-space-sm min-w-[240px] bg-surface-container-low/80 p-space-md rounded-xl backdrop-blur-sm self-stretch lg:self-auto justify-center">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Capacidade Estimada</span>
+<span class="text-tertiary font-bold">~9 vídeos</span>
+</div>
+<!-- Progress Bar Tracker -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-tertiary rounded-full" style="width: 65%;"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-label-sm text-label-sm pt-0.5">
+<span>Consumo mensal</span>
+<span class="text-on-surface">35 / 80 usados</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Monthly Plans Section -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Planos mensais</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Escolha a assinatura ideal com renovação mensal e créditos automáticos.
+      </p>
+</div>
+<!-- 3-Column Plan Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch">
+<!-- Plan 1: Básico -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container p-space-lg shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Entrada</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Básico</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant min-h-[40px]">
+              Para testar e criar seus primeiros vídeos.
+            </p>
+</div>
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-extrabold text-on-surface tracking-tight">R$ 29</span>
+<span class="font-body-sm text-body-sm text-outline">/ mês</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary">50 créditos por mês</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-tertiary font-label-sm text-label-sm font-bold">≈ 10 clipes</span>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container-highest my-space-xs"></div>
+<!-- Feature List -->
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Vídeos em HD</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Sem marca d'água</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Cancele quando quiser</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-surface-container-high hover:bg-primary/20 text-primary font-label-lg text-label-lg font-bold transition-all shadow-sm flex items-center justify-center gap-1.5" type="button">
+<span>Assinar</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Plan 2: Pro Creator (Maximum Highlight) -->
+<div class="relative flex flex-col justify-between rounded-xl bg-gradient-to-b from-surface-container-high via-surface-container to-surface-container p-space-lg shadow-2xl scale-[1.02] z-20">
+<!-- Glow Backdrop behind featured card -->
+<div class="absolute -inset-0.5 bg-gradient-to-r from-primary-container via-secondary-container to-secondary rounded-xl blur-sm opacity-50 -z-10"></div>
+<!-- Popular Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-on-primary-fixed font-label-sm text-label-sm font-extrabold shadow-lg uppercase tracking-wider">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+            Mais popular
+          </span>
+</div>
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Ideal para criadores</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Pro Creator</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant min-h-[40px]">
+              Para criadores de conteúdo que postam toda semana.
+            </p>
+</div>
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-extrabold text-on-surface tracking-tight">R$ 69</span>
+<span class="font-body-sm text-body-sm text-outline">/ mês</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-secondary">180 créditos por mês</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 text-secondary-fixed font-label-sm text-label-sm font-bold">≈ 36 clipes</span>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container-highest my-space-xs"></div>
+<!-- Feature List -->
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Vídeos em HD</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Sem marca d'água</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Cancele quando quiser</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-semibold text-secondary-fixed">Prioridade na fila de geração</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-gradient-to-r from-primary-container to-secondary-container hover:brightness-110 text-on-surface font-label-lg text-label-lg font-bold shadow-[0_0_24px_rgba(160,120,255,0.4)] transition-all flex items-center justify-center gap-1.5" type="button">
+<span>Assinar Pro Creator</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+</div>
+<!-- Plan 3: Ultra Studio -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container p-space-lg shadow-md hover:bg-surface-container-high transition-all">
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Produção Avançada</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Ultra Studio</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant min-h-[40px]">
+              Para quem publica todo dia ou cria para clientes.
+            </p>
+</div>
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-extrabold text-on-surface tracking-tight">R$ 149</span>
+<span class="font-body-sm text-body-sm text-outline">/ mês</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-tertiary">500 créditos por mês</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-tertiary font-label-sm text-label-sm font-bold">≈ 100 clipes</span>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container-highest my-space-xs"></div>
+<!-- Feature List -->
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Vídeos em HD</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Sem marca d'água</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0">check_circle</span>
+<span>Cancele quando quiser</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">support_agent</span>
+<span>Suporte dedicado para criação</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full py-space-sm px-space-md rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-bold transition-all shadow-sm flex items-center justify-center gap-1.5" type="button">
+<span>Assinar Ultra Studio</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- On-Demand Packages (Pacotes Avulsos) -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">add_shopping_cart</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Pacotes avulsos</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Sem compromisso mensal. Compre créditos sob demanda e use no seu ritmo.
+      </p>
+</div>
+<!-- 3 Cards in Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Pack 1 -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">20 créditos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">≈ 4 clipes em HD</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary">R$ 15</span>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-2 px-space-sm rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md font-semibold transition-all shadow-sm" type="button">
+            Comprar
+          </button>
+</div>
+</div>
+<!-- Pack 2 (Best Value Badge) -->
+<div class="relative flex flex-col justify-between rounded-xl bg-surface-container p-space-md shadow-md hover:bg-surface-container-high transition-all">
+<div class="absolute -top-2.5 right-4">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold tracking-wide uppercase">
+            Melhor valor
+          </span>
+</div>
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">60 créditos</span>
+<span class="font-body-sm text-body-sm text-secondary">≈ 12 clipes em HD</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-extrabold text-secondary">R$ 39</span>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-2 px-space-sm rounded-lg bg-secondary hover:bg-secondary-fixed text-on-secondary font-label-md text-label-md font-bold transition-all shadow-sm" type="button">
+            Comprar
+          </button>
+</div>
+</div>
+<!-- Pack 3 -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-md hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">150 créditos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">≈ 30 clipes em HD</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-extrabold text-tertiary">R$ 89</span>
+</div>
+<div class="pt-space-md">
+<button class="w-full py-2 px-space-sm rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md font-semibold transition-all shadow-sm" type="button">
+            Comprar
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Usage Breakdown Table (Quanto custa cada criação) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">tune</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Quanto custa cada criação</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Transparência completa sobre como seus créditos são descontados por tarefa gerada.
+      </p>
+</div>
+<!-- Table in Glass Card -->
+<div class="rounded-xl bg-surface-container p-space-md md:p-space-lg shadow-lg flex flex-col gap-space-md">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="pb-space-sm font-semibold">Tipo de Criação</th>
+<th class="pb-space-sm font-semibold">Qualidade</th>
+<th class="pb-space-sm font-semibold text-right">Custo em Créditos</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/60 font-body-md text-body-md text-on-surface">
+<!-- Item 1 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">movie</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Clipe da biblioteca</span>
+<span class="font-body-sm text-body-sm text-outline">Modelos predefinidos prontos</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-bold">Padrão</span>
+</td>
+<td class="py-space-sm text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">5</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">créditos</span>
+</td>
+</tr>
+<!-- Item 2 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">videocam</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Vídeo de 5 s</span>
+<span class="font-body-sm text-body-sm text-outline">Movimento dinâmico e fala</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm font-bold">HD</span>
+</td>
+<td class="py-space-sm text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">5</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">créditos</span>
+</td>
+</tr>
+<!-- Item 3 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">theaters</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Vídeo de 10 s</span>
+<span class="font-body-sm text-body-sm text-outline">Cena estendida com narrativa</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm font-bold">HD</span>
+</td>
+<td class="py-space-sm text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">8</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">créditos</span>
+</td>
+</tr>
+<!-- Item 4 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">portrait</span>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Foto</span>
+<span class="font-body-sm text-body-sm text-outline">Geração de quadro estático</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/50 text-secondary-fixed font-label-sm text-label-sm font-bold">Retrato IA</span>
+</td>
+<td class="py-space-sm text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">2</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">créditos</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Privacy & Photo Storage Rule Note -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">lock</span>
+<span>Sua foto fica salva na sua conta até você apagá-la no Perfil.</span>
+</div>
+</div>
+</section>
+<!-- Security & Trust Footer Banner -->
+<footer class="rounded-xl bg-surface-container-low/90 backdrop-blur-md p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md shadow-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Pagamento seguro. Os créditos avulsos não expiram.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Criptografia de ponta a ponta e política de estorno automático caso a geração falhe.</span>
+</div>
+</div>
+<!-- Security Trust Badges -->
+<div class="flex items-center gap-space-sm flex-wrap justify-center">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>SSL 256-bit</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-primary">replay</span>
+<span>Reembolso Garantido</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Checkout Confiável</span>
+</div>
+</div>
+</footer>
+</div></main></div><nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-t border-outline-variant/30 z-50 flex items-center justify-around px-space-sm shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-bold"><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span>Início</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span>Criar</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-[22px]">video_library</span><span>Criações</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[22px]">face</span><span>Perfil</span></a></nav></body></html>

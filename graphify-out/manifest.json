@@ -1,0 +1,2828 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1792520861.5448177,
+    "seen": 1792543605.2679598,
+    "ast_hash": "f00b63afbeee0dc3f06219a824e33db9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/deploy-to-vercel/resources/deploy-codex.sh": {
+    "mtime": 1792521012.319005,
+    "seen": 1792543605.2679663,
+    "ast_hash": "1e058427679d19ffb6f1b70817599c70",
+    "semantic_hash": ""
+  },
+  ".claude/skills/deploy-to-vercel/resources/deploy.sh": {
+    "mtime": 1792521012.319005,
+    "seen": 1792543605.2679691,
+    "ast_hash": "f691ea901bd4ad44a492c4eb4775dfa2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gh-fix-ci/scripts/inspect_pr_checks.py": {
+    "mtime": 1792521024.5843008,
+    "seen": 1792543605.26797,
+    "ast_hash": "af5c2c81ad9a721408f26ccbdebeea4d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/assets/showcase/color-pair.tsx": {
+    "mtime": 1792521042.1025724,
+    "seen": 1792543605.2679713,
+    "ast_hash": "deea9209282815e9639465ac4ff41a5e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/assets/showcase/state-matrix.tsx": {
+    "mtime": 1792521042.1060376,
+    "seen": 1792543605.267973,
+    "ast_hash": "2a2bb1b70c07b3f2df8f4b8df2f47a62",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/evals/evals.json": {
+    "mtime": 1792521042.1123424,
+    "seen": 1792543605.267974,
+    "ast_hash": "ff2596fefcdd2ddb853a73870214164c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/scripts/showcase-coverage.mjs": {
+    "mtime": 1792521042.1213536,
+    "seen": 1792543605.2679749,
+    "ast_hash": "2cbb4e479b376730348e82fea973d9bf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/auth-route.mjs": {
+    "mtime": 1792521012.3845801,
+    "seen": 1792543605.267976,
+    "ast_hash": "71e57ac88c9a128fe9bcb0d011ede682",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/budget-summary.mjs": {
+    "mtime": 1792521012.3855777,
+    "seen": 1792543605.2679772,
+    "ast_hash": "9a4ff46aeb08b1f8ab1eb838f6511d4c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/citations.mjs": {
+    "mtime": 1792521012.3855777,
+    "seen": 1792543605.267978,
+    "ast_hash": "de88963f0ac598d1ad7702e01814343c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/cost-coverage.mjs": {
+    "mtime": 1792521012.3865712,
+    "seen": 1792543605.2679868,
+    "ast_hash": "5a9598e11593937390dd579833a19fb2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/dedup-recs.mjs": {
+    "mtime": 1792521012.3865712,
+    "seen": 1792543605.2679877,
+    "ast_hash": "958478880459e5e749921877e5ee8204",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/deep-dive.mjs": {
+    "mtime": 1792521012.3865712,
+    "seen": 1792543605.2679887,
+    "ast_hash": "641fb7fac77f0b2a83bbba831b915319",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/display-labels.mjs": {
+    "mtime": 1792521012.3865712,
+    "seen": 1792543605.26799,
+    "ast_hash": "94fbd947864e75ae0e87254145a048fb",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/extract-claims.mjs": {
+    "mtime": 1792521012.3880944,
+    "seen": 1792543605.2679908,
+    "ast_hash": "9738058996d283162a437935c66f90f3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/framework-support.mjs": {
+    "mtime": 1792521012.388663,
+    "seen": 1792543605.2679918,
+    "ast_hash": "8f0e9a9a0798814dfdd90372331ad112",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/build-minutes-fanout.mjs": {
+    "mtime": 1792521012.389209,
+    "seen": 1792543605.2679927,
+    "ast_hash": "c959ca1b53b620ff3a7f1e8750a49bad",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/cold-start.mjs": {
+    "mtime": 1792521012.389209,
+    "seen": 1792543605.267994,
+    "ast_hash": "2f920f322b30bd82fcfa80d7a7dd6a24",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/contract.mjs": {
+    "mtime": 1792521012.389209,
+    "seen": 1792543605.267995,
+    "ast_hash": "a452897d4b63d339560e137d8e6254da",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/cwv-poor.mjs": {
+    "mtime": 1792521012.3902323,
+    "seen": 1792543605.2679963,
+    "ast_hash": "e275b40a3def8807c180d5b49190c664",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/external-api-slow.mjs": {
+    "mtime": 1792521012.3902323,
+    "seen": 1792543605.2679973,
+    "ast_hash": "57d06bd9d0de4104c3e9bc615259f7c4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/hard-gates.mjs": {
+    "mtime": 1792521012.391232,
+    "seen": 1792543605.2679987,
+    "ast_hash": "bc17569a25dd6ef80422a7d1a3db093c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/index.mjs": {
+    "mtime": 1792521012.391232,
+    "seen": 1792543605.2679996,
+    "ast_hash": "6a4b2432227adf117eb83866c6f0aa7d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/isr-overrevalidation.mjs": {
+    "mtime": 1792521012.391232,
+    "seen": 1792543605.2680006,
+    "ast_hash": "1602af854c1e4c551a7fd79ddcd79ff6",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/middleware-heavy.mjs": {
+    "mtime": 1792521012.392233,
+    "seen": 1792543605.2680013,
+    "ast_hash": "5b929d15773ce9033049d942c2dea903",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/observability-events-attribution.mjs": {
+    "mtime": 1792521012.392233,
+    "seen": 1792543605.2680025,
+    "ast_hash": "5967d19933866f815bb8c6c6be1469ef",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/platform-bot-protection.mjs": {
+    "mtime": 1792521012.3932316,
+    "seen": 1792543605.2680037,
+    "ast_hash": "81c6cc0b933ad0599c119fac35d116ee",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/platform-fluid-compute.mjs": {
+    "mtime": 1792521012.3932316,
+    "seen": 1792543605.2680047,
+    "ast_hash": "86859a7f0c109b69fa7c4c294d5a9765",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/region-misconfig.mjs": {
+    "mtime": 1792521012.3932316,
+    "seen": 1792543605.2680054,
+    "ast_hash": "b66b6952c6c94d2863de95dd44f034b4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/route-errors.mjs": {
+    "mtime": 1792521012.394232,
+    "seen": 1792543605.2680063,
+    "ast_hash": "b0982f2fb2ea02e4c528572df2557f07",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/scanner-driven.mjs": {
+    "mtime": 1792521012.394232,
+    "seen": 1792543605.2680075,
+    "ast_hash": "17c03adb22f744c592be1d2c20de9156",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/select-candidates.mjs": {
+    "mtime": 1792521012.3952355,
+    "seen": 1792543605.2680082,
+    "ast_hash": "259a0bf9012c79335f1e96a62fd2c692",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/slow-route.mjs": {
+    "mtime": 1792521012.3952355,
+    "seen": 1792543605.2680092,
+    "ast_hash": "a4d929f629accf11494a1e0f1593210a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/types.d.ts": {
+    "mtime": 1792521012.3952355,
+    "seen": 1792543605.2680101,
+    "ast_hash": "fe788acedd81bef124fd1cabba932ea3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/uncached-route.mjs": {
+    "mtime": 1792521012.3962314,
+    "seen": 1792543605.2680113,
+    "ast_hash": "162dd68191abd529b1b21dd9ff7c76ed",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/gates/usage-spike-triage.mjs": {
+    "mtime": 1792521012.3962314,
+    "seen": 1792543605.2680123,
+    "ast_hash": "b37c17d46c8b43037cfc728e4d20f1de",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/grade-recommendation.mjs": {
+    "mtime": 1792521012.3972323,
+    "seen": 1792543605.2680135,
+    "ast_hash": "1198d4cf62bf526f2a02d783dd0a113a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/impact-label.mjs": {
+    "mtime": 1792521012.3972323,
+    "seen": 1792543605.2680144,
+    "ast_hash": "09f45517d2f3909c779496b060cd28d9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/impact-magnitude.mjs": {
+    "mtime": 1792521012.398235,
+    "seen": 1792543605.2680154,
+    "ast_hash": "024c8a71b8738ced7bbebffba8fbb171",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/investigation-brief.mjs": {
+    "mtime": 1792521012.398235,
+    "seen": 1792543605.268016,
+    "ast_hash": "1c6226187c32acb86baa365289db8115",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/observation-safety.mjs": {
+    "mtime": 1792521012.399237,
+    "seen": 1792543605.2680173,
+    "ast_hash": "a5ab597fba7bbf4c81b6140f9ee09173",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/project-facts.mjs": {
+    "mtime": 1792521012.399597,
+    "seen": 1792543605.2680185,
+    "ast_hash": "3abed94202c02e0f4f610e1e2c8987a4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/queries.mjs": {
+    "mtime": 1792521012.40001,
+    "seen": 1792543605.26802,
+    "ast_hash": "09714d4d207cccc8f40bc606503430d7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/reconcile-candidates.mjs": {
+    "mtime": 1792521012.40001,
+    "seen": 1792543605.268021,
+    "ast_hash": "7298034c669dc567ccda36c50eeb4c18",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/render-report.mjs": {
+    "mtime": 1792521012.401299,
+    "seen": 1792543605.268022,
+    "ast_hash": "6da068edbfc077c838ee040597889960",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/repo-root.mjs": {
+    "mtime": 1792521012.4022985,
+    "seen": 1792543605.2680228,
+    "ast_hash": "3907e49cdab74fd337e66c0140448c9c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/route-normalize.mjs": {
+    "mtime": 1792521012.4022985,
+    "seen": 1792543605.2680237,
+    "ast_hash": "84d68fc58c00da998a343c3261d93a5c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/bot-protection-certainty.mjs": {
+    "mtime": 1792521012.4033053,
+    "seen": 1792543605.2680252,
+    "ast_hash": "6fb7bde73e0246dcd597c7d4e6cd00f9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/cache-tag-invalidation-certainty.mjs": {
+    "mtime": 1792521012.4033053,
+    "seen": 1792543605.268026,
+    "ast_hash": "691b6559fbd54dcb5fbb13b3f098710b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/count-correct.mjs": {
+    "mtime": 1792521012.404297,
+    "seen": 1792543605.2680268,
+    "ast_hash": "5b21e4077a7dfc7d212870cef8412b12",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/function-duration-invocations.mjs": {
+    "mtime": 1792521012.4048176,
+    "seen": 1792543605.268028,
+    "ast_hash": "03e005ed87a1ce9654c650bc58951f7f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/index.mjs": {
+    "mtime": 1792521012.4048176,
+    "seen": 1792543605.268029,
+    "ast_hash": "b6ff0a9ffdee10d26a20d837c6f368d6",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/middleware-conflict.mjs": {
+    "mtime": 1792521012.4048176,
+    "seen": 1792543605.2680297,
+    "ast_hash": "883ce591c434aea841e25b4fcd6b0953",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/missing-citation.mjs": {
+    "mtime": 1792521012.4048176,
+    "seen": 1792543605.2680304,
+    "ast_hash": "6f090744efd9d60f0e40be03df0d6566",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/pre-release.mjs": {
+    "mtime": 1792521012.4063382,
+    "seen": 1792543605.2680316,
+    "ast_hash": "f84cfe9dff4d7eb16632aab3135530f9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/rate-limit.mjs": {
+    "mtime": 1792521012.4063382,
+    "seen": 1792543605.2680328,
+    "ast_hash": "dc34251f6c2e3cadd3269cd1a9da0587",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/rendering-mode-mislabel.mjs": {
+    "mtime": 1792521012.4063382,
+    "seen": 1792543605.2680337,
+    "ast_hash": "3800cec0d9b0d723dec7ebe071d66a77",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/undeclared-dep.mjs": {
+    "mtime": 1792521012.4063382,
+    "seen": 1792543605.2680345,
+    "ast_hash": "d2c6f0d56c462d19ed85206f1dfaaa83",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/vercel-directive-strip.mjs": {
+    "mtime": 1792521012.4079127,
+    "seen": 1792543605.2680357,
+    "ast_hash": "eb8db9f868393181b2dbe5dcd6502100",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/sanitizers/window-units.mjs": {
+    "mtime": 1792521012.4079127,
+    "seen": 1792543605.2680364,
+    "ast_hash": "efbbefbbcdd42ae9ecc7647239e22820",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/cache-components-suspense-dedupe.mjs": {
+    "mtime": 1792521012.4089377,
+    "seen": 1792543605.268037,
+    "ast_hash": "75d886752c21a0948d71d7b34fa320d4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/edge-heavy-import.mjs": {
+    "mtime": 1792521012.4089377,
+    "seen": 1792543605.2680378,
+    "ast_hash": "9bb3406e40fd6e9d3f1f7e8f5ad30628",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/force-dynamic.mjs": {
+    "mtime": 1792521012.4099393,
+    "seen": 1792543605.268039,
+    "ast_hash": "76609efa8e39d4644948945b3a54a066",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/headers-in-page.mjs": {
+    "mtime": 1792521012.4099393,
+    "seen": 1792543605.2680402,
+    "ast_hash": "c4f7e3194957a352f71d2402dd9eb7b5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/index.mjs": {
+    "mtime": 1792521012.4099393,
+    "seen": 1792543605.2680411,
+    "ast_hash": "352c8d274295bb17a8146c76aa1958f1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/large-static-asset.mjs": {
+    "mtime": 1792521012.410939,
+    "seen": 1792543605.2680423,
+    "ast_hash": "07e9b452806daa5442e0351e2ec27350",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/max-age-without-s-maxage.mjs": {
+    "mtime": 1792521012.410939,
+    "seen": 1792543605.2680433,
+    "ast_hash": "7bd7f7f73c21f8a94586d84ee8b33874",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/middleware-broad-matcher.mjs": {
+    "mtime": 1792521012.4119382,
+    "seen": 1792543605.2680442,
+    "ast_hash": "456e68b8e9c1d3704e96012efa1b37d3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/missing-cache-headers.mjs": {
+    "mtime": 1792521012.4119382,
+    "seen": 1792543605.268045,
+    "ast_hash": "23aef3dee98687ae92bebaa472c97353",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/prisma-include-tree.mjs": {
+    "mtime": 1792521012.4119382,
+    "seen": 1792543605.2680461,
+    "ast_hash": "0648bc7584a8bd9f41a27621e1aa9d57",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/region-pin-in-config.mjs": {
+    "mtime": 1792521012.4129384,
+    "seen": 1792543605.2680469,
+    "ast_hash": "1df619657dd3916f8b2d95c4017712db",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/source-maps-production.mjs": {
+    "mtime": 1792521012.4129384,
+    "seen": 1792543605.2680476,
+    "ast_hash": "2be123f2e92edbfb3c6b976a9b9895ef",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/sveltekit-prerender-missing.mjs": {
+    "mtime": 1792521012.4139357,
+    "seen": 1792543605.2680483,
+    "ast_hash": "838ac35e9d3cc9a75f7ef1c57c0e5f95",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/turbo-force-bypass.mjs": {
+    "mtime": 1792521012.4139357,
+    "seen": 1792543605.2680495,
+    "ast_hash": "77d29fc24d000fd96441720f1a313db9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/unoptimized-image.mjs": {
+    "mtime": 1792521012.4139357,
+    "seen": 1792543605.2680502,
+    "ast_hash": "6c3c9b446b40ac7760dc4a72e5c23bad",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/scanners/use-cache-date-stamp.mjs": {
+    "mtime": 1792521012.4149404,
+    "seen": 1792543605.2680511,
+    "ast_hash": "2d6ea591fb066b9a85a1095cf5746b5b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/support-topics.mjs": {
+    "mtime": 1792521012.4149404,
+    "seen": 1792543605.2680523,
+    "ast_hash": "28b48cca0066f277bf456d3ff9ca405f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/throttle.mjs": {
+    "mtime": 1792521012.4159424,
+    "seen": 1792543605.268053,
+    "ast_hash": "17221e1f3c0c6b2c19e2b8c755216b6e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/util.mjs": {
+    "mtime": 1792521012.4162512,
+    "seen": 1792543605.2680538,
+    "ast_hash": "46a418af647a60aef3657b1832e8691b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/vercel.mjs": {
+    "mtime": 1792521012.4170787,
+    "seen": 1792543605.2680547,
+    "ast_hash": "5a67e7a42af89ecd38056a4955f09d7d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/verify-claim.mjs": {
+    "mtime": 1792521012.4180906,
+    "seen": 1792543605.268056,
+    "ast_hash": "25af27603eef4698ad59459b94171673",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/lib/workspace-resolver.mjs": {
+    "mtime": 1792521012.4180906,
+    "seen": 1792543605.2680566,
+    "ast_hash": "a0eeaca23d1e02d85b517d964b7e1626",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/docs-library.json": {
+    "mtime": 1792521012.420084,
+    "seen": 1792543605.2680578,
+    "ast_hash": "e01b31e53b527ec982039272c08a9ace",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/budget-summary.mjs": {
+    "mtime": 1792521012.445818,
+    "seen": 1792543605.2680588,
+    "ast_hash": "65353d5a7af523200a2f8fb335406cf9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/build-docs.mjs": {
+    "mtime": 1792521012.445818,
+    "seen": 1792543605.26806,
+    "ast_hash": "b39a2f6f2cc914c314b9beb2a88a5a05",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/check-citations.mjs": {
+    "mtime": 1792521012.448418,
+    "seen": 1792543605.2680619,
+    "ast_hash": "aeacb69269be1b87df3e927a4a86ac14",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/check-docs-fresh.mjs": {
+    "mtime": 1792521012.448418,
+    "seen": 1792543605.2680628,
+    "ast_hash": "a1be7ef9ba9ee9c50bc6827972082428",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/collect-signals.mjs": {
+    "mtime": 1792521012.448418,
+    "seen": 1792543605.2680635,
+    "ast_hash": "8e5787f63180659a3efe02a24e5dafc5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/collect-sub-agent-outputs.mjs": {
+    "mtime": 1792521012.4495854,
+    "seen": 1792543605.2680645,
+    "ast_hash": "b21ead751250179c29196129abcf320e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/deep-dive.mjs": {
+    "mtime": 1792521012.4495854,
+    "seen": 1792543605.2680652,
+    "ast_hash": "7e09f04d47fc9d37faacfa17c1945c39",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/gate-investigations.mjs": {
+    "mtime": 1792521012.450611,
+    "seen": 1792543605.2680664,
+    "ast_hash": "39f5871fcd36b3236cd75404679c080b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/merge-signals.mjs": {
+    "mtime": 1792521012.450611,
+    "seen": 1792543605.2680674,
+    "ast_hash": "62c921556097b0b882d9350d4fb58f11",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/prepare-investigation-brief.mjs": {
+    "mtime": 1792521012.4516108,
+    "seen": 1792543605.268068,
+    "ast_hash": "067c2493e3f3c03a2aec8e6893fcba4f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/reconcile-candidates.mjs": {
+    "mtime": 1792521012.4516108,
+    "seen": 1792543605.268069,
+    "ast_hash": "77a1a4c2c1e113567ce62264a417fde3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/render-report.mjs": {
+    "mtime": 1792521012.4526055,
+    "seen": 1792543605.26807,
+    "ast_hash": "793f6e9f3a8e5b9f7d36cdf2ac12b66d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/scan-codebase.mjs": {
+    "mtime": 1792521012.4526055,
+    "seen": 1792543605.268071,
+    "ast_hash": "3598e55caeef52b03b0a6cb52307aa8a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/verify-and-regen.mjs": {
+    "mtime": 1792521012.4536088,
+    "seen": 1792543605.2680717,
+    "ast_hash": "e719d3267457a69ef3249246550a248a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/scripts/verify-finding.mjs": {
+    "mtime": 1792521012.4536088,
+    "seen": 1792543605.2680724,
+    "ast_hash": "42bba066fa80f300bee533eec75c9f51",
+    "semantic_hash": ""
+  },
+  ".mcp.json": {
+    "mtime": 1792520996.960665,
+    "seen": 1792543605.2680736,
+    "ast_hash": "9d3c830d384928b406ea8dcd9c9bb4cb",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1792522840.2124655,
+    "seen": 1792543605.2680743,
+    "ast_hash": "c498a8253ef15cec22a8a36475cc34d8",
+    "semantic_hash": ""
+  },
+  "postcss.config.js": {
+    "mtime": 1792522851.815019,
+    "seen": 1792543605.2680752,
+    "ast_hash": "bac55ffb0fef2a6b45aa3b70e015f698",
+    "semantic_hash": ""
+  },
+  "scripts/baixar-imagens.mjs": {
+    "mtime": 1792523051.2506943,
+    "seen": 1792543605.2680757,
+    "ast_hash": "f558d7f8404e79befa8b3ab39f3d13ae",
+    "semantic_hash": ""
+  },
+  "scripts/extrair-tela.mjs": {
+    "mtime": 1792523654.702003,
+    "seen": 1792543605.2680771,
+    "ast_hash": "e91c757ced2e6a21f391c0c567b404dc",
+    "semantic_hash": ""
+  },
+  "scripts/mapa-imagens.json": {
+    "mtime": 1792523053.4102302,
+    "seen": 1792543605.2680786,
+    "ast_hash": "b2bdb47aab1eda6ea63eec169d0347e7",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1792521161.21904,
+    "seen": 1792543605.2680795,
+    "ast_hash": "4db8fbc382a8f66e03d67867bfac9a2f",
+    "semantic_hash": ""
+  },
+  "src/api.js": {
+    "mtime": 1792523160.4531622,
+    "seen": 1792543605.2680807,
+    "ast_hash": "f81f4b3f6228d293e7fd3bdbe54b7600",
+    "semantic_hash": ""
+  },
+  "src/api.test.js": {
+    "mtime": 1792523102.416088,
+    "seen": 1792543605.2680817,
+    "ast_hash": "1afce080f4f364c3a177ac1962c4b656",
+    "semantic_hash": ""
+  },
+  "src/biblioteca.js": {
+    "mtime": 1792544126.4457343,
+    "seen": 1792544269.3747635,
+    "ast_hash": "a55039fe86d55b61a0a8eeb68f7158f3",
+    "semantic_hash": ""
+  },
+  "src/biblioteca.test.js": {
+    "mtime": 1792543491.7762618,
+    "seen": 1792543605.2680836,
+    "ast_hash": "d2c75e239b885db0e7d2296c9c50b039",
+    "semantic_hash": ""
+  },
+  "src/creditos.js": {
+    "mtime": 1792523814.8205652,
+    "seen": 1792543605.2680845,
+    "ast_hash": "432e3a86f27f7255c4b6e43865b8113d",
+    "semantic_hash": ""
+  },
+  "src/data/clips.json": {
+    "mtime": 1792523078.8287473,
+    "seen": 1792543605.268086,
+    "ast_hash": "a42ee2bf7bca57035b5f216ce55b0d69",
+    "semantic_hash": ""
+  },
+  "src/foto-utils.js": {
+    "mtime": 1792543388.1076453,
+    "seen": 1792543605.2680867,
+    "ast_hash": "4afd5b3d2f5e49b54fb0b28519c7ce2c",
+    "semantic_hash": ""
+  },
+  "src/foto-utils.test.js": {
+    "mtime": 1792543380.503197,
+    "seen": 1792543605.2680879,
+    "ast_hash": "d03797cf208342eeb8102ec0754110ba",
+    "semantic_hash": ""
+  },
+  "src/pages/entrar.js": {
+    "mtime": 1792524456.4379869,
+    "seen": 1792543605.2680886,
+    "ast_hash": "37d742ea510b056e82e769946b799acc",
+    "semantic_hash": ""
+  },
+  "src/pages/foto.js": {
+    "mtime": 1792543720.8940752,
+    "seen": 1792543781.166116,
+    "ast_hash": "f7c35595132938f31725f211b278730b",
+    "semantic_hash": ""
+  },
+  "src/pages/inicio.js": {
+    "mtime": 1792543572.61558,
+    "seen": 1792543605.2680905,
+    "ast_hash": "77ef9748194bcc3b3bc99f570903183a",
+    "semantic_hash": ""
+  },
+  "src/pages/landing.js": {
+    "mtime": 1792523816.3189998,
+    "seen": 1792543605.2680914,
+    "ast_hash": "9371eefe6a480eda0d1fb2a2bab04234",
+    "semantic_hash": ""
+  },
+  "src/shell.js": {
+    "mtime": 1792543719.7726448,
+    "seen": 1792543781.166122,
+    "ast_hash": "9c49e857ffeed8dab19a9505ad44ba6c",
+    "semantic_hash": ""
+  },
+  "src/store.js": {
+    "mtime": 1792523261.5333874,
+    "seen": 1792543605.268093,
+    "ast_hash": "4d6e40df605fb28100074a10672a9c7e",
+    "semantic_hash": ""
+  },
+  "src/store.test.js": {
+    "mtime": 1792523170.1898866,
+    "seen": 1792543605.268094,
+    "ast_hash": "71c30d478d3dd06decd4c29c782ccafd",
+    "semantic_hash": ""
+  },
+  "src/util.js": {
+    "mtime": 1792523248.1478486,
+    "seen": 1792543605.2680948,
+    "ast_hash": "dea8fa8db8ab37fe15c54f7be263ec67",
+    "semantic_hash": ""
+  },
+  "tailwind.config.js": {
+    "mtime": 1792522860.9262917,
+    "seen": 1792543605.2680955,
+    "ast_hash": "554ea6f383a167b70a3363f801d4e405",
+    "semantic_hash": ""
+  },
+  "vercel.json": {
+    "mtime": 1792522851.7813032,
+    "seen": 1792543605.2680964,
+    "ast_hash": "e1da9064618d6add088a54d0e6a420b9",
+    "semantic_hash": ""
+  },
+  "vite.config.js": {
+    "mtime": 1792522851.8515272,
+    "seen": 1792543605.2680972,
+    "ast_hash": "cd66f75181a9ed4c3958f6bf6459456e",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1792520705.5162315,
+    "seen": 1792543605.2680984,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": ""
+  },
+  ".claude/skills/deploy-to-vercel/SKILL.md": {
+    "mtime": 1792521012.319005,
+    "seen": 1792543605.268099,
+    "ast_hash": "9b79db226c48449b4159d08bc81d2865",
+    "semantic_hash": ""
+  },
+  ".claude/skills/differential-review/SKILL.md": {
+    "mtime": 1792521029.5043004,
+    "seen": 1792543605.2681003,
+    "ast_hash": "b119688f810401fdf6fd27e7846d0a98",
+    "semantic_hash": ""
+  },
+  ".claude/skills/differential-review/adversarial.md": {
+    "mtime": 1792521029.5052974,
+    "seen": 1792543605.2681012,
+    "ast_hash": "65a5b9ba9be7a5910ad0a62aebedd368",
+    "semantic_hash": ""
+  },
+  ".claude/skills/differential-review/agents/openai.yaml": {
+    "mtime": 1792521029.5052974,
+    "seen": 1792543605.268102,
+    "ast_hash": "3025e1be45be66376b3c811399c540e5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/differential-review/methodology.md": {
+    "mtime": 1792521029.5063074,
+    "seen": 1792543605.2681026,
+    "ast_hash": "e0f985ea854e6d1c15db37311e7f41e8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/differential-review/patterns.md": {
+    "mtime": 1792521029.507305,
+    "seen": 1792543605.2681036,
+    "ast_hash": "bbaf917eca57560aaca1ceb0356a5520",
+    "semantic_hash": ""
+  },
+  ".claude/skills/differential-review/reporting.md": {
+    "mtime": 1792521029.507305,
+    "seen": 1792543605.2681046,
+    "ast_hash": "ed3b6c3a38f3564b4345055960d9cb36",
+    "semantic_hash": ""
+  },
+  ".claude/skills/find-skills/SKILL.md": {
+    "mtime": 1792521016.9807522,
+    "seen": 1792543605.2681055,
+    "ast_hash": "62b297abdee9aea84c577ab2e04e1974",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gh-fix-ci/LICENSE.txt": {
+    "mtime": 1792521024.5817666,
+    "seen": 1792543605.2681065,
+    "ast_hash": "2100d7efc453bde03b318f0329ecf6d4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gh-fix-ci/SKILL.md": {
+    "mtime": 1792521024.582279,
+    "seen": 1792543605.2681072,
+    "ast_hash": "f7bd94e014324ed3ff0518b7440d0ceb",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gh-fix-ci/agents/openai.yaml": {
+    "mtime": 1792521024.582279,
+    "seen": 1792543605.2681081,
+    "ast_hash": "d8d0ef6ebaf0c1bca6d98f13204a2856",
+    "semantic_hash": ""
+  },
+  ".claude/skills/next-bundle-optimizer/SKILL.md": {
+    "mtime": 1792521137.9906795,
+    "seen": 1792543605.268109,
+    "ast_hash": "e0c93fb4ba76426cfa7bead3bc4bfa61",
+    "semantic_hash": ""
+  },
+  ".claude/skills/next-bundle-optimizer/references/fix-patterns.md": {
+    "mtime": 1792521137.9906795,
+    "seen": 1792543605.2681098,
+    "ast_hash": "a6c67ea5d34fbd9da2a64ff5aa01de77",
+    "semantic_hash": ""
+  },
+  ".claude/skills/next-bundle-optimizer/references/graph-methods.md": {
+    "mtime": 1792521137.9906795,
+    "seen": 1792543605.2681108,
+    "ast_hash": "38089af0f2775b747ebfe28c6ed58420",
+    "semantic_hash": ""
+  },
+  ".claude/skills/next-dev-loop/SKILL.md": {
+    "mtime": 1792521075.227138,
+    "seen": 1792543605.2681117,
+    "ast_hash": "6fe8698cc86b1f1c9165985bea211a2e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/SKILL.md": {
+    "mtime": 1792521042.0970626,
+    "seen": 1792543605.2681127,
+    "ast_hash": "4a57d8723afac2230bc1738475c3e559",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/agents/openai.yml": {
+    "mtime": 1792521042.099061,
+    "seen": 1792543605.2681134,
+    "ast_hash": "a93201a1b378a868c0795edbf1ae751c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/cli.md": {
+    "mtime": 1792521042.1073308,
+    "seen": 1792543605.268114,
+    "ast_hash": "06dc1478b5449f2a3c60f4bf4e043687",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/customization.md": {
+    "mtime": 1792521042.108407,
+    "seen": 1792543605.2681153,
+    "ast_hash": "f012ac15403e90fec2533ec7fc6638a6",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/design-system-page.md": {
+    "mtime": 1792521042.1094067,
+    "seen": 1792543605.2681165,
+    "ast_hash": "08e7dea8cfb14593d18e3db5ca57b266",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/design-system.md": {
+    "mtime": 1792521042.111342,
+    "seen": 1792543605.2681174,
+    "ast_hash": "33bde97198b0d0a941643f25df17d31b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/mcp.md": {
+    "mtime": 1792521042.113342,
+    "seen": 1792543605.2681186,
+    "ast_hash": "aa876f97643326a64e99b86d5ac41bc5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/registry.md": {
+    "mtime": 1792521042.1143422,
+    "seen": 1792543605.2681193,
+    "ast_hash": "f7e28f2e510e8ec5847619641ddfeea4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/rules/base-vs-radix.md": {
+    "mtime": 1792521042.1163414,
+    "seen": 1792543605.26812,
+    "ast_hash": "582481904d3c35aae4125153db97fc37",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/rules/chat.md": {
+    "mtime": 1792521042.117344,
+    "seen": 1792543605.2681208,
+    "ast_hash": "650b1871f8aea9e8f9ce486ba97e7bf5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/rules/composition.md": {
+    "mtime": 1792521042.1183436,
+    "seen": 1792543605.2681215,
+    "ast_hash": "44ec3d642cf72d48e1d370fb267b79a3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/rules/forms.md": {
+    "mtime": 1792521042.1193447,
+    "seen": 1792543605.2681227,
+    "ast_hash": "41155ed5a844952613e717a5add76606",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/rules/icons.md": {
+    "mtime": 1792521042.1203456,
+    "seen": 1792543605.2681239,
+    "ast_hash": "56b5a01599f8c03c90f248c5e5e01f67",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/rules/styling.md": {
+    "mtime": 1792521042.1203456,
+    "seen": 1792543605.2681246,
+    "ast_hash": "3eaa3bb2a07262feabbea63b33fd0f67",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/CHANGELOG.md": {
+    "mtime": 1792521020.4147024,
+    "seen": 1792543605.2681258,
+    "ast_hash": "fdd0ba418e6744556f0029ffb76711b1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/SKILL.md": {
+    "mtime": 1792521020.415748,
+    "seen": 1792543605.2681265,
+    "ast_hash": "845c64575b6d28856ea6a9735a372225",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/_contributing.md": {
+    "mtime": 1792521020.415748,
+    "seen": 1792543605.2681272,
+    "ast_hash": "32c800fa6621705288dc651da22c9366",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/_sections.md": {
+    "mtime": 1792521020.415748,
+    "seen": 1792543605.268128,
+    "ast_hash": "8547fba7fd9fae3b6be916c6f55b0f62",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/_template.md": {
+    "mtime": 1792521020.4174297,
+    "seen": 1792543605.268129,
+    "ast_hash": "74ec7e2bdd6c8ddbb354fcceec038bc2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/advanced-full-text-search.md": {
+    "mtime": 1792521020.4174297,
+    "seen": 1792543605.2681298,
+    "ast_hash": "327f8367de51b0982b963f2928184c35",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/advanced-jsonb-indexing.md": {
+    "mtime": 1792521020.4174297,
+    "seen": 1792543605.2681305,
+    "ast_hash": "413ba907ff4408d6fd3545f839101ebf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/conn-idle-timeout.md": {
+    "mtime": 1792521020.4194572,
+    "seen": 1792543605.2681315,
+    "ast_hash": "8bbe8b609d5241351672cefc19036db6",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/conn-limits.md": {
+    "mtime": 1792521020.4194572,
+    "seen": 1792543605.2681324,
+    "ast_hash": "661b3efcf0e35136352b3923ff265d5c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/conn-pooling.md": {
+    "mtime": 1792521020.4194572,
+    "seen": 1792543605.2681332,
+    "ast_hash": "c90dab7d0ab47443b41f17d5bc9f04b3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/conn-prepared-statements.md": {
+    "mtime": 1792521020.4194572,
+    "seen": 1792543605.2681339,
+    "ast_hash": "b53eb9dea11d6da338a8b6f9e67a3622",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/data-batch-inserts.md": {
+    "mtime": 1792521020.4214668,
+    "seen": 1792543605.2681348,
+    "ast_hash": "6801a3a2d414dfd6a4c79970a37e795d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/data-n-plus-one.md": {
+    "mtime": 1792521020.4214668,
+    "seen": 1792543605.268136,
+    "ast_hash": "c3ed0702a116d654602120bd5cd7713e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/data-pagination.md": {
+    "mtime": 1792521020.4214668,
+    "seen": 1792543605.268137,
+    "ast_hash": "59be210a420d34780949ce16d5b4a8d5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/data-upsert.md": {
+    "mtime": 1792521020.4214668,
+    "seen": 1792543605.2681377,
+    "ast_hash": "3ae132bce8b5368e1e4a426d55ca4567",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/lock-advisory.md": {
+    "mtime": 1792521020.4214668,
+    "seen": 1792543605.2681391,
+    "ast_hash": "ff943eb307d8b6e12cc6ab2bcb6e2d18",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/lock-deadlock-prevention.md": {
+    "mtime": 1792521020.4234755,
+    "seen": 1792543605.268141,
+    "ast_hash": "685b04bcae3a0720e84f1507d243e959",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/lock-short-transactions.md": {
+    "mtime": 1792521020.4234755,
+    "seen": 1792543605.268142,
+    "ast_hash": "3c947d59e0359f3b236bf2ad1da52c61",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/lock-skip-locked.md": {
+    "mtime": 1792521020.424483,
+    "seen": 1792543605.2681432,
+    "ast_hash": "098d38542f44b656aa55923f06db74c1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/monitor-explain-analyze.md": {
+    "mtime": 1792521020.4250026,
+    "seen": 1792543605.268144,
+    "ast_hash": "1fd19c373a0ff272129edd215a96e3a1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/monitor-pg-stat-statements.md": {
+    "mtime": 1792521020.4250026,
+    "seen": 1792543605.2681448,
+    "ast_hash": "2f0cab7f72ad9dfe2cba469aaaacc733",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/monitor-vacuum-analyze.md": {
+    "mtime": 1792521020.4250026,
+    "seen": 1792543605.268146,
+    "ast_hash": "25e738451079707ac54d21364b5538e1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/query-composite-indexes.md": {
+    "mtime": 1792521020.4250026,
+    "seen": 1792543605.2681468,
+    "ast_hash": "5017f09940ed04b5b3ad836e426d9084",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/query-covering-indexes.md": {
+    "mtime": 1792521020.427057,
+    "seen": 1792543605.2681477,
+    "ast_hash": "fd05c38771229d97f2d4065d0af0df70",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/query-index-types.md": {
+    "mtime": 1792521020.427057,
+    "seen": 1792543605.2681484,
+    "ast_hash": "e2395c6ef69ea2f147c9ab1d18c7f879",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/query-missing-indexes.md": {
+    "mtime": 1792521020.427057,
+    "seen": 1792543605.2681496,
+    "ast_hash": "786767ec677862bad060fc1b4ae0a94f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/query-partial-indexes.md": {
+    "mtime": 1792521020.427057,
+    "seen": 1792543605.2681503,
+    "ast_hash": "249d8fccca68c332e946b499531f21d8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/schema-constraints.md": {
+    "mtime": 1792521020.427057,
+    "seen": 1792543605.2681513,
+    "ast_hash": "476ca283cfda6c5517d94c25c41de775",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/schema-data-types.md": {
+    "mtime": 1792521020.4298253,
+    "seen": 1792543605.268152,
+    "ast_hash": "cd65e34969ebce0bce84f622f5072477",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/schema-foreign-key-indexes.md": {
+    "mtime": 1792521020.4298253,
+    "seen": 1792543605.2681527,
+    "ast_hash": "8b99b21a07cadd2d85c6c16f416b5464",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/schema-lowercase-identifiers.md": {
+    "mtime": 1792521020.430832,
+    "seen": 1792543605.2681537,
+    "ast_hash": "632ea53a0da6fe7651e354f3744d998e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/schema-partitioning.md": {
+    "mtime": 1792521020.430832,
+    "seen": 1792543605.2681546,
+    "ast_hash": "0f2fe9016bf9aa79dd30d7d6a4a03358",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/schema-primary-keys.md": {
+    "mtime": 1792521020.430832,
+    "seen": 1792543605.2681553,
+    "ast_hash": "a732b1a95b6c231d47af14b715c6b9b0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/security-privileges.md": {
+    "mtime": 1792521020.430832,
+    "seen": 1792543605.268156,
+    "ast_hash": "e6fbc325f8f3af1cab3e1cb99d9f146a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/security-rls-basics.md": {
+    "mtime": 1792521020.4328392,
+    "seen": 1792543605.268157,
+    "ast_hash": "82ee8b214f39f78c9e88061b6f890508",
+    "semantic_hash": ""
+  },
+  ".claude/skills/supabase-postgres-best-practices/references/security-rls-performance.md": {
+    "mtime": 1792521020.4328392,
+    "seen": 1792543605.268158,
+    "ast_hash": "ad2ccf01dfd325527b18256c3e25b842",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-cli-with-tokens/SKILL.md": {
+    "mtime": 1792521012.3817136,
+    "seen": 1792543605.268159,
+    "ast_hash": "c48545dd64ca2795632619600f2aec5f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/AGENTS.md": {
+    "mtime": 1792521012.3113134,
+    "seen": 1792543605.26816,
+    "ast_hash": "6ca48da2d9f2e3df4bc875543b2c5d52",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/README.md": {
+    "mtime": 1792521012.3113134,
+    "seen": 1792543605.268161,
+    "ast_hash": "d0e78645434d460eaa1defbdff1d57df",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/SKILL.md": {
+    "mtime": 1792521012.3113134,
+    "seen": 1792543605.2681623,
+    "ast_hash": "641a0ff3ecebfadb5234a13faa54f428",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/_sections.md": {
+    "mtime": 1792521012.3133137,
+    "seen": 1792543605.268163,
+    "ast_hash": "23f1c9af766ed9246d052484d5e0ed73",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/_template.md": {
+    "mtime": 1792521012.3133137,
+    "seen": 1792543605.268164,
+    "ast_hash": "1bfa639fa580642b7372425e0182edbf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md": {
+    "mtime": 1792521012.3143184,
+    "seen": 1792543605.2681646,
+    "ast_hash": "0363b55141376d4059e2625a90fdba8b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/architecture-compound-components.md": {
+    "mtime": 1792521012.3143184,
+    "seen": 1792543605.2681653,
+    "ast_hash": "c21a8bd7f19ce7bb68fd970e307bd9a7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md": {
+    "mtime": 1792521012.3143184,
+    "seen": 1792543605.2681663,
+    "ast_hash": "cc134df030320f336a570f5d5bb19a9b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md": {
+    "mtime": 1792521012.3153176,
+    "seen": 1792543605.2681675,
+    "ast_hash": "da06c21b2c17c157b370e5b2c6fbb4a3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/react19-no-forwardref.md": {
+    "mtime": 1792521012.3158376,
+    "seen": 1792543605.2681682,
+    "ast_hash": "8268c880a29f7326048cb637ea3ef534",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/state-context-interface.md": {
+    "mtime": 1792521012.3163,
+    "seen": 1792543605.268169,
+    "ast_hash": "bfd14c0e521b2593e70de8ef1b5c20a9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/state-decouple-implementation.md": {
+    "mtime": 1792521012.3167598,
+    "seen": 1792543605.2681699,
+    "ast_hash": "cf84b77776095d867d5ba3bee5c4b76e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-composition-patterns/rules/state-lift-state.md": {
+    "mtime": 1792521012.3167598,
+    "seen": 1792543605.2681708,
+    "ast_hash": "722dac7f3c9fd540380a4a7ec015cd0a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/AGENTS.md": {
+    "mtime": 1792521012.383183,
+    "seen": 1792543605.2681723,
+    "ast_hash": "dd163e4bbcd8c9fdb984f9021653bfda",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/CONTRIBUTING.md": {
+    "mtime": 1792521012.3835466,
+    "seen": 1792543605.268173,
+    "ast_hash": "ed9e70f9c35d0b39d9a8877a33981916",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/README.md": {
+    "mtime": 1792521012.3835466,
+    "seen": 1792543605.2681742,
+    "ast_hash": "5604e1edf7e94b067c64ae5fa8562200",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/SKILL.md": {
+    "mtime": 1792521012.3845801,
+    "seen": 1792543605.2681746,
+    "ast_hash": "19724f6d0fed2f97fd7ef8836b186b05",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/candidates.md": {
+    "mtime": 1792521012.4190867,
+    "seen": 1792543605.2681756,
+    "ast_hash": "67ba4cf3c92891eda58b505497c0000a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/data-collection.md": {
+    "mtime": 1792521012.420084,
+    "seen": 1792543605.2681763,
+    "ast_hash": "560219e8cb599e5d8a1ac1e6e3bd1239",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/doctrine.md": {
+    "mtime": 1792521012.421607,
+    "seen": 1792543605.2681773,
+    "ast_hash": "a41b5ec8e4be569b126fb92f02b5abc2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/observability-plus.md": {
+    "mtime": 1792521012.4221787,
+    "seen": 1792543605.268178,
+    "ast_hash": "50ea4502298fbc50258e966518ad8881",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/playbooks/README.md": {
+    "mtime": 1792521012.4227333,
+    "seen": 1792543605.2681787,
+    "ast_hash": "475553ae09b36a8407ff2a1b29e10a4a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/playbooks/ai-application.md": {
+    "mtime": 1792521012.4227333,
+    "seen": 1792543605.2681797,
+    "ast_hash": "75268047c223de98e2d1120e8d6ab3b8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/playbooks/api-service.md": {
+    "mtime": 1792521012.423753,
+    "seen": 1792543605.2681804,
+    "ast_hash": "4bc1c1a86cddfd81530e5e64c9f52981",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/playbooks/content-site.md": {
+    "mtime": 1792521012.423753,
+    "seen": 1792543605.2681816,
+    "ast_hash": "668494392cfc130748ee0cb1acee2f59",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/playbooks/ecommerce.md": {
+    "mtime": 1792521012.4247558,
+    "seen": 1792543605.2681825,
+    "ast_hash": "adc8f5bca8407fa0cad2cf72b42943ef",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/playbooks/marketing.md": {
+    "mtime": 1792521012.4247558,
+    "seen": 1792543605.2681832,
+    "ast_hash": "7bdeb4113e9b48dbc5262cd50ef5c4c3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/playbooks/saas.md": {
+    "mtime": 1792521012.4247558,
+    "seen": 1792543605.2681844,
+    "ast_hash": "4980e907c217b4d94025b46498c58480",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/playbooks/sveltekit.md": {
+    "mtime": 1792521012.4257615,
+    "seen": 1792543605.2681854,
+    "ast_hash": "cc8289fb81551b13bc6125a42cbd77ea",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/recommendations.md": {
+    "mtime": 1792521012.4257615,
+    "seen": 1792543605.268186,
+    "ast_hash": "81b57222c711f2b93859ba0627f9b202",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/scanner-patterns.md": {
+    "mtime": 1792521012.4267569,
+    "seen": 1792543605.268187,
+    "ast_hash": "9302a183a6f261ffd322e6d320d565c0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/scoring.md": {
+    "mtime": 1792521012.4267569,
+    "seen": 1792543605.268188,
+    "ast_hash": "f44304bf1cd7a89ec0aa17d82eea82cf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/README.md": {
+    "mtime": 1792521012.4277546,
+    "seen": 1792543605.268189,
+    "ast_hash": "6eb2959b4e5de7f0b2db88d4c723ce9f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/astro-edge-middleware-scope.md": {
+    "mtime": 1792521012.4277546,
+    "seen": 1792543605.2681897,
+    "ast_hash": "9e15d0c217c4dbff88919dcd68152ee3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/astro-output-mode-and-isr.md": {
+    "mtime": 1792521012.4287567,
+    "seen": 1792543605.2681904,
+    "ast_hash": "c4876450d1c33591fdf51fd54bb566cf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/auth-preserving-parallelization.md": {
+    "mtime": 1792521012.4297607,
+    "seen": 1792543605.2681913,
+    "ast_hash": "f9911693080083cb85ec03e8f423fb9b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/bot-protection-product-guardrails.md": {
+    "mtime": 1792521012.4297607,
+    "seen": 1792543605.268192,
+    "ast_hash": "c1c8146ab2072baa0f3d9670874ef8b2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/build-minutes-monorepo-fanout.md": {
+    "mtime": 1792521012.430759,
+    "seen": 1792543605.2681928,
+    "ast_hash": "72ae490a3e6f7cb6749ce0e232641dba",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/cache-components-static-shell-boundaries.md": {
+    "mtime": 1792521012.430759,
+    "seen": 1792543605.2681937,
+    "ast_hash": "7c66fd3e49b87e4838f1b9d2cf94d4a4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/cache-components-suspense-dedupe-pitfall.md": {
+    "mtime": 1792521012.430759,
+    "seen": 1792543605.2681947,
+    "ast_hash": "19ea1ee57a38f0deae1eb49c9e5f5c78",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/cdn-cache-auth-safety.md": {
+    "mtime": 1792521012.4317582,
+    "seen": 1792543605.2681954,
+    "ast_hash": "2df7b6d06b90de72eb47fc4afcc9f949",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/cold-start-initialization-bundle.md": {
+    "mtime": 1792521012.4317582,
+    "seen": 1792543605.268196,
+    "ast_hash": "50c5fe91fe3ae948d9f8f9d098530bd7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/core-web-vitals-client-bottlenecks.md": {
+    "mtime": 1792521012.4327557,
+    "seen": 1792543605.268197,
+    "ast_hash": "29538bd69db836296d24a68f633f0270",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/database-egress-pooling-region.md": {
+    "mtime": 1792521012.4327557,
+    "seen": 1792543605.2681978,
+    "ast_hash": "324e9899be6a225ee6a587476ba06ba4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/dynamic-rendering-traps.md": {
+    "mtime": 1792521012.4332936,
+    "seen": 1792543605.268199,
+    "ast_hash": "59f647c6d416717213ae515db6e34891",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/external-api-critical-path-platform.md": {
+    "mtime": 1792521012.4332936,
+    "seen": 1792543605.2681997,
+    "ast_hash": "233a3f4edb72db9b7c7a33ff9b4786ce",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/external-api-critical-path.md": {
+    "mtime": 1792521012.4345,
+    "seen": 1792543605.2682006,
+    "ast_hash": "2a3c311232f9f7bd4232799fec4e01fa",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/fast-data-transfer-payloads.md": {
+    "mtime": 1792521012.4348638,
+    "seen": 1792543605.2682016,
+    "ast_hash": "695328412bcc75a5f3057549aee522c0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/fluid-compute-caveats.md": {
+    "mtime": 1792521012.4352033,
+    "seen": 1792543605.2682025,
+    "ast_hash": "15d1724cb61420ec5016ab0559672920",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/function-duration-io-and-after.md": {
+    "mtime": 1792521012.4352033,
+    "seen": 1792543605.2682033,
+    "ast_hash": "a8498d9fe9510864152d47af7531c490",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/function-invocation-reduction.md": {
+    "mtime": 1792521012.4352033,
+    "seen": 1792543605.2682042,
+    "ast_hash": "820a13a727b0976d70801615e13e1ed6",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/function-region-misconfiguration-ttfb.md": {
+    "mtime": 1792521012.4352033,
+    "seen": 1792543605.2682054,
+    "ast_hash": "a1a605d9b2dcb809900b4862d63d4d84",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/image-optimization-cost-control.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.2682061,
+    "ast_hash": "b8f04265a0a2b2eeb1508fa04d367388",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/isr-revalidation-static-generation.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.268207,
+    "ast_hash": "ab5fba47d78660abbd095b2294c86b1e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/middleware-proxy-edge-cost.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.2682078,
+    "ast_hash": "044f77a218216afaf8fc0dfd1321dc28",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/next-fetch-revalidate-floor.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.268209,
+    "ast_hash": "e8cfee6b53b40c43c2f918ffba54d75b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/next-font-cls-self-hosting.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.2682097,
+    "ast_hash": "9ff364c4c1ed8473c02bd8ce9a25ddd4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/next-heavy-ui-lazy-load-boundaries.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.2682104,
+    "ast_hash": "012dd6e95929f088426486466ffc3175",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/next-image-lcp-preload-sizes.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.2682111,
+    "ast_hash": "7fb9d1a6dc10602b9378cfa9bbda8386",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/next-route-handler-get-cache-defaults.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.2682126,
+    "ast_hash": "31ee82f50049d6f51639fd505b2c096d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/next-script-third-party-strategy.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.2682135,
+    "ast_hash": "adc5767640420bdf180da60c7053cb30",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/nextjs-version-cache-semantics.md": {
+    "mtime": 1792521012.436791,
+    "seen": 1792543605.2682142,
+    "ast_hash": "f58de55bc8d92c3fc8a85251ba125a8a",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/not-found-catchall-request-waste.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.268215,
+    "ast_hash": "4bfa13feccf8a0f49f72b7389278b95c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/nuxt-route-rules-cache-isr.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.2682164,
+    "ast_hash": "1c5d6667e6036a31cd7c4aae5c3616e1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/observability-events-cost-attribution.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.268217,
+    "ast_hash": "772adc9ae781f78ca36591595f442ca0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/post-response-work-waituntil.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.2682178,
+    "ast_hash": "038a3bd013ad52b98ee3c69d3e9e6a75",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/route-error-durable-offload.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.2682195,
+    "ast_hash": "ce21a908c07d5bb903fe0654fd7be8eb",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/route-error-runtime-limits.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.2682202,
+    "ast_hash": "71ab3dfb2b67b9ae2a3199574e32fd44",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/runtime-cache-reusable-data.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.2682211,
+    "ast_hash": "2dc0e78f4cc8b399ce8ec84feaee45e3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/sveltekit-isr-prerender-safety.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.2682219,
+    "ast_hash": "c63156fbf0d439411b632a310c039897",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/sveltekit-split-cold-start-tradeoff.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.2682233,
+    "ast_hash": "960b64823acf5dddf46a0ee0e07d14cf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/usage-spike-triage.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.268224,
+    "ast_hash": "fb0a0ea295fef3014fbfa7ed9519931f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/use-cache-date-stamp-isr-write-amplifier.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.268225,
+    "ast_hash": "418362f6498b983da114fee8180d890e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/use-cache-remote-shared-origin-data.md": {
+    "mtime": 1792521012.4412706,
+    "seen": 1792543605.268226,
+    "ast_hash": "f0adbd388c7c75c0e6b8fd4dd8c4ca5b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/support-topics/workflow-resumable-stream-routes.md": {
+    "mtime": 1792521012.445818,
+    "seen": 1792543605.2682269,
+    "ast_hash": "7ca921cd4a287755625e07a575dfc4f5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/verification.md": {
+    "mtime": 1792521012.445818,
+    "seen": 1792543605.2682276,
+    "ast_hash": "b3de629aa1a06f4dd3e0cae94d2bbc42",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-optimize/references/voice.md": {
+    "mtime": 1792521012.445818,
+    "seen": 1792543605.2682283,
+    "ast_hash": "9d7e16340fa3ffac9e637915a043178f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/AGENTS.md": {
+    "mtime": 1792521012.322165,
+    "seen": 1792543605.2682295,
+    "ast_hash": "f2639073a4b0e835bed60d37c6fd41f2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/README.md": {
+    "mtime": 1792521012.322165,
+    "seen": 1792543605.2682302,
+    "ast_hash": "ea0b87a642d12567a80424f12365a934",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/SKILL.md": {
+    "mtime": 1792521012.322165,
+    "seen": 1792543605.268231,
+    "ast_hash": "f196f239081f4f193ccf785e11efb85f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/_sections.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.2682319,
+    "ast_hash": "2e0313063b1c0e4f2aa9cfde7bc73321",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/_template.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.2682328,
+    "ast_hash": "83904a5210a1031a1a4dfdde0f49c088",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.2682335,
+    "ast_hash": "d505719c2c940fe7484021947538027b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.2682343,
+    "ast_hash": "e277ef383b038da08b81404c569af6cd",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/advanced-init-once.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.2682352,
+    "ast_hash": "8e7759bb017e5d0d1dd64f6f60f85d3e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/advanced-use-latest.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.268236,
+    "ast_hash": "21d3dbb5f2b557f6d14b224af2d47dc5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/async-api-routes.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.2682369,
+    "ast_hash": "94058ab5b50f99781e5aa56183b00008",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.2682378,
+    "ast_hash": "1f34f4c469dc79d9b56610967697c087",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/async-defer-await.md": {
+    "mtime": 1792521012.3254054,
+    "seen": 1792543605.2682385,
+    "ast_hash": "7ae1ade2d9621cc4f820f2e9ffd6357c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/async-dependencies.md": {
+    "mtime": 1792521012.328845,
+    "seen": 1792543605.2682395,
+    "ast_hash": "3bd47351349c6fe86323bf32dd017d76",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/async-parallel.md": {
+    "mtime": 1792521012.328845,
+    "seen": 1792543605.2682405,
+    "ast_hash": "5029495e12b0b9b3c03b0ae4f3085659",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md": {
+    "mtime": 1792521012.328845,
+    "seen": 1792543605.2682412,
+    "ast_hash": "00c19181680f2f698664db510da810d4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md": {
+    "mtime": 1792521012.328845,
+    "seen": 1792543605.268242,
+    "ast_hash": "62351ac5830fb55b2f77d3a4835529ac",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md": {
+    "mtime": 1792521012.328845,
+    "seen": 1792543605.2682426,
+    "ast_hash": "66868890a107341db885ff644ac1be04",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/bundle-conditional.md": {
+    "mtime": 1792521012.330873,
+    "seen": 1792543605.2682438,
+    "ast_hash": "d1e3c1adf9989359446cbf624bc0587d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md": {
+    "mtime": 1792521012.330873,
+    "seen": 1792543605.2682445,
+    "ast_hash": "476bf2e75198f7c6accc17ea81f3a161",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md": {
+    "mtime": 1792521012.330873,
+    "seen": 1792543605.2682455,
+    "ast_hash": "2ccb840f6d1c0b4ccf9714dc3fb05651",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/bundle-preload.md": {
+    "mtime": 1792521012.330873,
+    "seen": 1792543605.2682462,
+    "ast_hash": "b67a4242446249b2bafdeb6a620a2af7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/client-event-listeners.md": {
+    "mtime": 1792521012.3328197,
+    "seen": 1792543605.268247,
+    "ast_hash": "78c4562d3fa71d314c7b98d272f56045",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/client-localstorage-schema.md": {
+    "mtime": 1792521012.3331358,
+    "seen": 1792543605.2682478,
+    "ast_hash": "65c4468bd1d170a5f36003b23062a1e7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md": {
+    "mtime": 1792521012.3341322,
+    "seen": 1792543605.268249,
+    "ast_hash": "fbeb4ae3eb20a5bde142b50686e7a166",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/client-swr-dedup.md": {
+    "mtime": 1792521012.3341322,
+    "seen": 1792543605.2682502,
+    "ast_hash": "e912f4b5ee9e04bcf1b12cb86c86e192",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-batch-dom-css.md": {
+    "mtime": 1792521012.3351376,
+    "seen": 1792543605.268251,
+    "ast_hash": "8aeccee9fc15f16f17a8a035b095a088",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-cache-function-results.md": {
+    "mtime": 1792521012.3351376,
+    "seen": 1792543605.2682517,
+    "ast_hash": "352d02de8ae05ca73448044591fedd70",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-cache-property-access.md": {
+    "mtime": 1792521012.3351376,
+    "seen": 1792543605.2682524,
+    "ast_hash": "3fc311109878cb0564faad1c3f8992a8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-cache-storage.md": {
+    "mtime": 1792521012.3361378,
+    "seen": 1792543605.2682533,
+    "ast_hash": "ae2d1432a80c552513c42dac684d8663",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-combine-iterations.md": {
+    "mtime": 1792521012.3361378,
+    "seen": 1792543605.2682543,
+    "ast_hash": "afe61f0854bf49bd52475dbaae3bac85",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-early-exit.md": {
+    "mtime": 1792521012.3371415,
+    "seen": 1792543605.268255,
+    "ast_hash": "729d6ae7f359973121b30dcb3c8e5d9b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-flatmap-filter.md": {
+    "mtime": 1792521012.3371415,
+    "seen": 1792543605.268256,
+    "ast_hash": "9aa17a40be8457b4d9dbcaf7791acb23",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-hoist-regexp.md": {
+    "mtime": 1792521012.338143,
+    "seen": 1792543605.2682571,
+    "ast_hash": "76ec43c627c68eca559e7a79a6520bbc",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-index-maps.md": {
+    "mtime": 1792521012.338143,
+    "seen": 1792543605.2682579,
+    "ast_hash": "8462667d199be001ed6df6cc0cb5c83b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-length-check-first.md": {
+    "mtime": 1792521012.338143,
+    "seen": 1792543605.2682586,
+    "ast_hash": "ded33d19a9c0d1aa4138838fd6c30402",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-min-max-loop.md": {
+    "mtime": 1792521012.339138,
+    "seen": 1792543605.2682593,
+    "ast_hash": "3b812151da0f973d0006fc954eeb1950",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-request-idle-callback.md": {
+    "mtime": 1792521012.339138,
+    "seen": 1792543605.26826,
+    "ast_hash": "eba2c241f730a01cec317c06b53b50c2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-set-map-lookups.md": {
+    "mtime": 1792521012.3401382,
+    "seen": 1792543605.268261,
+    "ast_hash": "e26c96c5383f2afef8788fc4de914e97",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md": {
+    "mtime": 1792521012.3401382,
+    "seen": 1792543605.268262,
+    "ast_hash": "55999ff61e2a85ef01e19c685fd1f0c0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-activity.md": {
+    "mtime": 1792521012.3401382,
+    "seen": 1792543605.2682626,
+    "ast_hash": "3d75187b877aef28c7b4d6b5f33b2915",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md": {
+    "mtime": 1792521012.3411357,
+    "seen": 1792543605.2682636,
+    "ast_hash": "b471e4d8054772a6c5e6a67cf5589e8c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-conditional-render.md": {
+    "mtime": 1792521012.3411357,
+    "seen": 1792543605.2682645,
+    "ast_hash": "c61896d12e979f353634cc6e5f1b27f0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-content-visibility.md": {
+    "mtime": 1792521012.3411357,
+    "seen": 1792543605.2682652,
+    "ast_hash": "20a486c49754b5fb0bf806d303118aa2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md": {
+    "mtime": 1792521012.3421483,
+    "seen": 1792543605.268266,
+    "ast_hash": "776e60b758a1e9fc755f112ae2dd6253",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md": {
+    "mtime": 1792521012.3421483,
+    "seen": 1792543605.268267,
+    "ast_hash": "dc8c31d3ea2156299b3da17364fc51cb",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md": {
+    "mtime": 1792521012.343139,
+    "seen": 1792543605.2682679,
+    "ast_hash": "ad795d33558ef725bb5204e122e9ffbd",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-resource-hints.md": {
+    "mtime": 1792521012.343139,
+    "seen": 1792543605.2682688,
+    "ast_hash": "207930cc268f9a74c3cdd79f89330d1c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md": {
+    "mtime": 1792521012.3441408,
+    "seen": 1792543605.2682695,
+    "ast_hash": "bb06001577eb52b221ba79abefbfaa6d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-svg-precision.md": {
+    "mtime": 1792521012.3441408,
+    "seen": 1792543605.2682703,
+    "ast_hash": "bb74883dab6f28f8f5652ca779867be0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md": {
+    "mtime": 1792521012.3441408,
+    "seen": 1792543605.2682712,
+    "ast_hash": "5d8cd195730cf58891d3878bafe64bb0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-defer-reads.md": {
+    "mtime": 1792521012.3441408,
+    "seen": 1792543605.2682722,
+    "ast_hash": "75aa954f318eedc3a9ca14fed5aebcac",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-dependencies.md": {
+    "mtime": 1792521012.345667,
+    "seen": 1792543605.2682729,
+    "ast_hash": "52f7b732ffe56cd965fe0843a3bb0734",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md": {
+    "mtime": 1792521012.345667,
+    "seen": 1792543605.2682738,
+    "ast_hash": "31ea3f116cd42a25443867bc093d3694",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-derived-state.md": {
+    "mtime": 1792521012.345667,
+    "seen": 1792543605.2682748,
+    "ast_hash": "37b637d1bc1c176c0e25900d61783766",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md": {
+    "mtime": 1792521012.3466954,
+    "seen": 1792543605.2682755,
+    "ast_hash": "ad5f7b2581764321ef7c856530130152",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md": {
+    "mtime": 1792521012.3466954,
+    "seen": 1792543605.2682765,
+    "ast_hash": "8232f3ad1c39eb66fbbd7586bba68477",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md": {
+    "mtime": 1792521012.3466954,
+    "seen": 1792543605.2682772,
+    "ast_hash": "4a9093e4588f6bddd7bde77956ba12f9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-memo.md": {
+    "mtime": 1792521012.347691,
+    "seen": 1792543605.2682781,
+    "ast_hash": "ffc8ff5758af92671ad9073316eeec96",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md": {
+    "mtime": 1792521012.347691,
+    "seen": 1792543605.2682788,
+    "ast_hash": "0f0a135c2841f75d12197e8d7a5b1dce",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md": {
+    "mtime": 1792521012.3487053,
+    "seen": 1792543605.2682796,
+    "ast_hash": "e3d4873ce0a8685edb279f3ea195437d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md": {
+    "mtime": 1792521012.3496838,
+    "seen": 1792543605.2682805,
+    "ast_hash": "93133bbfc9e82851d12dd10314b17239",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md": {
+    "mtime": 1792521012.3496838,
+    "seen": 1792543605.2682815,
+    "ast_hash": "dd4d7c3c88422702722a10bcb150f645",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-transitions.md": {
+    "mtime": 1792521012.3506975,
+    "seen": 1792543605.2682822,
+    "ast_hash": "a6900c7ea8278db5ebdc0dfea981da68",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md": {
+    "mtime": 1792521012.3506975,
+    "seen": 1792543605.268283,
+    "ast_hash": "3e3740199ed0050be4c382e2dc38df43",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md": {
+    "mtime": 1792521012.3506975,
+    "seen": 1792543605.2682838,
+    "ast_hash": "7518ae1a018dd77897cba1897d321f5f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-after-nonblocking.md": {
+    "mtime": 1792521012.35169,
+    "seen": 1792543605.2682843,
+    "ast_hash": "ef9df9991c5ac8ef7d4685219fc4f2fe",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-auth-actions.md": {
+    "mtime": 1792521012.35169,
+    "seen": 1792543605.268286,
+    "ast_hash": "79f807c5ceed427137d46e125b47c188",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-cache-lru.md": {
+    "mtime": 1792521012.3526945,
+    "seen": 1792543605.2682867,
+    "ast_hash": "b4bff68df5ef6067861ffd725c5de9db",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-cache-react.md": {
+    "mtime": 1792521012.3526945,
+    "seen": 1792543605.2682874,
+    "ast_hash": "07ef8edb8485881cb4d5dc679998a69b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-dedup-props.md": {
+    "mtime": 1792521012.3536928,
+    "seen": 1792543605.2682886,
+    "ast_hash": "01b8f05177ca9fec8af89db728dad353",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-hoist-static-io.md": {
+    "mtime": 1792521012.3536928,
+    "seen": 1792543605.2682893,
+    "ast_hash": "1592802f3d317a216b5782ff6de2a331",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md": {
+    "mtime": 1792521012.3546946,
+    "seen": 1792543605.2682903,
+    "ast_hash": "5f330a1601f30a516ab2b865ba08b45e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-parallel-fetching.md": {
+    "mtime": 1792521012.3546946,
+    "seen": 1792543605.268291,
+    "ast_hash": "30af1819ffffec5afcababf49ed8e9f1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md": {
+    "mtime": 1792521012.3552134,
+    "seen": 1792543605.268297,
+    "ast_hash": "406444eacc5c3e039ef8dde372924a0e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-best-practices/rules/server-serialization.md": {
+    "mtime": 1792521012.3557668,
+    "seen": 1792543605.268298,
+    "ast_hash": "65ef936a259fe0bfcdae6e70b643cf8b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/AGENTS.md": {
+    "mtime": 1792521012.3567884,
+    "seen": 1792543605.268299,
+    "ast_hash": "855ac4c5133c02bea7e98694ab1baee7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/README.md": {
+    "mtime": 1792521012.3567884,
+    "seen": 1792543605.2682998,
+    "ast_hash": "d4bd39ee08a5b35727779a71f7ac9560",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/SKILL.md": {
+    "mtime": 1792521012.3567884,
+    "seen": 1792543605.2683005,
+    "ast_hash": "20b0c32281599765b7bdf8828f0dda04",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/_sections.md": {
+    "mtime": 1792521012.3588073,
+    "seen": 1792543605.2683012,
+    "ast_hash": "1e29fc9351327c9b2ce8f6971a309777",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/_template.md": {
+    "mtime": 1792521012.3588073,
+    "seen": 1792543605.268302,
+    "ast_hash": "83904a5210a1031a1a4dfdde0f49c088",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/animation-derived-value.md": {
+    "mtime": 1792521012.3588073,
+    "seen": 1792543605.2683032,
+    "ast_hash": "9e60d057f7c4cf5f9b4ea7f61222c27e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/animation-gesture-detector-press.md": {
+    "mtime": 1792521012.3598073,
+    "seen": 1792543605.2683039,
+    "ast_hash": "466e4133b168e61519b6023c3a785c54",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/animation-gpu-properties.md": {
+    "mtime": 1792521012.3598073,
+    "seen": 1792543605.2683046,
+    "ast_hash": "7f0dd61cd4118b5c4bc707e109c03ce9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/design-system-compound-components.md": {
+    "mtime": 1792521012.360809,
+    "seen": 1792543605.2683053,
+    "ast_hash": "a4f701e320e47647a2650284370017ba",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/fonts-config-plugin.md": {
+    "mtime": 1792521012.360809,
+    "seen": 1792543605.2683063,
+    "ast_hash": "ac9103d2cc3ad61e6643acf7f4def6a1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/imports-design-system-folder.md": {
+    "mtime": 1792521012.360809,
+    "seen": 1792543605.268307,
+    "ast_hash": "d9d7987dec602ccd06cabedd0b975ef3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/js-hoist-intl.md": {
+    "mtime": 1792521012.3618245,
+    "seen": 1792543605.2683077,
+    "ast_hash": "68a8d443b039f884d6c2df29f919b558",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/list-performance-callbacks.md": {
+    "mtime": 1792521012.3618245,
+    "seen": 1792543605.2683084,
+    "ast_hash": "034c362d1431d427f33bcc81c01acca3",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/list-performance-function-references.md": {
+    "mtime": 1792521012.3628144,
+    "seen": 1792543605.2683094,
+    "ast_hash": "594fdb044bf0329dd0e2673b029f09f4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/list-performance-images.md": {
+    "mtime": 1792521012.3628144,
+    "seen": 1792543605.26831,
+    "ast_hash": "dcfe76e31ec92f1df6e386f74518e421",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/list-performance-inline-objects.md": {
+    "mtime": 1792521012.3628144,
+    "seen": 1792543605.2683108,
+    "ast_hash": "d5e8b759beaad807b613d1d3e98fe7fa",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/list-performance-item-expensive.md": {
+    "mtime": 1792521012.3638096,
+    "seen": 1792543605.2683117,
+    "ast_hash": "55b3d2fac9467764301712bcac98fe84",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/list-performance-item-memo.md": {
+    "mtime": 1792521012.3638096,
+    "seen": 1792543605.2683127,
+    "ast_hash": "8be2fc3d89acea38e253fc8d15f754eb",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/list-performance-item-types.md": {
+    "mtime": 1792521012.364811,
+    "seen": 1792543605.2683134,
+    "ast_hash": "a340b399dd0342553b5c83a9748ed410",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/list-performance-virtualize.md": {
+    "mtime": 1792521012.3658123,
+    "seen": 1792543605.2683141,
+    "ast_hash": "562d704816763991eb3c680b4373ada9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/monorepo-native-deps-in-app.md": {
+    "mtime": 1792521012.366194,
+    "seen": 1792543605.2683148,
+    "ast_hash": "64cc8e840b05dfd1aa37fb025daa2a50",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/monorepo-single-dependency-versions.md": {
+    "mtime": 1792521012.3669033,
+    "seen": 1792543605.2683156,
+    "ast_hash": "36b438e03de6185cf519b7d6259b62a9",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/navigation-native-navigators.md": {
+    "mtime": 1792521012.3669033,
+    "seen": 1792543605.2683167,
+    "ast_hash": "9efc15c4eac50fee8188fe7d9952960b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/react-compiler-destructure-functions.md": {
+    "mtime": 1792521012.3679159,
+    "seen": 1792543605.2683175,
+    "ast_hash": "fc72bda7b29e66a4b633fa644df3502e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/react-compiler-reanimated-shared-values.md": {
+    "mtime": 1792521012.3679159,
+    "seen": 1792543605.2683182,
+    "ast_hash": "8072467a04dafed285ff43a75eb5140b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/react-state-dispatcher.md": {
+    "mtime": 1792521012.3679159,
+    "seen": 1792543605.268319,
+    "ast_hash": "6342052228f5abb7334c0662c196d97f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/react-state-fallback.md": {
+    "mtime": 1792521012.3689125,
+    "seen": 1792543605.26832,
+    "ast_hash": "2ca3179448720609b40ae8aea9fc76ca",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/react-state-minimize.md": {
+    "mtime": 1792521012.3689125,
+    "seen": 1792543605.2683208,
+    "ast_hash": "4d40d566bb058a2a38bca5d2efcb0109",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/rendering-no-falsy-and.md": {
+    "mtime": 1792521012.3699088,
+    "seen": 1792543605.2683218,
+    "ast_hash": "f3e2287e6bfc2e05f1a884d7211a7ac2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/rendering-text-in-text-component.md": {
+    "mtime": 1792521012.3699088,
+    "seen": 1792543605.2683227,
+    "ast_hash": "367f3f84926a75b222a68f348dd1da97",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/scroll-position-no-state.md": {
+    "mtime": 1792521012.3709126,
+    "seen": 1792543605.2683237,
+    "ast_hash": "5b02eeca6f0f7f428a10218a2d8f846f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/state-ground-truth.md": {
+    "mtime": 1792521012.3709126,
+    "seen": 1792543605.2683246,
+    "ast_hash": "0abd53901382663b61d31609075a8ceb",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-expo-image.md": {
+    "mtime": 1792521012.3709126,
+    "seen": 1792543605.2683253,
+    "ast_hash": "1976706c0257517203f46aec0e648bc1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-image-gallery.md": {
+    "mtime": 1792521012.3724313,
+    "seen": 1792543605.268326,
+    "ast_hash": "34c8aca467cf92bd49c06d86fc86a958",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-measure-views.md": {
+    "mtime": 1792521012.3724313,
+    "seen": 1792543605.268327,
+    "ast_hash": "7adb11a62fe662d54877dd3cf3b0cfc0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-menus.md": {
+    "mtime": 1792521012.3724313,
+    "seen": 1792543605.2683277,
+    "ast_hash": "47c80fa1a540e25085fe2f9b28f8a7d0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-native-modals.md": {
+    "mtime": 1792521012.3724313,
+    "seen": 1792543605.2683284,
+    "ast_hash": "02e5d8a3ce8a8451589522489d2ee17e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-pressable.md": {
+    "mtime": 1792521012.3741548,
+    "seen": 1792543605.2683291,
+    "ast_hash": "b1d1d05d7bc7d31540a8133948e2e23e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-safe-area-scroll.md": {
+    "mtime": 1792521012.3741548,
+    "seen": 1792543605.2683303,
+    "ast_hash": "818cc441156d24fba296464009e32522",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-scrollview-content-inset.md": {
+    "mtime": 1792521012.3751793,
+    "seen": 1792543605.268331,
+    "ast_hash": "3c00038a575aa881e041681ba0f407cd",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-native-skills/rules/ui-styling.md": {
+    "mtime": 1792521012.3751793,
+    "seen": 1792543605.2683318,
+    "ast_hash": "a671c63798fbaf9c461721b204fcd025",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-view-transitions/AGENTS.md": {
+    "mtime": 1792521012.3766918,
+    "seen": 1792543605.2683325,
+    "ast_hash": "e90d65b6d9b9c1fb559e4f771738b9c2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-view-transitions/README.md": {
+    "mtime": 1792521012.3766918,
+    "seen": 1792543605.2683332,
+    "ast_hash": "748bb2fea10dcf644480c1bc028acef4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-view-transitions/SKILL.md": {
+    "mtime": 1792521012.3777137,
+    "seen": 1792543605.2683342,
+    "ast_hash": "80701eb348f2e18ec326dac5efccef59",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-view-transitions/references/css-recipes.md": {
+    "mtime": 1792521012.3787181,
+    "seen": 1792543605.268335,
+    "ast_hash": "fa244c3d882fc861fce39f2ed156c9c8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-view-transitions/references/implementation.md": {
+    "mtime": 1792521012.3787181,
+    "seen": 1792543605.2683358,
+    "ast_hash": "55ccf32761fcf2c4cb790d15d52e509f",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-view-transitions/references/nextjs.md": {
+    "mtime": 1792521012.379704,
+    "seen": 1792543605.268337,
+    "ast_hash": "5328eff0aca2a8bb160c7cb2794351c6",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-view-transitions/references/patterns.md": {
+    "mtime": 1792521012.3807123,
+    "seen": 1792543605.2683377,
+    "ast_hash": "db31cf9860c15f0db35ed8b986baba53",
+    "semantic_hash": ""
+  },
+  ".claude/skills/vercel-react-view-transitions/references/troubleshooting.md": {
+    "mtime": 1792521012.3807123,
+    "seen": 1792543605.2683384,
+    "ast_hash": "cd59b3f83283c6ca17cc0adc028bcbd7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/web-design-guidelines/SKILL.md": {
+    "mtime": 1792521012.4551287,
+    "seen": 1792543605.2683392,
+    "ast_hash": "8d96a7f6f0c5e1908bab8faf8cd2f9b4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/writing-guidelines/SKILL.md": {
+    "mtime": 1792521012.4557002,
+    "seen": 1792543605.26834,
+    "ast_hash": "df776ee8d63b8441217eddb789612494",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1792520705.5182354,
+    "seen": 1792543605.268341,
+    "ast_hash": "e231500a60f9c1a25d4de826fbfb12fe",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1792521731.8707013,
+    "seen": 1792543605.2683418,
+    "ast_hash": "037ec87388df992d472606c157a60fa0",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md": {
+    "mtime": 1792524866.1720383,
+    "seen": 1792543605.2683425,
+    "ast_hash": "8ced9121fde8b29682b5f028b0f0124f",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-10-20-selfiemovie-design.md": {
+    "mtime": 1792522567.1843686,
+    "seen": 1792543605.2683432,
+    "ast_hash": "514f42b14ab2a708f1301799751a9f41",
+    "semantic_hash": ""
+  },
+  "entrar.html": {
+    "mtime": 1792524614.7021756,
+    "seen": 1792543605.2683442,
+    "ast_hash": "4e66f39316dd605e31d3b4df1f25d4e0",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1792523755.450384,
+    "seen": 1792543605.2683449,
+    "ast_hash": "3caabcabc7f0802383fb85898f213ea1",
+    "semantic_hash": ""
+  },
+  "inicio.html": {
+    "mtime": 1792543475.8861804,
+    "seen": 1792543605.2683456,
+    "ast_hash": "c4d8c09f6f97d36260096e200ce651f9",
+    "semantic_hash": ""
+  },
+  "perfil-rosto/foto.html": {
+    "mtime": 1792524939.6267095,
+    "seen": 1792543605.2683465,
+    "ast_hash": "c28aa55ecede171078a6b187ff41c87a",
+    "semantic_hash": ""
+  },
+  "telas/cinematic_ai_lumina/DESIGN.md": {
+    "mtime": 1792522317.953422,
+    "seen": 1792543605.2683475,
+    "ast_hash": "de64b0428aaded71ff575173e491fdec",
+    "semantic_hash": ""
+  },
+  "telas/criar_com_texto_prompt_ia/code.html": {
+    "mtime": 1792522317.7764091,
+    "seen": 1792543605.2683485,
+    "ast_hash": "401ed725503656f643f64f149d474a08",
+    "semantic_hash": ""
+  },
+  "telas/detalhe_do_clipe_agente_secreto/code.html": {
+    "mtime": 1792522317.7257879,
+    "seen": 1792543605.2683492,
+    "ast_hash": "6dec8e193c1348145a35a7a72173d7c4",
+    "semantic_hash": ""
+  },
+  "telas/gerando_progresso_da_ia/code.html": {
+    "mtime": 1792522317.8677104,
+    "seen": 1792543605.26835,
+    "ast_hash": "b8ed22f2d9f86470931bd70006730f56",
+    "semantic_hash": ""
+  },
+  "telas/in_cio_biblioteca_de_clipes/code.html": {
+    "mtime": 1792522317.6837995,
+    "seen": 1792543605.2683506,
+    "ast_hash": "de47ecd34b0c616676a54e6d6cbc5ecc",
+    "semantic_hash": ""
+  },
+  "telas/landing_page_seja_o_protagonista/code.html": {
+    "mtime": 1792522317.5353959,
+    "seen": 1792543605.2683516,
+    "ast_hash": "a61b2f240ff66bf2546b77b4fd28b459",
+    "semantic_hash": ""
+  },
+  "telas/login_e_cadastro/code.html": {
+    "mtime": 1792522317.5839126,
+    "seen": 1792543605.2683523,
+    "ast_hash": "614fd339a1ac4d4ec584bd518226882b",
+    "semantic_hash": ""
+  },
+  "telas/minhas_cria_es_galeria_status/code.html": {
+    "mtime": 1792522317.9080255,
+    "seen": 1792543605.268353,
+    "ast_hash": "49314fb101d28d2d202fa02ccaf25a4d",
+    "semantic_hash": ""
+  },
+  "telas/resultado_seu_v_deo_est_pronto/code.html": {
+    "mtime": 1792522317.8233733,
+    "seen": 1792543605.2683537,
+    "ast_hash": "2dbddcd0e44bda491ade1d374ebf2d42",
+    "semantic_hash": ""
+  },
+  "telas/sua_foto_configura_o_facial/code.html": {
+    "mtime": 1792522317.6306014,
+    "seen": 1792543605.268355,
+    "ast_hash": "bbf860f4b68bb7ef5bd89866948319a4",
+    "semantic_hash": ""
+  },
+  ".claude/skills/differential-review/assets/trail-of-bits-mark.svg": {
+    "mtime": 1792521029.5063074,
+    "seen": 1792543605.2683556,
+    "ast_hash": "57c913d8512ed2728388965b0e2f5a79",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gh-fix-ci/assets/github-small.svg": {
+    "mtime": 1792521024.583292,
+    "seen": 1792543605.2683566,
+    "ast_hash": "4ec830a6ddeccfa817e0a346b44f93e5",
+    "semantic_hash": ""
+  },
+  ".claude/skills/gh-fix-ci/assets/github.png": {
+    "mtime": 1792521024.5843008,
+    "seen": 1792543605.2683573,
+    "ast_hash": "2dcd799fc3e378420f094705b91e5f84",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/assets/shadcn-small.png": {
+    "mtime": 1792521042.1000605,
+    "seen": 1792543605.2683582,
+    "ast_hash": "72349c6b7f303e6be598a2196391291b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/shadcn/assets/shadcn.png": {
+    "mtime": 1792521042.1010604,
+    "seen": 1792543605.268359,
+    "ast_hash": "cb56bf002d36bb860c3d320a23bd871a",
+    "semantic_hash": ""
+  },
+  "public/img/avatar-exemplo.jpg": {
+    "mtime": 1792523052.1241648,
+    "seen": 1792543605.2683597,
+    "ast_hash": "0f7967e0d8ebb4e8d62f2a9dcb2dbaf8",
+    "semantic_hash": ""
+  },
+  "public/img/banner-cinema.jpg": {
+    "mtime": 1792523052.3985398,
+    "seen": 1792543605.2683604,
+    "ast_hash": "e0e55f1c94e27ad1f70a5b20649e45f7",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-agente-secreto.jpg": {
+    "mtime": 1792523052.4292736,
+    "seen": 1792543605.2683613,
+    "ast_hash": "2020be0d06ec5650206b812198d10959",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-campeao-podio.jpg": {
+    "mtime": 1792523053.35164,
+    "seen": 1792543605.268362,
+    "ast_hash": "3ec341e31a8ccc73a0f800780210971d",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-danca-festival.jpg": {
+    "mtime": 1792523052.5164316,
+    "seen": 1792543605.268363,
+    "ast_hash": "c51225f58ce599d0bc806b9756b4faab",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-detetive-cyberpunk.jpg": {
+    "mtime": 1792523052.242014,
+    "seen": 1792543605.2683637,
+    "ast_hash": "23c80968eb504c074918f444f319fea7",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-detetive-noir.jpg": {
+    "mtime": 1792523053.310188,
+    "seen": 1792543605.2683644,
+    "ast_hash": "d2d1d0a6b3705e739b3c20afaaf6487d",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-duelo-cerejeiras.jpg": {
+    "mtime": 1792523052.703126,
+    "seen": 1792543605.2683654,
+    "ast_hash": "cbc63ddeb98ba1c2e770e6b28ed7f114",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-explorador.jpg": {
+    "mtime": 1792523052.4766562,
+    "seen": 1792543605.268366,
+    "ast_hash": "2d80d4cccee4920feba4d8abe717f96c",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-ferias-santorini.jpg": {
+    "mtime": 1792523052.6728635,
+    "seen": 1792543605.2683668,
+    "ast_hash": "ea0e20bcb7fc8c1d7e5284ec04b34f64",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-fuga-noturna.jpg": {
+    "mtime": 1792523052.1885839,
+    "seen": 1792543605.2683675,
+    "ast_hash": "0c652ef3f71efc547372e34c6584c2a4",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-guardiao-reino.jpg": {
+    "mtime": 1792523052.2773664,
+    "seen": 1792543605.2683687,
+    "ast_hash": "29158467a27b1ed67486eae638746414",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-herdeira-trono.jpg": {
+    "mtime": 1792523053.3826509,
+    "seen": 1792543605.2683694,
+    "ast_hash": "1dff27024790b135beaf616437ee98aa",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-horizonte-alienigena.jpg": {
+    "mtime": 1792523052.359446,
+    "seen": 1792543605.2683702,
+    "ast_hash": "2a0432696ea09ecda716911a7d893bc8",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-noite-de-estreia.jpg": {
+    "mtime": 1792523052.3247313,
+    "seen": 1792543605.268371,
+    "ast_hash": "9dfa9c7476bf5a3aa5aa384a74171322",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-piloto-corrida.jpg": {
+    "mtime": 1792523052.6384096,
+    "seen": 1792543605.268372,
+    "ast_hash": "863d8904973cbcce45da929c3b5e4f56",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-piloto-orbital.jpg": {
+    "mtime": 1792523053.2765422,
+    "seen": 1792543605.2683725,
+    "ast_hash": "f370bb45ea0e09df8837445882b2e6de",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-trapalhao-cozinha.jpg": {
+    "mtime": 1792523052.7509396,
+    "seen": 1792543605.2683735,
+    "ast_hash": "e00893c36dadfcc87f91bea590533b41",
+    "semantic_hash": ""
+  },
+  "public/img/clipe-trono-de-cinzas.jpg": {
+    "mtime": 1792523052.6010444,
+    "seen": 1792543605.2683742,
+    "ast_hash": "df647ae78ae0e6a647043a782fd94355",
+    "semantic_hash": ""
+  },
+  "public/img/criacao-agente-iate.jpg": {
+    "mtime": 1792523053.0083518,
+    "seen": 1792543605.2683752,
+    "ast_hash": "6c6832e0cfe1562d4344e638ef4563b6",
+    "semantic_hash": ""
+  },
+  "public/img/criacao-astronauta-marte.jpg": {
+    "mtime": 1792523053.1901872,
+    "seen": 1792543605.268376,
+    "ast_hash": "25a301118acb6d640fec21e01a470dad",
+    "semantic_hash": ""
+  },
+  "public/img/criacao-imperatriz.jpg": {
+    "mtime": 1792523053.1507027,
+    "seen": 1792543605.2683768,
+    "ast_hash": "4358ce74e1e902a5e4cccddbdf48f490",
+    "semantic_hash": ""
+  },
+  "public/img/criacao-neo-tokyo.jpg": {
+    "mtime": 1792523053.07175,
+    "seen": 1792543605.2683775,
+    "ast_hash": "f11c30f05ac69b9c55733ce1f01a1999",
+    "semantic_hash": ""
+  },
+  "public/img/criacao-piloto-box.jpg": {
+    "mtime": 1792523053.1117215,
+    "seen": 1792543605.2683783,
+    "ast_hash": "53bb7b41c67ab0a9ff5a573f0c64c23e",
+    "semantic_hash": ""
+  },
+  "public/img/criacao-surfista.jpg": {
+    "mtime": 1792523053.0433106,
+    "seen": 1792543605.2683792,
+    "ast_hash": "a988accdcfa44b6b2da3966b5fe162b8",
+    "semantic_hash": ""
+  },
+  "public/img/foto-retrato-exemplo.jpg": {
+    "mtime": 1792523053.4102302,
+    "seen": 1792543605.2683842,
+    "ast_hash": "cbe4719e548e3ade0898a9daaac7633b",
+    "semantic_hash": ""
+  },
+  "public/img/landing-agente-secreto.jpg": {
+    "mtime": 1792523052.8598576,
+    "seen": 1792543605.2683852,
+    "ast_hash": "d520552dc1573ec2122babc76df21b83",
+    "semantic_hash": ""
+  },
+  "public/img/landing-astronauta.jpg": {
+    "mtime": 1792523052.9022346,
+    "seen": 1792543605.2683864,
+    "ast_hash": "e292590fcecb13741f87de060a2f6723",
+    "semantic_hash": ""
+  },
+  "public/img/landing-danca.jpg": {
+    "mtime": 1792523052.934633,
+    "seen": 1792543605.268387,
+    "ast_hash": "7039e6ed45c4c5392c0787d5e0e5a5e9",
+    "semantic_hash": ""
+  },
+  "public/img/landing-guerreiro.jpg": {
+    "mtime": 1792523052.9726057,
+    "seen": 1792543605.2683878,
+    "ast_hash": "fc7a76e99dcde43e44337d73d4f55595",
+    "semantic_hash": ""
+  },
+  "public/img/landing-hero.jpg": {
+    "mtime": 1792523052.787356,
+    "seen": 1792543605.2683887,
+    "ast_hash": "b9c3e5bd131139e69a03db71252a71e1",
+    "semantic_hash": ""
+  },
+  "public/img/landing-selfie.jpg": {
+    "mtime": 1792523052.8223698,
+    "seen": 1792543605.2683897,
+    "ast_hash": "139c3e2262b38e83eb7ca1600a953da5",
+    "semantic_hash": ""
+  },
+  "public/img/logo.png": {
+    "mtime": 1792523051.9339967,
+    "seen": 1792543605.2683907,
+    "ast_hash": "9685cd50702949c38a9e226f263d5a92",
+    "semantic_hash": ""
+  },
+  "public/img/resultado-agente.jpg": {
+    "mtime": 1792523053.223115,
+    "seen": 1792543605.2683914,
+    "ast_hash": "0f36048ac5cdb8112039af1279be4eca",
+    "semantic_hash": ""
+  },
+  "telas/criar_com_texto_prompt_ia/screen.png": {
+    "mtime": 1792522317.79386,
+    "seen": 1792543605.2683926,
+    "ast_hash": "05c9377572fe2fdb6b90d506536f8929",
+    "semantic_hash": ""
+  },
+  "telas/detalhe_do_clipe_agente_secreto/screen.png": {
+    "mtime": 1792522317.7535555,
+    "seen": 1792543605.2683933,
+    "ast_hash": "3a5a0f8742ba395bcc553c170dc747a8",
+    "semantic_hash": ""
+  },
+  "telas/gerando_progresso_da_ia/screen.png": {
+    "mtime": 1792522317.8836448,
+    "seen": 1792543605.268394,
+    "ast_hash": "de2f0b1f6dcf1c4287c87d7b356eb47f",
+    "semantic_hash": ""
+  },
+  "telas/in_cio_biblioteca_de_clipes/screen.png": {
+    "mtime": 1792522317.709337,
+    "seen": 1792543605.2683947,
+    "ast_hash": "0cbe9aa675d03220b60f0b4106292871",
+    "semantic_hash": ""
+  },
+  "telas/landing_page_seja_o_protagonista/screen.png": {
+    "mtime": 1792522317.5582087,
+    "seen": 1792543605.2683954,
+    "ast_hash": "ebc1e39928f11efb2d8d1a5e23e239dc",
+    "semantic_hash": ""
+  },
+  "telas/login_e_cadastro/screen.png": {
+    "mtime": 1792522317.604316,
+    "seen": 1792543605.2683964,
+    "ast_hash": "e7fa04cf84e62bf0863f9cb15ae15e33",
+    "semantic_hash": ""
+  },
+  "telas/minhas_cria_es_galeria_status/screen.png": {
+    "mtime": 1792522317.933534,
+    "seen": 1792543605.2683973,
+    "ast_hash": "52376d273b1a7a70557841e0f202fe81",
+    "semantic_hash": ""
+  },
+  "telas/resultado_seu_v_deo_est_pronto/screen.png": {
+    "mtime": 1792522317.847839,
+    "seen": 1792543605.268398,
+    "ast_hash": "25f14da6dfcd3404349b689acd5146dd",
+    "semantic_hash": ""
+  },
+  "telas/sua_foto_configura_o_facial/screen.png": {
+    "mtime": 1792522317.6556313,
+    "seen": 1792543605.2683988,
+    "ast_hash": "f4619d33edcf1794b80f6aa70e3fb161",
+    "semantic_hash": ""
+  },
+  "src/pages/clipe.js": {
+    "mtime": 1792544123.4716966,
+    "seen": 1792544269.374786,
+    "ast_hash": "2dbee82d240582302dca89fd58e285ee",
+    "semantic_hash": ""
+  },
+  "clipe.html": {
+    "mtime": 1792543671.8824341,
+    "seen": 1792543781.1666994,
+    "ast_hash": "1ff48c54d1dd2eb773bba27c57c59a30",
+    "semantic_hash": ""
+  },
+  "src/pages/criar.js": {
+    "mtime": 1792543874.2670133,
+    "seen": 1792543932.6252997,
+    "ast_hash": "2df2a7a151854257da2a2fbacf6f9c64",
+    "semantic_hash": ""
+  },
+  "criar-com-texto.html": {
+    "mtime": 1792543917.6314425,
+    "seen": 1792543932.6261396,
+    "ast_hash": "714741fe15699de3f7e51fbf06409888",
+    "semantic_hash": ""
+  },
+  "src/pages/gerando.js": {
+    "mtime": 1792544001.8946157,
+    "seen": 1792544088.3224485,
+    "ast_hash": "32ae681b9935041cabb8bb971126baf9",
+    "semantic_hash": ""
+  },
+  "gerando.html": {
+    "mtime": 1792544056.840559,
+    "seen": 1792544088.322827,
+    "ast_hash": "1e4c289b4eaf2ab6b01d57796449093b",
+    "semantic_hash": ""
+  },
+  "src/pages/resultado.js": {
+    "mtime": 1792544222.0136065,
+    "seen": 1792544269.374807,
+    "ast_hash": "e2a00ea4b1333ace3e7fe84fa28c3eaa",
+    "semantic_hash": ""
+  },
+  "resultado.html": {
+    "mtime": 1792544253.7195854,
+    "seen": 1792544269.3757782,
+    "ast_hash": "dc480ba87ce81e7ff8c6d1c5c9ca48c8",
+    "semantic_hash": ""
+  },
+  "src/pages/minhas-criacoes.js": {
+    "mtime": 1792544344.8536139,
+    "seen": 1792544407.833408,
+    "ast_hash": "0452ad6900e7c33851dfe0c3b7d44450",
+    "semantic_hash": ""
+  },
+  "minhas-criacoes.html": {
+    "mtime": 1792544343.7183015,
+    "seen": 1792544407.8337939,
+    "ast_hash": "c6e2f20fcb45fdca12ac3d6e8148813e",
+    "semantic_hash": ""
+  }
+}

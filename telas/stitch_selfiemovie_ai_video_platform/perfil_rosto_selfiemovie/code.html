@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#3e0022",
+          "secondary": "#ffb0cd",
+          "background": "#141319",
+          "on-error-container": "#ffdad6",
+          "tertiary-fixed-dim": "#4cd7f6",
+          "surface-container": "#201f25",
+          "on-tertiary-fixed-variant": "#004e5c",
+          "on-primary-container": "#594983",
+          "surface-container-low": "#1c1b21",
+          "surface-tint": "#d0bcff",
+          "on-surface-variant": "#cbc3d7",
+          "on-secondary": "#531d35",
+          "secondary-fixed-dim": "#ffb0cd",
+          "surface-variant": "#35343b",
+          "inverse-primary": "#6d3bd7",
+          "on-surface": "#e5e1ea",
+          "surface-container-highest": "#35343b",
+          "secondary-container": "#70364f",
+          "on-primary-fixed-variant": "#4d3d76",
+          "on-primary-fixed": "#23005c",
+          "surface-bright": "#3a383f",
+          "primary-container": "#a078ff",
+          "surface-container-lowest": "#0e0d13",
+          "on-tertiary": "#003640",
+          "error-container": "#93000a",
+          "surface-container-high": "#2b2930",
+          "inverse-on-surface": "#312f36",
+          "on-error": "#690005",
+          "on-secondary-fixed-variant": "#6e344c",
+          "error": "#ffb4ab",
+          "on-tertiary-container": "#002f38",
+          "outline-variant": "#494454",
+          "tertiary-fixed": "#acedff",
+          "inverse-surface": "#e5e1ea",
+          "surface": "#141319",
+          "on-tertiary-fixed": "#001f26",
+          "primary-fixed": "#e9ddff",
+          "outline": "#958ea0",
+          "secondary-fixed": "#ffd9e4",
+          "primary-fixed-dim": "#d0bcff",
+          "primary": "#d0bcff",
+          "surface-dim": "#141319",
+          "tertiary": "#4cd7f6",
+          "on-background": "#e5e1ea",
+          "on-secondary-container": "#efa2bf",
+          "on-primary": "#3c0091",
+          "tertiary-container": "#009eb9"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "margin": "3rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "space-xl": "2rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-lg": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "800"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="hidden md:flex fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex-col justify-between p-space-md border-r border-outline-variant/30 shadow-[4px_0_24px_rgba(0,0,0,0.5)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-container via-primary to-secondary flex items-center justify-center shadow-[0_0_16px_rgba(208,188,255,0.35)]"><span class="material-symbols-outlined text-on-primary text-[22px]">movie_filter</span></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight bg-gradient-to-r from-primary via-secondary to-secondary-fixed bg-clip-text text-transparent">SelfieMovie</span></div><div class="bg-surface-container-low rounded-xl p-space-md border border-outline-variant/40 relative overflow-hidden backdrop-blur-md"><div class="absolute -right-4 -top-4 w-16 h-16 bg-primary/10 rounded-full blur-xl pointer-events-none"></div><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-[18px]">bolt</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Saldo</span></div><span class="font-label-md text-label-md font-bold text-on-surface">45 créditos</span></div><a class="flex items-center justify-center w-full py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-on-surface font-label-md text-label-md transition-all duration-200 border border-outline-variant/30" data-path="creditos-e-planos" href="#">Recarregar</a></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary shadow-[inset_0_0_12px_rgba(208,188,255,0.06)] font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="inicio" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Início</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Criar com Texto</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-[20px]">video_library</span><span>Minhas Criações</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="creditos-e-planos" href="#"><span class="material-symbols-outlined text-[20px]">loyalty</span><span>Créditos &amp; Planos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[20px]">face</span><span>Perfil &amp; Rosto</span></a></nav></div><div class="pt-space-md border-t border-outline-variant/30"><div class="flex items-center gap-space-sm px-space-xs py-space-xs rounded-xl bg-surface-container/60"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(208,188,255,0.25)]"><span class="material-symbols-outlined text-on-primary text-[20px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Lucas Silva</span><span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Conta Ativa</span></div><a class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg transition-colors" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[18px]">settings</span></a></div></div></aside><div class="md:pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-0 md:left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.3)] z-40 px-space-gutter-mobile md:px-space-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm md:hidden"><div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary-container to-secondary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">movie_filter</span></div><span class="font-headline-sm text-headline-sm font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">SelfieMovie</span></div><div class="hidden sm:flex items-center flex-1 max-w-md bg-surface-container-lowest/80 rounded-full border border-outline-variant/40 px-space-md py-1.5 focus-within:border-primary transition-all"><span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span><input class="bg-transparent border-none outline-none text-on-surface placeholder:text-outline font-body-sm text-body-sm w-full" placeholder="Buscar criações, cenas ou estilos..." type="text"/></div><div class="flex items-center gap-space-sm md:gap-space-md ml-auto"><div class="flex items-center gap-1.5 bg-surface-container-high/70 backdrop-blur-md px-space-sm py-1 rounded-full border border-outline-variant/30 text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">bolt</span><span class="font-bold">45</span><span class="hidden xs:inline text-on-surface-variant">créditos</span></div><button class="hidden sm:flex items-center justify-center w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Central de Ajuda"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><a class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-gradient-to-r from-primary-container to-secondary-container hover:brightness-110 text-on-surface font-label-md text-label-md font-bold shadow-[0_0_20px_rgba(160,120,255,0.35)] transition-all" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span class="hidden sm:inline">Novo Vídeo</span><span class="sm:hidden">Criar</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 pb-20 md:pb-space-xl px-space-gutter-mobile md:px-space-gutter max-w-7xl mx-auto flex-1 bg-surface"><div class="flex flex-col w-full">
+<div class="max-w-5xl mx-auto w-full py-8 px-4 sm:px-6 space-y-8">
+<!-- 1. Header da Página -->
+<header class="relative space-y-2">
+<div class="flex items-center gap-2 text-tertiary font-label-sm uppercase tracking-wider">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(76,215,246,0.8)] animate-pulse"></span>
+<span>Gestão de Identidade &amp; Conta</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+        Perfil &amp; Rosto
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+        Gerencie seus dados de acesso, controle sua biometria facial e acompanhe suas assinaturas com total privacidade.
+      </p>
+</header>
+<!-- 2. Cartão: Sua Conta -->
+<section class="bg-surface-container/70 rounded-2xl p-6 md:p-8 backdrop-blur-md shadow-xl relative overflow-hidden transition-all">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Sua conta</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Perfil Principal & Avatar -->
+<div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-low/80 backdrop-blur-sm">
+<img alt="Foto de Camila Silva" class="w-14 h-14 rounded-full object-cover shadow-[0_0_12px_rgba(208,188,255,0.25)] shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoorL1mwJ8CwbLVJLUwZlqB0kJZAKgtjJuwyRFEsptzN9krIHet7yZ588GemtdCI8NIBPqqVX0jLmCO1RlZOWSiB_SwApe2tLEBlFYzotOflZSrpse6-XqlOe5G5w3_3Y_OOf7wpGA3lmGLNh_TDdwvZKCKJS_M9iaqXM2mHFFrYAugOnFBZ81o9VG9I8To71dSUzpkk1IMGtW4ohkfNn1aX0NgMHCuA5ALxl29p_tNU6fe4H8ZPiuAw"/>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Camila Silva</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                Conta Verificada
+              </span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">camila.silva@email.com</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-outline font-label-sm text-[10px]">E-mail primário</span>
+</div>
+</div>
+</div>
+<!-- Plano Atual -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low/80 backdrop-blur-sm">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Assinatura Atual</span>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Sem plano ativo</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gratuito</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-1 text-primary hover:text-primary-fixed font-label-md text-label-md font-semibold transition-colors group" data-path="creditos-e-planos" href="#">
+<span>Ver planos</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Saldo de Créditos -->
+<div class="md:col-span-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 rounded-xl bg-surface-container-lowest/80 backdrop-blur-sm">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-tertiary/15 text-tertiary flex items-center justify-center shrink-0 shadow-[0_0_16px_rgba(76,215,246,0.2)]">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">45 créditos</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-[11px] font-bold">Disponíveis</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Cada geração de cena cinematográfica utiliza 5 créditos de alta definição.
+              </p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-all shrink-0" data-path="creditos-e-planos" href="#">
+<span class="material-symbols-outlined text-[18px] text-tertiary">add_circle</span>
+<span>Recarregar</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. Cartão: Seu Rosto (Gestão Biométrica) -->
+<section class="bg-surface-container/70 rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-2xl backdrop-blur-md">
+<!-- Glow Decorativo de Fundo -->
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-3 mb-6 relative">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">face_retouching_natural</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Seu rosto</h2>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Armazenamento Seguro</span>
+</div>
+</div>
+<!-- Layout Lado a Lado -->
+<div class="flex flex-col lg:flex-row items-start gap-8 relative">
+<!-- Retrato Ativo de Camila -->
+<div class="relative shrink-0 mx-auto lg:mx-0">
+<div class="relative group">
+<img alt="Foto de rosto de Camila" class="w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.6)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoorL1mwJ8CwbLVJLUwZlqB0kJZAKgtjJuwyRFEsptzN9krIHet7yZ588GemtdCI8NIBPqqVX0jLmCO1RlZOWSiB_SwApe2tLEBlFYzotOflZSrpse6-XqlOe5G5w3_3Y_OOf7wpGA3lmGLNh_TDdwvZKCKJS_M9iaqXM2mHFFrYAugOnFBZ81o9VG9I8To71dSUzpkk1IMGtW4ohkfNn1aX0NgMHCuA5ALxl29p_tNU6fe4H8ZPiuAw"/>
+<div class="absolute inset-0 rounded-2xl bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<div class="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-surface-container-high/90 backdrop-blur-md px-3.5 py-1 rounded-full shadow-[0_4px_14px_rgba(0,0,0,0.4)] flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">Rosto ativo para IA</span>
+</div>
+</div>
+<!-- Bloco de Informações & Compromisso de Privacidade -->
+<div class="flex-1 space-y-5 min-w-0">
+<div class="p-4 sm:p-5 rounded-xl bg-surface-container-low/90 backdrop-blur-sm space-y-2">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+<span>Compromisso de Privacidade &amp; Soberania</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Sua foto fica salva na sua conta até você apagá-la. Ela é usada só para gerar o que você pedir e nunca é vendida.
+            </p>
+</div>
+<ul class="space-y-2 text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0">enhanced_encryption</span>
+<span>Criptografia biométrica ponta a ponta vinculada apenas à sua chave de conta.</span>
+</li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">delete_sweep</span>
+<span>Remoção instantânea sob demanda com eliminação total dos vetores neurais.</span>
+</li>
+</ul>
+<!-- Ações da Foto -->
+<div class="flex flex-wrap items-center gap-4 pt-1">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-all">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Trocar foto</span>
+</button>
+<button class="text-error hover:text-on-error-container font-label-md text-label-md font-medium inline-flex items-center gap-1.5 transition-colors underline-offset-4 hover:underline">
+<span class="material-symbols-outlined text-[18px]">delete_outline</span>
+<span>Apagar minha foto</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Caixa de Confirmação ABERTA INLINE: Apagar Foto -->
+<div class="mt-8 rounded-xl p-5 sm:p-6 bg-error-container/20 shadow-inner relative">
+<div class="flex flex-col sm:flex-row items-start gap-4">
+<div class="w-10 h-10 rounded-xl bg-error-container/40 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">warning_amber</span>
+</div>
+<div class="flex-1 space-y-2 min-w-0">
+<h3 class="font-label-lg text-label-lg text-error font-bold">
+              Apagar sua foto? Você precisará enviar outra para gerar novos vídeos.
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              A exclusão é imediata e irreversível em nossos clusters neurais. Seus vídeos gerados anteriormente continuarão salvos na biblioteca.
+            </p>
+<div class="flex flex-wrap items-center gap-3 pt-3">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-error-container hover:bg-error text-on-error font-label-md text-label-md font-bold transition-all shadow-[0_0_16px_rgba(147,0,10,0.5)]">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Apagar foto</span>
+</button>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium transition-all">
+                Cancelar
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Cartão: Histórico de Compras (Empty State) -->
+<section class="bg-surface-container/70 rounded-2xl p-6 sm:p-8 backdrop-blur-md shadow-xl">
+<div class="flex items-center justify-between gap-3 mb-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Histórico de compras</h2>
+</div>
+</div>
+<!-- Área de Empty State Elegante -->
+<div class="py-10 px-4 text-center max-w-md mx-auto flex flex-col items-center">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-high/60 text-outline/50 flex items-center justify-center mb-4 shadow-inner">
+<span class="material-symbols-outlined text-[32px]">receipt_long</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1.5">
+          Nenhuma compra ainda
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+          Você ainda está usando os créditos iniciais gratuitos de boas-vindas.
+        </p>
+<a class="inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed font-label-lg text-label-lg font-bold group" data-path="creditos-e-planos" href="#">
+<span>Ver planos e créditos</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 5. Cartão: Zona de Perigo (Danger Zone) -->
+<section class="bg-surface-container-lowest/90 rounded-2xl p-6 sm:p-8 shadow-2xl space-y-6">
+<div class="flex items-center gap-2 pb-2">
+<div class="w-8 h-8 rounded-lg bg-error-container/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">gpp_maybe</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-error font-bold">Zona de perigo</h2>
+</div>
+<!-- Linha: Sair da Sessão -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-surface-container-low/60">
+<div class="space-y-0.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Sair da sessão</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Encerra sua sessão atual com segurança neste dispositivo.
+          </p>
+</div>
+<button class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-all shrink-0">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+<span>Sair da conta</span>
+</button>
+</div>
+<!-- Bloco de Exclusão de Conta -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block">Excluir conta permanentemente</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Exclui permanentemente todos os registros biométricos, vídeos gerados e dados cadastrais.
+            </p>
+</div>
+<button class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-error bg-error-container/20 hover:bg-error-container/30 font-label-md text-label-md font-semibold transition-all shrink-0">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Excluir conta</span>
+</button>
+</div>
+<button class="sm:hidden w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-error bg-error-container/20 hover:bg-error-container/30 font-label-md text-label-md font-semibold transition-all">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Excluir conta</span>
+</button>
+<!-- CAIXA DE CONFIRMAÇÃO ABERTA NA PÁGINA (Inline) -->
+<div class="rounded-xl p-5 sm:p-6 bg-error-container/25 shadow-inner mt-4">
+<div class="flex items-start gap-3.5">
+<span class="material-symbols-outlined text-error text-[24px] shrink-0 mt-0.5">warning</span>
+<div class="space-y-2 flex-1">
+<p class="font-label-lg text-label-lg text-error font-bold leading-snug">
+                Excluir sua conta apaga sua foto, suas criações e seus créditos. Não dá para desfazer.
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Ao prosseguir, seu perfil será apagado imediatamente do SelfieMovie. Não será possível recuperar créditos não utilizados ou restabelecer as versões neurais pré-computadas.
+              </p>
+<div class="flex flex-wrap items-center gap-3 pt-3">
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-error-container hover:bg-error text-on-error font-label-md text-label-md font-bold transition-all shadow-[0_0_16px_rgba(147,0,10,0.5)]">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Excluir conta</span>
+</button>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-medium transition-all">
+                  Cancelar
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main></div><nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-t border-outline-variant/30 z-50 flex items-center justify-around px-space-sm shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-bold"><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span>Início</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span>Criar</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-[22px]">video_library</span><span>Criações</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[22px]">face</span><span>Perfil</span></a></nav></body></html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#3e0022",
+          "secondary": "#ffb0cd",
+          "background": "#141319",
+          "on-error-container": "#ffdad6",
+          "tertiary-fixed-dim": "#4cd7f6",
+          "surface-container": "#201f25",
+          "on-tertiary-fixed-variant": "#004e5c",
+          "on-primary-container": "#594983",
+          "surface-container-low": "#1c1b21",
+          "surface-tint": "#d0bcff",
+          "on-surface-variant": "#cbc3d7",
+          "on-secondary": "#531d35",
+          "secondary-fixed-dim": "#ffb0cd",
+          "surface-variant": "#35343b",
+          "inverse-primary": "#6d3bd7",
+          "on-surface": "#e5e1ea",
+          "surface-container-highest": "#35343b",
+          "secondary-container": "#70364f",
+          "on-primary-fixed-variant": "#4d3d76",
+          "on-primary-fixed": "#23005c",
+          "surface-bright": "#3a383f",
+          "primary-container": "#a078ff",
+          "surface-container-lowest": "#0e0d13",
+          "on-tertiary": "#003640",
+          "error-container": "#93000a",
+          "surface-container-high": "#2b2930",
+          "inverse-on-surface": "#312f36",
+          "on-error": "#690005",
+          "on-secondary-fixed-variant": "#6e344c",
+          "error": "#ffb4ab",
+          "on-tertiary-container": "#002f38",
+          "outline-variant": "#494454",
+          "tertiary-fixed": "#acedff",
+          "inverse-surface": "#e5e1ea",
+          "surface": "#141319",
+          "on-tertiary-fixed": "#001f26",
+          "primary-fixed": "#e9ddff",
+          "outline": "#958ea0",
+          "secondary-fixed": "#ffd9e4",
+          "primary-fixed-dim": "#d0bcff",
+          "primary": "#d0bcff",
+          "surface-dim": "#141319",
+          "tertiary": "#4cd7f6",
+          "on-background": "#e5e1ea",
+          "on-secondary-container": "#efa2bf",
+          "on-primary": "#3c0091",
+          "tertiary-container": "#009eb9"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "margin": "3rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1.25rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "space-xl": "2rem"
+        },
+        "fontFamily": {
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "label-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero-mobile": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-lg": [
+            "15px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero": [
+            "56px",
+            {
+              "lineHeight": "64px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "800"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-hero-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "800"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="hidden md:flex fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex-col justify-between p-space-md border-r border-outline-variant/30 shadow-[4px_0_24px_rgba(0,0,0,0.5)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-container via-primary to-secondary flex items-center justify-center shadow-[0_0_16px_rgba(208,188,255,0.35)]"><span class="material-symbols-outlined text-on-primary text-[22px]">movie_filter</span></div><span class="font-headline-sm text-headline-sm font-bold tracking-tight bg-gradient-to-r from-primary via-secondary to-secondary-fixed bg-clip-text text-transparent">SelfieMovie</span></div><div class="bg-surface-container-low rounded-xl p-space-md border border-outline-variant/40 relative overflow-hidden backdrop-blur-md"><div class="absolute -right-4 -top-4 w-16 h-16 bg-primary/10 rounded-full blur-xl pointer-events-none"></div><div class="flex items-center justify-between mb-space-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-tertiary text-[18px]">bolt</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Saldo</span></div><span class="font-label-md text-label-md font-bold text-on-surface">45 créditos</span></div><a class="flex items-center justify-center w-full py-space-xs px-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface hover:text-on-surface font-label-md text-label-md transition-all duration-200 border border-outline-variant/30" data-path="creditos-e-planos" href="#">Recarregar</a></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary shadow-[inset_0_0_12px_rgba(208,188,255,0.06)] font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="inicio" href="#"><span class="material-symbols-outlined text-[20px]">home</span><span>Início</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Criar com Texto</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-[20px]">video_library</span><span>Minhas Criações</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="creditos-e-planos" href="#"><span class="material-symbols-outlined text-[20px]">loyalty</span><span>Créditos &amp; Planos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[20px]">face</span><span>Perfil &amp; Rosto</span></a></nav></div><div class="pt-space-md border-t border-outline-variant/30"><div class="flex items-center gap-space-sm px-space-xs py-space-xs rounded-xl bg-surface-container/60"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(208,188,255,0.25)]"><span class="material-symbols-outlined text-on-primary text-[20px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Lucas Silva</span><span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Conta Ativa</span></div><a class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg transition-colors" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[18px]">settings</span></a></div></div></aside><div class="md:pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-0 md:left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_4px_20px_rgba(0,0,0,0.3)] z-40 px-space-gutter-mobile md:px-space-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm md:hidden"><div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary-container to-secondary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">movie_filter</span></div><span class="font-headline-sm text-headline-sm font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">SelfieMovie</span></div><div class="hidden sm:flex items-center flex-1 max-w-md bg-surface-container-lowest/80 rounded-full border border-outline-variant/40 px-space-md py-1.5 focus-within:border-primary transition-all"><span class="material-symbols-outlined text-outline text-[18px] mr-2">search</span><input class="bg-transparent border-none outline-none text-on-surface placeholder:text-outline font-body-sm text-body-sm w-full" placeholder="Buscar criações, cenas ou estilos..." type="text"/></div><div class="flex items-center gap-space-sm md:gap-space-md ml-auto"><div class="flex items-center gap-1.5 bg-surface-container-high/70 backdrop-blur-md px-space-sm py-1 rounded-full border border-outline-variant/30 text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-tertiary text-[16px]">bolt</span><span class="font-bold">45</span><span class="hidden xs:inline text-on-surface-variant">créditos</span></div><button class="hidden sm:flex items-center justify-center w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Central de Ajuda"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><a class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-gradient-to-r from-primary-container to-secondary-container hover:brightness-110 text-on-surface font-label-md text-label-md font-bold shadow-[0_0_20px_rgba(160,120,255,0.35)] transition-all" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span class="hidden sm:inline">Novo Vídeo</span><span class="sm:hidden">Criar</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 pb-20 md:pb-space-xl px-space-gutter-mobile md:px-space-gutter max-w-7xl mx-auto flex-1 bg-surface"><div class="flex flex-col w-full">
+<!-- Glow decorativo superior contextualizado no card principal -->
+<div class="relative w-full overflow-hidden rounded-3xl bg-surface-container-lowest p-space-lg md:p-space-xl shadow-2xl">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[110px] pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-secondary-container/20 rounded-full blur-[110px] pointer-events-none"></div>
+<!-- Topo / Hero da Central de Ajuda -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto space-y-space-md pt-space-xs pb-space-sm">
+<div class="inline-flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-low shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_rgba(76,215,246,0.8)]"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-bold">Central de Suporte &amp; Transparência</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg md:text-display-hero md:font-display-hero text-on-surface tracking-tight">
+        Como podemos ajudar?
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Tire dúvidas sobre créditos, regras de foto, privacidade e geração de vídeos em HD com rapidez e transparência.
+      </p>
+<!-- Campo de busca imersivo -->
+<div class="w-full pt-space-xs">
+<div class="relative flex items-center w-full bg-surface-container-low rounded-2xl shadow-xl transition-all duration-300 focus-within:bg-surface-container focus-within:shadow-[0_0_28px_rgba(160,120,255,0.22)]">
+<div class="pl-space-md flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input autocomplete="off" class="w-full py-4 pl-3 pr-14 bg-transparent outline-none text-on-surface placeholder:text-outline font-body-md text-body-md" id="faq-search-input" placeholder="Buscar uma dúvida..." type="text"/>
+<div class="absolute right-4 flex items-center pointer-events-none">
+<kbd class="hidden sm:inline-flex items-center justify-center h-6 min-w-[24px] px-1.5 text-label-sm font-label-sm text-outline bg-surface-container-highest rounded font-mono">
+              /
+            </kbd>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Cartões de Atalho Temáticos -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-gutter mt-space-xl">
+<!-- Card 1: Primeiros passos -->
+<div class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md hover:-translate-y-1">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">rocket_launch</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Primeiros passos</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Orientações sobre o cadastro imediato, a ativação dos 10 créditos de bônus e como montar suas primeiras cenas.
+        </p>
+</div>
+<div class="pt-space-md">
+<a class="inline-flex items-center gap-1.5 font-label-lg text-label-lg text-primary hover:text-primary-fixed transition-colors" href="#faq-section">
+<span>Ver tópicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Créditos e pagamento -->
+<div class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md hover:-translate-y-1">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">account_balance_wallet</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Créditos e pagamento</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Entenda como funcionam os planos mensais, recargas avulsas e a garantia de estorno imediato se houver instabilidade.
+        </p>
+</div>
+<div class="pt-space-md">
+<a class="inline-flex items-center gap-1.5 font-label-lg text-label-lg text-primary hover:text-primary-fixed transition-colors" href="#faq-section">
+<span>Ver tópicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Sua foto e privacidade -->
+<div class="group relative flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container hover:bg-surface-container-high transition-all duration-300 shadow-md hover:-translate-y-1">
+<div class="flex flex-col gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[26px]">security</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Sua foto e privacidade</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Controle total: sua foto permanece salva sob criptografia até você decidir apagá-la no Perfil, sem venda a terceiros.
+        </p>
+</div>
+<div class="pt-space-md">
+<a class="inline-flex items-center gap-1.5 font-label-lg text-label-lg text-primary hover:text-primary-fixed transition-colors" href="#faq-section">
+<span>Ver tópicos</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Seção Perguntas Frequentes (FAQ) -->
+<div class="mt-space-xl pt-space-md flex flex-col gap-space-md" id="faq-section">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-xs pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">Dúvidas Frequentes</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Perguntas Frequentes</h2>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+        Clique nos tópicos para expandir as respostas
+      </p>
+</div>
+<!-- Lista de Acordeões -->
+<div class="flex flex-col gap-space-sm" id="faq-accordion-container">
+<!-- FAQ 1: Como funciona o SelfieMovie? (ABERTO) -->
+<div class="faq-item rounded-2xl bg-surface-container transition-all overflow-hidden shadow-sm" data-search-content="como funciona o selfiemovie biblioteca texto cena selfie 10 creditos bonus hd protagonista">
+<button aria-expanded="true" class="faq-toggle w-full flex items-center justify-between p-space-md md:p-space-lg text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-sm pr-space-md">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Como funciona o SelfieMovie?</span>
+</div>
+<span class="faq-icon material-symbols-outlined text-outline transition-transform duration-300 rotate-180">expand_more</span>
+</button>
+<div class="faq-content px-space-md md:px-space-lg pb-space-lg pt-0 text-on-surface-variant font-body-md text-body-md space-y-3">
+<p>
+            Você escolhe um modelo da biblioteca ou digita uma cena cinematográfica em texto, envia ou seleciona sua selfie cadastrada, e nossa IA gera um vídeo em HD colocando você como protagonista.
+          </p>
+<div class="p-space-sm rounded-xl bg-surface-container-high/60 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0">card_giftcard</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+              Ao criar sua conta, você recebe <strong class="text-tertiary">10 créditos de bônus</strong> para experimentar a plataforma sem qualquer custo inicial.
+            </span>
+</div>
+</div>
+</div>
+<!-- FAQ 2: Que tipo de foto devo enviar? -->
+<div class="faq-item rounded-2xl bg-surface-container transition-all overflow-hidden shadow-sm" data-search-content="tipo de foto selfie iluminacao oculos escuros rosto nitida frente angulo">
+<button aria-expanded="false" class="faq-toggle w-full flex items-center justify-between p-space-md md:p-space-lg text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-sm pr-space-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Que tipo de foto devo enviar?</span>
+</div>
+<span class="faq-icon material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md md:px-space-lg pb-space-lg pt-0 text-on-surface-variant font-body-md text-body-md">
+<p>
+            Recomendamos uma foto nítida, tirada de frente, com boa iluminação natural ou frontal. Certifique-se de que não haja óculos escuros, máscaras, mãos cobrindo a face ou acessórios que ocultem traços faciais essenciais para que o mapeamento mantenha sua identidade exata na cena.
+          </p>
+</div>
+</div>
+<!-- FAQ 3: Quanto custa cada criação? -->
+<div class="faq-item rounded-2xl bg-surface-container transition-all overflow-hidden shadow-sm" data-search-content="quanto custa preco creditos valor clipe 5 creditos video 5 s hd 10 s 8 foto estatica 2">
+<button aria-expanded="false" class="faq-toggle w-full flex items-center justify-between p-space-md md:p-space-lg text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-sm pr-space-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Quanto custa cada criação?</span>
+</div>
+<span class="faq-icon material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md md:px-space-lg pb-space-lg pt-0 text-on-surface-variant font-body-md text-body-md">
+<p class="mb-space-sm">Nossa precificação é transparente e cobrada por ação finalizada:</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs font-body-sm text-body-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between">
+<span class="text-on-surface">Clipe da biblioteca</span>
+<span class="font-bold text-tertiary">5 créditos</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between">
+<span class="text-on-surface">Vídeo de 5 s em HD</span>
+<span class="font-bold text-tertiary">5 créditos</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between">
+<span class="text-on-surface">Vídeo de 10 s em HD</span>
+<span class="font-bold text-tertiary">8 créditos</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high flex items-center justify-between">
+<span class="text-on-surface">Foto estática</span>
+<span class="font-bold text-tertiary">2 créditos</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ 4: O que acontece se a geração falhar? -->
+<div class="faq-item rounded-2xl bg-surface-container transition-all overflow-hidden shadow-sm" data-search-content="geracao falhar erro estorno garantia reembolso saldo creditos gastos voltam">
+<button aria-expanded="false" class="faq-toggle w-full flex items-center justify-between p-space-md md:p-space-lg text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-sm pr-space-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">O que acontece se a geração falhar?</span>
+</div>
+<span class="faq-icon material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md md:px-space-lg pb-space-lg pt-0 text-on-surface-variant font-body-md text-body-md">
+<p>
+            Existe uma garantia inegociável na plataforma: se houver qualquer erro técnico ou interrupção durante a geração, os créditos utilizados são <strong class="text-on-surface">estornados imediatamente e de forma integral</strong> para a sua conta, sem necessidade de contato manual.
+          </p>
+</div>
+</div>
+<!-- FAQ 5: Quanto tempo leva para gerar? -->
+<div class="faq-item rounded-2xl bg-surface-container transition-all overflow-hidden shadow-sm" data-search-content="tempo demora minutos minhas criacoes fechar navegador fila">
+<button aria-expanded="false" class="faq-toggle w-full flex items-center justify-between p-space-md md:p-space-lg text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-sm pr-space-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Quanto tempo leva para gerar?</span>
+</div>
+<span class="faq-icon material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md md:px-space-lg pb-space-lg pt-0 text-on-surface-variant font-body-md text-body-md">
+<p>
+            O processamento leva apenas alguns minutos. Você não precisa permanecer com a tela aberta: sinta-se à vontade para navegar ou até fechar a janela. Assim que a renderização for concluída, o arquivo ficará guardado com segurança na aba <strong class="text-on-surface">Minhas Criações</strong>.
+          </p>
+</div>
+</div>
+<!-- FAQ 6: Onde fica minha foto e como apago? -->
+<div class="faq-item rounded-2xl bg-surface-container transition-all overflow-hidden shadow-sm" data-search-content="onde fica foto apagar perfil e rosto privacidade criptografia excluir deletar venda terceiros">
+<button aria-expanded="false" class="faq-toggle w-full flex items-center justify-between p-space-md md:p-space-lg text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-sm pr-space-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Onde fica minha foto e como apago?</span>
+</div>
+<span class="faq-icon material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md md:px-space-lg pb-space-lg pt-0 text-on-surface-variant font-body-md text-body-md">
+<p>
+            Sua foto permanece salva de forma criptografada e vinculada unicamente à sua conta até que você mesmo decida excluí-la na aba <strong class="text-on-surface">Perfil &amp; Rosto</strong>. Ela nunca é descartada sem sua autorização nem comercializada para terceiros. Você pode substituí-la ou apagá-la em definitivo a qualquer momento com um único clique.
+          </p>
+</div>
+</div>
+<!-- FAQ 7: Posso usar os vídeos nas redes sociais? -->
+<div class="faq-item rounded-2xl bg-surface-container transition-all overflow-hidden shadow-sm" data-search-content="redes sociais compartilhar uso pessoal direitos portfolio instagram tiktok youtube">
+<button aria-expanded="false" class="faq-toggle w-full flex items-center justify-between p-space-md md:p-space-lg text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-sm pr-space-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Posso usar os vídeos nas redes sociais?</span>
+</div>
+<span class="faq-icon material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md md:px-space-lg pb-space-lg pt-0 text-on-surface-variant font-body-md text-body-md">
+<p>
+            Sim! Todas as produções geradas em HD destinam-se ao seu uso pessoal. Você tem total liberdade para baixar, arquivar e compartilhar livremente em seus perfis sociais, mensageiros e portfólios pessoais.
+          </p>
+</div>
+</div>
+<!-- FAQ 8: Como cancelo meu plano? -->
+<div class="faq-item rounded-2xl bg-surface-container transition-all overflow-hidden shadow-sm" data-search-content="cancelar plano assinatura mensalidade creditos e planos sem taxas manter creditos">
+<button aria-expanded="false" class="faq-toggle w-full flex items-center justify-between p-space-md md:p-space-lg text-left focus:outline-none" type="button">
+<div class="flex items-center gap-space-sm pr-space-md">
+<span class="w-2 h-2 rounded-full bg-outline-variant shrink-0"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Como cancelo meu plano?</span>
+</div>
+<span class="faq-icon material-symbols-outlined text-outline transition-transform duration-300">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md md:px-space-lg pb-space-lg pt-0 text-on-surface-variant font-body-md text-body-md">
+<p>
+            O cancelamento da sua assinatura pode ser realizado a qualquer momento diretamente na tela de <strong class="text-on-surface">Créditos &amp; Planos</strong>. Não cobramos multas ou taxas rescisórias, e todos os créditos já creditados permanecem disponíveis para uso até o término de sua validade.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Rodapé / Card de Atendimento Direto -->
+<div class="mt-space-xl p-space-lg md:p-space-xl rounded-3xl bg-surface-container-low shadow-xl">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[30px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface">Não achou sua resposta?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-1">
+            Nossa equipe de suporte técnico e atendimento humanizado está pronta para orientar sua experiência com respostas ágeis.
+          </p>
+<!-- Selo discreto de segurança -->
+<div class="flex items-center gap-2 mt-space-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Criptografia de ponta a ponta e dados protegidos</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full lg:w-auto">
+<button class="w-full sm:w-auto px-space-lg py-3.5 rounded-full bg-gradient-to-r from-primary-container to-secondary-container hover:brightness-110 text-on-surface font-label-lg text-label-lg font-bold shadow-[0_0_24px_rgba(160,120,255,0.35)] transition-all flex items-center justify-center gap-2" id="btn-suporte" type="button">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Falar com o suporte</span>
+</button>
+</div>
+</div>
+<!-- Links Auxiliares -->
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<a class="font-label-md text-label-md hover:text-on-surface transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Termos de Uso</span>
+</a>
+<span class="text-outline">/</span>
+<a class="font-label-md text-label-md hover:text-on-surface transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Política de Privacidade</span>
+</a>
+</div>
+<div class="font-label-sm text-label-sm text-outline">
+        Tempo médio de resposta: menos de 15 minutos
+      </div>
+</div>
+</div>
+<!-- Modal interativo simples de suporte -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center p-space-md bg-background/80 backdrop-blur-md" id="modal-suporte">
+<div class="w-full max-w-lg bg-surface-container rounded-3xl p-space-lg shadow-2xl space-y-space-md relative">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">chat_bubble</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Falar com o Suporte</h4>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="btn-fechar-modal" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Envie sua mensagem diretamente para nosso canal de atendimento. Retornamos no seu e-mail cadastrado.
+      </p>
+<form class="space-y-space-sm" id="suporte-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Retornaremos em instantes.'); document.getElementById('modal-suporte').classList.add('hidden'); document.getElementById('modal-suporte').classList.remove('flex');">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Assunto</label>
+<input class="w-full px-space-sm py-2.5 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary" placeholder="Ex: Dúvida sobre estorno de créditos" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Descrição</label>
+<textarea class="w-full px-space-sm py-2.5 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary" placeholder="Descreva brevemente sua situação..." required="" rows="4"></textarea>
+</div>
+<div class="pt-space-xs flex justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md" id="btn-cancelar-modal" type="button">
+            Cancelar
+          </button>
+<button class="px-space-lg py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-[0_0_12px_rgba(208,188,255,0.4)]" type="submit">
+            Enviar Chamado
+          </button>
+</div>
+</form>
+</div>
+</div>
+<script>
+    (function initHelpCenter() {
+      // 1. Acordeão interativo
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach((item) => {
+        const toggleBtn = item.querySelector('.faq-toggle');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        const dot = item.querySelector('.shrink-0');
+
+        toggleBtn.addEventListener('click', () => {
+          const isCurrentlyOpen = !content.classList.contains('hidden');
+
+          // Opcional: fechar outros itens para visual limpo
+          faqItems.forEach((otherItem) => {
+            if (otherItem !== item) {
+              const otherContent = otherItem.querySelector('.faq-content');
+              const otherIcon = otherItem.querySelector('.faq-icon');
+              const otherDot = otherItem.querySelector('.shrink-0');
+              const otherBtn = otherItem.querySelector('.faq-toggle');
+              if (otherContent) otherContent.classList.add('hidden');
+              if (otherIcon) otherIcon.classList.remove('rotate-180');
+              if (otherDot) {
+                otherDot.classList.remove('bg-primary');
+                otherDot.classList.add('bg-outline-variant');
+              }
+              if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          if (isCurrentlyOpen) {
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+            if (dot) {
+              dot.classList.remove('bg-primary');
+              dot.classList.add('bg-outline-variant');
+            }
+            toggleBtn.setAttribute('aria-expanded', 'false');
+          } else {
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+            if (dot) {
+              dot.classList.add('bg-primary');
+              dot.classList.remove('bg-outline-variant');
+            }
+            toggleBtn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // 2. Campo de busca em tempo real com destaque
+      const searchInput = document.getElementById('faq-search-input');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const term = e.target.value.toLowerCase().trim();
+
+          faqItems.forEach((item) => {
+            const dataSearch = item.getAttribute('data-search-content') || '';
+            const title = item.querySelector('.faq-toggle span')?.textContent.toLowerCase() || '';
+            const content = item.querySelector('.faq-content')?.textContent.toLowerCase() || '';
+
+            if (!term || dataSearch.includes(term) || title.includes(term) || content.includes(term)) {
+              item.style.display = 'block';
+              if (term.length > 2) {
+                // Auto-expande se tiver correspondência relevante
+                const c = item.querySelector('.faq-content');
+                const i = item.querySelector('.faq-icon');
+                if (c && c.classList.contains('hidden')) {
+                  c.classList.remove('hidden');
+                  if (i) i.classList.add('rotate-180');
+                }
+              }
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+
+        // Atalho de teclado "/"
+        window.addEventListener('keydown', (e) => {
+          if (e.key === '/' && document.activeElement !== searchInput) {
+            e.preventDefault();
+            searchInput.focus();
+          }
+        });
+      }
+
+      // 3. Modal de suporte
+      const btnSuporte = document.getElementById('btn-suporte');
+      const modalSuporte = document.getElementById('modal-suporte');
+      const btnFecharModal = document.getElementById('btn-fechar-modal');
+      const btnCancelarModal = document.getElementById('btn-cancelar-modal');
+
+      function openModal() {
+        if (modalSuporte) {
+          modalSuporte.classList.remove('hidden');
+          modalSuporte.classList.add('flex');
+        }
+      }
+
+      function closeModal() {
+        if (modalSuporte) {
+          modalSuporte.classList.add('hidden');
+          modalSuporte.classList.remove('flex');
+        }
+      }
+
+      if (btnSuporte) btnSuporte.addEventListener('click', openModal);
+      if (btnFecharModal) btnFecharModal.addEventListener('click', closeModal);
+      if (btnCancelarModal) btnCancelarModal.addEventListener('click', closeModal);
+    })();
+  </script>
+</div></main></div><nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-t border-outline-variant/30 z-50 flex items-center justify-around px-space-sm shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-bold"><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span>Início</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="criar-com-texto" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span>Criar</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="minhas-criacoes" href="#"><span class="material-symbols-outlined text-[22px]">video_library</span><span>Criações</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-on-surface py-1 font-label-sm text-label-sm gap-0.5" data-path="perfil-e-rosto" href="#"><span class="material-symbols-outlined text-[22px]">face</span><span>Perfil</span></a></nav></body></html>

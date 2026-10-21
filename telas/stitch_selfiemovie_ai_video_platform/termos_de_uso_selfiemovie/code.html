@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SelfieMovie</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container":"#201f25","surface":"#141319","on-tertiary-fixed-variant":"#004e5c","on-secondary-fixed":"#390820","inverse-surface":"#e5e1ea","on-primary-container":"#594983","secondary-fixed-dim":"#ffb0cd","tertiary":"#4cd7f6","surface-dim":"#141319","on-tertiary-container":"#002f38","on-tertiary":"#003640","on-secondary-container":"#efa2bf","inverse-primary":"#6d3bd7","on-tertiary-fixed":"#001f26","on-surface":"#e5e1ea","surface-container-highest":"#35343b","on-background":"#e5e1ea","primary-fixed":"#e9ddff","on-error-container":"#ffdad6","on-surface-variant":"#cbc3d7","primary-fixed-dim":"#d0bcff","surface-variant":"#35343b","tertiary-container":"#009eb9","tertiary-fixed-dim":"#4cd7f6","surface-container-high":"#2b2930","on-secondary":"#531d35","surface-bright":"#3a383f","surface-container-lowest":"#0e0d13","secondary":"#ffb0cd","outline-variant":"#494454","on-primary-fixed":"#210f48","on-secondary-fixed-variant":"#6e344c","on-primary-fixed-variant":"#5516be","error":"#ffb4ab","secondary-fixed":"#ffd9e4","outline":"#958ea0","primary-container":"#d0bcff","secondary-container":"#aa0266","background":"#141319","surface-tint":"#d0bcff","inverse-on-surface":"#312f36","surface-container-low":"#1c1b21","on-primary":"#3c0091","tertiary-fixed":"#acedff","error-container":"#93000a","on-error":"#690005","primary":"#d0bcff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem",gutter:"1.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-xl":"2rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-md":"1rem",margin:"3rem"},fontFamily:{"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},fontSize:{"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-lg":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.015em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"700"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"800"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container"><div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden"><div class="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-primary/5 rounded-full blur-[140px]"></div><div class="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-secondary-container/5 rounded-full blur-[160px]"></div><div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[500px] bg-tertiary/5 rounded-full blur-[150px]"></div></div><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><a class="flex items-center gap-space-sm group transition-opacity hover:opacity-90" data-path="home" href="#"><div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shadow-[0_0_20px_rgba(208,188,255,0.15)] group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[22px]">movie</span></div><div class="flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Selfie<span class="text-primary">Movie</span></span><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></div></a><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all font-label-md text-label-md" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span>Voltar</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full flex-1 pt-16 bg-transparent"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="flex flex-col w-full relative">
+<!-- Faixa de Aviso no Topo (Rascunho de Homologação) -->
+<div class="w-full mb-space-xl p-space-md rounded-xl bg-amber-950/30 shadow-[0_0_24px_rgba(245,158,11,0.06)] flex items-start gap-space-md relative overflow-hidden">
+<div class="w-1.5 absolute inset-y-0 left-0 bg-amber-500/80"></div>
+<div class="flex-shrink-0 w-8 h-8 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-md text-label-md text-amber-200 uppercase tracking-wider">Rascunho — pendente de revisão jurídica</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-label-sm text-label-sm">Versão Operacional v2.4</span>
+</div>
+<p class="font-body-sm text-body-sm text-amber-200/80 max-w-3xl">
+        Este documento constitui uma minuta operacional preliminar de conformidade do ecossistema SelfieMovie, sujeita a homologação legal formal e revisões regulatórias finais antes de sua publicação definitiva.
+      </p>
+</div>
+</div>
+<!-- Cabeçalho Principal do Documento -->
+<header class="mb-space-xl relative">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+      Documento Institucional &amp; Diretrizes de Serviço
+    </div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight max-w-4xl bg-gradient-to-r from-on-surface via-primary-fixed-dim to-tertiary-fixed-dim bg-clip-text text-transparent">
+      Termos de Uso
+    </h1>
+<div class="flex items-center gap-space-md mt-space-sm text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">update</span>
+<span>Última atualização: 20/10/2026</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+<span>Vigência Global</span>
+</div>
+</div>
+</header>
+<!-- Mobile Collapsible Table of Contents (Card Retrátil) -->
+<div class="lg:hidden mb-space-xl rounded-xl bg-surface-container p-space-md shadow-md">
+<details class="group">
+<summary class="flex items-center justify-between cursor-pointer list-none text-on-surface font-label-lg text-label-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<span>Índice do Documento (8 seções)</span>
+</div>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180 text-on-surface-variant">expand_more</span>
+</summary>
+<nav class="flex flex-col gap-1.5 mt-space-md pt-space-sm">
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1.5 font-label-md text-label-md flex items-center justify-between" href="#secao-1">
+<span>1. Quem somos e o que o serviço faz</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1.5 font-label-md text-label-md flex items-center justify-between" href="#secao-2">
+<span>2. Conta e idade mínima</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1.5 font-label-md text-label-md flex items-center justify-between" href="#secao-3">
+<span>3. Sua foto e o seu consentimento</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1.5 font-label-md text-label-md flex items-center justify-between" href="#secao-4">
+<span>4. Créditos, planos e reembolso de falhas</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1.5 font-label-md text-label-md flex items-center justify-between" href="#secao-5">
+<span>5. Uso permitido e condutas proibidas</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1.5 font-label-md text-label-md flex items-center justify-between" href="#secao-6">
+<span>6. Conteúdo gerado e direitos de uso</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1.5 font-label-md text-label-md flex items-center justify-between" href="#secao-7">
+<span>7. Cancelamento e exclusão da conta</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-1.5 font-label-md text-label-md flex items-center justify-between" href="#secao-8">
+<span>8. Contato e atendimento</span>
+<span class="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+</a>
+</nav>
+</details>
+</div>
+<!-- Layout em Grid Editorial: Desktop Sidebar + Leitura Focada -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Desktop Sticky Sidebar (Índice Navegável) -->
+<aside class="hidden lg:block lg:col-span-4 sticky top-24">
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">format_list_bulleted</span>
+<span class="font-label-lg text-label-lg tracking-tight">Neste documento</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">8 Seções</span>
+</div>
+<nav class="flex flex-col gap-1 relative" id="toc-nav">
+<a class="toc-link group flex items-center gap-3 px-3 py-2 rounded-lg text-primary font-label-md text-label-md bg-surface-container transition-all" href="#secao-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary transition-transform group-hover:scale-125"></span>
+<span class="truncate">1. Quem somos e o que fazemos</span>
+</a>
+<a class="toc-link group flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 font-label-md text-label-md transition-all" href="#secao-2">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-transform group-hover:scale-125"></span>
+<span class="truncate">2. Conta e idade mínima</span>
+</a>
+<a class="toc-link group flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 font-label-md text-label-md transition-all" href="#secao-3">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-transform group-hover:scale-125"></span>
+<span class="truncate">3. Sua foto e consentimento</span>
+</a>
+<a class="toc-link group flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 font-label-md text-label-md transition-all" href="#secao-4">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-transform group-hover:scale-125"></span>
+<span class="truncate">4. Créditos e reembolsos</span>
+</a>
+<a class="toc-link group flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 font-label-md text-label-md transition-all" href="#secao-5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-transform group-hover:scale-125"></span>
+<span class="truncate">5. Condutas proibidas</span>
+</a>
+<a class="toc-link group flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 font-label-md text-label-md transition-all" href="#secao-6">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-transform group-hover:scale-125"></span>
+<span class="truncate">6. Direitos do conteúdo</span>
+</a>
+<a class="toc-link group flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 font-label-md text-label-md transition-all" href="#secao-7">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-transform group-hover:scale-125"></span>
+<span class="truncate">7. Exclusão e cancelamento</span>
+</a>
+<a class="toc-link group flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 font-label-md text-label-md transition-all" href="#secao-8">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant transition-transform group-hover:scale-125"></span>
+<span class="truncate">8. Contato e atendimento</span>
+</a>
+</nav>
+<div class="mt-space-sm p-space-md rounded-lg bg-surface-container-lowest flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Compromisso SelfieMovie</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Sua foto permanece restrita ao seu perfil e sob seu absoluto controle técnico até que você decida removê-la.
+          </p>
+</div>
+</div>
+</aside>
+<!-- Coluna Principal com Texto Corrido Confortável -->
+<main class="w-full lg:col-span-8 flex flex-col gap-space-xl max-w-2xl">
+<!-- Seção 1 -->
+<section class="scroll-mt-24 p-space-lg rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-md relative group" id="secao-1">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-md bg-primary-container text-on-primary-container font-label-sm text-label-sm">01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
+            1. Quem somos e o que o serviço faz
+          </h2>
+</div>
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+            O SelfieMovie é uma plataforma digital pioneira voltada à criação cinematográfica pessoal, desenvolvida para possibilitar a inserção automatizada do próprio usuário como protagonista em cenas estilizadas, narrativas visuais e clipes cinematográficos gerados por inteligência artificial em qualidade HD.
+          </p>
+<p>
+            Nosso papel institucional e técnico consiste em fornecer uma suíte de software como ferramenta criativa operada sob demanda. A plataforma atua única e exclusivamente mediante comandos pontuais inseridos por você, processando os insumos estéticos fornecidos para compor renderizações visuais personalizadas sem qualquer intervenção editorial humana prévia sobre o resultado pretendido.
+          </p>
+</div>
+</section>
+<!-- Seção 2 -->
+<section class="scroll-mt-24 p-space-lg rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-md relative group" id="secao-2">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-primary font-label-sm text-label-sm">02</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
+            2. Conta e idade mínima
+          </h2>
+</div>
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+            O acesso e a utilização dos serviços do SelfieMovie são estritamente condicionados à maioridade civil. É terminantemente exigida a idade mínima de 18 anos completos no momento do cadastro. Menores de idade não estão autorizados a registrar contas, enviar fotografias ou operar as ferramentas generativas sob qualquer pretexto ou autorização de terceiros.
+          </p>
+<p>
+            Ao criar sua conta, você declara a inteira veracidade e autenticidade das informações prestadas. Você assume plena responsabilidade pelo sigilo de suas credenciais de autenticação e por todas as atividades e gerações geradas a partir do seu login, tendo a obrigação contínua de notificar a administração do SelfieMovie imediatamente sobre qualquer indício de violação de segurança.
+          </p>
+</div>
+</section>
+<!-- Seção 3 -->
+<section class="scroll-mt-24 p-space-lg rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-md relative group" id="secao-3">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-md bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">03</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
+            3. Sua foto e o seu consentimento
+          </h2>
+</div>
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary text-[24px]">lock</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">
+              Regra pétrea: Sua foto fica salva na sua conta até você apagá-la no Perfil.
+            </span>
+</div>
+<p>
+            Reafirmamos nosso compromisso categórico de transparência: a sua fotografia nunca é descartada de forma unilateral ou arbitrária pelo sistema, e nunca é comercializada, compartilhada, sublicenciada ou transferida para empresas parceiras, corretores de dados ou terceiros comerciais. Seu arquivo permanece estritamente restrito ao repositório pessoal da sua conta.
+          </p>
+<p>
+            O upload de sua imagem representa seu consentimento voluntário, específico e inequívoco para que os algoritmos de síntese visual do SelfieMovie utilizem os dados visuais unicamente para mapear e gerar as cenas cinematográficas em HD solicitadas por você em tempo real, interrompendo qualquer uso imediatamente após eventual solicitação de exclusão.
+          </p>
+</div>
+</section>
+<!-- Seção 4 -->
+<section class="scroll-mt-24 p-space-lg rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-md relative group" id="secao-4">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-tertiary font-label-sm text-label-sm">04</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
+            4. Créditos, planos e reembolso de gerações que falham
+          </h2>
+</div>
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+            A operação do motor de renderização adota um ecossistema transparente baseado em créditos digitais: ao concluir o cadastro com sucesso, o usuário recebe 10 créditos de bônus cortesia. O consumo por tarefa é pré-fixado de forma clara no painel: a seleção de um clipe da biblioteca custa 5 créditos, um vídeo de 5 s HD custa 5 créditos, um vídeo estendido de 10 s HD consome 8 créditos e uma foto cinematográfica individual custa 2 créditos.
+          </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm p-space-md rounded-lg bg-surface-container-low text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-tertiary">5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Clipe Biblioteca</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-tertiary">5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vídeo 5 s HD</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-tertiary">8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vídeo 10 s HD</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-tertiary">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Foto HD</span>
+</div>
+</div>
+<p>
+            Créditos avulsos adquiridos na plataforma não possuem prazo de expiração e permanecem disponíveis no saldo do usuário. Além disso, aplicamos proteção sistêmica integral contra falhas: se uma geração for interrompida por erro técnico ou instabilidade dos servidores, os créditos debitados retornam integralmente e de forma automática para o saldo de sua carteira, sem necessidade de abertura manual de tíquete.
+          </p>
+</div>
+</section>
+<!-- Seção 5 -->
+<section class="scroll-mt-24 p-space-lg rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-md relative group" id="secao-5">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-md bg-error-container text-on-error-container font-label-sm text-label-sm">05</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
+            5. Uso permitido e condutas proibidas
+          </h2>
+</div>
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+            É estritamente vedado enviar fotografias, rostos ou registros visuais de terceiros sem autorização prévia, expressa e documentada dos respectivos titulares. O SelfieMovie destina-se ao protagonismo individual e recreativo; qualquer utilização de imagens alheias para paródia não autorizada, humilhação ou invasão de privacidade ensejará o banimento sumário da conta infratora.
+          </p>
+<p>
+            É terminantemente proibido utilizar o serviço para produzir conteúdo difamatório, discriminatório, obsceno, odioso, de conotação violenta, ou que busque personificar e imitar figuras públicas, autoridades e indivíduos sem o seu consentimento explícito. O desrespeito a direitos humanos e legislações vigentes resultará em suspensão imediata e cooperação técnica irrestrita com os órgãos judiciais pertinentes.
+          </p>
+</div>
+</section>
+<!-- Seção 6 -->
+<section class="scroll-mt-24 p-space-lg rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-md relative group" id="secao-6">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-primary font-label-sm text-label-sm">06</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
+            6. Conteúdo gerado e direitos de uso
+          </h2>
+</div>
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+            O usuário detém a titularidade sobre as renderizações em HD obtidas na plataforma, gozando de ampla liberdade para transferir, armazenar e compartilhar suas mídias pessoais nas redes sociais e canais digitais de sua preferência, desde que em estrita conformidade com os princípios éticos deste termo.
+          </p>
+<p>
+            A concessão conferida pelo usuário ao SelfieMovie restringe-se a uma licença técnica não exclusiva, global e estritamente limitada ao tempo necessário para processar, renderizar e disponibilizar os arquivos gerados em sua galeria de usuário. O SelfieMovie exime-se formalmente de qualquer responsabilidade civil ou criminal decorrente da destinação externa ou eventual uso indevido das produções compartilhadas fora da plataforma.
+          </p>
+</div>
+</section>
+<!-- Seção 7 -->
+<section class="scroll-mt-24 p-space-lg rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-md relative group" id="secao-7">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-secondary font-label-sm text-label-sm">07</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
+            7. Cancelamento e exclusão da conta
+          </h2>
+</div>
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+            Garantimos autonomia absoluta quanto à permanência no serviço: eventuais assinaturas recorrentes podem ser rescindidas a qualquer instante diretamente no painel de configurações de conta, com eficácia imediata e sem incidência de multas rescisórias ou cobranças retroativas indesejadas.
+          </p>
+<p>
+            O titular dispõe do poder de purgar seus dados permanentemente acessando a funcionalidade "Zona de Perigo" na aba "Perfil &amp; Rosto". Ao acionar a exclusão definitiva da conta, o SelfieMovie executa a eliminação irreversível da foto cadastrada, de todo o acervo de vídeos e clipes HD já gerados e dos registros biométricos derivados, cessando completamente a custódia sobre seus insumos.
+          </p>
+</div>
+</section>
+<!-- Seção 8 -->
+<section class="scroll-mt-24 p-space-lg rounded-xl bg-surface-container shadow-sm flex flex-col gap-space-md relative group" id="secao-8">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-tertiary font-label-sm text-label-sm">08</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight group-hover:text-primary transition-colors">
+            8. Contato e atendimento
+          </h2>
+</div>
+<div class="flex flex-col gap-space-md font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+            Para esclarecer dúvidas técnicas sobre o tratamento de informações biométricas, reportar potenciais violações de conduta ou formular solicitações administrativas atreladas a créditos e faturamento, nossa equipe especializada em governança de dados mantém atendimento dedicado.
+          </p>
+<p>
+            Utilize os canais oficiais integrados em nossa Central de Atendimento ao Usuário para obter suporte em tempo hábil, acessando o formulário estruturado de requisições ou remetendo comunicação formal para o time de integridade da SelfieMovie Studio.
+          </p>
+</div>
+</section>
+<!-- Caixa Final de Atalho / Suporte -->
+<div class="p-space-lg rounded-xl bg-gradient-to-br from-surface-container to-surface-container-high shadow-lg flex flex-col sm:flex-row items-center justify-between gap-space-lg relative overflow-hidden">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0 shadow-[0_0_20px_rgba(208,188,255,0.2)]">
+<span class="material-symbols-outlined text-[28px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ficou com alguma dúvida?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nossa equipe jurídica e técnica está disponível para auxiliar.</p>
+</div>
+</div>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary text-on-primary font-label-lg text-label-lg transition-transform hover:scale-105 shadow-[0_0_24px_rgba(208,188,255,0.25)]" data-path="suporte" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Fale com nosso suporte</span>
+</a>
+</div>
+</main>
+</div>
+</div>
+<script>
+  // Script para marcar o link ativo do Índice Navegável durante o Scroll
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('main > section');
+    const navLinks = document.querySelectorAll('#toc-nav .toc-link');
+
+    if (!sections.length || !navLinks.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href').replace('#', '');
+            const dot = link.querySelector('span:first-child');
+            if (href === id) {
+              link.classList.remove('text-on-surface-variant', 'bg-transparent');
+              link.classList.add('text-primary', 'bg-surface-container');
+              if (dot) {
+                dot.classList.remove('bg-outline-variant');
+                dot.classList.add('bg-primary');
+              }
+            } else {
+              link.classList.add('text-on-surface-variant');
+              link.classList.remove('text-primary', 'bg-surface-container');
+              if (dot) {
+                dot.classList.add('bg-outline-variant');
+                dot.classList.remove('bg-primary');
+              }
+            }
+          });
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  });
+</script></div></main><footer class="w-full bg-surface-container-lowest/80 backdrop-blur-md py-space-xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center text-primary-fixed-dim"><span class="material-symbols-outlined text-[16px]">movie</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 SelfieMovie AI Studio. Todos os direitos reservados.</span></div><nav class="flex flex-wrap items-center gap-space-lg" data-active-classes="text-primary font-label-sm"><a aria-current="page" class="transition-colors text-primary font-label-sm" data-path="termos-de-uso" href="#">Termos de Uso</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="politica-de-privacidade" href="#">Privacidade</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="diretrizes-de-ia" href="#">Diretrizes de IA</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="suporte" href="#">Suporte</a></nav></div></footer></body></html>

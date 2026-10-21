@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SelfieMovie</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container":"#201f25","surface":"#141319","on-tertiary-fixed-variant":"#004e5c","on-secondary-fixed":"#390820","inverse-surface":"#e5e1ea","on-primary-container":"#594983","secondary-fixed-dim":"#ffb0cd","tertiary":"#4cd7f6","surface-dim":"#141319","on-tertiary-container":"#002f38","on-tertiary":"#003640","on-secondary-container":"#efa2bf","inverse-primary":"#6d3bd7","on-tertiary-fixed":"#001f26","on-surface":"#e5e1ea","surface-container-highest":"#35343b","on-background":"#e5e1ea","primary-fixed":"#e9ddff","on-error-container":"#ffdad6","on-surface-variant":"#cbc3d7","primary-fixed-dim":"#d0bcff","surface-variant":"#35343b","tertiary-container":"#009eb9","tertiary-fixed-dim":"#4cd7f6","surface-container-high":"#2b2930","on-secondary":"#531d35","surface-bright":"#3a383f","surface-container-lowest":"#0e0d13","secondary":"#ffb0cd","outline-variant":"#494454","on-primary-fixed":"#210f48","on-secondary-fixed-variant":"#6e344c","on-primary-fixed-variant":"#5516be","error":"#ffb4ab","secondary-fixed":"#ffd9e4","outline":"#958ea0","primary-container":"#d0bcff","secondary-container":"#aa0266","background":"#141319","surface-tint":"#d0bcff","inverse-on-surface":"#312f36","surface-container-low":"#1c1b21","on-primary":"#3c0091","tertiary-fixed":"#acedff","error-container":"#93000a","on-error":"#690005","primary":"#d0bcff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem",gutter:"1.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-xl":"2rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-md":"1rem",margin:"3rem"},fontFamily:{"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"display-hero-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},fontSize:{"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-lg":["15px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.015em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"700"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"700"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"800"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container"><div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden"><div class="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-primary/5 rounded-full blur-[140px]"></div><div class="absolute top-[40%] right-[-10%] w-[600px] h-[600px] bg-secondary-container/5 rounded-full blur-[160px]"></div><div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[500px] bg-tertiary/5 rounded-full blur-[150px]"></div></div><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><a class="flex items-center gap-space-sm group transition-opacity hover:opacity-90" data-path="home" href="#"><div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shadow-[0_0_20px_rgba(208,188,255,0.15)] group-hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[22px]">movie</span></div><div class="flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Selfie<span class="text-primary">Movie</span></span><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></div></a><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-all font-label-md text-label-md" href="#"><span class="material-symbols-outlined text-[18px]">arrow_back</span><span>Voltar</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full flex-1 pt-16 bg-transparent"><div class="flex flex-col w-full">
+<!-- Top Draft Banner / Alerta Âmbar de Minuta Preliminar -->
+<aside aria-label="Aviso de Minuta Jurídica" class="w-full bg-surface-container-low shadow-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-3">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-start sm:items-center gap-3">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+<span class="inline-flex items-center gap-1.5 text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+              RASCUNHO — PENDENTE DE REVISÃO JURÍDICA
+            </span>
+<span class="hidden sm:inline text-outline text-[12px]">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Versão Operacional v2.4 — Minuta preliminar de conformidade com a LGPD e privacidade biométrica.
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+            Homologação Formal Pendente
+          </span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Hero Headline & Institutional Meta -->
+<section class="w-full py-space-xl relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col gap-space-sm max-w-4xl">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield_with_heart</span>
+            Documento Institucional &amp; Governança de Dados
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">gavel</span>
+            Lei Federal nº 13.709/2018
+          </span>
+</div>
+<h1 class="font-display-hero text-display-hero tracking-tight text-on-surface mt-2">
+          Política de <span class="text-primary">Privacidade</span>
+</h1>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2 pt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">calendar_today</span>
+            Última atualização: <strong class="text-on-surface">20/10/2026</strong>
+</span>
+<span class="text-outline">•</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+            Conformidade Integral com a LGPD
+          </span>
+<span class="text-outline">•</span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">fingerprint</span>
+            Proteção à Soberania Biométrica
+          </span>
+</div>
+</div>
+<!-- Card Destaque: Soberania Biométrica -->
+<div class="mt-8 relative rounded-2xl bg-surface-container p-6 lg:p-8 shadow-xl overflow-hidden">
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 text-primary shadow-[0_0_24px_rgba(208,188,255,0.2)]">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<div class="flex flex-col gap-1.5 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
+                  Compromisso Fundamental de Privacidade
+                </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Garantia de Soberania Biométrica
+                </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed font-medium">
+                “Sua foto fica salva na sua conta até você apagá-la no Perfil. Ela é usada só para gerar os vídeos e fotos que você pedir e nunca é vendida a terceiros.”
+              </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col gap-2 shrink-0 w-full lg:w-auto">
+<a class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:opacity-95 transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">photo_camera_front</span>
+<span>Gerenciar Minha Foto</span>
+</a>
+<span class="text-center font-label-sm text-label-sm text-on-surface-variant">
+              Exclusão imediata e definitiva no Perfil
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Two Column Layout (Sticky Sidebar + Editorial Stream) -->
+<section class="w-full pb-space-xl">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Sticky Index Navigation -->
+<aside class="lg:col-span-4 sticky top-20 z-20 space-y-space-md">
+<nav aria-label="Sumário da Política" class="bg-surface-container-low rounded-2xl p-5 shadow-lg backdrop-blur-md">
+<div class="flex items-center justify-between pb-3 mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">toc</span>
+                Sumário do Documento
+              </span>
+<span class="font-label-sm text-label-sm text-tertiary bg-surface-container-highest px-2 py-0.5 rounded-full">
+                8 Cláusulas
+              </span>
+</div>
+<ul class="space-y-1" id="privacy-toc">
+<li>
+<a class="toc-link group flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#secao-1">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-outline group-hover:text-primary shrink-0">01</span>
+<span class="font-label-md text-label-md truncate">Quais dados coletamos</span>
+</a>
+</li>
+<li>
+<a class="toc-link group flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#secao-2">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-outline group-hover:text-primary shrink-0">02</span>
+<span class="font-label-md text-label-md truncate">Sua foto é um dado biométrico</span>
+</a>
+</li>
+<li>
+<a class="toc-link group flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#secao-3">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-outline group-hover:text-primary shrink-0">03</span>
+<span class="font-label-md text-label-md truncate">Para que usamos os dados</span>
+</a>
+</li>
+<li>
+<a class="toc-link group flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#secao-4">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-outline group-hover:text-primary shrink-0">04</span>
+<span class="font-label-md text-label-md truncate">Com quem compartilhamos</span>
+</a>
+</li>
+<li>
+<a class="toc-link group flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#secao-5">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-outline group-hover:text-primary shrink-0">05</span>
+<span class="font-label-md text-label-md truncate">Por quanto tempo guardamos</span>
+</a>
+</li>
+<li>
+<a class="toc-link group flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#secao-6">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-outline group-hover:text-primary shrink-0">06</span>
+<span class="font-label-md text-label-md truncate">Seus direitos pela LGPD</span>
+</a>
+</li>
+<li>
+<a class="toc-link group flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#secao-7">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-outline group-hover:text-primary shrink-0">07</span>
+<span class="font-label-md text-label-md truncate">Segurança e criptografia</span>
+</a>
+</li>
+<li>
+<a class="toc-link group flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#secao-8">
+<span class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center font-label-sm text-label-sm text-outline group-hover:text-primary shrink-0">08</span>
+<span class="font-label-md text-label-md truncate">Contato do DPO (Encarregado)</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Compromisso Card Lateral -->
+<div class="rounded-2xl bg-surface-container p-5 shadow-md">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wide text-primary">Compromisso SelfieMovie</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Seus dados biométricos <strong>não</strong> são usados para treinar modelos públicos de terceiros nem são comercializados ou transferidos para anúncios direcionados.
+            </p>
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">lock</span> Isolamento Neural
+              </span>
+<span class="text-outline">Auditoria Contínua</span>
+</div>
+</div>
+</aside>
+<!-- Right Column: Editorial Clauses Stream -->
+<main class="lg:col-span-8 flex flex-col gap-8">
+<!-- Seção 1: Quais dados coletamos -->
+<article class="rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm scroll-mt-24 transition-all" id="secao-1">
+<header class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-label-lg text-label-lg text-primary font-bold">01</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Artigo I • Transparência Ativa</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Quais dados coletamos</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">database</span>
+</header>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+              Para viabilizar a geração personalizada de produções cinematográficas e a administração transparente da sua conta na plataforma SelfieMovie, tratamos exclusivamente as seguintes categorias de informações:
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Item 1 -->
+<div class="rounded-xl bg-surface-container p-4.5 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Dados de Identificação e Conta</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Nome completo de cadastro (ex.: Camila Silva), endereço de e-mail verificado e credenciais criptografadas de autenticação segura.
+                </p>
+</div>
+<!-- Item 2 -->
+<div class="rounded-xl bg-surface-container p-4.5 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[16px]">face</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Insumos Visuais &amp; Biométricos</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  A fotografia frontal enviada voluntariamente pelo usuário (selfie em alta resolução e iluminação neutra) destinada ao mapeamento facial.
+                </p>
+</div>
+<!-- Item 3 -->
+<div class="rounded-xl bg-surface-container p-4.5 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]">video_library</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Ativos Cinematográficos Gerados</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Histórico dos clipes renderizados em HD disponibilizados no seu cofre particular na área “Minhas Criações”.
+                </p>
+</div>
+<!-- Item 4 -->
+<div class="rounded-xl bg-surface-container p-4.5 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Dados Transacionais e Consumo</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Saldo de créditos (incluindo o bônus de 10 créditos de boas-vindas), recargas avulsas, histórico de faturamento e assinaturas.
+                </p>
+</div>
+</div>
+</article>
+<!-- Seção 2: Sua foto é um dado biométrico -->
+<article class="rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm scroll-mt-24 transition-all" id="secao-2">
+<header class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-label-lg text-label-lg text-secondary font-bold">02</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Artigo II • Dados Pessoais Sensíveis</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Sua foto é um dado biométrico: por que pedimos o consentimento</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">fingerprint</span>
+</header>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+                Nos exatos termos do <strong class="text-on-surface">art. 5º, inciso II da Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018)</strong>, a fotografia do rosto submetida ao nosso sistema é classificada juridicamente como <em>dado pessoal sensível</em>, uma vez que suas características intrínsecas possibilitam a identificação unívoca da pessoa natural.
+              </p>
+<!-- Box explicativo técnico -->
+<div class="p-5 rounded-xl bg-surface-container flex flex-col md:flex-row gap-4 items-start">
+<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[22px]">neurology</span>
+</div>
+<div class="space-y-2">
+<h3 class="font-label-lg text-label-lg text-on-surface">Justificativa Técnica de Engenharia</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    A extração de vetores faciais e marcos anatômicos (distância interpupilar, contorno maxilar, volumetria do nariz) é estritamente imperativa para que as redes neurais generativas realizem a <strong>transposição fidedigna e harmoniosa</strong> da sua fisionomia para os personagens das cenas cinematográficas solicitadas.
+                  </p>
+</div>
+</div>
+<p>
+                Por essa razão primordial, colhemos o seu <strong class="text-on-surface">consentimento expresso, informado, livre e inequívoco</strong> antes do processamento de qualquer insumo visual, o qual pode ser revogado a qualquer instante diretamente nas preferências da sua conta.
+              </p>
+</div>
+</article>
+<!-- Seção 3: Para que usamos os dados -->
+<article class="rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm scroll-mt-24 transition-all" id="secao-3">
+<header class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-label-lg text-label-lg text-tertiary font-bold">03</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Artigo III • Princípio da Finalidade</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Para que usamos os dados</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">checklist</span>
+</header>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-5">
+              Todo tratamento de dados realizado pela plataforma obedece aos princípios da finalidade e adequação, restringindo-se tão somente aos seguintes escopos operacionais:
+            </p>
+<div class="space-y-3">
+<!-- Finalidade 1 -->
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-4">
+<div class="w-8 h-8 rounded-lg bg-tertiary/10 flex items-center justify-center shrink-0 text-tertiary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">movie_edit</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<h3 class="font-label-lg text-label-lg text-on-surface">Execução e Renderização Cinematográfica</h3>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded-full bg-surface-container-high">Ordem Direta</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    Processamento técnico dos pedidos gerados pelo usuário: clipes do catálogo (5 créditos), vídeos de 5 segundos em HD (5 créditos), vídeos de 10 segundos em HD (8 créditos) e retratos fotográficos (2 créditos).
+                  </p>
+</div>
+</div>
+<!-- Finalidade 2 -->
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-4">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 text-primary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<h3 class="font-label-lg text-label-lg text-on-surface">Controle de Balanço e Proteção a Créditos</h3>
+<span class="font-label-sm text-label-sm text-primary px-2 py-0.5 rounded-full bg-surface-container-high">Estorno Automático</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    Gestão transparente da contabilidade interna da conta e mecanismo de proteção: ressarcimento imediato e automático dos créditos em caso de interrupção técnica ou falha na renderização.
+                  </p>
+</div>
+</div>
+<!-- Finalidade 3 -->
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-4">
+<div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<h3 class="font-label-lg text-label-lg text-on-surface">Segurança da Conta e Atendimento</h3>
+<span class="font-label-sm text-label-sm text-secondary px-2 py-0.5 rounded-full bg-surface-container-high">Zero Perfilamento</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    Prevenção a tentativas de login suspeitas, suporte técnico personalizado e auditoria de integridade. <em>É expressamente vedado qualquer perfilamento comercial invasivo ou fornecimento a data brokers</em>.
+                  </p>
+</div>
+</div>
+</div>
+</article>
+<!-- Seção 4: Com quem compartilhamos -->
+<article class="rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm scroll-mt-24 transition-all" id="secao-4">
+<header class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-label-lg text-label-lg text-primary font-bold">04</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Artigo IV • Fronteiras de Compartilhamento</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Com quem compartilhamos</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">share</span>
+</header>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+                Adotamos a premissa da <strong>transparência radical e compartilhamento mínimo necessário</strong>. Suas imagens são trafegadas exclusivamente em canais protegidos e isolados:
+              </p>
+<div class="p-5 rounded-xl bg-surface-container">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">dns</span>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface mb-1">Clusters Neurais Dedicados de Renderização</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Os dados da selfie são transmitidos temporariamente à infraestrutura computacional segura com o único propósito de sintetizar o seu vídeo de acordo com a ordem expedida. Encerrado o cálculo vetorial do frame, o processador descarta os buffers transitórios de renderização.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Vedação categórica -->
+<div class="rounded-xl bg-surface-container p-4.5">
+<span class="font-label-md text-label-md text-error flex items-center gap-1.5 mb-2 font-bold">
+<span class="material-symbols-outlined text-[18px]">block</span> Vedação Absoluta a Parceiros Publicitários
+                </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  O SelfieMovie não vende, não aluga, não cede e não licencia suas fotografias, vídeos ou metadados para redes sociais, corretores de dados (data brokers) ou empresas de publicidade direcionada. Todos os prestadores técnicos de infraestrutura são signatários de acordos rigorosos de confidencialidade (NDA) e compliance com a LGPD.
+                </p>
+</div>
+</div>
+</article>
+<!-- Seção 5: Por quanto tempo guardamos -->
+<article class="rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm scroll-mt-24 transition-all" id="secao-5">
+<header class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-label-lg text-label-lg text-secondary font-bold">05</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Artigo V • Ciclo de Vida do Dado</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Por quanto tempo guardamos</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">timer</span>
+</header>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+                O controle temporal sobre os seus dados biométricos e criativos pertence integralmente a você:
+              </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-5 rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-[20px]">account_circle</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Fotografia de Referência</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      A foto enviada permanece armazenada na sua conta <strong>exclusivamente até você decidir apagá-la</strong> no painel de controle. Ela nunca é descartada unilateralmente sem o seu consentimento prévio e nunca expira por inatividade básica.
+                    </p>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">touch_app</span> Gerenciável em “Perfil &amp; Rosto”
+                  </div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-tertiary mb-2">
+<span class="material-symbols-outlined text-[20px]">video_library</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Vídeos e Obras Finalizadas</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Os clipes produzidos continuam salvos de forma resiliente na sua biblioteca “Minhas Criações” para que você possa assisti-los e efetuar downloads em HD quando desejar.
+                    </p>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">cloud_download</span> Exportação HD ilimitada
+                  </div>
+</div>
+</div>
+<!-- Zona de Perigo / Exclusão total -->
+<div class="p-4 rounded-xl bg-surface-container flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">delete_forever</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Exclusão Total da Conta:</strong> Caso você solicite o encerramento da conta através da Zona de Perigo, a purga dos dados biométricos, histórico de transações e vídeos é <em>definitiva, imediata e irreversível</em> de nossos servidores de produção.
+                </p>
+</div>
+</div>
+</article>
+<!-- Seção 6: Seus direitos pela LGPD -->
+<article class="rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm scroll-mt-24 transition-all" id="secao-6">
+<header class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-label-lg text-label-lg text-tertiary font-bold">06</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Artigo VI • Autonomia do Titular</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Seus direitos pela LGPD</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">policy</span>
+</header>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+              Em estrita consonância com o <strong class="text-on-surface">Artigo 18 da LGPD</strong>, você possui ampla prerrogativa legal para exercer, a qualquer momento e sem custos, os seguintes direitos:
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span class="font-label-md text-label-md text-on-surface">Confirmação de tratamento</span>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">visibility</span>
+<span class="font-label-md text-label-md text-on-surface">Acesso irrestrito aos dados</span>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">edit_note</span>
+<span class="font-label-md text-label-md text-on-surface">Correção e retificação</span>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">sync_alt</span>
+<span class="font-label-md text-label-md text-on-surface">Portabilidade de arquivos</span>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">cancel</span>
+<span class="font-label-md text-label-md text-on-surface">Revogação do consentimento</span>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_delete</span>
+<span class="font-label-md text-label-md text-on-surface">Eliminação e anonimização</span>
+</div>
+</div>
+<!-- Botão de Ação Rápida de Exclusão -->
+<div class="p-5 rounded-2xl bg-surface-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-error/15 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[20px]">person_remove</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Ação Rápida de Privacidade</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Gerencie ou exclua sua selfie agora mesmo na aba Perfil &amp; Rosto com efeito imediato.
+                  </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-high text-error hover:bg-error/20 transition-all font-label-md text-label-md shrink-0" href="#">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Apagar minha foto</span>
+</a>
+</div>
+</article>
+<!-- Seção 7: Segurança e criptografia -->
+<article class="rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm scroll-mt-24 transition-all" id="secao-7">
+<header class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-label-lg text-label-lg text-primary font-bold">07</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Artigo VII • Medidas Técnicas de Defesa</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Segurança e criptografia</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">lock</span>
+</header>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+              Implementamos salvaguardas tecnológicas e arquiteturais de última geração para neutralizar vulnerabilidades de acesso indevido, interceptação ou perda de integridade:
+            </p>
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">enhanced_encryption</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Criptografia Ponta a Ponta</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Todos os dados em trânsito são envelopados em canais criptográficos TLS/SSL de 256-bit. Em repouso, as matrizes de imagens residem sob volumes cifrados de armazenamento em nuvem.
+                  </p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">key</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Mínimo Privilégio e Chaves Segmentadas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Políticas estritas de segregação de funções técnicas (Least Privilege Access). Nenhum colaborador interno ou operador humano possui autorização rotineira para visualização manual da sua selfie.
+                  </p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">security_update_good</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface">Monitoramento e Auditorias</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Varreduras rotineiras de vulnerabilidades cibernéticas, testes de intrusão periódicos e trilhas de auditoria criptográficas imutáveis para prevenção contra vetores de vazamento.
+                  </p>
+</div>
+</div>
+</div>
+</article>
+<!-- Seção 8: Contato do DPO -->
+<article class="rounded-2xl bg-surface-container-low p-6 lg:p-8 shadow-sm scroll-mt-24 transition-all" id="secao-8">
+<header class="flex items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center font-label-lg text-label-lg text-secondary font-bold">08</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Artigo VIII • Canal Oficial Regulamentar</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Contato do encarregado de dados (DPO)</h2>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">support_agent</span>
+</header>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>
+                Para exercer seus direitos de titular, formalizar requisições ou esclarecer dúvidas jurídicas sobre a custódia dos seus ativos biométricos, entre em contato direto com o nosso Encarregado pelo Tratamento de Dados Pessoais (Data Protection Officer — DPO):
+              </p>
+<!-- DPO Contact Info Box -->
+<div class="p-5 rounded-xl bg-surface-container grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">E-mail do DPO</span>
+<a class="font-label-lg text-label-lg text-primary hover:underline block" href="mailto:dpo@selfiemovie.app">
+                      dpo@selfiemovie.app
+                    </a>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Canal direto de governança</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Prazo de Retorno Legal</span>
+<p class="font-label-lg text-label-lg text-on-surface">Até 15 dias úteis</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conforme orientação da ANPD</span>
+</div>
+</div>
+</div>
+<!-- Final Support Card -->
+<div class="mt-6 p-6 rounded-2xl bg-surface-container flex flex-col md:flex-row items-start md:items-center justify-between gap-5 shadow-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">contact_support</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold">Dúvidas sobre sua privacidade biométrica?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nossa equipe de governança de dados e suporte está à inteira disposição.</p>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-95 transition-all shadow-md shrink-0" href="#">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+<span>Falar com o DPO / Suporte</span>
+</a>
+</div>
+</div>
+</article>
+</main>
+</div>
+</div>
+</section>
+<!-- Script para Interação Suave no Menu de Cláusulas (Active State) -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.toc-link');
+      const sections = document.querySelectorAll('article[id^="secao-"]');
+
+      function updateActiveToc() {
+        const scrollPosition = window.scrollY + 140;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            links.forEach(link => {
+              const href = link.getAttribute('href');
+              if (href === '#' + sectionId) {
+                link.classList.add('bg-surface-container-high', 'text-primary');
+                link.classList.remove('text-on-surface-variant');
+              } else {
+                link.classList.remove('bg-surface-container-high', 'text-primary');
+                link.classList.add('text-on-surface-variant');
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveToc, { passive: true });
+      updateActiveToc();
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest/80 backdrop-blur-md py-space-xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center text-primary-fixed-dim"><span class="material-symbols-outlined text-[16px]">movie</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 SelfieMovie AI Studio. Todos os direitos reservados.</span></div><nav class="flex flex-wrap items-center gap-space-lg" data-active-classes="text-primary font-label-sm"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="termos-de-uso" href="#">Termos de Uso</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="politica-de-privacidade" href="#">Privacidade</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="diretrizes-de-ia" href="#">Diretrizes de IA</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="suporte" href="#">Suporte</a></nav></div></footer></body></html>
