@@ -83,7 +83,7 @@ async function usarArquivo(arquivo) {
   try {
     mostrarPreview(await reduzirImagem(arquivo))
   } catch {
-    mensagem('Formato não suportado. Use JPG ou PNG.')
+    mensagem('Formato não suportado, use JPG ou PNG.')
   }
 }
 

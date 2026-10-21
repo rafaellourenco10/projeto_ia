@@ -21,4 +21,5 @@ export async function reduzirImagem(fonte, max = 1024) {
 }
 
 // Só aceita caminhos internos em ?voltar= (evita redirecionar para outro site).
-export const destinoSeguro = (url, padrao = '/inicio') => (url && url.startsWith('/') && !url.startsWith('//') ? url : padrao)
+// O navegador trata "/\" como "//", então os dois são recusados.
+export const destinoSeguro = (url, padrao = '/inicio') => (url && /^\/(?![/\\])/.test(url) ? url : padrao)
