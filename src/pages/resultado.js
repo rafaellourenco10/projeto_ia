@@ -98,6 +98,20 @@ function mostrar(c) {
     avisar('Obrigado pela avaliação!')
   })
 
+  // Dois cliques: o primeiro arma, o segundo apaga.
+  $('btn-apagar').addEventListener('click', (e) => {
+    const btn = e.currentTarget
+    if (!btn.dataset.confirmar) {
+      btn.dataset.confirmar = '1'
+      $('btn-apagar-texto').textContent = 'Confirmar: apagar esta criação'
+      return
+    }
+    delete btn.dataset.confirmar
+    if (store.removerCriacao(c.id)) return location.replace('/minhas-criacoes')
+    $('btn-apagar-texto').textContent = 'Apagar'
+    avisar(store.getCriacao(c.id) ? MSG_SEM_ESPACO : 'Esta criação não pode ser apagada agora. Recarregue a página.')
+  })
+
   $('btn-variacao').addEventListener('click', async () => {
     $('btn-variacao').disabled = true
     try {

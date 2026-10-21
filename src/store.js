@@ -110,6 +110,13 @@ export const updateCriacao = (id, patch) =>
     if (c) Object.assign(c, patch)
   })
 
+// Só apaga o que não está gerando: o crédito de um job em andamento está reservado.
+export function removerCriacao(id) {
+  const c = getCriacao(id)
+  if (!c || c.status === 'gerando') return false
+  return alterar((e) => (e.criacoes = e.criacoes.filter((x) => x.id !== id)))
+}
+
 // Fecha um job uma única vez: sucesso debita, falha só libera a reserva.
 export function concluirCriacao(id, sucesso) {
   alterar((e) => {

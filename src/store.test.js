@@ -91,4 +91,20 @@ describe('custo', () => {
     expect(store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })).toBe(null)
     spy.mockRestore()
   })
+
+  it('removerCriacao apaga criação pronta', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.addCriacao({ id: 'a', status: 'pronto', custo: 3 })
+    expect(store.removerCriacao('a')).toBe(true)
+    expect(store.getCriacao('a')).toBeNull()
+    expect(store.getSaldo()).toBe(10)
+  })
+
+  it('removerCriacao recusa criação gerando', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.addCriacao({ id: 'a', status: 'gerando', custo: 3 })
+    expect(store.removerCriacao('a')).toBe(false)
+    expect(store.getCriacao('a')).not.toBeNull()
+    expect(store.getSaldoDisponivel()).toBe(7)
+  })
 })

@@ -65,6 +65,7 @@ function card(c, s) {
       <span class="font-label-md text-label-md text-error font-bold">Falhou</span>
       <p class="font-body-sm text-body-sm text-on-surface-variant">Crédito devolvido</p>
       <button type="button" data-refazer="${c.id}" class="mt-space-xs px-space-sm py-2 rounded-xl bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1.5 transition-all shadow-md disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"><span class="material-symbols-outlined text-sm" aria-hidden="true">refresh</span>Tentar de novo</button>
+      <button type="button" data-remover="${c.id}" class="px-space-sm py-1.5 rounded-xl text-on-surface-variant hover:text-error font-label-sm text-label-sm font-bold flex items-center gap-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"><span class="material-symbols-outlined text-sm" aria-hidden="true">delete</span><span>Remover</span></button>
     </div>
   </div>
   ${rodape(c, `<span class="font-label-sm text-label-sm text-outline">${quando(c.criadoEm)}</span>`)}
@@ -120,6 +121,18 @@ document.querySelectorAll('[data-aba]').forEach((b) =>
 )
 $('ordem').addEventListener('change', render)
 $('grade').addEventListener('click', async (e) => {
+  const r = e.target.closest('[data-remover]')
+  if (r) {
+    if (!r.dataset.confirmar) {
+      r.dataset.confirmar = '1'
+      r.lastElementChild.textContent = 'Confirmar: remover'
+      return
+    }
+    delete r.dataset.confirmar
+    if (store.removerCriacao(r.dataset.remover)) return render()
+    r.lastElementChild.textContent = 'Remover'
+    return avisar(store.getCriacao(r.dataset.remover) ? MSG_SEM_ESPACO : 'Não foi possível remover agora. Recarregue a página.')
+  }
   const b = e.target.closest('[data-refazer]')
   if (!b) return
   b.disabled = true
