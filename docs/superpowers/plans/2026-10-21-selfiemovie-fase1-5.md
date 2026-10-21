@@ -138,10 +138,10 @@
 **Files:**
 - Modify: `vercel.json` se o deploy pedir; nenhum código do app.
 
-- [ ] **Step 1:** Rodar `npx vercel` (o usuário faz o login na conta dele). Projeto novo, framework Vite, output `dist`.
-- [ ] **Step 2:** Deploy de preview. Conferir no link: as 14 rotas abrem sem `.html`, `/clipe?id=xyz` mostra "não encontrado", console limpo.
-- [ ] **Step 3:** **Parar e pedir confirmação ao usuário** antes de `npx vercel --prod`: o link fica público, e quem abrir vê a demo (os dados de cada pessoa ficam só no navegador dela).
-- [ ] **Step 4:** Commit só se `vercel.json` mudou (`.vercel/` vai para o `.gitignore`).
+- [x] **Step 1:** Rodar `npx vercel` (o usuário faz o login na conta dele). Projeto novo, framework Vite, output `dist`.
+- [x] **Step 2:** Deploy de preview. Conferir no link: as 14 rotas abrem sem `.html`, `/clipe?id=xyz` mostra "não encontrado", console limpo.
+- [x] **Step 3:** **Parar e pedir confirmação ao usuário** antes de `npx vercel --prod`: o link fica público, e quem abrir vê a demo (os dados de cada pessoa ficam só no navegador dela).
+- [x] **Step 4:** Commit só se `vercel.json` mudou (`.vercel/` vai para o `.gitignore`).
 
 ### Task 8: Revisão final
 
