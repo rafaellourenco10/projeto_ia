@@ -636,15 +636,15 @@
     "semantic_hash": ""
   },
   "src/api.js": {
-    "mtime": 1792523160.4531622,
-    "seen": 1792543605.2680807,
-    "ast_hash": "f81f4b3f6228d293e7fd3bdbe54b7600",
+    "mtime": 1792578629.299484,
+    "seen": 1792578689.1832955,
+    "ast_hash": "c15b9edbff12543fde8db4fd3289dc06",
     "semantic_hash": ""
   },
   "src/api.test.js": {
-    "mtime": 1792523102.416088,
-    "seen": 1792543605.2680817,
-    "ast_hash": "1afce080f4f364c3a177ac1962c4b656",
+    "mtime": 1792578604.7080414,
+    "seen": 1792578689.1832988,
+    "ast_hash": "3b35098e214b5ae0bdacc38a87b0bd19",
     "semantic_hash": ""
   },
   "src/biblioteca.js": {
@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "src/pages/entrar.js": {
-    "mtime": 1792549152.4657114,
-    "seen": 1792549184.1772554,
-    "ast_hash": "a1297e82329ee5616d0befed94c479c8",
+    "mtime": 1792578570.45838,
+    "seen": 1792578689.1833253,
+    "ast_hash": "1478f6ed8f3a8e70c209f4f0cc5e1bb7",
     "semantic_hash": ""
   },
   "src/pages/foto.js": {
@@ -720,15 +720,15 @@
     "semantic_hash": ""
   },
   "src/store.test.js": {
-    "mtime": 1792549121.1242552,
-    "seen": 1792549184.17727,
-    "ast_hash": "2fdd875a5aa6e01533c771e1aabcabbc",
+    "mtime": 1792578567.6351783,
+    "seen": 1792578689.1833484,
+    "ast_hash": "bf82e87135410157e6ba4456501b7a39",
     "semantic_hash": ""
   },
   "src/util.js": {
-    "mtime": 1792523248.1478486,
-    "seen": 1792543605.2680948,
-    "ast_hash": "dea8fa8db8ab37fe15c54f7be263ec67",
+    "mtime": 1792578570.4324715,
+    "seen": 1792578689.1833506,
+    "ast_hash": "e727865c30b355a0ecf33017162c7d4a",
     "semantic_hash": ""
   },
   "tailwind.config.js": {
@@ -2766,9 +2766,9 @@
     "semantic_hash": ""
   },
   "src/pages/clipe.js": {
-    "mtime": 1792544123.4716966,
-    "seen": 1792544269.374786,
-    "ast_hash": "2dbee82d240582302dca89fd58e285ee",
+    "mtime": 1792578570.4865754,
+    "seen": 1792578689.183317,
+    "ast_hash": "83f8d5e8ba99210a7e94860c911850a3",
     "semantic_hash": ""
   },
   "clipe.html": {
@@ -2778,9 +2778,9 @@
     "semantic_hash": ""
   },
   "src/pages/criar.js": {
-    "mtime": 1792543874.2670133,
-    "seen": 1792543932.6252997,
-    "ast_hash": "2df2a7a151854257da2a2fbacf6f9c64",
+    "mtime": 1792578570.5183094,
+    "seen": 1792578689.1833231,
+    "ast_hash": "976703084de7aea3f235a576cbac7bc6",
     "semantic_hash": ""
   },
   "criar-com-texto.html": {
@@ -2790,9 +2790,9 @@
     "semantic_hash": ""
   },
   "src/pages/gerando.js": {
-    "mtime": 1792544001.8946157,
-    "seen": 1792544088.3224485,
-    "ast_hash": "32ae681b9935041cabb8bb971126baf9",
+    "mtime": 1792578570.5341873,
+    "seen": 1792578689.1833296,
+    "ast_hash": "d4c3140b143956f8aee9ed0a6d02906a",
     "semantic_hash": ""
   },
   "gerando.html": {
@@ -2802,9 +2802,9 @@
     "semantic_hash": ""
   },
   "src/pages/resultado.js": {
-    "mtime": 1792544222.0136065,
-    "seen": 1792544269.374807,
-    "ast_hash": "e2a00ea4b1333ace3e7fe84fa28c3eaa",
+    "mtime": 1792578570.5551226,
+    "seen": 1792578689.183342,
+    "ast_hash": "bb7917bce335a466a2c8c190b02d5862",
     "semantic_hash": ""
   },
   "resultado.html": {
@@ -2949,6 +2949,12 @@
     "mtime": 1792546304.442507,
     "seen": 1792547142.6680539,
     "ast_hash": "c6b17eaeb3da6ae0b7ad4098703cc79a",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-10-21-selfiemovie-fase1-5.md": {
+    "mtime": 1792578118.7564065,
+    "seen": 1792578689.184007,
+    "ast_hash": "46510f96c382ac61fb29eb418bb623a7",
     "semantic_hash": ""
   }
 }

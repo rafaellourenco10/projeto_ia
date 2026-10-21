@@ -1,17 +1,17 @@
-# Graph Report - projeto com ia  (2026-10-20)
+# Graph Report - projeto com ia  (2026-10-21)
 
 ## Corpus Check
-- 407 files · ~681,012 words
+- 408 files · ~683,045 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: .css 2, .zip 1, (none) 1)
 
 ## Summary
-- 2868 nodes · 4155 edges · 349 communities (187 shown, 162 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 61 edges (avg confidence: 0.91)
+- 2881 nodes · 4187 edges · 356 communities (193 shown, 163 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 76 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3794affa`
+- Built from commit: `ef88eff0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -98,8 +98,8 @@
 - React Composition Patterns
 - vercel-optimize/SKILL.md
 - Components
-- renderReport
-- display-labels.mjs
+- impact-label.mjs
+- uncached-route.mjs
 - Pipeline
 - React Best Practices
 - Sections
@@ -113,7 +113,7 @@
 - 2. List Performance
 - vercel-react-view-transitions/AGENTS.md
 - Gh Pr Checks Plan Fix
-- lib/budget-summary.mjs
+- count-correct.mjs
 - Forms & Inputs
 - large-static-asset.mjs
 - minhas-criacoes.js
@@ -121,18 +121,19 @@
 - Vercel Optimize
 - Implementation Workflow
 - Implementation Workflow
-- SelfieMovie Fase 1 — Plano de implementação
+- Review Focus
 - Adversarial Vulnerability Analysis (Phase 5)
 - Differential Review Methodology
-- isr-overrevalidation.mjs
+- util.mjs
 - framework-support.mjs
-- cost-coverage.mjs
+- rate-limit.mjs
 - Semaphore
 - edge-heavy-import.mjs
 - turbo-force-bypass.mjs
+- cwv-poor.mjs
 - Observability Plus Stop-And-Ask
 - Verification
-- gerando.js
+- cache-components-suspense-dedupe.mjs
 - 1. Eliminating Waterfalls
 - 2. Bundle Size Optimization
 - detect_framework
@@ -198,9 +199,14 @@
 - Web Interface Guidelines
 - Writing Guidelines
 - Example Usage
-- cold-start.mjs
+- use-cache-date-stamp.mjs
+- undeclared-dep.mjs
+- platform-fluid-compute.mjs
+- bot-protection-certainty.mjs
+- cache-tag-invalidation-certainty.mjs
 - observability-events-attribution.mjs
 - gates/index.mjs
+- headers-in-page.mjs
 - Support Topics
 - async-cheap-condition-before-await.md
 - Prefer Statically Analyzable Paths
@@ -208,6 +214,7 @@
 - 3. Animation
 - 6. React State
 - Command output
+- region-pin-in-config.mjs
 - 11. Monorepo
 - 1. Core Rendering
 - 8. React Compiler
@@ -369,33 +376,33 @@
 6. `main()` - 24 edges
 7. `recText()` - 23 edges
 8. `lineOf()` - 19 edges
-9. `montarShell()` - 18 edges
+9. `montarShell()` - 19 edges
 10. `React Native Skills` - 18 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Tarefa 8: Detalhe do clipe (`/clipe?id=`)` --references--> `gerarClipe()`  [INFERRED]
   docs/superpowers/specs/2026-10-20-selfiemovie-design.md → src/api.js
+- `Task 4: Apagar uma criação` --references--> `getSaldoDisponivel()`  [INFERRED]
+  docs/superpowers/plans/2026-10-21-selfiemovie-fase1-5.md → src/store.js
 - `Task 2: Store e API simulada (TDD)` --references--> `gerarClipe()`  [INFERRED]
   docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md → src/api.js
 - `Tasks 4–12: Porte das telas` --references--> `gerarClipe()`  [INFERRED]
   docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md → src/api.js
-- `Review Focus` --references--> `statusJob()`  [INFERRED]
-  docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md → src/api.js
-- `Tasks 4–12: Porte das telas` --references--> `statusJob()`  [INFERRED]
-  docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md → src/api.js
+- `Task 2: Shell sempre atual` --references--> `gerarClipe()`  [INFERRED]
+  docs/superpowers/plans/2026-10-21-selfiemovie-fase1-5.md → src/api.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (349 total, 162 thin omitted)
+## Communities (356 total, 163 thin omitted)
 
 ### Community 0 - "lib/render-report.mjs"
-Cohesion: 0.13
-Nodes (27): deriveProjectFacts(), buildFinalReportMessage(), costRoundsToCents(), escape(), extractCoverageLine(), formatBytes(), formatGatedTargets(), formatNum() (+19 more)
+Cohesion: 0.05
+Nodes (83): buildBudgetSummary(), buildChatPreview(), buildExactChatMessage(), buildOptions(), buildPrintCheck(), buildQuestionPayload(), buildQuestionText(), renderBudgetSummaryMarkdown() (+75 more)
 
 ### Community 1 - "verify-claim.mjs"
 Cohesion: 0.06
-Nodes (86): isKnownUrl(), findRecContradictions(), asArray(), buildScriptHasMigrationSideEffect(), cacheInvalidationFileCache, cacheLifeNeedsContentFreshnessProof(), cleanHeaderValue(), compilePattern() (+78 more)
+Nodes (85): findRecContradictions(), asArray(), buildScriptHasMigrationSideEffect(), cacheInvalidationFileCache, cacheLifeNeedsContentFreshnessProof(), cleanHeaderValue(), compilePattern(), configContainsTag() (+77 more)
 
 ### Community 2 - "scripts/render-report.mjs"
 Cohesion: 0.08
@@ -403,15 +410,15 @@ Nodes (57): affectedFiles(), appliesAlsoEntry(), cacheLifeIntent(), dedupEditTar
 
 ### Community 3 - "extract-claims.mjs"
 Cohesion: 0.09
-Nodes (53): asArray(), cacheRecommendationFiles(), extractClaims(), isCacheCandidate(), mentionsAuthSensitiveParallelization(), mentionsCachedNotFoundOr404(), mentionsCacheLifeCdnHeaderClaim(), mentionsCacheLifetimeChange() (+45 more)
+Nodes (54): asArray(), cacheRecommendationFiles(), extractClaims(), isCacheCandidate(), mentionsAuthSensitiveParallelization(), mentionsCachedNotFoundOr404(), mentionsCacheLifeCdnHeaderClaim(), mentionsCacheLifetimeChange() (+46 more)
 
 ### Community 4 - "workspace-resolver.mjs"
 Cohesion: 0.07
 Nodes (54): buildPackageLookup(), buildResolver(), DEFAULT_RESOLVE_OPTIONS, detectMonorepoRoot(), escapeRegExp(), expandParts(), expandResolvedSpecifier(), expandPureBarrel() (+46 more)
 
 ### Community 5 - "sanitizers/index.mjs"
-Cohesion: 0.06
-Nodes (37): sanitizeCitations(), computeImpactLabel(), cwvIssue(), formatCwvIssue(), formatInteger(), joinEnglish(), parseSigNumber(), round1() (+29 more)
+Cohesion: 0.19
+Nodes (10): applyDollarStrip(), stripDollarLiterals(), metadata, STRING_FIELDS, applySanitizers(), applySanitizersBatch(), recordSanitizer(), SANITIZERS (+2 more)
 
 ### Community 6 - "inspect_pr_checks.py"
 Cohesion: 0.12
@@ -459,11 +466,11 @@ Nodes (26): citationApplies(), HERE, KNOWN_CANDIDATE_KINDS, loadSupportTopics(),
 
 ### Community 17 - "store.js"
 Cohesion: 0.14
-Nodes (33): Review Focus, Task 0: Base do projeto, Task 13: Telas que faltam, Task 14: Revisão final, Task 1: Assets, Task 2: Store e API simulada (TDD), Task 3: Shell compartilhado, Tasks 4–12: Porte das telas (+25 more)
+Nodes (36): Task 2: Store e API simulada (TDD), Task 3: Shell compartilhado, Global Constraints, Task 1: Avisar quando o navegador não salva, criar(), usuarioComFoto(), render(), atualizar() (+28 more)
 
 ### Community 18 - "citations.mjs"
-Cohesion: 0.18
-Nodes (17): compareVersion(), HERE, LIBRARY_PATH, libraryForStack(), loadLibrary(), lookupSkillRule(), lookupUrl(), matchesFrameworkVersion() (+9 more)
+Cohesion: 0.17
+Nodes (20): compareVersion(), HERE, isKnownUrl(), LIBRARY_PATH, libraryForStack(), loadLibrary(), lookupSkillRule(), lookupUrl() (+12 more)
 
 ### Community 19 - "6. Plano de tarefas"
 Cohesion: 0.08
@@ -498,12 +505,12 @@ Cohesion: 0.10
 Nodes (17): Duplicate browser dependency, Fix patterns, Lazy interaction feature, Other attributed assets, Server-rendered display work, Clustering — find logical communities, Conditional min cut — detach a target, Graph methods (+9 more)
 
 ### Community 27 - "inicio.js"
-Cohesion: 0.15
-Nodes (21): CATEGORIAS, filtrarClipes(), miniCard(), normalizar(), ORDENS, clipe, preencher(), ATIVO (+13 more)
+Cohesion: 0.20
+Nodes (12): CATEGORIAS, filtrarClipes(), normalizar(), ORDENS, ATIVO, busca, card(), chips (+4 more)
 
 ### Community 28 - "lineOf"
-Cohesion: 0.06
-Nodes (47): apply(), COUNT_CLAIM_TYPES, metadata, rewriteCount(), apply(), metadata, apply(), metadata (+39 more)
+Cohesion: 0.15
+Nodes (15): isApplicable(), metadata, scan(), metadata, scan(), metadata, scan(), metadata (+7 more)
 
 ### Community 29 - "throttle.mjs"
 Cohesion: 0.14
@@ -514,8 +521,8 @@ Cohesion: 0.10
 Nodes (19): Animation (HIGH), Core Rendering (CRITICAL), Creating a New Rule, Design System (MEDIUM), Fonts (LOW), JavaScript (LOW), List Performance (HIGH), Monorepo (LOW) (+11 more)
 
 ### Community 31 - "creditos.js"
-Cohesion: 0.11
-Nodes (17): CUSTOS, PACOTES, PLANOS, reais(), itens, atualizar(), clipes(), itens() (+9 more)
+Cohesion: 0.15
+Nodes (14): CUSTOS, PACOTES, PLANOS, reais(), atualizar(), clipes(), itens(), LINHAS (+6 more)
 
 ### Community 32 - "Gates"
 Cohesion: 0.11
@@ -631,7 +638,7 @@ Nodes (14): Animation Timing, Card Expand/Collapse with `startTransition`, Compo
 
 ### Community 60 - "api.js"
 Cohesion: 0.14
-Nodes (20): 4. Decisões técnicas da fase 1 (escolhas do Claude, revisáveis), Tabela única de créditos (escolha do Claude; as telas usam valores diferentes), vitest, criar(), DURACAO_MS, FASES, gerarClipe(), gerarComTexto() (+12 more)
+Nodes (16): 4. Decisões técnicas da fase 1 (escolhas do Claude, revisáveis), Tabela única de créditos (escolha do Claude; as telas usam valores diferentes), vitest, DURACAO_MS, FASES, gerarClipe(), gerarComTexto(), IMG_ESTILO (+8 more)
 
 ### Community 61 - "Component Composition"
 Cohesion: 0.15
@@ -642,8 +649,8 @@ Cohesion: 0.15
 Nodes (13): Built-in variants first, className for layout only, Contents, No manual dark: color overrides, No manual z-index on overlay components, No raw color values for status/state indicators, No space-x-* / space-y-*, Prefer size-* over w-* h-* when equal (+5 more)
 
 ### Community 63 - "shell.js"
-Cohesion: 0.32
-Nodes (10): atualizar(), dataCurta(), avatar(), bottomNav(), header(), LINKS, montarShell(), sidebar() (+2 more)
+Cohesion: 0.13
+Nodes (23): miniCard(), itens, clipe, preencher(), erro, form, atualizar(), etapas() (+15 more)
 
 ### Community 64 - "Common Vulnerability Patterns"
 Cohesion: 0.17
@@ -694,8 +701,8 @@ Cohesion: 0.36
 Nodes (8): candidateIdentity(), DEFAULT_KIND_CAPS, DIVERSITY_ELIGIBILITY, durationMsFromSignal(), isDiversityEligible(), numberFromEvidence(), numberFromSignal(), selectLaunchCandidates()
 
 ### Community 77 - "withRouteShapeWarnings"
-Cohesion: 0.11
-Nodes (23): byRoute(), gate(), metadata, ratioOverThreshold(), round2(), sumRows(), extractErrors(), extractFromStatusRows() (+15 more)
+Cohesion: 0.29
+Nodes (9): extractErrors(), extractFromStatusRows(), gate(), metadata, extractErrorRatesByRoute(), extractFunctionRoutes(), gate(), metadata (+1 more)
 
 ### Community 78 - "3. Server-Side Performance"
 Cohesion: 0.18
@@ -717,13 +724,13 @@ Nodes (4): Install, Procedure, Requirements, vercel-optimize
 Cohesion: 0.08
 Nodes (23): 1. Botões de Ação Cinematográfica (CTAs), 2. Cards de Template & Vídeo (Thumbnails 9:16 e 16:9), 3. Upload & Dropzone de Face / Selfie, 4. Chips & Seletores de Categoria, 5. Barra de Status de Renderização & IA Progress, 6. Campos de Texto & Prompts Adicionais, 7. Badge de Carteira de Créditos (Header Bar), Atmospheric Glow & Layered Glass (+15 more)
 
-### Community 83 - "renderReport"
-Cohesion: 0.17
-Nodes (21): asArray(), assertValidObservations(), candidateForDisplay(), compactFinalText(), displayCandidate(), displayCandidateObject(), displayCandidateRef(), formatEvidenceText() (+13 more)
+### Community 83 - "impact-label.mjs"
+Cohesion: 0.38
+Nodes (10): computeImpactLabel(), cwvIssue(), formatCwvIssue(), formatInteger(), joinEnglish(), parseSigNumber(), round1(), round2() (+2 more)
 
-### Community 84 - "display-labels.mjs"
-Cohesion: 0.15
-Nodes (21): formatCandidateLabel(), formatCandidateLine(), formatKind(), formatNumberLike(), formatPublicText(), formatRoute(), formatSignal(), formatSignalPart() (+13 more)
+### Community 84 - "uncached-route.mjs"
+Cohesion: 0.24
+Nodes (8): Candidate, CandidateScope, GateMetadata, Signals, extractCacheHitRates(), extractMethodShares(), gate(), metadata
 
 ### Community 85 - "Pipeline"
 Cohesion: 0.20
@@ -773,9 +780,9 @@ Nodes (9): 2.1 Avoid Inline Objects in renderItem, 2.2 Hoist callbacks to the ro
 Cohesion: 0.25
 Nodes (7): Bundled Resources, Gh Pr Checks Plan Fix, Inputs, Overview, Quick start, scripts/inspect_pr_checks.py, Workflow
 
-### Community 98 - "lib/budget-summary.mjs"
-Cohesion: 0.31
-Nodes (10): buildBudgetSummary(), buildChatPreview(), buildExactChatMessage(), buildOptions(), buildPrintCheck(), buildQuestionPayload(), buildQuestionText(), renderBudgetSummaryMarkdown() (+2 more)
+### Community 98 - "count-correct.mjs"
+Cohesion: 0.27
+Nodes (8): apply(), COUNT_CLAIM_TYPES, metadata, rewriteCount(), apply(), metadata, STRIP_DIRECTIVES, escapeRegex()
 
 ### Community 99 - "Forms & Inputs"
 Cohesion: 0.25
@@ -786,8 +793,8 @@ Cohesion: 0.36
 Nodes (7): formatBytes(), metadata, scan(), shouldSkip(), SKIP_EXTENSIONS, SKIP_PATH_PREFIXES, walk()
 
 ### Community 101 - "minhas-criacoes.js"
-Cohesion: 0.26
-Nodes (11): ATIVO, card(), ehDaAba, INATIVO, quando(), render(), rodape(), rotuloTipo() (+3 more)
+Cohesion: 0.27
+Nodes (10): ATIVO, card(), ehDaAba, INATIVO, quando(), render(), rodape(), rotuloTipo() (+2 more)
 
 ### Community 102 - "docs-library.json"
 Cohesion: 0.25
@@ -805,6 +812,10 @@ Nodes (8): Implementation Workflow, Step 1: Audit the App, Step 2: Add CSS Recip
 Cohesion: 0.25
 Nodes (8): Implementation Workflow, Step 1: Audit the App, Step 2: Add CSS Recipes, Step 3: Isolate Persistent Elements, Step 4: Add Directional Page Transitions, Step 5: Add Suspense Reveals, Step 6: Add Shared Element Transitions, Step 7: Verify Each Navigation Path
 
+### Community 106 - "Review Focus"
+Cohesion: 0.10
+Nodes (19): Global Constraints, Review Focus, SelfieMovie Fase 1 — Plano de implementação, Task 0: Base do projeto, Task 13: Telas que faltam, Task 14: Revisão final, Task 1: Assets, Tasks 4–12: Porte das telas (+11 more)
+
 ### Community 107 - "Adversarial Vulnerability Analysis (Phase 5)"
 Cohesion: 0.29
 Nodes (7): 1. Define Specific Attacker Model, 2. Identify Concrete Attack Vectors, 3. Rate Realistic Exploitability, 4. Build Complete Exploit Scenario, 5. Cross-Reference with Baseline Context, Adversarial Vulnerability Analysis (Phase 5), Vulnerability Report Template
@@ -813,17 +824,17 @@ Nodes (7): 1. Define Specific Attacker Model, 2. Identify Concrete Attack Vector
 Cohesion: 0.29
 Nodes (7): Differential Review Methodology, Phase 0: Intake & Triage, Phase 1: Changed Code Analysis, Phase 2: Test Coverage Analysis, Phase 3: Blast Radius Analysis, Phase 4: Deep Context Analysis, Pre-Analysis: Baseline Context Building
 
-### Community 109 - "isr-overrevalidation.mjs"
-Cohesion: 0.67
-Nodes (3): extractRows(), gate(), metadata
+### Community 109 - "util.mjs"
+Cohesion: 0.33
+Nodes (6): apply(), metadata, apply(), metadata, MODE_PATTERNS, extractRoute()
 
 ### Community 110 - "framework-support.mjs"
 Cohesion: 0.43
 Nodes (6): classifyFrameworkSupport(), CORE_SUPPORTED_FRAMEWORKS, frameworkLabel(), LABELS, LIMITED_FRAMEWORKS, normalizeFramework()
 
-### Community 111 - "cost-coverage.mjs"
-Cohesion: 0.47
-Nodes (5): classifyService(), computeCostCoverage(), escapeCell(), renderCostCoverageMarkdown(), SERVICE_DIMENSION
+### Community 111 - "rate-limit.mjs"
+Cohesion: 0.36
+Nodes (7): apply(), collectText(), matchConcurrency(), matchProviders(), metadata, PROVIDER_LIMITS, PROVIDER_RE
 
 ### Community 113 - "edge-heavy-import.mjs"
 Cohesion: 0.48
@@ -833,17 +844,21 @@ Nodes (6): extractSpecifiers(), HEAVY_PATTERNS, isEdgeRuntimeFile(), isMiddlewar
 Cohesion: 0.48
 Nodes (6): detectBuildCacheDisabled(), lineOfMatch(), metadata, safeScripts(), scan(), truncate()
 
+### Community 115 - "cwv-poor.mjs"
+Cohesion: 0.48
+Nodes (6): byRoute(), gate(), metadata, ratioOverThreshold(), round2(), sumRows()
+
 ### Community 116 - "Observability Plus Stop-And-Ask"
 Cohesion: 0.29
 Nodes (6): After The User Chooses, Blocker Copy, Observability Plus Stop-And-Ask, Scanner-Only Mode, User Template, Why This Check Exists
 
 ### Community 117 - "Verification"
-Cohesion: 0.25
-Nodes (7): Claim types, Dispositions, Re-gen trigger and accept criteria, Table of contents, Verification, Verifier implementation, Why mechanical verification
+Cohesion: 0.29
+Nodes (6): Claim types, Dispositions, Re-gen trigger and accept criteria, Table of contents, Verification, Why mechanical verification
 
-### Community 118 - "gerando.js"
-Cohesion: 0.60
-Nodes (4): atualizar(), etapas(), jobId, mostrar()
+### Community 118 - "cache-components-suspense-dedupe.mjs"
+Cohesion: 0.48
+Nodes (6): countMatches(), findRepeated(), metadata, record(), scan(), truncate()
 
 ### Community 119 - "1. Eliminating Waterfalls"
 Cohesion: 0.29
@@ -922,8 +937,8 @@ Cohesion: 0.60
 Nodes (4): computeBotShare(), gate(), metadata, totalRequestsFromSignals()
 
 ### Community 142 - "gates/index.mjs"
-Cohesion: 0.13
-Nodes (13): gate(), metadata, unique(), DEFAULT_MAX_CODE_CANDIDATES, gates, gate(), metadata, sumRows() (+5 more)
+Cohesion: 0.11
+Nodes (15): gate(), metadata, unique(), extractColdStarts(), gate(), metadata, DEFAULT_MAX_CODE_CANDIDATES, gates (+7 more)
 
 ### Community 143 - "usage-spike-triage.mjs"
 Cohesion: 0.60
@@ -1097,9 +1112,17 @@ Nodes (4): Guidelines Source, How It Works, Usage, Writing Guidelines
 Cohesion: 0.50
 Nodes (4): Deep Audit (Large, Critical Change), Example Usage, Quick Triage (Small PR), Standard Review (Medium Codebase)
 
-### Community 187 - "cold-start.mjs"
-Cohesion: 0.67
-Nodes (3): extractColdStarts(), gate(), metadata
+### Community 186 - "use-cache-date-stamp.mjs"
+Cohesion: 0.48
+Nodes (6): classifySubtype(), collectRanges(), findMatchingParen(), isInsideAnyRange(), metadata, scan()
+
+### Community 187 - "undeclared-dep.mjs"
+Cohesion: 0.47
+Nodes (5): apply(), extractCodeBlocks(), metadata, NODE_BUILTINS, pkgRoot()
+
+### Community 188 - "platform-fluid-compute.mjs"
+Cohesion: 0.60
+Nodes (4): extractHighColdRoutes(), extractSlowHotRoutes(), gate(), metadata
 
 ### Community 191 - "observability-events-attribution.mjs"
 Cohesion: 0.67
@@ -1108,6 +1131,10 @@ Nodes (3): gate(), metadata, sumBilled()
 ### Community 192 - "gates/index.mjs"
 Cohesion: 0.19
 Nodes (14): GATE_VERSION, MAX_CODE_CANDIDATES, HERE, main(), REFS, renderCandidates(), renderScanners(), trimTrailingBlankLine() (+6 more)
+
+### Community 193 - "headers-in-page.mjs"
+Cohesion: 0.67
+Nodes (3): isApplicable(), metadata, scan()
 
 ### Community 194 - "Support Topics"
 Cohesion: 0.50
@@ -1125,6 +1152,10 @@ Nodes (4): 3.1 Animate Transform and Opacity Instead of Layout Properties, 3.2 P
 Cohesion: 0.50
 Nodes (4): 6.1 Minimize State Variables and Derive Values, 6.2 Use fallback state instead of initialState, 6.3 useState Dispatch updaters for State That Depends on Current Value, 6. React State
 
+### Community 201 - "region-pin-in-config.mjs"
+Cohesion: 0.67
+Nodes (3): metadata, parseRegionList(), scan()
+
 ### Community 203 - "11. Monorepo"
 Cohesion: 0.67
 Nodes (3): 11.1 Install Native Dependencies in App Directory, 11.2 Use Single Dependency Versions Across Monorepo, 11. Monorepo
@@ -1139,22 +1170,22 @@ Nodes (3): 8.1 Destructure Functions Early in Render (React Compiler), 8.2 Use .
 
 ## Knowledge Gaps
 - **5 isolated node(s):** `cmd`, `autoprefixer`, `happy-dom`, `postcss`, `tailwindcss`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1597 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **162 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1602 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **163 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `vite` connect `ref_node_fs` to `package.json`?**
-  _High betweenness centrality (0.069) - this node is a cross-community bridge._
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **What connects `cmd`, `autoprefixer`, `happy-dom` to the rest of the system?**
   _5 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `lib/render-report.mjs` be split into smaller, more focused modules?**
-  _Cohesion score 0.1330049261083744 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.052184769038701624 - nodes in this community are weakly interconnected._
 - **Why does `vitest` connect `api.js` to `package.json`, `inicio.js`, `foto.js`?**
-  _High betweenness centrality (0.060) - this node is a cross-community bridge._
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
 - **Should `verify-claim.mjs` be split into smaller, more focused modules?**
-  _Cohesion score 0.0577324973876698 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05854049719326383 - nodes in this community are weakly interconnected._
 - **Why does `inferPlaybook()` connect `prepare-investigation-brief.mjs` to `investigation-brief.mjs`, `scoring.md`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Should `scripts/render-report.mjs` be split into smaller, more focused modules?**
