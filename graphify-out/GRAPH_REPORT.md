@@ -1,17 +1,17 @@
 # Graph Report - projeto com ia  (2026-10-20)
 
 ## Corpus Check
-- 407 files · ~680,643 words
+- 407 files · ~680,851 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: .css 2, .zip 1, (none) 1)
 
 ## Summary
-- 2867 nodes · 4152 edges · 352 communities (191 shown, 161 thin omitted)
+- 2867 nodes · 4153 edges · 352 communities (191 shown, 161 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 61 edges (avg confidence: 0.91)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `aaeedbb6`
+- Built from commit: `cf7141dc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -461,7 +461,7 @@ Cohesion: 0.13
 Nodes (26): citationApplies(), HERE, KNOWN_CANDIDATE_KINDS, loadSupportTopics(), matchesCandidateKind(), matchesCandidateMetrics(), matchesCandidateRoutePatterns(), matchesFrameworks() (+18 more)
 
 ### Community 17 - "store.js"
-Cohesion: 0.18
+Cohesion: 0.19
 Nodes (25): Task 2: Store e API simulada (TDD), Tasks 4–12: Porte das telas, usuarioComFoto(), addCriacao(), adicionarCreditos(), alterar(), apagarFoto(), cadastrar() (+17 more)
 
 ### Community 18 - "citations.mjs"

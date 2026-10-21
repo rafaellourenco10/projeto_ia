@@ -672,21 +672,21 @@
     "semantic_hash": ""
   },
   "src/foto-utils.js": {
-    "mtime": 1792543388.1076453,
-    "seen": 1792543605.2680867,
-    "ast_hash": "4afd5b3d2f5e49b54fb0b28519c7ce2c",
+    "mtime": 1792548668.0484152,
+    "seen": 1792548706.851845,
+    "ast_hash": "43822ce2cdb06a77c428a6352fb4c7ec",
     "semantic_hash": ""
   },
   "src/foto-utils.test.js": {
-    "mtime": 1792543380.503197,
-    "seen": 1792543605.2680879,
-    "ast_hash": "d03797cf208342eeb8102ec0754110ba",
+    "mtime": 1792548651.0045128,
+    "seen": 1792548706.851847,
+    "ast_hash": "74e324851bca51c3ccce45c50bcbd3bb",
     "semantic_hash": ""
   },
   "src/pages/entrar.js": {
-    "mtime": 1792524456.4379869,
-    "seen": 1792543605.2680886,
-    "ast_hash": "37d742ea510b056e82e769946b799acc",
+    "mtime": 1792548670.3529131,
+    "seen": 1792548706.851864,
+    "ast_hash": "ecada25cbf18f32bd757493635676b2d",
     "semantic_hash": ""
   },
   "src/pages/foto.js": {
@@ -708,21 +708,21 @@
     "semantic_hash": ""
   },
   "src/shell.js": {
-    "mtime": 1792546794.7173615,
-    "seen": 1792547142.667267,
-    "ast_hash": "40049c323915c3b73e5fd949058e837c",
+    "mtime": 1792548422.3342774,
+    "seen": 1792548706.8518763,
+    "ast_hash": "6aeb7145b2f085b2949f241b7e735aec",
     "semantic_hash": ""
   },
   "src/store.js": {
-    "mtime": 1792523261.5333874,
-    "seen": 1792543605.268093,
-    "ast_hash": "4d6e40df605fb28100074a10672a9c7e",
+    "mtime": 1792548669.2512012,
+    "seen": 1792548706.8518777,
+    "ast_hash": "1174fc8fefdbfe213b066ccae4e144a1",
     "semantic_hash": ""
   },
   "src/store.test.js": {
-    "mtime": 1792523170.1898866,
-    "seen": 1792543605.268094,
-    "ast_hash": "71c30d478d3dd06decd4c29c782ccafd",
+    "mtime": 1792548649.833784,
+    "seen": 1792548706.8518786,
+    "ast_hash": "a8fbf6e0ee0d8e1ac81bf44ae8487d7d",
     "semantic_hash": ""
   },
   "src/util.js": {
@@ -2406,9 +2406,9 @@
     "semantic_hash": ""
   },
   "inicio.html": {
-    "mtime": 1792543475.8861804,
-    "seen": 1792543605.2683456,
-    "ast_hash": "c4d8c09f6f97d36260096e200ce651f9",
+    "mtime": 1792548422.3700585,
+    "seen": 1792548706.8522234,
+    "ast_hash": "8b8a9be7954aaa07d6aaf016ae7e7050",
     "semantic_hash": ""
   },
   "perfil-rosto/foto.html": {
@@ -2850,9 +2850,9 @@
     "semantic_hash": ""
   },
   "ajuda-faq.html": {
-    "mtime": 1792546877.8579211,
-    "seen": 1792547142.667858,
-    "ast_hash": "04152dceb7f5321826d7931d705c7fd2",
+    "mtime": 1792548422.4068117,
+    "seen": 1792548706.852213,
+    "ast_hash": "e7350e92254e430dddac2550867c536c",
     "semantic_hash": ""
   },
   "creditos-planos.html": {
