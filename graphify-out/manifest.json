@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "src/pages/entrar.js": {
-    "mtime": 1792548670.3529131,
-    "seen": 1792548706.851864,
-    "ast_hash": "ecada25cbf18f32bd757493635676b2d",
+    "mtime": 1792549152.4657114,
+    "seen": 1792549184.1772554,
+    "ast_hash": "a1297e82329ee5616d0befed94c479c8",
     "semantic_hash": ""
   },
   "src/pages/foto.js": {
@@ -714,15 +714,15 @@
     "semantic_hash": ""
   },
   "src/store.js": {
-    "mtime": 1792548669.2512012,
-    "seen": 1792548706.8518777,
-    "ast_hash": "1174fc8fefdbfe213b066ccae4e144a1",
+    "mtime": 1792549137.1545243,
+    "seen": 1792549184.1772685,
+    "ast_hash": "dcf285cd3fe09b13eaef98cec3b899fe",
     "semantic_hash": ""
   },
   "src/store.test.js": {
-    "mtime": 1792548649.833784,
-    "seen": 1792548706.8518786,
-    "ast_hash": "a8fbf6e0ee0d8e1ac81bf44ae8487d7d",
+    "mtime": 1792549121.1242552,
+    "seen": 1792549184.17727,
+    "ast_hash": "2fdd875a5aa6e01533c771e1aabcabbc",
     "semantic_hash": ""
   },
   "src/util.js": {
@@ -2394,9 +2394,9 @@
     "semantic_hash": ""
   },
   "entrar.html": {
-    "mtime": 1792524614.7021756,
-    "seen": 1792543605.2683442,
-    "ast_hash": "4e66f39316dd605e31d3b4df1f25d4e0",
+    "mtime": 1792549138.3389535,
+    "seen": 1792549184.1775942,
+    "ast_hash": "dc95ea36be8b3e395a9068d20b02af35",
     "semantic_hash": ""
   },
   "index.html": {
