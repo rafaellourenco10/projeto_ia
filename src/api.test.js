@@ -1,5 +1,5 @@
 // @vitest-environment happy-dom
-import { beforeEach, describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import * as store from './store.js'
 import { gerarClipe, gerarComTexto, statusJob, DURACAO_MS } from './api.js'
 
@@ -75,5 +75,13 @@ describe('api simulada', () => {
 
   it('job desconhecido devolve null', async () => {
     expect(await statusJob('xyz')).toBeNull()
+  })
+
+  it('gerarClipe recusa com SEM_ESPACO quando o navegador não grava', async () => {
+    usuarioComFoto(10)
+    const spy = vi.spyOn(localStorage, 'setItem').mockImplementation(() => { throw new Error('QuotaExceededError') })
+    await expect(gerarClipe('agente-secreto')).rejects.toThrow('SEM_ESPACO')
+    spy.mockRestore()
+    expect(store.getCriacoes()).toHaveLength(0)
   })
 })

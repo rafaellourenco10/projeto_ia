@@ -3,7 +3,7 @@ import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
 import { CUSTOS, custo } from '../creditos.js'
-import { debug } from '../util.js'
+import { debug, MSG_SEM_ESPACO } from '../util.js'
 
 montarShell({ rota: 'criar-com-texto' })
 
@@ -112,7 +112,7 @@ $('btn-gerar').addEventListener('click', async () => {
     location.href = `/gerando?job=${jobId}${debug() ? '&debug' : ''}`
   } catch (e) {
     render()
-    $('motivo').textContent = e.message === 'SEM_SALDO' ? 'Saldo insuficiente.' : 'Não foi possível começar a geração. Tente de novo.'
+    $('motivo').textContent = e.message === 'SEM_SALDO' ? 'Saldo insuficiente.' : e.message === 'SEM_ESPACO' ? MSG_SEM_ESPACO : 'Não foi possível começar a geração. Tente de novo.'
   }
 })
 

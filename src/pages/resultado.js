@@ -3,7 +3,7 @@ import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
 import { miniCard } from '../biblioteca.js'
-import { esc, param, debug, avisar } from '../util.js'
+import { esc, param, debug, avisar, MSG_SEM_ESPACO } from '../util.js'
 import clipes from '../data/clips.json'
 
 montarShell({ rota: 'minhas-criacoes' })
@@ -111,7 +111,9 @@ function mostrar(c) {
           ? 'Saldo insuficiente. <a class="underline" href="/creditos-planos">Comprar créditos</a>'
           : e.message === 'SEM_FOTO'
             ? 'Envie sua foto primeiro. <a class="underline" href="/perfil-rosto/foto">Enviar foto</a>'
-            : 'Não foi possível gerar a variação.'
+            : e.message === 'SEM_ESPACO'
+              ? MSG_SEM_ESPACO
+              : 'Não foi possível gerar a variação.'
     }
   })
 

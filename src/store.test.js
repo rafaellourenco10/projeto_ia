@@ -79,4 +79,10 @@ describe('custo', () => {
     expect(custo({ tipo: 'video', duracao: 10 })).toBe(8)
     expect(custo({ tipo: 'foto' })).toBe(2)
   })
+
+  it('cadastrar devolve null quando o navegador não grava', () => {
+    const spy = vi.spyOn(localStorage, 'setItem').mockImplementation(() => { throw new Error('QuotaExceededError') })
+    expect(store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })).toBe(null)
+    spy.mockRestore()
+  })
 })

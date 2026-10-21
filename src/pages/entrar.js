@@ -1,7 +1,7 @@
 import '../main.css'
 import * as store from '../store.js'
 import { CUSTOS } from '../creditos.js'
-import { avisar } from '../util.js'
+import { avisar, MSG_SEM_ESPACO } from '../util.js'
 
 if (store.getUsuario()) location.replace('/inicio')
 
@@ -69,10 +69,10 @@ form.addEventListener('submit', (e) => {
   // Fase 1: a senha não é guardada nem conferida; o login é simulado.
   try {
     if (modo === 'cadastro') {
-      store.cadastrar({ nome, email })
+      if (!store.cadastrar({ nome, email })) return falhar(MSG_SEM_ESPACO, $('email'))
       location.href = '/perfil-rosto/foto'
     } else {
-      store.entrar({ email })
+      if (!store.entrar({ email })) return falhar(MSG_SEM_ESPACO, $('email'))
       location.href = '/inicio'
     }
   } catch {

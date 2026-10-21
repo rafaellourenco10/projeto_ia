@@ -2,6 +2,8 @@
 export const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
 
+export const MSG_SEM_ESPACO = 'Não foi possível salvar neste navegador. Libere espaço ou saia da janela anônima e tente de novo.'
+
 export const param = (nome) => new URLSearchParams(location.search).get(nome)
 export const debug = () => new URLSearchParams(location.search).has('debug')
 

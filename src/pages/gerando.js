@@ -2,7 +2,7 @@ import '../main.css'
 import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
-import { param, debug } from '../util.js'
+import { param, debug, MSG_SEM_ESPACO } from '../util.js'
 
 montarShell({ rota: 'minhas-criacoes' })
 
@@ -81,7 +81,9 @@ $('btn-tentar').addEventListener('click', async () => {
         ? 'Saldo insuficiente. <a class="underline" href="/creditos-planos">Comprar créditos</a>'
         : e.message === 'SEM_FOTO'
           ? 'Envie sua foto primeiro. <a class="underline" href="/perfil-rosto/foto">Enviar foto</a>'
-          : 'Não foi possível tentar de novo.'
+          : e.message === 'SEM_ESPACO'
+            ? MSG_SEM_ESPACO
+            : 'Não foi possível tentar de novo.'
   }
 })
 

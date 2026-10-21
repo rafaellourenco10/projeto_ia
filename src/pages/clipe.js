@@ -4,7 +4,7 @@ import * as store from '../store.js'
 import * as api from '../api.js'
 import { custo as calcularCusto } from '../creditos.js'
 import { CATEGORIAS, miniCard } from '../biblioteca.js'
-import { esc, param, debug } from '../util.js'
+import { esc, param, debug, MSG_SEM_ESPACO } from '../util.js'
 import clipes from '../data/clips.json'
 
 montarShell({ rota: 'inicio' })
@@ -91,7 +91,7 @@ function preencher() {
     } catch (e) {
       $('btn-gerar').disabled = false
       $('msg').classList.remove('hidden')
-      $('msg').textContent = e.message === 'SEM_SALDO' ? 'Saldo insuficiente para este clipe.' : 'Não foi possível começar a geração. Tente de novo.'
+      $('msg').textContent = e.message === 'SEM_SALDO' ? 'Saldo insuficiente para este clipe.' : e.message === 'SEM_ESPACO' ? MSG_SEM_ESPACO : 'Não foi possível começar a geração. Tente de novo.'
     }
   })
 

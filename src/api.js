@@ -24,7 +24,7 @@ function criar(dados) {
     criadoEm: Date.now(),
     falhar: new URLSearchParams(location.search).get('debug') === 'falha',
   }
-  store.addCriacao(c)
+  if (!store.addCriacao(c)) throw new Error('SEM_ESPACO')
   return { jobId: c.id }
 }
 
