@@ -111,5 +111,6 @@ export function montarShell({ rota = null, exigirLogin = true } = {}) {
     document.querySelectorAll('[data-avatar]').forEach((el) => (el.innerHTML = avatar('w-8 h-8')))
   }
   store.onChange(atualizar)
+  atualizar() // também preenche os [data-saldo] que a página tem no <main>
   return main
 }

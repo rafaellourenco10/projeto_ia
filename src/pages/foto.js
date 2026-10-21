@@ -11,7 +11,6 @@ const destino = destinoSeguro(param('voltar'))
 let stream = null
 let fotoAtual = null // dataURL da prévia (ainda não salva)
 
-document.querySelectorAll('main [data-saldo]').forEach((el) => (el.textContent = store.getSaldoDisponivel()))
 $('link-depois').href = destino
 
 function mensagem(texto) {
