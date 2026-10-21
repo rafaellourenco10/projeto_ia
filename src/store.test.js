@@ -6,6 +6,12 @@ import { custo } from './creditos.js'
 beforeEach(() => localStorage.clear())
 
 describe('store', () => {
+  it('setPlano grava o plano', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    expect(store.setPlano('Pro Creator')).toBe(true)
+    expect(store.getPlano()).toBe('Pro Creator')
+  })
+
   it('cadastro ganha o bônus de 10 créditos', () => {
     store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
     expect(store.getSaldo()).toBe(10)

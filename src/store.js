@@ -66,6 +66,7 @@ export function entrar({ email }) {
 }
 
 export const getPlano = () => ler()?.plano ?? null
+export const setPlano = (nome) => alterar((e) => (e.plano = nome))
 
 export const sair = () => alterar((e) => (e.logado = false))
 

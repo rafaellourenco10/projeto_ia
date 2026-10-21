@@ -92,8 +92,11 @@ $('arquivo').addEventListener('change', (e) => usarArquivo(e.target.files[0]))
 $('arquivo-camera').addEventListener('change', (e) => usarArquivo(e.target.files[0]))
 
 $('btn-capturar').addEventListener('click', async () => {
-  const dataUrl = await reduzirImagem($('video'))
-  mostrarPreview(dataUrl)
+  try {
+    mostrarPreview(await reduzirImagem($('video')))
+  } catch {
+    mensagem('A câmera ainda está abrindo. Espere a imagem aparecer e tente de novo.')
+  }
 })
 $('btn-cancelar-camera').addEventListener('click', () => mostrar(fotoAtual ? 'preview' : 'vazio'))
 $('btn-trocar').addEventListener('click', () => {

@@ -88,6 +88,7 @@ document.querySelector('main').addEventListener('click', (e) => {
   const plano = PLANOS.find((p) => p.id === b.dataset.plano)
   const item = plano ?? PACOTES.find((p) => p.id === b.dataset.pacote)
   store.adicionarCreditos(item.creditos)
+  if (plano) store.setPlano(plano.nome)
   store.registrarCompra({ descricao: plano ? `Plano ${plano.nome}` : `Pacote de ${item.creditos} créditos`, creditos: item.creditos, preco: item.preco })
   avisar(`+${item.creditos} créditos (simulação)`)
 })

@@ -2,7 +2,7 @@ import '../main.css'
 import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
-import { esc, debug } from '../util.js'
+import { esc, debug, avisar, MSG_SEM_ESPACO } from '../util.js'
 
 montarShell({ rota: 'minhas-criacoes' })
 
@@ -127,8 +127,10 @@ $('grade').addEventListener('click', async (e) => {
     const { jobId } = await api.refazer(b.dataset.refazer)
     location.href = `/gerando?job=${jobId}`
   } catch (err) {
+    if (err.message === 'SEM_FOTO') return (location.href = '/perfil-rosto/foto?voltar=%2Fminhas-criacoes')
+    if (err.message === 'SEM_SALDO') return (location.href = '/creditos-planos')
     b.disabled = false
-    location.href = err.message === 'SEM_FOTO' ? '/perfil-rosto/foto?voltar=%2Fminhas-criacoes' : '/creditos-planos'
+    avisar(err.message === 'SEM_ESPACO' ? MSG_SEM_ESPACO : 'Não foi possível tentar de novo. Recarregue a página.')
   }
 })
 
