@@ -80,6 +80,8 @@ $('destaque').innerHTML = `
   </div>
 </div>`
 
+let gradeHtml = null
+
 function render() {
   const fav = categoria === FAV
   const lista = filtrarClipes(clipes, { q: busca.value, categoria: fav ? null : categoria, ordem: ordem.value, ids: fav ? store.getFavoritos() : null })
@@ -87,7 +89,9 @@ function render() {
   $('destaque').hidden = fav // em Favoritos só aparece a lista do usuário; um destaque favorito já está na grade
   $('vazio-titulo').textContent = semFavoritos ? 'Nenhum favorito ainda' : 'Nenhum clipe encontrado'
   $('vazio-texto').textContent = semFavoritos ? 'Você ainda não favoritou nenhum clipe. Toque no coração na página do clipe.' : 'Tente outra palavra ou outra categoria.'
-  $('grade').innerHTML = lista.map(card).join('')
+  const html = lista.map(card).join('')
+  // Trocar o HTML tira o foco do card; só troca quando a grade mudou de fato.
+  if (html !== gradeHtml) $('grade').innerHTML = gradeHtml = html
   $('grade').hidden = !lista.length
   $('vazio').hidden = !!lista.length
   $('contagem').textContent = `${lista.length} ${lista.length === 1 ? 'clipe' : 'clipes'}`

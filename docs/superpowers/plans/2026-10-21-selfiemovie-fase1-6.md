@@ -57,9 +57,9 @@
 **Files:**
 - Modify: `src/pages/inicio.js:88-94` (`render`)
 
-- [ ] **Step 1:** Em `render`, montar o HTML da grade e só trocar `$('grade').innerHTML` quando o HTML mudar em relação ao último que foi aplicado (variável do módulo). Comentário de uma linha com o porquê: trocar o HTML tira o foco do card.
-- [ ] **Step 2:** No navegador em 1440 px: dar Tab até o 2º card e rodar `window.dispatchEvent(new StorageEvent('storage', { key: 'selfiemovie:v1' }))` → `document.activeElement` continua sendo o mesmo link (`href` igual). Busca, chips e ordenação continuam filtrando.
-- [ ] **Step 3:** `npm test` e `npm run build` passam. Commit `fix: manter o foco no card quando o início redesenha`.
+- [x] **Step 1:** Em `render`, montar o HTML da grade e só trocar `$('grade').innerHTML` quando o HTML mudar em relação ao último que foi aplicado (variável do módulo). Comentário de uma linha com o porquê: trocar o HTML tira o foco do card.
+- [x] **Step 2:** No navegador em 1440 px: dar Tab até o 2º card e rodar `window.dispatchEvent(new StorageEvent('storage', { key: 'selfiemovie:v1' }))` → `document.activeElement` continua sendo o mesmo link (`href` igual). Busca, chips e ordenação continuam filtrando.
+- [x] **Step 3:** `npm test` e `npm run build` passam. Commit `fix: manter o foco no card quando o início redesenha`.
 
 ### Task 3: Rascunho do `/criar-com-texto` sobrevive ao Voltar
 
