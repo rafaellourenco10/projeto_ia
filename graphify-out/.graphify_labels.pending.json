@@ -26,7 +26,7 @@
   "24": "package.json",
   "25": "Step 2: Choose a Deploy Method",
   "26": "Bundle optimizer",
-  "27": "inicio.js",
+  "27": "clipe.js",
   "28": "lineOf",
   "29": "throttle.mjs",
   "30": "Rules",
@@ -99,7 +99,7 @@
   "97": "Gh Pr Checks Plan Fix",
   "98": "count-correct.mjs",
   "99": "Forms & Inputs",
-  "100": "large-static-asset.mjs",
+  "100": "showcase-coverage.mjs",
   "101": "minhas-criacoes.js",
   "102": "docs-library.json",
   "103": "Vercel Optimize",
@@ -190,7 +190,7 @@
   "188": "platform-fluid-compute.mjs",
   "189": "bot-protection-certainty.mjs",
   "190": "cache-tag-invalidation-certainty.mjs",
-  "191": "observability-events-attribution.mjs",
+  "191": "gerando.js",
   "192": "gates/index.mjs",
   "193": "headers-in-page.mjs",
   "194": "Support Topics",
@@ -201,6 +201,7 @@
   "199": "6. React State",
   "200": "Command output",
   "201": "region-pin-in-config.mjs",
+  "202": "cold-start.mjs",
   "203": "11. Monorepo",
   "204": "1. Core Rendering",
   "205": "8. React Compiler",
@@ -354,5 +355,7 @@
   "353": "README.md",
   "354": "tailwind.config.js",
   "355": "vercel.json",
-  "356": "postcss.config.js"
+  "356": "postcss.config.js",
+  "357": "middleware-heavy.mjs",
+  "358": "SelfieMovie Fase 1 — Plano de implementação"
 }

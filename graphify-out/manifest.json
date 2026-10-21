@@ -636,15 +636,15 @@
     "semantic_hash": ""
   },
   "src/api.js": {
-    "mtime": 1792578629.299484,
-    "seen": 1792578689.1832955,
-    "ast_hash": "c15b9edbff12543fde8db4fd3289dc06",
+    "mtime": 1792578870.1337466,
+    "seen": 1792578943.224223,
+    "ast_hash": "1371c6ebe2986e93cfebc5f6c90705f3",
     "semantic_hash": ""
   },
   "src/api.test.js": {
-    "mtime": 1792578604.7080414,
-    "seen": 1792578689.1832988,
-    "ast_hash": "3b35098e214b5ae0bdacc38a87b0bd19",
+    "mtime": 1792578842.6437535,
+    "seen": 1792578943.2242343,
+    "ast_hash": "fb1038fba1864008fa9f9f26657232b1",
     "semantic_hash": ""
   },
   "src/biblioteca.js": {
@@ -708,9 +708,9 @@
     "semantic_hash": ""
   },
   "src/shell.js": {
-    "mtime": 1792548422.3342774,
-    "seen": 1792548706.8518763,
-    "ast_hash": "6aeb7145b2f085b2949f241b7e735aec",
+    "mtime": 1792578857.0833743,
+    "seen": 1792578943.2244196,
+    "ast_hash": "5af010de7abfd8ba09af653047b1006e",
     "semantic_hash": ""
   },
   "src/store.js": {
