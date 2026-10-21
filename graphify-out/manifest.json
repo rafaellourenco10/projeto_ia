@@ -648,9 +648,9 @@
     "semantic_hash": ""
   },
   "src/biblioteca.js": {
-    "mtime": 1792580677.082045,
-    "seen": 1792581323.9929492,
-    "ast_hash": "6c23256adfb554d650f6df820110f0ae",
+    "mtime": 1792581764.3066764,
+    "seen": 1792583873.6372216,
+    "ast_hash": "62c9086ea57e1bc2e0d0e69939ba5904",
     "semantic_hash": ""
   },
   "src/biblioteca.test.js": {
@@ -696,15 +696,15 @@
     "semantic_hash": ""
   },
   "src/pages/inicio.js": {
-    "mtime": 1792580677.0860913,
-    "seen": 1792581323.9930158,
-    "ast_hash": "d56031a10f6367fd49098dfcd96a3541",
+    "mtime": 1792581764.3886542,
+    "seen": 1792583873.6372805,
+    "ast_hash": "711ed1de3e90716236097e1442b2aff4",
     "semantic_hash": ""
   },
   "src/pages/landing.js": {
-    "mtime": 1792523816.3189998,
-    "seen": 1792543605.2680914,
-    "ast_hash": "9371eefe6a480eda0d1fb2a2bab04234",
+    "mtime": 1792582050.2152858,
+    "seen": 1792583873.6372843,
+    "ast_hash": "d134f4a6dbd1e360d668899fe593c789",
     "semantic_hash": ""
   },
   "src/shell.js": {
@@ -732,9 +732,9 @@
     "semantic_hash": ""
   },
   "tailwind.config.js": {
-    "mtime": 1792522860.9262917,
-    "seen": 1792543605.2680955,
-    "ast_hash": "554ea6f383a167b70a3363f801d4e405",
+    "mtime": 1792581764.181558,
+    "seen": 1792583873.6373224,
+    "ast_hash": "3418c3842ad2b217301de7ff4c2fed73",
     "semantic_hash": ""
   },
   "vercel.json": {
@@ -2394,27 +2394,27 @@
     "semantic_hash": ""
   },
   "entrar.html": {
-    "mtime": 1792549138.3389535,
-    "seen": 1792549184.1775942,
-    "ast_hash": "dc95ea36be8b3e395a9068d20b02af35",
+    "mtime": 1792583422.105408,
+    "seen": 1792583873.638431,
+    "ast_hash": "6d0ce7f3f7b645cb6d352165027d467a",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792579298.9967954,
-    "seen": 1792579431.954275,
-    "ast_hash": "484bf0f0e73622408e8edb9506b5f17d",
+    "mtime": 1792582050.2063565,
+    "seen": 1792583873.6384382,
+    "ast_hash": "6cfe0f400769b788ddd8495ae2762a5e",
     "semantic_hash": ""
   },
   "inicio.html": {
-    "mtime": 1792580677.0790546,
-    "seen": 1792581323.9942012,
-    "ast_hash": "721a3cd0839b77df3d302ab4f5f6fdc2",
+    "mtime": 1792581764.4304228,
+    "seen": 1792583873.6384418,
+    "ast_hash": "b4843cc89175ab1d6d68b8c6115e1646",
     "semantic_hash": ""
   },
   "perfil-rosto/foto.html": {
-    "mtime": 1792524939.6267095,
-    "seen": 1792543605.2683465,
-    "ast_hash": "c28aa55ecede171078a6b187ff41c87a",
+    "mtime": 1792583677.1776862,
+    "seen": 1792583873.6384525,
+    "ast_hash": "2a8f7da6bc8c3dbcfa3c1733e45dd9dc",
     "semantic_hash": ""
   },
   "telas/cinematic_ai_lumina/DESIGN.md": {
@@ -2772,9 +2772,9 @@
     "semantic_hash": ""
   },
   "clipe.html": {
-    "mtime": 1792580677.077293,
-    "seen": 1792581323.994167,
-    "ast_hash": "cfe0eaf1efca47b2b3f3b9fe55e5a5d8",
+    "mtime": 1792583421.99824,
+    "seen": 1792583873.6384077,
+    "ast_hash": "565f077569e60110f241c38c6396af7b",
     "semantic_hash": ""
   },
   "src/pages/criar.js": {
@@ -2784,21 +2784,21 @@
     "semantic_hash": ""
   },
   "criar-com-texto.html": {
-    "mtime": 1792543917.6314425,
-    "seen": 1792543932.6261396,
-    "ast_hash": "714741fe15699de3f7e51fbf06409888",
+    "mtime": 1792581595.0458133,
+    "seen": 1792583873.6384146,
+    "ast_hash": "86c94ea6f6ab58bb19510f4c5b74e8d9",
     "semantic_hash": ""
   },
   "src/pages/gerando.js": {
-    "mtime": 1792578570.5341873,
-    "seen": 1792578689.1833296,
-    "ast_hash": "d4c3140b143956f8aee9ed0a6d02906a",
+    "mtime": 1792583530.002012,
+    "seen": 1792583873.637277,
+    "ast_hash": "4d711a02e8a3e8130fae9f01c1e5a35b",
     "semantic_hash": ""
   },
   "gerando.html": {
-    "mtime": 1792544056.840559,
-    "seen": 1792544088.322827,
-    "ast_hash": "1e4c289b4eaf2ab6b01d57796449093b",
+    "mtime": 1792581595.0481997,
+    "seen": 1792583873.638435,
+    "ast_hash": "b00c70266b50980388c6ddf3bc104cb7",
     "semantic_hash": ""
   },
   "src/pages/resultado.js": {
@@ -2808,21 +2808,21 @@
     "semantic_hash": ""
   },
   "resultado.html": {
-    "mtime": 1792579622.9028287,
-    "seen": 1792579935.1434102,
-    "ast_hash": "0b4218a31904d4688deadab6b27b3cec",
+    "mtime": 1792583632.2447226,
+    "seen": 1792583873.6384597,
+    "ast_hash": "8831a08c85ed435bed5e903965d1f89c",
     "semantic_hash": ""
   },
   "src/pages/minhas-criacoes.js": {
-    "mtime": 1792579623.012988,
-    "seen": 1792579935.1413634,
-    "ast_hash": "39679d6aec46188ff3ccab8010a4817f",
+    "mtime": 1792583505.5749261,
+    "seen": 1792583873.6372914,
+    "ast_hash": "f8e42d5dee8707e56248f8425810c0f4",
     "semantic_hash": ""
   },
   "minhas-criacoes.html": {
-    "mtime": 1792544343.7183015,
-    "seen": 1792544407.8337939,
-    "ast_hash": "c6e2f20fcb45fdca12ac3d6e8148813e",
+    "mtime": 1792581780.1739469,
+    "seen": 1792583873.6384454,
+    "ast_hash": "4a78b18242a7eae06751e363113dfcd4",
     "semantic_hash": ""
   },
   "src/pages/ajuda-faq.js": {
@@ -2832,9 +2832,9 @@
     "semantic_hash": ""
   },
   "src/pages/creditos-planos.js": {
-    "mtime": 1792579298.9096925,
-    "seen": 1792579431.9531126,
-    "ast_hash": "4cd25b95a2d5b5cfd453878fca1fa5a4",
+    "mtime": 1792583422.2995274,
+    "seen": 1792583873.637259,
+    "ast_hash": "814e9df1ee1a4f4415d3c179633fbb87",
     "semantic_hash": ""
   },
   "src/pages/legal.js": {
@@ -2844,33 +2844,33 @@
     "semantic_hash": ""
   },
   "src/pages/perfil-rosto.js": {
-    "mtime": 1792546795.8506024,
-    "seen": 1792547142.6672618,
-    "ast_hash": "1fd86063e9f0cbdbdb0d31b143a78bf6",
+    "mtime": 1792581620.425177,
+    "seen": 1792583873.637295,
+    "ast_hash": "3b079e2d9d8fb4b91d780c7055b58f8b",
     "semantic_hash": ""
   },
   "ajuda-faq.html": {
-    "mtime": 1792548422.4068117,
-    "seen": 1792548706.852213,
-    "ast_hash": "e7350e92254e430dddac2550867c536c",
+    "mtime": 1792581585.626801,
+    "seen": 1792583873.638404,
+    "ast_hash": "b8b0d240a60a87dedab764fb1e2b2b15",
     "semantic_hash": ""
   },
   "creditos-planos.html": {
-    "mtime": 1792547101.013182,
-    "seen": 1792547142.667862,
-    "ast_hash": "672a52416eb7bbd6e6ca1f073de2aa64",
+    "mtime": 1792581595.0446692,
+    "seen": 1792583873.638411,
+    "ast_hash": "337d0e67f8621fbf5a5fbe4aba13e1be",
     "semantic_hash": ""
   },
   "perfil-rosto.html": {
-    "mtime": 1792546780.0152533,
-    "seen": 1792547142.6678824,
-    "ast_hash": "cc1946ae6b872dd48cba1033adb9ee84",
+    "mtime": 1792583422.0148792,
+    "seen": 1792583873.6384487,
+    "ast_hash": "d1be4bdd6f64d351af195e7152f74767",
     "semantic_hash": ""
   },
   "privacidade.html": {
-    "mtime": 1792547001.9955842,
-    "seen": 1792547142.6678863,
-    "ast_hash": "42b96095860113a6a3640b1bd0f79da6",
+    "mtime": 1792581795.3548577,
+    "seen": 1792583873.6384563,
+    "ast_hash": "3e610473db6fc69ac3c94e117e445d5d",
     "semantic_hash": ""
   },
   "telas/stitch_selfiemovie_ai_video_platform/ajuda_selfiemovie/code.html": {
@@ -2916,9 +2916,9 @@
     "semantic_hash": ""
   },
   "termos.html": {
-    "mtime": 1792546954.9923398,
-    "seen": 1792547142.6679313,
-    "ast_hash": "2de6a29e3f784c514565c8cc8c0dab3b",
+    "mtime": 1792581795.3323362,
+    "seen": 1792583873.6385355,
+    "ast_hash": "27ac01c39e6e4d7340c218c2a4fa66c1",
     "semantic_hash": ""
   },
   "telas/stitch_selfiemovie_ai_video_platform/ajuda_selfiemovie/screen.png": {
@@ -2955,6 +2955,12 @@
     "mtime": 1792578118.7564065,
     "seen": 1792578689.184007,
     "ast_hash": "46510f96c382ac61fb29eb418bb623a7",
+    "semantic_hash": ""
+  },
+  "src/tema.test.js": {
+    "mtime": 1792581639.9967442,
+    "seen": 1792583873.637315,
+    "ast_hash": "df5741a7f289c23b5809cf11642b3dab",
     "semantic_hash": ""
   }
 }
