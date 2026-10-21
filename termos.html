@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
-  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var m=matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};document.documentElement.className=t=="claro"||t=="sistema"&&m.matches?"light":"dark"})()</script>
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var c=t=="claro"?"light":"dark";try{var m=window.temaMq=window.temaMq||matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};if(t=="sistema"&&m.matches)c="light"}catch(e){}document.documentElement.className=c})()</script>
   <title>Termos de Uso · SelfieMovie</title>
   <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />

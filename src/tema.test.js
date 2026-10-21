@@ -6,9 +6,12 @@ import { globSync, readFileSync } from 'node:fs'
 const paginas = globSync(['*.html', 'perfil-rosto/*.html'])
 const scripts = paginas.map((p) => readFileSync(p, 'utf8').match(/<script>(\(window\.aplicarTema=[^<]*)<\/script>/)?.[1])
 
+let mq
 function rodar({ tema, claroNoSistema = false }) {
   if (tema) localStorage.setItem('selfiemovie:tema', tema)
-  vi.spyOn(window, 'matchMedia').mockReturnValue({ matches: claroNoSistema })
+  delete window.temaMq // cada rodar() simula uma página nova
+  mq = { matches: claroNoSistema }
+  vi.spyOn(window, 'matchMedia').mockReturnValue(mq)
   new Function(scripts[0])()
   return document.documentElement.className
 }
@@ -40,6 +43,30 @@ describe('script de tema', () => {
     rodar({ tema: 'escuro' })
     window.aplicarTema('claro')
     expect(document.documentElement.className).toBe('light')
+  })
+
+  it('escolha depois de sistema não é desfeita quando o sistema muda', () => {
+    rodar({ tema: 'sistema', claroNoSistema: true })
+    window.aplicarTema('escuro')
+    mq.matches = true
+    mq.onchange()
+    expect(window.matchMedia).toHaveBeenCalledTimes(1) // uma só MediaQueryList
+    expect(document.documentElement.className).toBe('dark')
+  })
+
+  it('sem matchMedia o script ainda aplica o tema', () => {
+    delete window.temaMq
+    vi.spyOn(window, 'matchMedia').mockImplementation(() => { throw new Error('sem matchMedia') })
+    localStorage.setItem('selfiemovie:tema', 'claro')
+    new Function(scripts[0])()
+    expect(document.documentElement.className).toBe('light')
+    localStorage.setItem('selfiemovie:tema', 'sistema')
+    new Function(scripts[0])()
+    expect(document.documentElement.className).toBe('dark')
+  })
+
+  it('valor desconhecido cai no escuro', () => {
+    expect(rodar({ tema: 'foo', claroNoSistema: true })).toBe('dark')
   })
 
   it('storage indisponível cai no escuro', () => {
