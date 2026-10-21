@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "src/pages/entrar.js": {
-    "mtime": 1792578570.45838,
-    "seen": 1792578689.1833253,
-    "ast_hash": "1478f6ed8f3a8e70c209f4f0cc5e1bb7",
+    "mtime": 1792593123.8340397,
+    "seen": 1792593271.060963,
+    "ast_hash": "1bc44314fadb9532691e3bb00e8db649",
     "semantic_hash": ""
   },
   "src/pages/foto.js": {
@@ -696,9 +696,9 @@
     "semantic_hash": ""
   },
   "src/pages/inicio.js": {
-    "mtime": 1792585915.002013,
-    "seen": 1792586683.5020661,
-    "ast_hash": "a555575a1aed18570cfed7d4efd5f064",
+    "mtime": 1792593039.6267078,
+    "seen": 1792593271.060975,
+    "ast_hash": "d3a862a4960a12456db0bb9fed3730f9",
     "semantic_hash": ""
   },
   "src/pages/landing.js": {
@@ -714,15 +714,15 @@
     "semantic_hash": ""
   },
   "src/store.js": {
-    "mtime": 1792580677.087016,
-    "seen": 1792581323.993049,
-    "ast_hash": "f902dd0b6970a96f42f6e14032ce84ac",
+    "mtime": 1792592812.531928,
+    "seen": 1792593271.0610123,
+    "ast_hash": "30eb771e72c17d742fe966d9154b5ebb",
     "semantic_hash": ""
   },
   "src/store.test.js": {
-    "mtime": 1792580677.087016,
-    "seen": 1792581323.9930525,
-    "ast_hash": "6aa78484618a512e912cd94f5c738fae",
+    "mtime": 1792592833.529714,
+    "seen": 1792593271.0610154,
+    "ast_hash": "5949673c84fe902446c4243d974840b1",
     "semantic_hash": ""
   },
   "src/util.js": {
@@ -2394,9 +2394,9 @@
     "semantic_hash": ""
   },
   "entrar.html": {
-    "mtime": 1792585915.0179968,
-    "seen": 1792586683.5032046,
-    "ast_hash": "737d94edd05ef1824a3c177492a7db74",
+    "mtime": 1792593123.8320103,
+    "seen": 1792593271.0621943,
+    "ast_hash": "cbeb80249c64fc891f4bd96d80c26b2d",
     "semantic_hash": ""
   },
   "index.html": {
@@ -2406,15 +2406,15 @@
     "semantic_hash": ""
   },
   "inicio.html": {
-    "mtime": 1792584073.2906644,
-    "seen": 1792586683.5032146,
-    "ast_hash": "dd59fdc23c61576afc0037831ba6d28e",
+    "mtime": 1792593039.593767,
+    "seen": 1792593271.0622065,
+    "ast_hash": "d1f53ccc4f860b4458c88b511e8b978b",
     "semantic_hash": ""
   },
   "perfil-rosto/foto.html": {
-    "mtime": 1792584073.3028398,
-    "seen": 1792586683.5032244,
-    "ast_hash": "0f0627df501212580c452dff32e4ac80",
+    "mtime": 1792593039.5774486,
+    "seen": 1792593271.0622177,
+    "ast_hash": "bce7297efc07f658a49c16d852ae48bc",
     "semantic_hash": ""
   },
   "telas/cinematic_ai_lumina/DESIGN.md": {
@@ -2772,45 +2772,45 @@
     "semantic_hash": ""
   },
   "clipe.html": {
-    "mtime": 1792586273.6351552,
-    "seen": 1792586683.503182,
-    "ast_hash": "53751aa26dafcf1e4c63cc525768b8c3",
+    "mtime": 1792593039.5627744,
+    "seen": 1792593271.0621655,
+    "ast_hash": "6f6bbe621cba7bf49b0d1946cd475fe9",
     "semantic_hash": ""
   },
   "src/pages/criar.js": {
-    "mtime": 1792578570.5183094,
-    "seen": 1792578689.1833231,
-    "ast_hash": "976703084de7aea3f235a576cbac7bc6",
+    "mtime": 1792592983.2787023,
+    "seen": 1792593271.0609589,
+    "ast_hash": "a9223a20e43b2beafe87756fd9d448c5",
     "semantic_hash": ""
   },
   "criar-com-texto.html": {
-    "mtime": 1792584073.2752457,
-    "seen": 1792586683.5031888,
-    "ast_hash": "3a32eeacec34fef541b33c598447f7f7",
+    "mtime": 1792593039.5739484,
+    "seen": 1792593271.0621731,
+    "ast_hash": "28ab0ad81db282c68032e27898828352",
     "semantic_hash": ""
   },
   "src/pages/gerando.js": {
-    "mtime": 1792583530.002012,
-    "seen": 1792583873.637277,
-    "ast_hash": "4d711a02e8a3e8130fae9f01c1e5a35b",
+    "mtime": 1792592812.5354753,
+    "seen": 1792593271.060971,
+    "ast_hash": "46a5a91f0abaa533530c9ba2e95d6236",
     "semantic_hash": ""
   },
   "gerando.html": {
-    "mtime": 1792584073.281909,
-    "seen": 1792586683.5032082,
-    "ast_hash": "5f86f13f92277795014d4b7517a698a1",
+    "mtime": 1792593039.5749874,
+    "seen": 1792593271.0621986,
+    "ast_hash": "e4ac55944767e8ff2d5adbc0760b8cf0",
     "semantic_hash": ""
   },
   "src/pages/resultado.js": {
-    "mtime": 1792579622.9115589,
-    "seen": 1792579935.1413803,
-    "ast_hash": "75cd59c8c5d28c2b60a5b7c896ca6e34",
+    "mtime": 1792592812.5354753,
+    "seen": 1792593271.0610003,
+    "ast_hash": "7c3d82d2a98f6a7341925c2e485b2cf7",
     "semantic_hash": ""
   },
   "resultado.html": {
-    "mtime": 1792585915.0314057,
-    "seen": 1792586683.5032313,
-    "ast_hash": "0f4abbe70a86069fb0677e7ef6d18b41",
+    "mtime": 1792593039.580259,
+    "seen": 1792593271.0622241,
+    "ast_hash": "66d9dfe6b3200226cc20e82793e8fb37",
     "semantic_hash": ""
   },
   "src/pages/minhas-criacoes.js": {
@@ -2820,9 +2820,9 @@
     "semantic_hash": ""
   },
   "minhas-criacoes.html": {
-    "mtime": 1792584073.2906644,
-    "seen": 1792586683.503218,
-    "ast_hash": "0b19f1a15567515397dac710e3061a59",
+    "mtime": 1792593039.5774486,
+    "seen": 1792593271.0622103,
+    "ast_hash": "c6e3406e13b0ab17b9ef2638656dd054",
     "semantic_hash": ""
   },
   "src/pages/ajuda-faq.js": {
@@ -2832,9 +2832,9 @@
     "semantic_hash": ""
   },
   "src/pages/creditos-planos.js": {
-    "mtime": 1792583422.2995274,
-    "seen": 1792583873.637259,
-    "ast_hash": "814e9df1ee1a4f4415d3c179633fbb87",
+    "mtime": 1792592812.531928,
+    "seen": 1792593271.060952,
+    "ast_hash": "823c5d895d6f500a1d566efb333901e8",
     "semantic_hash": ""
   },
   "src/pages/legal.js": {
@@ -2850,27 +2850,27 @@
     "semantic_hash": ""
   },
   "ajuda-faq.html": {
-    "mtime": 1792584073.2682076,
-    "seen": 1792586683.503178,
-    "ast_hash": "303121bb19344d25acc0e47530935e4d",
+    "mtime": 1792593039.5627744,
+    "seen": 1792593271.0621614,
+    "ast_hash": "adc4d4140313e4bdb5ee95f50ade2071",
     "semantic_hash": ""
   },
   "creditos-planos.html": {
-    "mtime": 1792584073.2752457,
-    "seen": 1792586683.5031855,
-    "ast_hash": "aa9523d04324b97e25146fe137483138",
+    "mtime": 1792593039.5627744,
+    "seen": 1792593271.062169,
+    "ast_hash": "b0063624fdc59ede1550f3eeb3848fba",
     "semantic_hash": ""
   },
   "perfil-rosto.html": {
-    "mtime": 1792584073.2956402,
-    "seen": 1792586683.503221,
-    "ast_hash": "f298f82890f3e87db3ce2f037cb789e6",
+    "mtime": 1792593039.5774486,
+    "seen": 1792593271.062214,
+    "ast_hash": "16cd4c24f6e7da1443a74236f74057d2",
     "semantic_hash": ""
   },
   "privacidade.html": {
-    "mtime": 1792584073.305362,
-    "seen": 1792586683.5032282,
-    "ast_hash": "28a8ecd0575d97be19ee18f8a4d7d527",
+    "mtime": 1792593039.580259,
+    "seen": 1792593271.0622213,
+    "ast_hash": "5eb0524d022b20b4749c41cc9cd9be72",
     "semantic_hash": ""
   },
   "telas/stitch_selfiemovie_ai_video_platform/ajuda_selfiemovie/code.html": {
@@ -2916,9 +2916,9 @@
     "semantic_hash": ""
   },
   "termos.html": {
-    "mtime": 1792584073.3119614,
-    "seen": 1792586683.503308,
-    "ast_hash": "a643dbaf244d13806aff6aed147a86a9",
+    "mtime": 1792593039.5834892,
+    "seen": 1792593271.0623004,
+    "ast_hash": "a9b22e71b9671f9b23e37eda6c552876",
     "semantic_hash": ""
   },
   "telas/stitch_selfiemovie_ai_video_platform/ajuda_selfiemovie/screen.png": {
@@ -2952,9 +2952,9 @@
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-10-21-selfiemovie-fase1-5.md": {
-    "mtime": 1792578118.7564065,
-    "seen": 1792578689.184007,
-    "ast_hash": "46510f96c382ac61fb29eb418bb623a7",
+    "mtime": 1792589705.2937813,
+    "seen": 1792593271.0621815,
+    "ast_hash": "34a138230c8248c38e185c4767637f79",
     "semantic_hash": ""
   },
   "src/tema.test.js": {
@@ -2973,6 +2973,12 @@
     "mtime": 1792585865.1530788,
     "seen": 1792586683.5021007,
     "ast_hash": "0ba7d636954896b702dfd82e6b3dc2ab",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-10-21-selfiemovie-fase1-6.md": {
+    "mtime": 1792593150.106504,
+    "seen": 1792593271.0621862,
+    "ast_hash": "f9e33ba2f466b62428578cdee7fecfa3",
     "semantic_hash": ""
   }
 }
