@@ -29,7 +29,7 @@ const itens = (p) => [
 $('lista-planos').innerHTML = PLANOS.map(
   (p) => `<div class="relative flex flex-col justify-between rounded-xl p-space-lg ${p.destaque ? 'bg-gradient-to-b from-surface-container-high via-surface-container to-surface-container shadow-2xl md:scale-[1.02] z-10' : 'bg-surface-container shadow-md'}">
   ${p.destaque ? `<div class="absolute -inset-0.5 bg-gradient-to-r from-primary-container via-secondary-container to-secondary rounded-xl blur-sm opacity-50 -z-10"></div>
-  <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-on-primary-fixed font-label-sm text-label-sm font-extrabold shadow-lg uppercase tracking-wider whitespace-nowrap"><span class="material-symbols-outlined text-[15px]" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>Mais popular</span>` : ''}
+  <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-on-primary dark:text-on-primary-fixed font-label-sm text-label-sm font-extrabold shadow-lg uppercase tracking-wider whitespace-nowrap"><span class="material-symbols-outlined text-[15px]" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>Mais popular</span>` : ''}
   <div class="flex flex-col gap-space-md">
     <div class="flex flex-col gap-1">
       <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">${p.nome}</h3>
@@ -60,7 +60,7 @@ $('lista-pacotes').innerHTML = PACOTES.map(
     </div>
     <span class="font-headline-sm text-headline-sm font-extrabold ${i === 1 ? 'text-secondary' : 'text-primary'}">${reais(p.preco)}</span>
   </div>
-  <button type="button" data-pacote="${p.id}" aria-label="Comprar ${p.creditos} créditos" class="mt-space-md w-full py-2 px-space-sm rounded-lg font-label-md text-label-md font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${i === 1 ? 'bg-secondary hover:bg-secondary-fixed text-on-secondary' : 'bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface'}">Comprar</button>
+  <button type="button" data-pacote="${p.id}" aria-label="Comprar ${p.creditos} créditos" class="mt-space-md w-full py-2 px-space-sm rounded-lg font-label-md text-label-md font-bold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${i === 1 ? 'bg-secondary hover:bg-secondary/90 dark:hover:bg-secondary-fixed text-on-secondary' : 'bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface'}">Comprar</button>
 </div>`,
 ).join('')
 

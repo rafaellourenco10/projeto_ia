@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var m=matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};document.documentElement.className=t=="claro"||t=="sistema"&&m.matches?"light":"dark"})()</script>
   <title>Sua foto · SelfieMovie</title>
   <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,7 +45,7 @@
         <span class="flex flex-col min-w-0">
           <span class="flex flex-wrap items-center gap-2">
             <span class="font-headline-sm text-headline-sm text-on-surface">Escolher da galeria</span>
-            <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary font-label-sm text-label-sm">JPG ou PNG</span>
+            <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-on-secondary-container font-label-sm text-label-sm">JPG ou PNG</span>
           </span>
           <span class="font-body-sm text-body-sm text-on-surface-variant"><span class="hidden md:inline">Arraste uma imagem para cá ou </span>escolha um arquivo</span>
         </span>

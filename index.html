@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var m=matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};document.documentElement.className=t=="claro"||t=="sistema"&&m.matches?"light":"dark"})()</script>
   <title>SelfieMovie · Seja o protagonista de qualquer vídeo</title>
   <meta name="description" content="Envie uma selfie e apareça em clipes prontos ou em cenas que você descreve em texto." />
   <link rel="icon" type="image/png" href="/img/logo.png" />
@@ -41,7 +43,7 @@
         Envie uma selfie e coloque seu rosto em clipes prontos de ação, dança e aventura, ou descreva a cena que imaginar e receba um vídeo ou uma foto com você.
       </p>
       <div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-md w-full sm:w-auto">
-        <a data-cta="cadastro" href="/entrar#cadastro" class="group relative flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded-xl font-label-lg text-label-lg text-surface-container-lowest bg-gradient-to-r from-primary via-primary-container to-secondary shadow-lg transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]">
+        <a data-cta="cadastro" href="/entrar#cadastro" class="group relative flex items-center justify-center gap-space-xs px-space-xl py-3.5 rounded-xl font-label-lg text-label-lg text-surface-container-lowest bg-gradient-to-r from-primary via-primary dark:via-primary-container to-secondary shadow-lg transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]">
           <span class="material-symbols-outlined text-lg" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">movie_filter</span>
           <span class="font-bold tracking-wide">Começar grátis</span>
           <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-0.5" aria-hidden="true">arrow_forward</span>
@@ -73,7 +75,7 @@
           <div class="relative aspect-video w-full bg-surface-container overflow-hidden">
             <!-- Fase 1 sem vídeo: o poster faz o papel do clipe. -->
             <video class="absolute inset-0 w-full h-full object-cover" poster="/img/landing-hero.jpg" muted playsinline loop preload="none" aria-label="Exemplo de clipe: perseguição de carro à noite em uma cidade neon"></video>
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-scrim via-transparent to-transparent opacity-80"></div>
             <div class="absolute top-3 left-3 md:top-4 md:left-4 z-20 bg-surface-container-lowest/85 backdrop-blur-md p-2 rounded-xl shadow-xl flex items-center gap-2 md:gap-3">
               <div class="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden bg-surface-container-high">
                 <img class="w-full h-full object-cover" alt="Exemplo de selfie enviada" src="/img/landing-selfie.jpg" />
@@ -215,7 +217,7 @@
         <span class="material-symbols-outlined text-secondary text-4xl mb-2" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">videocam</span>
         <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold max-w-2xl tracking-tight">Pronto para se ver na tela do cinema?</h2>
         <p class="mt-2 font-body-lg text-body-lg text-on-surface-variant max-w-xl">Crie sua conta, envie sua foto e ganhe <span data-custo="bonusCadastro">10</span> créditos para testar.</p>
-        <a data-cta="cadastro" href="/entrar#cadastro" class="relative mt-space-lg inline-flex items-center gap-space-xs px-space-xl py-4 rounded-xl font-label-lg text-label-lg text-surface-container-lowest bg-gradient-to-r from-primary via-primary-container to-secondary shadow-xl transition-transform hover:scale-105 active:scale-95 font-bold">
+        <a data-cta="cadastro" href="/entrar#cadastro" class="relative mt-space-lg inline-flex items-center gap-space-xs px-space-xl py-4 rounded-xl font-label-lg text-label-lg text-surface-container-lowest bg-gradient-to-r from-primary via-primary dark:via-primary-container to-secondary shadow-xl transition-transform hover:scale-105 active:scale-95 font-bold">
           <span class="material-symbols-outlined text-xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">bolt</span>
           <span>Criar conta grátis</span>
         </a>

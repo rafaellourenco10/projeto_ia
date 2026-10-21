@@ -46,11 +46,11 @@ function card(c, s) {
 </a>`
   if (c.status === 'gerando')
     return `<a href="/gerando?job=${c.id}" class="${CARD} ${LINK}">
-  <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container-lowest">
+  <div class="relative aspect-[9/14] w-full overflow-hidden bg-scrim">
     <img alt="" loading="lazy" src="${c.img}" class="w-full h-full object-cover opacity-60 blur-[1px]"/>
     <div class="absolute inset-0 bg-primary-container/20 flex flex-col items-center justify-center p-space-md text-center gap-space-sm">
-      <div class="w-14 h-14 rounded-full border-4 border-primary/20 border-t-primary animate-spin" aria-hidden="true"></div>
-      <span class="font-headline-sm text-headline-sm text-primary font-bold" data-pct="${c.id}">${s?.progresso ?? 0}%</span>
+      <div class="w-14 h-14 rounded-full border-4 border-primary-fixed-dim/20 border-t-primary-fixed-dim animate-spin" aria-hidden="true"></div>
+      <span class="font-headline-sm text-headline-sm text-primary-fixed-dim font-bold" data-pct="${c.id}">${s?.progresso ?? 0}%</span>
     </div>
     <span class="absolute top-space-sm left-space-sm px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1.5 shadow-[0_0_16px_rgba(160,120,255,0.4)]"><span class="material-symbols-outlined text-xs animate-spin" aria-hidden="true">progress_activity</span>Gerando</span>
     <div class="absolute inset-x-0 bottom-0 h-1.5 bg-surface-container-highest"><div class="h-full bg-gradient-to-r from-tertiary via-primary to-secondary transition-all duration-500" style="width: ${s?.progresso ?? 0}%" data-barra="${c.id}"></div></div>

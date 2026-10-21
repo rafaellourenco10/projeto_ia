@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var m=matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};document.documentElement.className=t=="claro"||t=="sistema"&&m.matches?"light":"dark"})()</script>
   <title>Clipe · SelfieMovie</title>
   <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,9 +47,9 @@
                 </button>
               </div>
             </div>
-            <div id="video-frame" class="relative w-full mx-auto bg-surface-container-lowest overflow-hidden transition-all duration-300">
+            <div id="video-frame" class="relative w-full mx-auto bg-scrim overflow-hidden transition-all duration-300">
               <video id="video" class="w-full h-full object-cover" muted playsinline preload="none"></video>
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/30 pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-scrim/90 via-transparent to-scrim/30 pointer-events-none"></div>
               <span class="absolute top-4 right-4 flex items-center gap-1.5 px-space-sm py-1 rounded-xl bg-surface-container-lowest/85 backdrop-blur-md text-on-surface-variant shadow-lg font-label-sm text-label-sm">
                 <span class="material-symbols-outlined text-xs text-secondary" aria-hidden="true">hd</span>HD
               </span>
@@ -113,7 +115,7 @@
                 <span id="restarao" class="text-outline"></span>
               </div>
             </div>
-            <button id="btn-gerar" type="button" class="relative group w-full py-4 px-space-lg rounded-xl bg-gradient-to-r from-inverse-primary via-primary-container to-secondary-container text-white font-label-lg text-label-lg shadow-[0_0_32px_rgba(170,2,102,0.45)] hover:shadow-[0_0_48px_rgba(208,188,255,0.7)] hover:scale-[1.02] active:scale-[0.99] disabled:opacity-60 disabled:hover:scale-100 disabled:cursor-wait transition-all duration-200 flex items-center justify-center gap-space-sm overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <button id="btn-gerar" type="button" class="relative group w-full py-4 px-space-lg rounded-xl bg-gradient-to-r from-inverse-primary via-primary-container to-secondary-container text-on-primary-container dark:text-white font-label-lg text-label-lg shadow-[0_0_32px_rgba(170,2,102,0.45)] hover:shadow-[0_0_48px_rgba(208,188,255,0.7)] hover:scale-[1.02] active:scale-[0.99] disabled:opacity-60 disabled:hover:scale-100 disabled:cursor-wait transition-all duration-200 flex items-center justify-center gap-space-sm overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
               <span class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
               <span id="btn-gerar-texto" class="font-bold tracking-wide"></span>
             </button>
@@ -136,7 +138,7 @@
           </div>
           <h2 class="font-headline-md text-headline-md text-on-surface">Clipes semelhantes</h2>
         </div>
-        <a class="flex items-center gap-1 text-primary hover:text-primary-fixed font-label-md text-label-md transition-colors" href="/inicio">
+        <a class="flex items-center gap-1 text-primary hover:text-on-surface dark:hover:text-primary-fixed font-label-md text-label-md transition-colors" href="/inicio">
           <span>Ver biblioteca completa</span><span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
         </a>
       </div>

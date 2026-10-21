@@ -29,7 +29,7 @@ galeria.innerHTML = EXEMPLOS.map(
 <a href="${destinoCta}" data-grupo="${e.filtro}" class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-md transition-all duration-300 hover:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
   <div class="relative aspect-[9/16] w-full bg-surface-container overflow-hidden">
     <img src="${e.img}" alt="${e.alt}" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-scrim via-transparent to-black/30"></div>
     <span class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-secondary-container/90 text-on-secondary-container font-label-sm text-label-sm font-bold">${e.selo}</span>
     <span class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded-full flex items-center gap-1 font-label-sm text-label-sm text-secondary">
       <span class="material-symbols-outlined text-xs" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">bolt</span>${CUSTOS.clipe}<span class="sr-only"> créditos</span>
@@ -39,9 +39,9 @@ galeria.innerHTML = EXEMPLOS.map(
         <span class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
       </span>
     </span>
-    <span class="absolute bottom-3 inset-x-3 text-on-surface">
+    <span class="absolute bottom-3 inset-x-3 text-white">
       <span class="block font-headline-sm text-sm font-bold truncate">${e.titulo}</span>
-      <span class="block text-on-surface-variant font-label-sm text-label-sm mt-1">${e.duracao} • HD</span>
+      <span class="block text-white/80 font-label-sm text-label-sm mt-1">${e.duracao} • HD</span>
     </span>
   </div>
 </a>`,
@@ -85,7 +85,7 @@ document.getElementById('lista-planos').innerHTML = PLANOS.map((p) => {
     </p>
     <ul class="mt-space-md space-y-2 ${p.destaque ? 'text-on-surface' : 'text-on-surface-variant'} font-body-sm text-body-sm">${lista}</ul>
   </div>
-  <a href="${destinoCta}" class="mt-space-lg w-full py-3 rounded-xl font-label-lg text-label-lg text-center transition-all ${p.destaque ? 'bg-gradient-to-r from-primary via-primary-container to-secondary text-surface-container-lowest font-bold shadow-lg hover:scale-[1.02]' : 'bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-semibold'}">
+  <a href="${destinoCta}" class="mt-space-lg w-full py-3 rounded-xl font-label-lg text-label-lg text-center transition-all ${p.destaque ? 'bg-gradient-to-r from-primary via-primary dark:via-primary-container to-secondary text-surface-container-lowest font-bold shadow-lg hover:scale-[1.02]' : 'bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-semibold'}">
     ${p.destaque ? 'Assinar Pro' : `Escolher ${p.nome.split(' ')[0]}`}
   </a>
 </div>`

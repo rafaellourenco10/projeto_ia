@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var m=matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};document.documentElement.className=t=="claro"||t=="sistema"&&m.matches?"light":"dark"})()</script>
   <title>Política de Privacidade · SelfieMovie</title>
   <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,12 +30,12 @@
   </div>
 </header>
 <main class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-24 pb-space-xl">
-  <div role="note" class="w-full mb-space-xl p-space-md pl-space-lg rounded-xl bg-amber-950/30 flex items-start gap-space-md relative overflow-hidden">
+  <div role="note" class="w-full mb-space-xl p-space-md pl-space-lg rounded-xl bg-amber-100 dark:bg-amber-950/30 flex items-start gap-space-md relative overflow-hidden">
     <div class="w-1.5 absolute inset-y-0 left-0 bg-amber-500/80"></div>
-    <span class="shrink-0 w-8 h-8 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center"><span class="material-symbols-outlined text-[20px]" aria-hidden="true">warning</span></span>
+    <span class="shrink-0 w-8 h-8 rounded-lg bg-amber-500/20 text-amber-800 dark:text-amber-300 flex items-center justify-center"><span class="material-symbols-outlined text-[20px]" aria-hidden="true">warning</span></span>
     <div class="flex flex-col gap-0.5">
-      <span class="font-label-md text-label-md text-amber-200 uppercase tracking-wider">Rascunho — pendente de revisão jurídica</span>
-      <p class="font-body-sm text-body-sm text-amber-200/80 max-w-3xl">Este texto ainda será revisado por um advogado antes do lançamento e pode mudar. Nesta versão de teste, seus dados ficam guardados só neste navegador.</p>
+      <span class="font-label-md text-label-md text-amber-900 dark:text-amber-200 uppercase tracking-wider">Rascunho — pendente de revisão jurídica</span>
+      <p class="font-body-sm text-body-sm text-amber-900/80 dark:text-amber-200/80 max-w-3xl">Este texto ainda será revisado por um advogado antes do lançamento e pode mudar. Nesta versão de teste, seus dados ficam guardados só neste navegador.</p>
     </div>
   </div>
 

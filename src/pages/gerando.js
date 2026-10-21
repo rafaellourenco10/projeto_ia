@@ -18,14 +18,14 @@ function etapas(fase) {
     const icone = feito ? 'check' : atual ? 'sync' : 'radio_button_unchecked'
     const caixa = atual
       ? 'bg-surface-container-highest/90 relative overflow-hidden shadow-[0_0_24px_rgba(160,120,255,0.18)]'
-      : feito ? 'bg-surface-container-high/60' : 'bg-surface-container-low/40 opacity-70'
+      : feito ? 'bg-surface-container-high/60' : 'bg-surface-container-low/40'
     const bola = atual
       ? 'bg-primary-container text-on-primary-container shadow-[0_0_16px_rgba(160,120,255,0.6)]'
       : feito ? 'bg-secondary-container text-on-secondary-container' : 'bg-surface-container-highest text-outline'
     return `<li class="flex items-center gap-space-sm p-3.5 rounded-2xl transition-all ${caixa}">
   ${atual ? '<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-primary via-secondary to-tertiary"></div>' : ''}
   <span class="w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${bola}"><span class="material-symbols-outlined text-base ${atual ? 'animate-spin' : ''}" aria-hidden="true">${icone}</span></span>
-  <span class="flex-1 min-w-0 font-label-md text-label-md ${atual ? 'text-primary-fixed font-bold' : feito ? 'text-on-surface' : 'text-outline'}">${nome.replace('...', '')}</span>
+  <span class="flex-1 min-w-0 font-label-md text-label-md ${atual ? 'text-primary dark:text-primary-fixed font-bold' : feito ? 'text-on-surface' : 'text-outline'}">${nome.replace('...', '')}</span>
   <span class="font-label-sm text-label-sm ${atual ? 'text-primary font-bold' : feito ? 'text-tertiary' : 'text-outline'}">${feito ? 'Concluído' : atual ? 'Em andamento' : 'Pendente'}</span>
 </li>`
   }).join('')

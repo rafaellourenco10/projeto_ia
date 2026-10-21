@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var m=matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};document.documentElement.className=t=="claro"||t=="sistema"&&m.matches?"light":"dark"})()</script>
   <title>Perfil e rosto · SelfieMovie</title>
   <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,7 +42,7 @@
             <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Plano atual</span>
             <span id="conta-plano" class="font-label-lg text-label-lg font-bold text-on-surface"></span>
           </div>
-          <a href="/creditos-planos" class="inline-flex items-center gap-1 text-primary hover:text-primary-fixed font-label-md text-label-md font-semibold transition-colors group shrink-0 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+          <a href="/creditos-planos" class="inline-flex items-center gap-1 text-primary hover:text-on-surface dark:hover:text-primary-fixed font-label-md text-label-md font-semibold transition-colors group shrink-0 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
             <span>Ver planos</span><span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform" aria-hidden="true">arrow_forward</span>
           </a>
         </div>
@@ -57,6 +59,29 @@
           </a>
         </div>
       </div>
+    </section>
+
+    <section class="bg-surface-container/70 rounded-2xl p-space-md sm:p-8 backdrop-blur-md shadow-xl">
+      <fieldset id="tema">
+        <legend class="flex items-center gap-2 mb-6">
+          <span class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]" aria-hidden="true">contrast</span></span>
+          <span class="font-headline-sm text-headline-sm text-on-surface font-bold">Aparência</span>
+        </legend>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <label class="flex items-center gap-3 p-4 rounded-xl bg-surface-container-low/80 cursor-pointer ring-1 ring-transparent has-[:checked]:ring-primary has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-primary transition-all">
+            <input type="radio" name="tema" value="escuro" class="w-4 h-4 accent-primary focus-visible:outline-none" />
+            <span class="material-symbols-outlined text-[20px] text-on-surface-variant" aria-hidden="true">dark_mode</span><span class="font-label-lg text-label-lg font-bold text-on-surface">Escuro</span>
+          </label>
+          <label class="flex items-center gap-3 p-4 rounded-xl bg-surface-container-low/80 cursor-pointer ring-1 ring-transparent has-[:checked]:ring-primary has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-primary transition-all">
+            <input type="radio" name="tema" value="claro" class="w-4 h-4 accent-primary focus-visible:outline-none" />
+            <span class="material-symbols-outlined text-[20px] text-on-surface-variant" aria-hidden="true">light_mode</span><span class="font-label-lg text-label-lg font-bold text-on-surface">Claro</span>
+          </label>
+          <label class="flex items-center gap-3 p-4 rounded-xl bg-surface-container-low/80 cursor-pointer ring-1 ring-transparent has-[:checked]:ring-primary has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-primary transition-all">
+            <input type="radio" name="tema" value="sistema" class="w-4 h-4 accent-primary focus-visible:outline-none" />
+            <span class="material-symbols-outlined text-[20px] text-on-surface-variant" aria-hidden="true">brightness_auto</span><span class="font-label-lg text-label-lg font-bold text-on-surface">Sistema</span>
+          </label>
+        </div>
+      </fieldset>
     </section>
 
     <section class="bg-surface-container/70 rounded-2xl p-space-md sm:p-8 relative overflow-hidden shadow-2xl backdrop-blur-md" aria-labelledby="titulo-rosto">
@@ -118,7 +143,7 @@
         <div class="w-16 h-16 rounded-2xl bg-surface-container-high/60 text-outline flex items-center justify-center mb-4 shadow-inner"><span class="material-symbols-outlined text-[32px]" aria-hidden="true">receipt_long</span></div>
         <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-1.5">Nenhuma compra ainda</h3>
         <p class="font-body-md text-body-md text-on-surface-variant mb-4">Quando você assinar um plano ou comprar créditos, a compra aparece aqui.</p>
-        <a href="/creditos-planos" class="inline-flex items-center gap-1.5 text-primary hover:text-primary-fixed font-label-lg text-label-lg font-bold group rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+        <a href="/creditos-planos" class="inline-flex items-center gap-1.5 text-primary hover:text-on-surface dark:hover:text-primary-fixed font-label-lg text-label-lg font-bold group rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
           <span>Ver planos e créditos</span><span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform" aria-hidden="true">arrow_forward</span>
         </a>
       </div>

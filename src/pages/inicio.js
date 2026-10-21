@@ -32,9 +32,9 @@ function card(c) {
   return `<a href="/clipe?id=${encodeURIComponent(c.id)}" class="group relative flex flex-col rounded-2xl bg-surface-container-low/70 overflow-hidden shadow-lg md:hover:shadow-[0_12px_36px_rgba(160,120,255,0.25)] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
   <div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
     <img alt="" loading="lazy" src="${c.img}" class="w-full h-full object-cover transition-all duration-500 md:group-hover:scale-105 md:group-hover:brightness-110"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-black/40 pointer-events-none"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-scrim via-scrim/30 to-black/40 pointer-events-none"></div>
     <div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between gap-1 z-10">
-      ${c.popularidade >= 90 ? '<span class="px-2 py-0.5 rounded-md bg-gradient-to-r from-secondary-container to-primary-container text-white font-label-sm text-label-sm shadow-md">Popular</span>' : '<span></span>'}
+      ${c.popularidade >= 90 ? '<span class="px-2 py-0.5 rounded-md bg-gradient-to-r from-secondary-container to-primary-container text-on-primary-container dark:text-white font-label-sm text-label-sm shadow-md">Popular</span>' : '<span></span>'}
       <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 whitespace-nowrap shadow-md">
         <span class="material-symbols-outlined text-xs" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">star</span>${c.custo}<span class="sr-only sm:not-sr-only"> créditos</span>
       </span>
@@ -58,23 +58,23 @@ function card(c) {
 const destaque = clipes.find((c) => c.destaque) ?? clipes[0]
 $('destaque').innerHTML = `
 <img alt="" src="${destaque.img}" class="absolute inset-0 w-full h-full object-cover opacity-45 mix-blend-luminosity"/>
-<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-scrim via-scrim/80 to-transparent"></div>
 <div class="relative z-10 p-space-md md:p-space-xl flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
   <div class="flex flex-col gap-space-xs max-w-2xl">
     <div class="inline-flex items-center gap-space-xs w-max px-space-sm py-1 rounded-full bg-secondary-container/80 text-on-secondary-container backdrop-blur-md shadow-[0_0_16px_rgba(170,2,102,0.5)]">
       <span class="material-symbols-outlined text-xs" aria-hidden="true">local_fire_department</span>
       <span class="font-label-sm text-label-sm uppercase tracking-wide">Novidade da semana</span>
     </div>
-    <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight mt-1">${esc(destaque.titulo)}</h2>
-    <p class="font-body-md text-body-md text-on-surface-variant">Seja o protagonista desta cena de ${esc(destaque.genero.toLowerCase())}. Envie sua foto e receba o clipe com o seu rosto.</p>
+    <h2 class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-white tracking-tight mt-1">${esc(destaque.titulo)}</h2>
+    <p class="font-body-md text-body-md text-white/80">Seja o protagonista desta cena de ${esc(destaque.genero.toLowerCase())}. Envie sua foto e receba o clipe com o seu rosto.</p>
     <div class="flex items-center gap-space-md mt-space-sm">
-      <span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary"><span class="material-symbols-outlined text-base" aria-hidden="true">hd</span>HD</span>
-      <span class="text-outline text-xs" aria-hidden="true">•</span>
-      <span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-base" aria-hidden="true">bolt</span>${destaque.custo} créditos</span>
+      <span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary-fixed-dim"><span class="material-symbols-outlined text-base" aria-hidden="true">hd</span>HD</span>
+      <span class="text-white/50 text-xs" aria-hidden="true">•</span>
+      <span class="flex items-center gap-1 font-label-sm text-label-sm text-secondary-fixed-dim"><span class="material-symbols-outlined text-base" aria-hidden="true">bolt</span>${destaque.custo} créditos</span>
     </div>
   </div>
   <div class="flex items-center gap-space-sm flex-shrink-0">
-    <a href="/clipe?id=${encodeURIComponent(destaque.id)}" class="px-space-lg py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-white font-label-lg text-label-lg shadow-[0_0_28px_rgba(160,120,255,0.45)] hover:shadow-[0_0_36px_rgba(255,176,205,0.6)] hover:scale-[1.02] transition-all flex items-center gap-space-sm">
+    <a href="/clipe?id=${encodeURIComponent(destaque.id)}" class="px-space-lg py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container dark:text-white font-label-lg text-label-lg shadow-[0_0_28px_rgba(160,120,255,0.45)] hover:shadow-[0_0_36px_rgba(255,176,205,0.6)] hover:scale-[1.02] transition-all flex items-center gap-space-sm">
       <span class="material-symbols-outlined text-xl" aria-hidden="true">star</span><span>Estrelar este clipe</span>
     </a>
   </div>

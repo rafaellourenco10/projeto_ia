@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var m=matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};document.documentElement.className=t=="claro"||t=="sistema"&&m.matches?"light":"dark"})()</script>
   <title>Resultado · SelfieMovie</title>
   <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +34,7 @@
         </div>
         <div class="flex flex-wrap items-center gap-2 z-10">
           <span id="faixa" class="font-headline-sm text-headline-sm text-on-surface"></span>
-          <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary font-label-sm text-label-sm">Pronto</span>
+          <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container dark:bg-secondary/20 dark:text-secondary font-label-sm text-label-sm">Pronto</span>
         </div>
       </div>
 
@@ -71,13 +73,13 @@
           <div class="p-space-md md:p-space-lg rounded-2xl bg-surface-container-high/80 backdrop-blur-xl flex flex-col gap-space-md shadow-xl">
             <div class="flex flex-col gap-1">
               <div class="flex flex-wrap items-center gap-2">
-                <span id="tipo" class="px-2.5 py-0.5 rounded-full bg-primary/20 text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider"></span>
+                <span id="tipo" class="px-2.5 py-0.5 rounded-full bg-primary/20 text-on-primary-container dark:text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider"></span>
                 <span id="genero" class="font-body-sm text-body-sm text-outline"></span>
               </div>
               <h1 id="titulo" class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight break-words"></h1>
               <p id="descricao" class="font-body-md text-body-md text-on-surface-variant break-words"></p>
             </div>
-            <a id="btn-baixar" download class="w-full py-4 px-space-lg rounded-xl bg-gradient-to-r from-inverse-primary via-primary-container to-secondary-container hover:brightness-110 text-white font-label-lg text-label-lg flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(208,188,255,0.4)] hover:shadow-[0_0_40px_rgba(255,176,205,0.6)] hover:scale-[1.01] active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <a id="btn-baixar" download class="w-full py-4 px-space-lg rounded-xl bg-gradient-to-r from-inverse-primary via-primary-container to-secondary-container hover:brightness-110 text-on-primary-container dark:text-white font-label-lg text-label-lg flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(208,188,255,0.4)] hover:shadow-[0_0_40px_rgba(255,176,205,0.6)] hover:scale-[1.01] active:scale-[0.99] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
               <span class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">download</span><span id="btn-baixar-texto"></span>
             </a>
             <button id="btn-compartilhar" type="button" class="w-full py-3 px-space-lg rounded-xl bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
@@ -105,7 +107,7 @@
               <p id="msg" role="alert" class="hidden font-body-sm text-body-sm text-error"></p>
               <a class="w-full p-space-sm rounded-xl bg-surface-container-high hover:bg-surface-container-highest transition-all flex items-center justify-between text-left group" href="/criar-com-texto">
                 <span class="flex items-center gap-space-sm">
-                  <span class="w-10 h-10 rounded-xl bg-primary-container/30 text-primary-fixed flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-xl" aria-hidden="true">magic_button</span></span>
+                  <span class="w-10 h-10 rounded-xl bg-primary-container/30 text-on-primary-container dark:text-primary-fixed flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-xl" aria-hidden="true">magic_button</span></span>
                   <span class="flex flex-col">
                     <span class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors">Criar outro</span>
                     <span class="font-body-sm text-body-sm text-outline">Descreva uma nova cena com texto</span>
@@ -132,7 +134,7 @@
             <h2 class="font-headline-sm text-headline-sm text-on-surface">Outras cenas para você</h2>
             <span class="font-body-sm text-body-sm text-on-surface-variant">Clipes da biblioteca prontos para o seu rosto</span>
           </div>
-          <a class="font-label-md text-label-md text-primary hover:text-primary-fixed flex items-center gap-1" href="/inicio">Ver biblioteca completa<span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span></a>
+          <a class="font-label-md text-label-md text-primary hover:text-on-surface dark:hover:text-primary-fixed flex items-center gap-1" href="/inicio">Ver biblioteca completa<span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span></a>
         </div>
         <div id="recomendados" class="grid grid-cols-2 md:grid-cols-4 gap-space-md"></div>
       </section>

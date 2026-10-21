@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var m=matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};document.documentElement.className=t=="claro"||t=="sistema"&&m.matches?"light":"dark"})()</script>
   <title>Minhas criações · SelfieMovie</title>
   <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,7 +67,7 @@
         <h2 id="vazio-titulo" class="font-headline-md text-headline-md text-on-surface tracking-tight mb-2"></h2>
         <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">Escolha um clipe pronto na biblioteca ou descreva uma ideia para criar com o seu rosto.</p>
         <div class="flex flex-col sm:flex-row items-stretch gap-space-sm w-full sm:w-auto">
-          <a class="px-space-lg py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-white font-label-lg text-label-lg font-bold hover:scale-105 transition-all duration-200 shadow-[0_0_30px_rgba(160,120,255,0.5)] flex items-center justify-center gap-2" href="/inicio">
+          <a class="px-space-lg py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container dark:text-white font-label-lg text-label-lg font-bold hover:scale-105 transition-all duration-200 shadow-[0_0_30px_rgba(160,120,255,0.5)] flex items-center justify-center gap-2" href="/inicio">
             <span class="material-symbols-outlined text-xl" aria-hidden="true">movie</span><span>Ver a biblioteca</span>
           </a>
           <a class="px-space-lg py-3.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2" href="/criar-com-texto">

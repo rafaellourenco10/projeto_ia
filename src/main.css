@@ -5,8 +5,108 @@
 /* Base herdada das telas do Stitch. */
 @layer base {
   html, body { margin: 0; padding: 0; }
-  /* Controles nativos (select, scrollbar) no tema escuro. */
-  html { color-scheme: dark; }
+  /* Cores em canais RGB (tailwind.config usa rgb(var(--c-*) / alpha)). Escuro é o padrão. */
+  :root {
+    color-scheme: dark;
+    --c-background: 20 19 25;
+    --c-error: 255 180 171;
+    --c-error-container: 147 0 10;
+    --c-inverse-on-surface: 49 47 54;
+    --c-inverse-primary: 109 59 215;
+    --c-inverse-surface: 229 225 234;
+    --c-on-background: 229 225 234;
+    --c-on-error: 105 0 5;
+    --c-on-error-container: 255 218 214;
+    --c-on-primary: 60 0 145;
+    --c-on-primary-container: 52 0 128;
+    --c-on-primary-fixed: 35 0 92;
+    --c-on-primary-fixed-variant: 85 22 190;
+    --c-on-secondary: 100 0 57;
+    --c-on-secondary-container: 255 186 211;
+    --c-on-secondary-fixed: 62 0 34;
+    --c-on-secondary-fixed-variant: 140 0 83;
+    --c-on-surface: 229 225 234;
+    --c-on-surface-variant: 203 195 215;
+    --c-on-tertiary: 0 54 64;
+    --c-on-tertiary-container: 0 47 56;
+    --c-on-tertiary-fixed: 0 31 38;
+    --c-on-tertiary-fixed-variant: 0 78 92;
+    --c-outline: 149 142 160;
+    --c-outline-variant: 73 68 84;
+    --c-primary: 208 188 255;
+    --c-primary-container: 160 120 255;
+    --c-primary-fixed: 233 221 255;
+    --c-primary-fixed-dim: 208 188 255;
+    --c-secondary: 255 176 205;
+    --c-secondary-container: 170 2 102;
+    --c-secondary-fixed: 255 217 228;
+    --c-secondary-fixed-dim: 255 176 205;
+    --c-surface: 20 19 25;
+    --c-surface-bright: 58 56 63;
+    --c-surface-container: 32 31 37;
+    --c-surface-container-high: 43 41 48;
+    --c-surface-container-highest: 53 52 59;
+    --c-surface-container-low: 28 27 33;
+    --c-surface-container-lowest: 14 13 19;
+    --c-surface-dim: 20 19 25;
+    --c-surface-tint: 208 188 255;
+    --c-surface-variant: 53 52 59;
+    --c-tertiary: 76 215 246;
+    --c-tertiary-container: 0 158 185;
+    --c-tertiary-fixed: 172 237 255;
+    --c-tertiary-fixed-dim: 76 215 246;
+  }
+  /* Claro: mesmo matiz e croma (HCT) de cada token, tom pelo papel M3. *-fixed iguais ao escuro. */
+  html.light {
+    color-scheme: light;
+    --c-background: 252 248 255;
+    --c-error: 136 79 72;
+    --c-error-container: 255 218 214;
+    --c-inverse-on-surface: 244 239 248;
+    --c-inverse-primary: 208 188 255;
+    --c-inverse-surface: 49 48 54;
+    --c-on-background: 28 27 33;
+    --c-on-error: 255 255 255;
+    --c-on-error-container: 42 22 20;
+    --c-on-primary: 255 255 255;
+    --c-on-primary-container: 35 0 92;
+    --c-on-primary-fixed: 35 0 92;
+    --c-on-primary-fixed-variant: 85 22 190;
+    --c-on-secondary: 255 255 255;
+    --c-on-secondary-container: 53 12 32;
+    --c-on-secondary-fixed: 62 0 34;
+    --c-on-secondary-fixed-variant: 140 0 83;
+    --c-on-surface: 28 27 33;
+    --c-on-surface-variant: 73 68 84;
+    --c-on-tertiary: 255 255 255;
+    --c-on-tertiary-container: 0 31 38;
+    --c-on-tertiary-fixed: 0 31 38;
+    --c-on-tertiary-fixed-variant: 0 78 92;
+    --c-outline: 107 101 118; /* tom 44, não 50: text-outline precisa de AA sobre os containers */
+    --c-outline-variant: 203 195 215;
+    --c-primary: 102 85 144;
+    --c-primary-container: 233 221 255;
+    --c-primary-fixed: 233 221 255;
+    --c-primary-fixed-dim: 208 188 255;
+    --c-secondary: 137 75 100;
+    --c-secondary-container: 255 217 229;
+    --c-secondary-fixed: 255 217 228;
+    --c-secondary-fixed-dim: 255 176 205;
+    --c-surface: 252 248 255;
+    --c-surface-bright: 253 248 255;
+    --c-surface-container: 241 236 245;
+    --c-surface-container-high: 236 230 240;
+    --c-surface-container-highest: 229 225 234;
+    --c-surface-container-low: 246 242 251;
+    --c-surface-container-lowest: 255 255 255;
+    --c-surface-dim: 221 216 225;
+    --c-surface-tint: 102 85 144;
+    --c-surface-variant: 229 225 234;
+    --c-tertiary: 0 104 122;
+    --c-tertiary-container: 172 236 255;
+    --c-tertiary-fixed: 172 237 255;
+    --c-tertiary-fixed-dim: 76 215 246;
+  }
   @media (prefers-reduced-motion: reduce) {
     *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
   }

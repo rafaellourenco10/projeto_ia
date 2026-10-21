@@ -54,6 +54,17 @@ $('apagar-foto-sim').addEventListener('click', () => {
   $('trocar').focus()
 })
 
+// Tema fica fora da conta (vale na landing e no login). aplicarTema vem do script inline do <head>.
+const TEMA = 'selfiemovie:tema'
+let tema = 'escuro'
+try { tema = localStorage.getItem(TEMA) || tema } catch {}
+const radios = [...$('tema').elements]
+;(radios.find((r) => r.value === tema) ?? radios[0]).checked = true
+$('tema').addEventListener('change', (e) => {
+  try { localStorage.setItem(TEMA, e.target.value) } catch {} // falhou: o tema vale só nesta página
+  window.aplicarTema?.(e.target.value)
+})
+
 $('excluir').addEventListener('click', () => alternar('excluir', 'confirma-conta', true))
 $('excluir-nao').addEventListener('click', () => alternar('excluir', 'confirma-conta', false))
 $('excluir-sim').addEventListener('click', () => {
