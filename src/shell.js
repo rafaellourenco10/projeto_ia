@@ -2,6 +2,7 @@
 // Markup portado de telas/in_cio_biblioteca_de_clipes. A página só escreve o <main>.
 import * as store from './store.js'
 import { esc } from './util.js'
+import { fecharVencidos } from './api.js'
 
 const LINKS = [
   { rota: 'inicio', icone: 'movie', nome: 'Início', curto: 'Início' },
@@ -115,5 +116,10 @@ export function montarShell({ rota = null, exigirLogin = true } = {}) {
   }
   store.onChange(atualizar)
   atualizar() // também preenche os [data-saldo] que a página tem no <main>
+  // Fechar um job grava no store, e o onChange acima atualiza o saldo.
+  fecharVencidos()
+  setInterval(fecharVencidos, 1000)
+  // Voltar do navegador pode restaurar a página do cache, com saldo e botões velhos.
+  addEventListener('pageshow', (e) => e.persisted && location.reload())
   return main
 }

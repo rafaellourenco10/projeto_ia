@@ -1,7 +1,7 @@
 // @vitest-environment happy-dom
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import * as store from './store.js'
-import { gerarClipe, gerarComTexto, statusJob, DURACAO_MS } from './api.js'
+import { gerarClipe, gerarComTexto, statusJob, fecharVencidos, DURACAO_MS } from './api.js'
 
 function usuarioComFoto(saldo) {
   store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
@@ -83,5 +83,21 @@ describe('api simulada', () => {
     await expect(gerarClipe('agente-secreto')).rejects.toThrow('SEM_ESPACO')
     spy.mockRestore()
     expect(store.getCriacoes()).toHaveLength(0)
+  })
+
+  it('fecharVencidos fecha só os jobs vencidos, uma vez', async () => {
+    usuarioComFoto(10)
+    vi.useFakeTimers()
+    const t0 = Date.now()
+    const a = await gerarClipe('agente-secreto')
+    vi.setSystemTime(t0 + 15000)
+    const b = await gerarClipe('agente-secreto')
+    await fecharVencidos(t0 + 20000)
+    vi.useRealTimers()
+    expect(store.getCriacao(a.jobId).status).toBe('pronto')
+    expect(store.getCriacao(b.jobId).status).toBe('gerando')
+    expect(store.getSaldo()).toBe(5)
+    await fecharVencidos(t0 + 20000)
+    expect(store.getSaldo()).toBe(5)
   })
 })

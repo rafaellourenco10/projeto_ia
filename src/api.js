@@ -71,3 +71,10 @@ export async function statusJob(jobId, agora = Date.now()) {
     criacao: c,
   }
 }
+
+// Fecha todo job vencido, mesmo que o usuário esteja em outra tela.
+export async function fecharVencidos(agora = Date.now()) {
+  for (const c of store.getCriacoes()) {
+    if (c.status === 'gerando') await statusJob(c.id, agora)
+  }
+}
