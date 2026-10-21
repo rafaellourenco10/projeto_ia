@@ -43,14 +43,17 @@ export const getUsuario = () => {
   return e?.logado ? e.usuario : null
 }
 
+// Fase 1 guarda uma conta por navegador: trocar de conta apagaria fotos, criações e créditos.
 export function cadastrar({ nome, email }) {
+  if (ler()) throw new Error('CONTA_EXISTENTE')
   gravar(novoEstado({ nome, email }, CUSTOS.bonusCadastro))
   return getUsuario()
 }
 
 export function entrar({ email }) {
   const e = ler()
-  if (e?.usuario.email === email) {
+  if (e && e.usuario.email !== email) throw new Error('CONTA_EXISTENTE')
+  if (e) {
     e.logado = true
     gravar(e)
   } else {

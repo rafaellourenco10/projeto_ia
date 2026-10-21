@@ -25,6 +25,25 @@ describe('store', () => {
     expect(store.getSaldo()).toBe(10)
   })
 
+  it('entrar com outro e-mail não apaga a conta salva', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.salvarFoto('data:image/jpeg;base64,AAA')
+    store.sair()
+    expect(() => store.entrar({ email: 'outro@x.com' })).toThrow('CONTA_EXISTENTE')
+    store.entrar({ email: 'ana@x.com' })
+    expect(store.getFoto()).toBe('data:image/jpeg;base64,AAA')
+  })
+
+  it('cadastrar de novo não apaga a conta salva', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.salvarFoto('data:image/jpeg;base64,AAA')
+    store.sair()
+    expect(() => store.cadastrar({ nome: 'Bia', email: 'bia@x.com' })).toThrow('CONTA_EXISTENTE')
+    store.entrar({ email: 'ana@x.com' })
+    expect(store.getUsuario().nome).toBe('Ana')
+    expect(store.getFoto()).toBe('data:image/jpeg;base64,AAA')
+  })
+
   it('salvarFoto devolve false e mantém a foto anterior quando a cota estoura', () => {
     store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
     store.salvarFoto('data:image/jpeg;base64,AAA')

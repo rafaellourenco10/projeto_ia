@@ -21,5 +21,15 @@ export async function reduzirImagem(fonte, max = 1024) {
 }
 
 // Só aceita caminhos internos em ?voltar= (evita redirecionar para outro site).
-// O navegador trata "/\" como "//", então os dois são recusados.
-export const destinoSeguro = (url, padrao = '/inicio') => (url && /^\/(?![/\\])/.test(url) ? url : padrao)
+// Usa o próprio parser de URL: ele ignora tab/quebra de linha e trata "/\" como "//",
+// então qualquer truque que saia da origem é recusado.
+export function destinoSeguro(url, padrao = '/inicio') {
+  if (!url) return padrao
+  const base = 'https://selfiemovie.invalid'
+  try {
+    const u = new URL(url, base)
+    return u.origin === base ? u.pathname + u.search + u.hash : padrao
+  } catch {
+    return padrao
+  }
+}

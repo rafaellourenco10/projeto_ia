@@ -66,11 +66,18 @@ form.addEventListener('submit', (e) => {
   if (!email || !$('email').checkValidity()) return falhar('Digite um e-mail válido.', $('email'))
   if ($('senha').value.length < 8) return falhar('A senha precisa ter pelo menos 8 caracteres.', $('senha'))
   // Fase 1: a senha não é guardada nem conferida; o login é simulado.
-  if (modo === 'cadastro') {
-    store.cadastrar({ nome, email })
-    location.href = '/perfil-rosto/foto'
-  } else {
-    store.entrar({ email })
-    location.href = '/inicio'
+  try {
+    if (modo === 'cadastro') {
+      store.cadastrar({ nome, email })
+      location.href = '/perfil-rosto/foto'
+    } else {
+      store.entrar({ email })
+      location.href = '/inicio'
+    }
+  } catch {
+    // CONTA_EXISTENTE: só uma conta por navegador na fase 1.
+    falhar(modo === 'cadastro'
+      ? 'Já existe uma conta salva neste navegador. Entre com ela ou exclua-a no Perfil.'
+      : 'Este e-mail não é o da conta salva neste navegador. Confira o e-mail.', $('email'))
   }
 })
