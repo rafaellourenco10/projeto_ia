@@ -2,13 +2,13 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Um painel no Claude Code para acompanhar os subagentes e o fechamento das pendências que sobraram da revisão final da fase 1.5.
+**Goal:** Fechar as pendências que sobraram da revisão final da fase 1.5.
 
-**Architecture:** A Task 1 é um mod do Claude Code (hooks em TSX), fora do repositório do app. As Tasks 2 a 6 mexem no app Vite multi-page de sempre: HTML e JS puros, estado no `localStorage` via `src/store.js`.
+**Architecture:** O app Vite multi-page de sempre: HTML e JS puros, estado no `localStorage` via `src/store.js`.
 
-**Tech Stack:** Vite (vanilla), Tailwind CSS v3, Vitest + happy-dom; mod: API `claude-code` (`Register`, `atom`/`read`/`update`), `claude plugin validate` e `claude plugin test`.
+**Tech Stack:** Vite (vanilla), Tailwind CSS v3, Vitest + happy-dom.
 
-**Spec:** `docs/superpowers/specs/2026-10-20-selfiemovie-design.md` (seções 4 e 5 valem para as Tasks 2 a 6). As pendências vêm da memória da revisão final da fase 1.5; o painel foi pedido pelo usuário em 2026-10-21. As decisões que o spec não cobre estão neste plano.
+**Spec:** `docs/superpowers/specs/2026-10-20-selfiemovie-design.md` (seções 4 e 5 valem para todas as tasks). As pendências vêm da memória da revisão final da fase 1.5. As decisões que o spec não cobre estão neste plano.
 
 **Fora deste plano (já feito na fase 1.5):** job pela metade (Task 2), link da ajuda no rodapé, plano em `?debug`, captura cedo da câmera, erros do refazer (Task 3), `addCriacao`, `cadastrar` e `entrar` sem gravar (Task 1), Voltar com página velha (`pageshow` na Task 2). `transition-all` herdado do Stitch fica como está.
 
@@ -24,35 +24,14 @@
 
 ## Review Focus
 
-1. Compra em `?debug` com o navegador sem gravar: saldo, plano e histórico ficam como estavam, e aparece o aviso. Teste na Task 2.
-2. Avaliação que não grava: as estrelas voltam para a nota salva e aparece o aviso. Checagem no navegador na Task 2.
-3. `sessionStorage` bloqueado ou rascunho com valor que não existe mais (estilo removido): `/criar-com-texto` abre normal, sem erro, com os padrões. Checagem na Task 4.
-4. Subagente que falha ou é interrompido: a linha mostra "falhou" e não fica presa em "rodando". Teste na Task 1.
-5. Store muda enquanto o foco está num card do `/inicio` (job fecha, favorito em outra aba): o foco continua no mesmo card. Checagem na Task 3.
+1. Compra em `?debug` com o navegador sem gravar: saldo, plano e histórico ficam como estavam, e aparece o aviso. Teste na Task 1.
+2. Avaliação que não grava: as estrelas voltam para a nota salva e aparece o aviso. Checagem no navegador na Task 1.
+3. `sessionStorage` bloqueado ou rascunho com valor que não existe mais (estilo removido): `/criar-com-texto` abre normal, sem erro, com os padrões. Checagem na Task 3.
+4. Store muda enquanto o foco está num card do `/inicio` (job fecha, favorito em outra aba): o foco continua no mesmo card. Checagem na Task 2.
 
 ---
 
-### Task 1: Painel de subagentes (mod do Claude Code)
-
-**Files (fora do repo):** pasta `subagentes/` dentro da pasta de mods que a skill `plugin-authoring` informa ao carregar (`dev-mods/<sessão>/`):
-- Create: `.claude-plugin/plugin.json`, `hooks/hooks.json`, `hooks/register.tsx`, `types/index.d.ts`, `hooks/register.test.tsx`
-
-**Interfaces:**
-- Produces: pane `id: 'subagentes'`, título `'Subagentes'`; comando `/subagentes` que abre o pane. Estado em `$.state` (atom `{ plugin: 'subagentes', key: 'lista' }`), com o tipo declarado no contrato:
-  `Subagente = { id: string; descricao: string; tipo: string; status: 'rodando' | 'concluido' | 'falhou'; inicio: number; ultimaAcao?: string }`. Guarda no máximo os 50 mais recentes.
-
-- [ ] **Step 1:** Carregar a skill `plugin-authoring`, que dá a pasta e os tipos. No arquivo de tipos, conferir com grep: o input e o result de `'agent.spawn'` (descrição, `subagentType`, `agentId` no result), se o input de `'tool.call'` traz `agentId`, e como `'turn.complete'` identifica o agente e o fim com erro. Se `tool.call` não trouxer `agentId`, a última ação sai de `'session.append'` (que traz `agentId`).
-- [ ] **Step 2: Teste que falha** `register.test.tsx`, no estilo de `examples/pane.test.tsx`:
-  - `spawn mostra linha rodando`: dispara `agent.spawn` com descrição `'Task 2: gravações'` → o pane mostra `'Task 2: gravações'` e `'rodando'`.
-  - `tool call vira última ação`: depois do spawn, um `tool.call` `Edit` do mesmo agente → a linha mostra `'Edit'`.
-  - `fim com erro marca falhou`: `turn.complete` com erro ou interrupção → `'falhou'`; fim normal → `'concluido'`.
-- [ ] **Step 3:** `claude plugin test <pasta>` → falha.
-- [ ] **Step 4:** Implementar `register` com os hooks `session.start` (registra `/subagentes` e abre o pane), `command.run`, `agent.spawn` (`await next(e)` e grava a linha com o `agentId` do result), `tool.call` ou `session.append` (última ação: nome da ferramenta + `file_path`/`description` curto, até 60 caracteres), `turn.complete` (status) e `ui.render` do pane. Cada linha mostra o ícone do status, a descrição, o tipo, o tempo decorrido e a última ação, mais um `Button` "Ver" que chama `$.ui.view({ agentId })`. Com a lista vazia, mostra "Nenhum subagente nesta sessão." O pane mostra só as linhas que cabem em `e.viewport.rows`, das mais recentes.
-- [ ] **Step 5:** `claude plugin validate <pasta>`, `tsc -p <pasta>` e `claude plugin test <pasta>` passam.
-- [ ] **Step 6:** No fim do turno, o usuário responde "Turn them on". Rodar `/subagentes` e conferir se `$.ui.open` resolve `isPlaced: true` no VS Code. **Se for `false`, parar e avisar o usuário** (o VS Code pode não exibir panes); não criar fallback por conta própria.
-- [ ] **Step 7:** Sem commit no repo do app. Perguntar ao usuário se o mod deve ficar permanente (via `CLAUDE_CODE_PLUGIN_DIRS` ou `--plugin-dir`).
-
-### Task 2: Gravações que falham sem aviso
+### Task 1: Gravações que falham sem aviso
 
 **Files:**
 - Modify: `src/store.js`, `src/pages/creditos-planos.js:84-94`, `src/pages/resultado.js:94-100`, `src/pages/gerando.js:92-96`
@@ -73,7 +52,7 @@
 - [ ] **Step 4:** `npm test` passa. No navegador, com `localStorage.setItem = () => { throw 1 }` no console: comprar em `/creditos-planos?debug` mostra o aviso e o saldo do header não muda; avaliar em `/resultado` mostra o aviso e as estrelas voltam.
 - [ ] **Step 5:** Commit `fix: avisar quando compra e avaliação não gravam`.
 
-### Task 3: Foco não se perde no `/inicio`
+### Task 2: Foco não se perde no `/inicio`
 
 **Files:**
 - Modify: `src/pages/inicio.js:88-94` (`render`)
@@ -82,7 +61,7 @@
 - [ ] **Step 2:** No navegador em 1440 px: dar Tab até o 2º card e rodar `window.dispatchEvent(new StorageEvent('storage', { key: 'selfiemovie:v1' }))` → `document.activeElement` continua sendo o mesmo link (`href` igual). Busca, chips e ordenação continuam filtrando.
 - [ ] **Step 3:** `npm test` e `npm run build` passam. Commit `fix: manter o foco no card quando o início redesenha`.
 
-### Task 4: Rascunho do `/criar-com-texto` sobrevive ao Voltar
+### Task 3: Rascunho do `/criar-com-texto` sobrevive ao Voltar
 
 **Files:**
 - Modify: `src/pages/criar.js`
@@ -95,7 +74,7 @@
 - [ ] **Step 3:** Rodar `sessionStorage.setItem('selfiemovie:rascunho-texto', '{"estilo":"xyz","modo":"foto"}')` e recarregar → abre sem erro no console, com estilo Cinematic e modo Foto. Com `sessionStorage.setItem = () => { throw 1 }` a página também funciona.
 - [ ] **Step 4:** `npm test` e `npm run build` passam. Commit `fix: guardar rascunho do criar com texto ao voltar`.
 
-### Task 5: Estado vazio de Favoritos e meta description
+### Task 4: Estado vazio de Favoritos e meta description
 
 **Files:**
 - Modify: `inicio.html:66-72`, `src/pages/inicio.js` (`render`), e os 13 HTML sem `<meta name="description">`
@@ -118,7 +97,7 @@
 - [ ] **Step 3:** `grep -L 'name="description"' *.html perfil-rosto/*.html` → vazio. No navegador: Favoritos sem nenhum favorito mostra o coração e "Ver todos os clipes", e o clique volta para Todos; uma busca sem resultado mostra `search_off` e "Limpar filtros".
 - [ ] **Step 4:** `npm test` e `npm run build` passam. Commit `fix: estado vazio de favoritos e meta description nas páginas`.
 
-### Task 6: Conferir o `/entrar`
+### Task 5: Conferir o `/entrar`
 
 **Files:**
 - Modify: `entrar.html` ou `src/pages/entrar.js`, só se a checagem achar problema
@@ -127,9 +106,9 @@
 - [ ] **Step 2:** Lighthouse em modo "snapshot" (o "navigation" apaga o `localStorage`) em `/entrar`: anotar cada auditoria que falhar, inclusive a "agentic" que a fase 1.5 apontou.
 - [ ] **Step 3:** Corrigir o que for problema real e anotar no relatório o que não for, com o motivo. Commit `fix: ...` só se algo mudou.
 
-### Task 7: Revisão final
+### Task 6: Revisão final
 
-- [ ] Fluxos em 390 e 1440 px: as mudanças das Tasks 2 a 6 e o fluxo completo (cadastro → foto → clipe → gerando → resultado → minhas criações).
+- [ ] Fluxos em 390 e 1440 px: as mudanças das Tasks 1 a 5 e o fluxo completo (cadastro → foto → clipe → gerando → resultado → minhas criações).
 - [ ] `grep` das palavras proibidas da seção 5 (fora de `telas/` e `src/store.js`) → vazio.
 - [ ] `npm test` e `npm run build` passam. Um revisor novo revisa o branch inteiro; o que for Critical ou Important é corrigido, com teste.
 - [ ] Atualizar a memória do projeto. Push só com o OK do usuário.
