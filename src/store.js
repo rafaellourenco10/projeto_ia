@@ -86,7 +86,13 @@ export function getSaldoDisponivel() {
 
 export const adicionarCreditos = (n) => alterar((e) => (e.saldo += n))
 
-export const registrarCompra = (compra) => alterar((e) => e.compras.unshift({ ...compra, data: Date.now() }))
+// Uma gravação só: se o navegador recusar, saldo, plano e histórico ficam como estavam.
+export const comprar = ({ creditos, plano = null, descricao, preco }) =>
+  alterar((e) => {
+    e.saldo += creditos
+    if (plano) e.plano = plano
+    e.compras.unshift({ descricao, creditos, preco, data: Date.now() })
+  })
 export const getCompras = () => ler()?.compras ?? []
 
 // Foto (fica salva até o usuário apagar)

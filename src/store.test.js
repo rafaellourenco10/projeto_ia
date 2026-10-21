@@ -12,6 +12,28 @@ describe('store', () => {
     expect(store.getPlano()).toBe('Pro Creator')
   })
 
+  it('comprar grava créditos, plano e compra juntos', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    const S = store.getSaldo()
+    expect(store.comprar({ creditos: 100, plano: 'Pro Creator', descricao: 'Plano Pro Creator', preco: 'R$ 49,90' })).toBe(true)
+    expect(store.getSaldo()).toBe(S + 100)
+    expect(store.getPlano()).toBe('Pro Creator')
+    expect(store.getCompras()[0].descricao).toBe('Plano Pro Creator')
+  })
+
+  it('comprar não muda nada quando o navegador não grava', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    const S = store.getSaldo()
+    const spy = vi.spyOn(localStorage, 'setItem').mockImplementation(() => {
+      throw new Error('QuotaExceededError')
+    })
+    expect(store.comprar({ creditos: 100, plano: 'Pro Creator', descricao: 'Plano Pro Creator', preco: 'R$ 49,90' })).toBe(false)
+    spy.mockRestore()
+    expect(store.getSaldo()).toBe(S)
+    expect(store.getPlano()).toBe(null)
+    expect(store.getCompras()).toHaveLength(0)
+  })
+
   it('cadastro ganha o bônus de 10 créditos', () => {
     store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
     expect(store.getSaldo()).toBe(10)

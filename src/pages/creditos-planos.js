@@ -2,7 +2,7 @@ import '../main.css'
 import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import { CUSTOS, PLANOS, PACOTES, reais } from '../creditos.js'
-import { avisar, debug } from '../util.js'
+import { avisar, debug, MSG_SEM_ESPACO } from '../util.js'
 
 montarShell({ rota: 'creditos-planos' })
 
@@ -87,8 +87,12 @@ document.querySelector('main').addEventListener('click', (e) => {
   if (!debug()) return avisar('Pagamento disponível em breve')
   const plano = PLANOS.find((p) => p.id === b.dataset.plano)
   const item = plano ?? PACOTES.find((p) => p.id === b.dataset.pacote)
-  store.adicionarCreditos(item.creditos)
-  if (plano) store.setPlano(plano.nome)
-  store.registrarCompra({ descricao: plano ? `Plano ${plano.nome}` : `Pacote de ${item.creditos} créditos`, creditos: item.creditos, preco: item.preco })
+  const ok = store.comprar({
+    creditos: item.creditos,
+    plano: plano?.nome,
+    descricao: plano ? `Plano ${plano.nome}` : `Pacote de ${item.creditos} créditos`,
+    preco: item.preco,
+  })
+  if (!ok) return avisar(MSG_SEM_ESPACO)
   avisar(`+${item.creditos} créditos (simulação)`)
 })

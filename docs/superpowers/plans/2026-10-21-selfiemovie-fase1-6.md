@@ -40,17 +40,17 @@
 **Interfaces:**
 - Produces: `comprar({ creditos, plano = null, descricao, preco }) -> boolean` em `src/store.js`. Faz numa única chamada `alterar`: soma os créditos, grava o plano (se vier) e põe a compra no início de `compras` com `data: Date.now()`. Devolve `false` sem mudar nada se o navegador não gravar. `adicionarCreditos`, `setPlano` e `registrarCompra` continuam existindo enquanto algum teste ou outra página usar.
 
-- [ ] **Step 1: Testes que falham** `store.test.js`:
+- [x] **Step 1: Testes que falham** `store.test.js`:
   - `comprar grava créditos, plano e compra juntos`: cadastro (saldo inicial `S`) → `comprar({ creditos: 100, plano: 'Pro Creator', descricao: 'Plano Pro Creator', preco: 'R$ 49,90' }) === true`, `getSaldo() === S + 100`, `getPlano() === 'Pro Creator'`, `getCompras()[0].descricao === 'Plano Pro Creator'`.
   - `comprar não muda nada quando o navegador não grava`: cadastro, `vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => { throw new Error('QuotaExceededError') })` → `false`; sem o mock, saldo `S`, plano `null` e `getCompras()` com tamanho 0.
-- [ ] **Step 2:** `npm test` → falha (`comprar` não existe).
-- [ ] **Step 3:** Mudanças:
+- [x] **Step 2:** `npm test` → falha (`comprar` não existe).
+- [x] **Step 3:** Mudanças:
   - `store.comprar`.
   - `creditos-planos.js` passa a chamar `store.comprar(...)` no lugar das três chamadas. Se devolver `false`, `avisar(MSG_SEM_ESPACO)` e não mostra o aviso de créditos. Atualiza `#plano-atual` como hoje.
   - `resultado.js`: se `updateCriacao` devolver `false`, chamar `avisar(MSG_SEM_ESPACO)`, `pintar(c.avaliacao ?? 0)` e desmarcar o radio escolhido. Só agradece no sucesso.
   - `gerando.js` (debug): se `updateCriacao` devolver `false`, `avisar(MSG_SEM_ESPACO)`.
-- [ ] **Step 4:** `npm test` passa. No navegador, com `localStorage.setItem = () => { throw 1 }` no console: comprar em `/creditos-planos?debug` mostra o aviso e o saldo do header não muda; avaliar em `/resultado` mostra o aviso e as estrelas voltam.
-- [ ] **Step 5:** Commit `fix: avisar quando compra e avaliação não gravam`.
+- [x] **Step 4:** `npm test` passa. No navegador, com `localStorage.setItem = () => { throw 1 }` no console: comprar em `/creditos-planos?debug` mostra o aviso e o saldo do header não muda; avaliar em `/resultado` mostra o aviso e as estrelas voltam.
+- [x] **Step 5:** Commit `fix: avisar quando compra e avaliação não gravam`.
 
 ### Task 2: Foco não se perde no `/inicio`
 

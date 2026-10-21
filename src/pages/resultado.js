@@ -93,7 +93,13 @@ function mostrar(c) {
   pintar(c.avaliacao ?? 0)
   $('estrelas').addEventListener('change', (e) => {
     const nota = Number(e.target.value)
-    store.updateCriacao(c.id, { avaliacao: nota })
+    if (!store.updateCriacao(c.id, { avaliacao: nota })) {
+      e.target.checked = false
+      const salva = store.getCriacao(c.id)?.avaliacao ?? 0
+      if (salva) $(`nota-${salva}`).checked = true
+      pintar(salva)
+      return avisar(MSG_SEM_ESPACO)
+    }
     pintar(nota)
     avisar('Obrigado pela avaliação!')
   })

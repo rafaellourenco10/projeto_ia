@@ -2,7 +2,7 @@ import '../main.css'
 import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
-import { param, debug, MSG_SEM_ESPACO } from '../util.js'
+import { param, debug, avisar, MSG_SEM_ESPACO } from '../util.js'
 
 montarShell({ rota: 'minhas-criacoes' })
 
@@ -92,7 +92,7 @@ if (debug()) {
   $('debug').hidden = false
   const terminar = (falhar) => {
     const c = store.getCriacao(jobId)
-    if (c?.status === 'gerando') store.updateCriacao(jobId, { falhar, criadoEm: Date.now() - api.DURACAO_MS })
+    if (c?.status === 'gerando' && !store.updateCriacao(jobId, { falhar, criadoEm: Date.now() - api.DURACAO_MS })) avisar(MSG_SEM_ESPACO)
     atualizar()
   }
   $('sim-falha').addEventListener('click', () => terminar(true))
