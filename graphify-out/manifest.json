@@ -708,9 +708,9 @@
     "semantic_hash": ""
   },
   "src/shell.js": {
-    "mtime": 1792543719.7726448,
-    "seen": 1792543781.166122,
-    "ast_hash": "9c49e857ffeed8dab19a9505ad44ba6c",
+    "mtime": 1792546794.7173615,
+    "seen": 1792547142.667267,
+    "ast_hash": "40049c323915c3b73e5fd949058e837c",
     "semantic_hash": ""
   },
   "src/store.js": {
@@ -2823,6 +2823,132 @@
     "mtime": 1792544343.7183015,
     "seen": 1792544407.8337939,
     "ast_hash": "c6e2f20fcb45fdca12ac3d6e8148813e",
+    "semantic_hash": ""
+  },
+  "src/pages/ajuda-faq.js": {
+    "mtime": 1792546878.9481978,
+    "seen": 1792547142.6672316,
+    "ast_hash": "69e355234a12ab9b6c367fd0afd15837",
+    "semantic_hash": ""
+  },
+  "src/pages/creditos-planos.js": {
+    "mtime": 1792546725.7227566,
+    "seen": 1792547142.6672387,
+    "ast_hash": "bd86b9fb3df511f7f0ee650c98797523",
+    "semantic_hash": ""
+  },
+  "src/pages/legal.js": {
+    "mtime": 1792547000.9070318,
+    "seen": 1792547142.6672575,
+    "ast_hash": "8d66fc6ec9550e160f8e205f23c34f00",
+    "semantic_hash": ""
+  },
+  "src/pages/perfil-rosto.js": {
+    "mtime": 1792546795.8506024,
+    "seen": 1792547142.6672618,
+    "ast_hash": "1fd86063e9f0cbdbdb0d31b143a78bf6",
+    "semantic_hash": ""
+  },
+  "ajuda-faq.html": {
+    "mtime": 1792546877.8579211,
+    "seen": 1792547142.667858,
+    "ast_hash": "04152dceb7f5321826d7931d705c7fd2",
+    "semantic_hash": ""
+  },
+  "creditos-planos.html": {
+    "mtime": 1792547101.013182,
+    "seen": 1792547142.667862,
+    "ast_hash": "672a52416eb7bbd6e6ca1f073de2aa64",
+    "semantic_hash": ""
+  },
+  "perfil-rosto.html": {
+    "mtime": 1792546780.0152533,
+    "seen": 1792547142.6678824,
+    "ast_hash": "cc1946ae6b872dd48cba1033adb9ee84",
+    "semantic_hash": ""
+  },
+  "privacidade.html": {
+    "mtime": 1792547001.9955842,
+    "seen": 1792547142.6678863,
+    "ast_hash": "42b96095860113a6a3640b1bd0f79da6",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/ajuda_selfiemovie/code.html": {
+    "mtime": 1792546304.365789,
+    "seen": 1792547142.6679173,
+    "ast_hash": "f7d1ef3dd10273bdc26eae2a84cf2b9c",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/cinematic_ai_lumina/DESIGN.md": {
+    "mtime": 1792546304.5104551,
+    "seen": 1792547142.6679192,
+    "ast_hash": "fb4c328893a65d64da3feaf40bff9046",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/cr_ditos_planos_selfiemovie/code.html": {
+    "mtime": 1792546304.2808986,
+    "seen": 1792547142.6679208,
+    "ast_hash": "f76f0630f4685a9180eac1ae229cea98",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/design.md": {
+    "mtime": 1792546304.2642365,
+    "seen": 1792547142.6679225,
+    "ast_hash": "de64b0428aaded71ff575173e491fdec",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/perfil_rosto_selfiemovie/code.html": {
+    "mtime": 1792546304.3199172,
+    "seen": 1792547142.667924,
+    "ast_hash": "6d5041f61b29465f82ddbccaa31a03cf",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/pol_tica_de_privacidade_selfiemovie/code.html": {
+    "mtime": 1792546304.4672592,
+    "seen": 1792547142.6679258,
+    "ast_hash": "7e6f4d635cc7aa256dee7f0004e4c9b3",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/termos_de_uso_selfiemovie/code.html": {
+    "mtime": 1792546304.4140627,
+    "seen": 1792547142.6679275,
+    "ast_hash": "e21dbebbaf08505add7cfcb2a0dd3132",
+    "semantic_hash": ""
+  },
+  "termos.html": {
+    "mtime": 1792546954.9923398,
+    "seen": 1792547142.6679313,
+    "ast_hash": "2de6a29e3f784c514565c8cc8c0dab3b",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/ajuda_selfiemovie/screen.png": {
+    "mtime": 1792546304.3979957,
+    "seen": 1792547142.6680477,
+    "ast_hash": "c102532be8afabab02650d3897f5a8ef",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/cr_ditos_planos_selfiemovie/screen.png": {
+    "mtime": 1792546304.2998002,
+    "seen": 1792547142.668049,
+    "ast_hash": "d18994649657c19c89fc91edeeb6f432",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/perfil_rosto_selfiemovie/screen.png": {
+    "mtime": 1792546304.343325,
+    "seen": 1792547142.6680508,
+    "ast_hash": "bafc941189472b421e515da389344f89",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/pol_tica_de_privacidade_selfiemovie/screen.png": {
+    "mtime": 1792546304.488201,
+    "seen": 1792547142.6680522,
+    "ast_hash": "e43abbfc0bf53811af0c026a7fdd7ecd",
+    "semantic_hash": ""
+  },
+  "telas/stitch_selfiemovie_ai_video_platform/termos_de_uso_selfiemovie/screen.png": {
+    "mtime": 1792546304.442507,
+    "seen": 1792547142.6680539,
+    "ast_hash": "c6b17eaeb3da6ae0b7ad4098703cc79a",
     "semantic_hash": ""
   }
 }
