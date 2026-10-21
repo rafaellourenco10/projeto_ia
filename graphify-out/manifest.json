@@ -690,9 +690,9 @@
     "semantic_hash": ""
   },
   "src/pages/foto.js": {
-    "mtime": 1792543720.8940752,
-    "seen": 1792543781.166116,
-    "ast_hash": "f7c35595132938f31725f211b278730b",
+    "mtime": 1792579298.9137342,
+    "seen": 1792579431.9531631,
+    "ast_hash": "17e55f747176d48027fb0e8f4882094e",
     "semantic_hash": ""
   },
   "src/pages/inicio.js": {
@@ -714,15 +714,15 @@
     "semantic_hash": ""
   },
   "src/store.js": {
-    "mtime": 1792549137.1545243,
-    "seen": 1792549184.1772685,
-    "ast_hash": "dcf285cd3fe09b13eaef98cec3b899fe",
+    "mtime": 1792579298.9041295,
+    "seen": 1792579431.9532735,
+    "ast_hash": "b905b5f6f6e3ba34006119beef4021be",
     "semantic_hash": ""
   },
   "src/store.test.js": {
-    "mtime": 1792578567.6351783,
-    "seen": 1792578689.1833484,
-    "ast_hash": "bf82e87135410157e6ba4456501b7a39",
+    "mtime": 1792579240.6515539,
+    "seen": 1792579431.95328,
+    "ast_hash": "c63ec68f8c17f3e36c571d5e22605582",
     "semantic_hash": ""
   },
   "src/util.js": {
@@ -2400,9 +2400,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1792523755.450384,
-    "seen": 1792543605.2683449,
-    "ast_hash": "3caabcabc7f0802383fb85898f213ea1",
+    "mtime": 1792579298.9967954,
+    "seen": 1792579431.954275,
+    "ast_hash": "484bf0f0e73622408e8edb9506b5f17d",
     "semantic_hash": ""
   },
   "inicio.html": {
@@ -2814,9 +2814,9 @@
     "semantic_hash": ""
   },
   "src/pages/minhas-criacoes.js": {
-    "mtime": 1792544344.8536139,
-    "seen": 1792544407.833408,
-    "ast_hash": "0452ad6900e7c33851dfe0c3b7d44450",
+    "mtime": 1792579298.9938047,
+    "seen": 1792579431.9532216,
+    "ast_hash": "7ec28eaa6e5591d9a9eb611b890b34de",
     "semantic_hash": ""
   },
   "minhas-criacoes.html": {
@@ -2832,9 +2832,9 @@
     "semantic_hash": ""
   },
   "src/pages/creditos-planos.js": {
-    "mtime": 1792546725.7227566,
-    "seen": 1792547142.6672387,
-    "ast_hash": "bd86b9fb3df511f7f0ee650c98797523",
+    "mtime": 1792579298.9096925,
+    "seen": 1792579431.9531126,
+    "ast_hash": "4cd25b95a2d5b5cfd453878fca1fa5a4",
     "semantic_hash": ""
   },
   "src/pages/legal.js": {
