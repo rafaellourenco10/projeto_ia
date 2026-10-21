@@ -20,9 +20,10 @@ const ORDENS = {
   custo: (a, b) => a.custo - b.custo || b.popularidade - a.popularidade,
 }
 
-export function filtrarClipes(clipes, { q = '', categoria = null, ordem = 'populares' } = {}) {
+export function filtrarClipes(clipes, { q = '', categoria = null, ordem = 'populares', ids = null } = {}) {
   const termo = normalizar(q)
   return clipes
+    .filter((c) => !ids || ids.includes(c.id))
     .filter((c) => !categoria || c.categoria === categoria)
     .filter((c) => !termo || normalizar(`${c.titulo} ${c.genero} ${CATEGORIAS[c.categoria]?.nome}`).includes(termo))
     .sort(ORDENS[ordem] ?? ORDENS.populares)

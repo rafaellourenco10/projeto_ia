@@ -4,7 +4,7 @@ import * as store from '../store.js'
 import * as api from '../api.js'
 import { custo as calcularCusto } from '../creditos.js'
 import { CATEGORIAS, miniCard } from '../biblioteca.js'
-import { esc, param, debug, MSG_SEM_ESPACO } from '../util.js'
+import { esc, param, debug, avisar, MSG_SEM_ESPACO } from '../util.js'
 import clipes from '../data/clips.json'
 
 montarShell({ rota: 'inicio' })
@@ -35,6 +35,19 @@ function preencher() {
       ? `<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 shadow-[0_0_12px_rgba(170,2,102,0.3)]"><span class="material-symbols-outlined text-xs" aria-hidden="true">local_fire_department</span>Popular</span>`
       : '') + `<span class="${selo}">${esc(categoria)}</span><span class="${selo}">${esc(clipe.genero)}</span>`
   document.querySelectorAll('[data-custo]').forEach((el) => (el.textContent = custo))
+
+  function pintarFavorito() {
+    const fav = store.getFavoritos().includes(clipe.id)
+    $('btn-fav').setAttribute('aria-pressed', fav)
+    $('btn-fav').setAttribute('aria-label', fav ? 'Remover dos favoritos' : 'Favoritar')
+    $('btn-fav').firstElementChild.style.fontVariationSettings = `'FILL' ${fav ? 1 : 0}`
+  }
+  $('btn-fav').addEventListener('click', () => {
+    const antes = store.getFavoritos().includes(clipe.id)
+    if (store.alternarFavorito(clipe.id) === antes) avisar(MSG_SEM_ESPACO)
+    pintarFavorito()
+  })
+  pintarFavorito()
 
   // Proporção: muda o aspect-ratio do player e vai junto no pedido.
   const ATIVO = ['bg-surface-container-high', 'text-primary', 'font-bold']

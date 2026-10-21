@@ -23,4 +23,10 @@ describe('filtrarClipes', () => {
     filtrarClipes(clipes, { ordem: 'recentes' })
     expect(clipes.map((c) => c.id)).toEqual(antes)
   })
+
+  it('filtra por ids', () => {
+    const r = filtrarClipes(clipes, { ids: ['agente-secreto'] })
+    expect(r.map((c) => c.id)).toEqual(['agente-secreto'])
+    expect(filtrarClipes(clipes, { ids: [] })).toEqual([])
+  })
 })

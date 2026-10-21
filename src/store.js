@@ -110,6 +110,19 @@ export const updateCriacao = (id, patch) =>
     if (c) Object.assign(c, patch)
   })
 
+// Favoritos (ids de clipe). Estado salvo antes da fase 1.5 não tem o campo.
+export const getFavoritos = () => ler()?.favoritos ?? []
+
+// Devolve o novo estado (true = favoritado); se não gravar, devolve o estado anterior.
+export function alternarFavorito(clipId) {
+  const antes = getFavoritos().includes(clipId)
+  const ok = alterar((e) => {
+    const f = e.favoritos ?? []
+    e.favoritos = antes ? f.filter((x) => x !== clipId) : [...f, clipId]
+  })
+  return ok ? !antes : antes
+}
+
 // Só apaga o que não está gerando: o crédito de um job em andamento está reservado.
 export function removerCriacao(id) {
   const c = getCriacao(id)

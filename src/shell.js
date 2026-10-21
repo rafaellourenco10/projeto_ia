@@ -106,7 +106,7 @@ export function montarShell({ rota = null, exigirLogin = true } = {}) {
   coluna.append(main)
   document.body.insertAdjacentHTML('afterbegin', sidebar(rota))
   document.body.insertAdjacentHTML('beforeend', bottomNav(rota))
-  main.id ||= 'conteudo'
+  main.id ||= 'conteudo-principal'
   main.tabIndex = -1
   document.body.insertAdjacentHTML('afterbegin', `<a href="#${main.id}" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-space-md focus:py-2 focus:rounded-xl focus:bg-primary-container focus:text-on-primary-container">Pular para o conteúdo</a>`)
 

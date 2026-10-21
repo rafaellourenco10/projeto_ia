@@ -108,3 +108,32 @@ describe('custo', () => {
     expect(store.getSaldoDisponivel()).toBe(7)
   })
 })
+
+describe('favoritos', () => {
+  it('alternarFavorito liga e desliga', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    expect(store.alternarFavorito('a')).toBe(true)
+    expect(store.getFavoritos()).toEqual(['a'])
+    expect(store.alternarFavorito('a')).toBe(false)
+    expect(store.getFavoritos()).toEqual([])
+  })
+
+  it('estado antigo sem favoritos', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    const e = JSON.parse(localStorage.getItem('selfiemovie:v1'))
+    delete e.favoritos
+    localStorage.setItem('selfiemovie:v1', JSON.stringify(e))
+    expect(store.getFavoritos()).toEqual([])
+    expect(store.alternarFavorito('a')).toBe(true)
+  })
+
+  it('sem espaço: não muda e devolve o estado anterior', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    const spy = vi.spyOn(localStorage, 'setItem').mockImplementation(() => {
+      throw new Error('cota')
+    })
+    expect(store.alternarFavorito('a')).toBe(false)
+    spy.mockRestore()
+    expect(store.getFavoritos()).toEqual([])
+  })
+})

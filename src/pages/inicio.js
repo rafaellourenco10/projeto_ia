@@ -1,5 +1,6 @@
 import '../main.css'
 import { montarShell } from '../shell.js'
+import * as store from '../store.js'
 import { esc, param } from '../util.js'
 import { CATEGORIAS, filtrarClipes } from '../biblioteca.js'
 import clipes from '../data/clips.json'
@@ -16,7 +17,8 @@ let categoria = null
 const ATIVO = ['bg-primary-container', 'text-on-primary-container', 'shadow-[0_0_16px_rgba(160,120,255,0.35)]']
 const INATIVO = ['bg-surface-container-high/70', 'text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-highest']
 
-const chips = [[null, { nome: 'Todos', icone: 'auto_awesome' }], ...Object.entries(CATEGORIAS)]
+const FAV = '__favoritos'
+const chips = [[FAV, { nome: 'Favoritos', icone: 'favorite' }], [null, { nome: 'Todos', icone: 'auto_awesome' }], ...Object.entries(CATEGORIAS)]
 $('chips').innerHTML = chips
   .map(
     ([id, c]) => `<button type="button" data-categoria="${id ?? ''}" class="flex items-center gap-1.5 px-space-md py-2 rounded-full font-label-md text-label-md whitespace-nowrap transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
@@ -79,13 +81,17 @@ $('destaque').innerHTML = `
 </div>`
 
 function render() {
-  const lista = filtrarClipes(clipes, { q: busca.value, categoria, ordem: ordem.value })
+  const fav = categoria === FAV
+  const lista = filtrarClipes(clipes, { q: busca.value, categoria: fav ? null : categoria, ordem: ordem.value, ids: fav ? store.getFavoritos() : null })
+  const semFavoritos = fav && !store.getFavoritos().length
+  $('vazio-titulo').textContent = semFavoritos ? 'Nenhum favorito ainda' : 'Nenhum clipe encontrado'
+  $('vazio-texto').textContent = semFavoritos ? 'Você ainda não favoritou nenhum clipe. Toque no coração na página do clipe.' : 'Tente outra palavra ou outra categoria.'
   $('grade').innerHTML = lista.map(card).join('')
   $('grade').hidden = !lista.length
   $('vazio').hidden = !!lista.length
   $('contagem').textContent = `${lista.length} ${lista.length === 1 ? 'clipe' : 'clipes'}`
   for (const b of $('chips').children) {
-    const ativo = (b.dataset.categoria || null) === categoria
+    const ativo = (b.dataset.categoria === '' ? null : b.dataset.categoria) === categoria
     b.setAttribute('aria-pressed', ativo)
     b.classList.remove(...(ativo ? INATIVO : ATIVO))
     b.classList.add(...(ativo ? ATIVO : INATIVO))
@@ -98,6 +104,7 @@ $('chips').addEventListener('click', (e) => {
   categoria = b.dataset.categoria || null
   render()
 })
+store.onChange(render)
 busca.addEventListener('input', render)
 ordem.addEventListener('change', render)
 $('limpar').addEventListener('click', () => {
