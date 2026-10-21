@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="dark" lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas criações · SelfieMovie</title>
+  <link rel="icon" type="image/png" href="/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script type="module" src="/src/pages/minhas-criacoes.js"></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<main>
+  <div class="flex flex-col w-full px-gutter-mobile md:px-gutter py-space-md max-w-[1440px] mx-auto gap-space-lg">
+    <div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-space-md md:p-space-lg shadow-xl">
+      <div class="absolute -right-24 -top-24 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute right-40 -bottom-20 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center gap-space-xs text-secondary">
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">video_library</span>
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Sua galeria</span>
+          </div>
+          <h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight">Minhas criações</h1>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Todos os seus vídeos e fotos em um só lugar.</p>
+        </div>
+        <div class="flex items-center gap-space-sm p-space-sm px-space-md bg-surface-container-high/80 rounded-xl backdrop-blur-md self-start md:self-auto shadow-md">
+          <span class="material-symbols-outlined text-tertiary" aria-hidden="true">cloud_done</span>
+          <span id="total" class="font-label-md text-label-md text-on-surface font-bold"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md">
+      <div role="group" aria-label="Filtrar por tipo" class="flex items-center bg-surface-container-low p-1.5 rounded-xl shadow-inner gap-1 overflow-x-auto">
+        <button type="button" data-aba="todos" class="px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-1.5 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"><span class="material-symbols-outlined text-sm" aria-hidden="true">auto_awesome_motion</span><span>Todos (<span data-conta="todos"></span>)</span></button>
+        <button type="button" data-aba="videos" class="px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-1.5 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"><span class="material-symbols-outlined text-sm" aria-hidden="true">smart_display</span><span>Vídeos (<span data-conta="videos"></span>)</span></button>
+        <button type="button" data-aba="fotos" class="px-space-md py-1.5 rounded-lg font-label-md text-label-md transition-all flex items-center gap-1.5 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"><span class="material-symbols-outlined text-sm" aria-hidden="true">photo_camera</span><span>Fotos (<span data-conta="fotos"></span>)</span></button>
+      </div>
+      <div class="flex items-center gap-space-sm justify-between sm:justify-end">
+        <label class="flex items-center gap-1 text-on-surface-variant bg-surface-container-low px-space-sm py-1.5 rounded-xl focus-within:ring-2 focus-within:ring-primary">
+          <span class="material-symbols-outlined text-sm text-outline" aria-hidden="true">sort</span>
+          <span class="font-label-sm text-label-sm text-outline">Ordenar:</span>
+          <select id="ordem" class="bg-transparent text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer pr-2">
+            <option class="bg-surface-container-low text-on-surface" value="recentes">Mais recentes</option>
+            <option class="bg-surface-container-low text-on-surface" value="antigos">Mais antigos</option>
+          </select>
+        </label>
+        <button id="sim-vazia" type="button" hidden class="px-space-sm py-1.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+          <span class="material-symbols-outlined text-sm text-tertiary" aria-hidden="true">visibility</span><span id="sim-vazia-texto">Simular galeria vazia</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="grade" class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-space-md"></div>
+
+    <div id="vazio" hidden class="flex flex-col items-center justify-center text-center p-space-lg md:p-space-xl bg-surface-container-low rounded-3xl relative overflow-hidden shadow-2xl">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary-container/25 rounded-full blur-[80px] pointer-events-none"></div>
+      <div class="relative z-10 flex flex-col items-center max-w-lg mx-auto">
+        <div class="relative w-24 h-24 mb-space-md rounded-2xl bg-surface-container-high/90 backdrop-blur-xl flex items-center justify-center shadow-[0_0_30px_rgba(208,188,255,0.2)]">
+          <span class="material-symbols-outlined text-5xl text-primary" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">movie_creation</span>
+        </div>
+        <h2 id="vazio-titulo" class="font-headline-md text-headline-md text-on-surface tracking-tight mb-2"></h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">Escolha um clipe pronto na biblioteca ou descreva uma ideia para criar com o seu rosto.</p>
+        <div class="flex flex-col sm:flex-row items-stretch gap-space-sm w-full sm:w-auto">
+          <a class="px-space-lg py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-white font-label-lg text-label-lg font-bold hover:scale-105 transition-all duration-200 shadow-[0_0_30px_rgba(160,120,255,0.5)] flex items-center justify-center gap-2" href="/inicio">
+            <span class="material-symbols-outlined text-xl" aria-hidden="true">movie</span><span>Ver a biblioteca</span>
+          </a>
+          <a class="px-space-lg py-3.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-2" href="/criar-com-texto">
+            <span class="material-symbols-outlined text-xl" aria-hidden="true">magic_button</span><span>Criar com texto</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>
