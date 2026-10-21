@@ -109,7 +109,8 @@
 
 ### Task 6: Revisão final
 
-- [ ] Fluxos em 390 e 1440 px: as mudanças das Tasks 1 a 5 e o fluxo completo (cadastro → foto → clipe → gerando → resultado → minhas criações).
-- [ ] `grep` das palavras proibidas da seção 5 (fora de `telas/` e `src/store.js`) → vazio.
-- [ ] `npm test` e `npm run build` passam. Um revisor novo revisa o branch inteiro; o que for Critical ou Important é corrigido, com teste.
-- [ ] Atualizar a memória do projeto. Push só com o OK do usuário.
+- [x] Fluxos em 390 e 1440 px: as mudanças das Tasks 1 a 5 e o fluxo completo (cadastro → foto → clipe → gerando → resultado → minhas criações).
+- [x] `grep` das palavras proibidas da seção 5 (fora de `telas/` e `src/store.js`) → vazio.
+- [x] `npm test` e `npm run build` passam. Um revisor novo revisa o branch inteiro; o que for Critical ou Important é corrigido, com teste.
+- [x] Atualizar a memória do projeto. Push só com o OK do usuário.
+- Revisão final: nenhum Critical ou Important. Minor, não corrigidos: `updateCriacao` devolve true mesmo se a criação sumiu (outra aba), e o `/resultado` agradece sem salvar; sem estado (`ler()` nulo) as telas mostram `MSG_SEM_ESPACO` em vez de outro motivo; o spy de `setItem` nos testes só é restaurado no caminho feliz, como no resto de `store.test.js`.
