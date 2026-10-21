@@ -89,6 +89,8 @@ function render() {
   $('destaque').hidden = fav // em Favoritos só aparece a lista do usuário; um destaque favorito já está na grade
   $('vazio-titulo').textContent = semFavoritos ? 'Nenhum favorito ainda' : 'Nenhum clipe encontrado'
   $('vazio-texto').textContent = semFavoritos ? 'Você ainda não favoritou nenhum clipe. Toque no coração na página do clipe.' : 'Tente outra palavra ou outra categoria.'
+  $('vazio-icone').textContent = semFavoritos ? 'favorite' : 'search_off'
+  $('limpar-texto').textContent = semFavoritos ? 'Ver todos os clipes' : 'Limpar filtros'
   const html = lista.map(card).join('')
   // Trocar o HTML tira o foco do card; só troca quando a grade mudou de fato.
   if (html !== gradeHtml) $('grade').innerHTML = gradeHtml = html

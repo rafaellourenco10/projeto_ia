@@ -6,6 +6,7 @@
   <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
   <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var c=t=="claro"?"light":"dark";try{var m=window.temaMq=window.temaMq||matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};if(t=="sistema"&&m.matches)c="light"}catch(e){}document.documentElement.className=c})()</script>
   <title>Início · SelfieMovie</title>
+  <meta name="description" content="Escolha um clipe da biblioteca e seja o protagonista."/>
   <link rel="icon" type="image/png" href="/img/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,11 +65,11 @@
     <div id="grade" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-space-md pb-space-xl"></div>
 
     <div id="vazio" hidden class="flex flex-col items-center text-center gap-space-sm py-space-xl mb-space-xl rounded-2xl bg-surface-container-low/60">
-      <span class="material-symbols-outlined text-5xl text-outline" aria-hidden="true">search_off</span>
+      <span id="vazio-icone" class="material-symbols-outlined text-5xl text-outline" aria-hidden="true">search_off</span>
       <h3 id="vazio-titulo" class="font-headline-sm text-headline-sm text-on-surface">Nenhum clipe encontrado</h3>
       <p id="vazio-texto" class="font-body-md text-body-md text-on-surface-variant max-w-md">Tente outra palavra ou outra categoria.</p>
       <button id="limpar" type="button" class="mt-space-xs px-space-lg py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5">
-        <span class="material-symbols-outlined text-base" aria-hidden="true">filter_alt_off</span>Limpar filtros
+        <span class="material-symbols-outlined text-base" aria-hidden="true">filter_alt_off</span><span id="limpar-texto">Limpar filtros</span>
       </button>
     </div>
 

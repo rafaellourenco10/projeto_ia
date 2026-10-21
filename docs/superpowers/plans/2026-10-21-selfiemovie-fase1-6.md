@@ -79,8 +79,8 @@
 **Files:**
 - Modify: `inicio.html:66-72`, `src/pages/inicio.js` (`render`), e os 13 HTML sem `<meta name="description">`
 
-- [ ] **Step 1:** `inicio.html`: o ícone do vazio ganha `id="vazio-icone"` e o texto do botão `#limpar` fica num `<span id="limpar-texto">`. Em `render`, quando `semFavoritos`, o ícone vira `favorite` e o botão diz "Ver todos os clipes"; nos outros casos, `search_off` e "Limpar filtros". O clique continua o mesmo (`categoria = null`, que leva para Todos).
-- [ ] **Step 2:** Uma `<meta name="description">` logo depois do `<title>` em cada página, com este texto:
+- [x] **Step 1:** `inicio.html`: o ícone do vazio ganha `id="vazio-icone"` e o texto do botão `#limpar` fica num `<span id="limpar-texto">`. Em `render`, quando `semFavoritos`, o ícone vira `favorite` e o botão diz "Ver todos os clipes"; nos outros casos, `search_off` e "Limpar filtros". O clique continua o mesmo (`categoria = null`, que leva para Todos).
+- [x] **Step 2:** Uma `<meta name="description">` logo depois do `<title>` em cada página, com este texto:
   - `ajuda-faq`: "Respostas sobre créditos, fotos, privacidade e como criar clipes no SelfieMovie."
   - `clipe`: "Veja o clipe, escolha a proporção e gere a sua versão com o seu rosto."
   - `creditos-planos`: "Veja seu saldo, compare planos e pacotes de créditos do SelfieMovie."
@@ -94,8 +94,8 @@
   - `privacidade`: "Como o SelfieMovie trata sua foto e seus dados."
   - `resultado`: "Assista, baixe e avalie a sua criação."
   - `termos`: "Termos de uso do SelfieMovie."
-- [ ] **Step 3:** `grep -L 'name="description"' *.html perfil-rosto/*.html` → vazio. No navegador: Favoritos sem nenhum favorito mostra o coração e "Ver todos os clipes", e o clique volta para Todos; uma busca sem resultado mostra `search_off` e "Limpar filtros".
-- [ ] **Step 4:** `npm test` e `npm run build` passam. Commit `fix: estado vazio de favoritos e meta description nas páginas`.
+- [x] **Step 3:** `grep -L 'name="description"' *.html perfil-rosto/*.html` → vazio. No navegador: Favoritos sem nenhum favorito mostra o coração e "Ver todos os clipes", e o clique volta para Todos; uma busca sem resultado mostra `search_off` e "Limpar filtros".
+- [x] **Step 4:** `npm test` e `npm run build` passam. Commit `fix: estado vazio de favoritos e meta description nas páginas`.
 
 ### Task 5: Conferir o `/entrar`
 
