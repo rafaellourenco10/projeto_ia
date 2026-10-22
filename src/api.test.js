@@ -76,6 +76,21 @@ describe('api simulada', () => {
     expect(store.getCriacao(outro).rostos).toEqual([r2.id, r1.id])
   })
 
+  it('refazer grátis custa zero, não debita e vale uma vez', async () => {
+    usuarioComFoto(5)
+    const { jobId } = await gerarClipe('agente-secreto')
+    await statusJob(jobId, store.getCriacao(jobId).criadoEm + DURACAO_MS)
+    expect(store.getSaldo()).toBe(0)
+    const { jobId: novo } = await refazer(jobId, { gratis: true })
+    expect(store.getCriacao(novo).custo).toBe(0)
+    expect(store.getCriacao(jobId).refazerGratisUsado).toBe(true)
+    await statusJob(novo, store.getCriacao(novo).criadoEm + DURACAO_MS)
+    expect(store.getCriacao(novo).status).toBe('pronto')
+    expect(store.getSaldo()).toBe(0)
+    await expect(refazer(jobId, { gratis: true })).rejects.toThrow('GRATIS_USADO')
+    await expect(refazer(novo, { gratis: true })).rejects.toThrow('GRATIS_USADO') // o refazer grátis não gera outro
+  })
+
   it('clipe solo ignora rostos', async () => {
     usuarioComFoto(10)
     const { jobId } = await gerarClipe('agente-secreto', { rostos: ['x', 'y'] })

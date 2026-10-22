@@ -34,7 +34,8 @@ function criar(dados) {
 }
 
 // Clipe em dupla (`pessoas: 2`) leva dois rostos salvos diferentes em `rostos`.
-export async function gerarClipe(clipId, { proporcao = '9:16', rostos } = {}) {
+// `gratis` só vem do refazer grátis (custo 0).
+export async function gerarClipe(clipId, { proporcao = '9:16', rostos, gratis = false } = {}) {
   const clip = clips.find((c) => c.id === clipId)
   if (!clip) throw new Error('CLIPE_INEXISTENTE')
   const dupla = clip.pessoas === 2
@@ -42,26 +43,32 @@ export async function gerarClipe(clipId, { proporcao = '9:16', rostos } = {}) {
     const salvos = store.getRostos().map((r) => r.id)
     if (rostos?.length !== 2 || rostos[0] === rostos[1] || !rostos.every((id) => salvos.includes(id))) throw new Error('SEM_SEGUNDO_ROSTO')
   }
-  return criar({ tipo: 'clipe', clipId, titulo: clip.titulo, img: clip.img, proporcao, rostos: dupla ? rostos : undefined, custo: custo({ tipo: 'clipe' }) })
+  return criar({ tipo: 'clipe', clipId, titulo: clip.titulo, img: clip.img, proporcao, rostos: dupla ? rostos : undefined, custo: gratis ? 0 : custo({ tipo: 'clipe' }) })
 }
 
-export async function gerarComTexto({ modo, prompt, estilo = 'cinematic', duracao = 5, proporcao = '9:16' }) {
+export async function gerarComTexto({ modo, prompt, estilo = 'cinematic', duracao = 5, proporcao = '9:16', gratis = false }) {
   const tipo = modo === 'foto' ? 'foto' : 'video'
   const titulo = prompt.length > 60 ? prompt.slice(0, 57) + '...' : prompt
   return criar({
     tipo, prompt, estilo, proporcao, titulo,
     duracao: tipo === 'video' ? duracao : undefined,
     img: IMG_ESTILO[estilo] ?? IMG_ESTILO.cinematic,
-    custo: custo({ tipo, duracao }),
+    custo: gratis ? 0 : custo({ tipo, duracao }),
   })
 }
 
 // Refaz o mesmo pedido ("Tentar de novo" e "Gerar variação").
-export function refazer(jobId) {
+// `gratis` (nota baixa no resultado): uma vez por criação paga; o refazer grátis não gera outro.
+export async function refazer(jobId, { gratis = false } = {}) {
   const c = store.getCriacao(jobId)
-  if (!c) return Promise.reject(new Error('JOB_INEXISTENTE'))
-  if (c.tipo === 'clipe') return gerarClipe(c.clipId, { proporcao: c.proporcao, rostos: c.rostos })
-  return gerarComTexto({ modo: c.tipo, prompt: c.prompt, estilo: c.estilo, duracao: c.duracao, proporcao: c.proporcao })
+  if (!c) throw new Error('JOB_INEXISTENTE')
+  if (gratis && (c.refazerGratisUsado || c.custo === 0)) throw new Error('GRATIS_USADO')
+  const r =
+    c.tipo === 'clipe'
+      ? await gerarClipe(c.clipId, { proporcao: c.proporcao, rostos: c.rostos, gratis })
+      : await gerarComTexto({ modo: c.tipo, prompt: c.prompt, estilo: c.estilo, duracao: c.duracao, proporcao: c.proporcao, gratis })
+  if (gratis) store.updateCriacao(jobId, { refazerGratisUsado: true })
+  return r
 }
 
 // O progresso sai do relógio, então recarregar a página não reinicia o job.

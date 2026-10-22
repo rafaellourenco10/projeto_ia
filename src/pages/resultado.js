@@ -96,6 +96,9 @@ function mostrar(c) {
       el.style.fontVariationSettings = `'FILL' ${Number(el.dataset.estrela) <= nota ? 1 : 0}`
     })
   pintar(c.avaliacao ?? 0)
+  // Nota 1 ou 2 oferece um refazer sem custo, uma vez por criação paga.
+  const mostrarGratis = (nota) => ($('refazer-gratis').hidden = !(nota && nota <= 2 && c.custo > 0 && !store.getCriacao(c.id)?.refazerGratisUsado))
+  mostrarGratis(c.avaliacao)
   $('estrelas').addEventListener('change', (e) => {
     const nota = Number(e.target.value)
     if (!store.updateCriacao(c.id, { avaliacao: nota })) {
@@ -106,7 +109,21 @@ function mostrar(c) {
       return avisar(MSG_SEM_ESPACO)
     }
     pintar(nota)
+    mostrarGratis(nota)
     avisar('Obrigado pela avaliação!')
+  })
+
+  $('btn-refazer-gratis').addEventListener('click', async () => {
+    $('btn-refazer-gratis').disabled = true
+    try {
+      const { jobId: novo } = await api.refazer(c.id, { gratis: true })
+      location.href = `/gerando?job=${novo}${debug() ? '&debug' : ''}`
+    } catch (e) {
+      if (e.message === 'SEM_SEGUNDO_ROSTO') return (location.href = `/clipe?id=${encodeURIComponent(c.clipId)}`)
+      $('btn-refazer-gratis').disabled = false
+      mostrarGratis(store.getCriacao(c.id)?.avaliacao)
+      avisar(e.message === 'SEM_FOTO' ? 'Envie sua foto primeiro.' : e.message === 'SEM_ESPACO' ? MSG_SEM_ESPACO : e.message === 'GRATIS_USADO' ? 'O refazer grátis desta criação já foi usado.' : 'Não foi possível refazer agora.')
+    }
   })
 
   // Dois cliques: o primeiro arma, o segundo apaga.
