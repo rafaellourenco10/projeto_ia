@@ -22,8 +22,8 @@ beforeEach(() => {
 })
 
 describe('script de tema', () => {
-  it('é o mesmo nas 14 páginas', () => {
-    expect(paginas).toHaveLength(14)
+  it('é o mesmo nas 15 páginas', () => {
+    expect(paginas).toHaveLength(15)
     expect(new Set(scripts).size).toBe(1)
     expect(scripts[0]).toBeTruthy()
   })

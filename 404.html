@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="dark" lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tema antes de pintar (sem flash). Perfil reaproveita window.aplicarTema. -->
+  <script>(window.aplicarTema=function(t){try{t=t||localStorage.getItem("selfiemovie:tema")}catch(e){}var c=t=="claro"?"light":"dark";try{var m=window.temaMq=window.temaMq||matchMedia("(prefers-color-scheme: light)");m.onchange=function(){aplicarTema(t)};if(t=="sistema"&&m.matches)c="light"}catch(e){}document.documentElement.className=c})()</script>
+  <title>Página não encontrada · SelfieMovie</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+  <script type="module" src="/src/pages/nao-encontrada.js"></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased">
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+  <div class="absolute -top-[25%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-primary/5 rounded-full blur-[140px]"></div>
+  <div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[500px] bg-tertiary/5 rounded-full blur-[150px]"></div>
+</div>
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl">
+  <div class="h-16 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center">
+    <a href="/" class="flex items-center gap-space-sm rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+      <img src="/img/logo.png" alt="" class="w-9 h-9 rounded-xl object-cover" />
+      <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Selfie<span class="text-primary">Movie</span></span>
+    </a>
+  </div>
+</header>
+<main class="min-h-screen max-w-xl mx-auto px-margin-mobile lg:px-margin pt-24 pb-space-xl flex flex-col items-center justify-center text-center gap-space-md">
+  <span class="w-20 h-20 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shadow-[0_0_30px_rgba(160,120,255,0.25)]">
+    <span class="material-symbols-outlined text-5xl" aria-hidden="true">movie_off</span>
+  </span>
+  <p class="font-label-md text-label-md text-secondary uppercase tracking-widest">Erro 404</p>
+  <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-extrabold tracking-tight">Esta cena não existe</h1>
+  <p class="text-on-surface-variant">O endereço pode ter mudado ou estar digitado errado.</p>
+  <a id="link-voltar" href="/" class="mt-space-sm px-space-lg py-3 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors flex items-center gap-space-xs shadow-[0_0_20px_rgba(160,120,255,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+    <span class="material-symbols-outlined text-base" aria-hidden="true">home</span><span id="link-voltar-texto">Ir para a página inicial</span>
+  </a>
+</main>
+</body>
+</html>
