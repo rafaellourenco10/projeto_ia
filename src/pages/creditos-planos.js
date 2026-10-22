@@ -3,10 +3,13 @@ import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import { CUSTOS, PLANOS, PACOTES, reais } from '../creditos.js'
 import { avisar, debug, MSG_SEM_ESPACO } from '../util.js'
+import { destinoSeguro } from '../foto-utils.js'
 
 montarShell({ rota: 'creditos-planos' })
 
 const $ = (id) => document.getElementById(id)
+// Quem chegou sem saldo do /clipe ou do /criar-com-texto volta para o pedido depois de comprar.
+const voltar = destinoSeguro(new URLSearchParams(location.search).get('voltar'), null)
 const clipes = (creditos) => Math.floor(creditos / CUSTOS.clipe)
 
 function atualizar() {
@@ -96,4 +99,9 @@ document.querySelector('main').addEventListener('click', (e) => {
   })
   if (!ok) return avisar(MSG_SEM_ESPACO)
   avisar(`+${item.creditos} créditos (simulação)`)
+  if (voltar) {
+    $('voltar-gerar').href = voltar
+    $('voltar-gerar').hidden = false
+    $('voltar-gerar').focus()
+  }
 })

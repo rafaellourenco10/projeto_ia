@@ -70,7 +70,7 @@ function preencher() {
   }
   $('btn-916').addEventListener('click', () => setProporcao('9:16'))
   $('btn-169').addEventListener('click', () => setProporcao('16:9'))
-  setProporcao('9:16')
+  setProporcao(new URLSearchParams(location.search).get('proporcao') === '16:9' ? '16:9' : '9:16')
 
   // Rosto: foto do store ou convite para enviar.
   const foto = store.getFoto()
@@ -133,7 +133,12 @@ function preencher() {
   $('btn-gerar').addEventListener('click', async () => {
     if (!store.getFoto()) return (location.href = $('link-foto').href)
     if (dupla && !parceiro) return (location.href = $('link-parceiro').href)
-    if (store.getSaldoDisponivel() < custo) return (location.href = '/creditos-planos')
+    if (store.getSaldoDisponivel() < custo) {
+      // Depois da compra, "Voltar e gerar" traz de volta para este clipe com a mesma proporção.
+      const aqui = new URL(location.href)
+      aqui.searchParams.set('proporcao', proporcao)
+      return (location.href = `/creditos-planos?voltar=${encodeURIComponent(aqui.pathname + aqui.search)}${debug() ? '&debug' : ''}`)
+    }
     $('btn-gerar').disabled = true
     try {
       const { jobId } = await api.gerarClipe(clipe.id, { proporcao, rostos: dupla ? [store.getRostoAtivo().id, parceiro] : undefined })

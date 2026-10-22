@@ -107,7 +107,7 @@ function render() {
     : !store.getFoto()
       ? `Envie sua foto primeiro. <a class="text-primary underline" href="${$('link-foto').getAttribute('href')}">Enviar foto</a>`
       : disponivel < total
-        ? 'Saldo insuficiente. <a class="text-primary underline" href="/creditos-planos">Comprar créditos</a>'
+        ? `Saldo insuficiente. <a class="text-primary underline" href="/creditos-planos?voltar=/criar-com-texto${debug() ? '&debug' : ''}">Comprar créditos</a>`
         : ''
   $('btn-gerar').disabled = !!motivo
   $('motivo').innerHTML = motivo
