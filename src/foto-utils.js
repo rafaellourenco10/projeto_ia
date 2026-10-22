@@ -42,10 +42,24 @@ const carregar = (src) =>
     img.src = src
   })
 
-// Imagem para baixar: as fontes lado a lado na altura da menor (sem ampliar) e, se pedido, a marca d'água no canto.
-export async function montarImagem(fontes, { marca = false } = {}) {
+// Quebra o texto em linhas que cabem em `max`, medindo com `medir` (o measureText do canvas).
+export function quebrarLinhas(texto, max, medir) {
+  const linhas = []
+  let linha = ''
+  for (const palavra of texto.trim().split(/\s+/)) {
+    const tentativa = linha ? `${linha} ${palavra}` : palavra
+    if (linha && medir(tentativa) > max) {
+      linhas.push(linha)
+      linha = palavra
+    } else linha = tentativa
+  }
+  return linha ? [...linhas, linha] : linhas
+}
+
+// Imagem para baixar: as fontes lado a lado em altura HD, a legenda embaixo e, se pedido, a marca d'água no canto.
+// Altura fixa para o texto sair legível mesmo com as imagens pequenas da fase 1.
+export async function montarImagem(fontes, { marca = false, legenda = '', altura = 1080 } = {}) {
   const imgs = await Promise.all(fontes.map(carregar))
-  const altura = Math.min(...imgs.map((i) => i.naturalHeight))
   const larguras = imgs.map((i) => Math.round((i.naturalWidth / i.naturalHeight) * altura))
   const canvas = document.createElement('canvas')
   canvas.width = larguras.reduce((a, b) => a + b, 0)
@@ -57,6 +71,23 @@ export async function montarImagem(fontes, { marca = false } = {}) {
     x += larguras[i]
   })
   const u = altura / 100
+  if (legenda.trim()) {
+    g.font = `700 ${4.5 * u}px "Plus Jakarta Sans", sans-serif`
+    g.textAlign = 'center'
+    g.textBaseline = 'bottom'
+    g.lineJoin = 'round'
+    g.lineWidth = u
+    g.strokeStyle = 'rgba(0,0,0,0.8)'
+    g.fillStyle = '#fff'
+    const max = canvas.width - 10 * u
+    quebrarLinhas(legenda, max, (t) => g.measureText(t).width)
+      .reverse()
+      .forEach((linha, i) => {
+        const y = altura - 8 * u - i * 5.5 * u
+        g.strokeText(linha, canvas.width / 2, y, max)
+        g.fillText(linha, canvas.width / 2, y, max)
+      })
+  }
   if (marca) {
     g.font = `800 ${3.2 * u}px "Plus Jakarta Sans", sans-serif`
     g.textAlign = 'right'

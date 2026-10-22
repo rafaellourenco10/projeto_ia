@@ -60,13 +60,21 @@ function mostrar(c) {
   const marca = !store.getPlano()
   if (marca) $('quadro').insertAdjacentHTML('beforeend', '<span class="absolute bottom-3 right-3 font-extrabold text-white/75 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] pointer-events-none" aria-hidden="true">SelfieMovie</span>')
   $('aviso-marca').hidden = !marca
+
+  $('quadro').insertAdjacentHTML('beforeend', '<span id="legenda-previa" class="absolute inset-x-4 bottom-12 text-center font-bold text-lg text-white [text-shadow:0_0_4px_#000,0_0_2px_#000] break-words pointer-events-none" aria-hidden="true"></span>')
+  $('legenda').value = c.legenda ?? ''
+  $('legenda-previa').textContent = $('legenda').value
+  $('legenda').addEventListener('input', () => ($('legenda-previa').textContent = $('legenda').value))
+  $('legenda').addEventListener('change', () => {
+    if (!store.updateCriacao(c.id, { legenda: $('legenda').value.trim() })) avisar(MSG_SEM_ESPACO)
+  })
   $('btn-baixar').href = c.img
   $('btn-baixar').setAttribute('download', `selfiemovie-${c.id}.jpg`)
   $('btn-baixar-texto').textContent = ehFoto ? 'Baixar foto' : 'Baixar vídeo'
   $('btn-baixar').addEventListener('click', async (e) => {
     e.preventDefault()
     try {
-      baixarArquivo(await montarImagem([c.img], { marca }), `selfiemovie-${c.id}.jpg`)
+      baixarArquivo(await montarImagem([c.img], { marca, legenda: $('legenda').value }), `selfiemovie-${c.id}.jpg`)
     } catch {
       avisar('Não foi possível preparar o download. Tente de novo.')
     }
