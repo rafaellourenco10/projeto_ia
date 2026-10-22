@@ -4,7 +4,7 @@ import * as store from '../store.js'
 import * as api from '../api.js'
 import { custo as calcularCusto } from '../creditos.js'
 import { CATEGORIAS, miniCard } from '../biblioteca.js'
-import { esc, param, debug, avisar, MSG_SEM_ESPACO } from '../util.js'
+import { esc, param, debug, avisar, compartilhar, MSG_SEM_ESPACO } from '../util.js'
 import clipes from '../data/clips.json'
 
 montarShell({ rota: 'inicio' })
@@ -47,6 +47,7 @@ function preencher() {
     pintarFavorito()
   })
   pintarFavorito()
+  $('btn-compartilhar').addEventListener('click', () => compartilhar(clipe.titulo, 'Olha este clipe no SelfieMovie'))
 
   // Proporção: muda o aspect-ratio do player e vai junto no pedido.
   const ATIVO = ['bg-surface-container-high', 'text-primary', 'font-bold']

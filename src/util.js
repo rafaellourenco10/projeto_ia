@@ -7,6 +7,23 @@ export const MSG_SEM_ESPACO = 'Não foi possível salvar neste navegador. Libere
 export const param = (nome) => new URLSearchParams(location.search).get(nome)
 export const debug = () => new URLSearchParams(location.search).has('debug')
 
+// Compartilha a página atual; sem Web Share API, copia o link.
+export async function compartilhar(title, text = 'Olha o que eu criei no SelfieMovie') {
+  if (navigator.share) {
+    try {
+      return await navigator.share({ title, text, url: location.href })
+    } catch (e) {
+      if (e.name === 'AbortError') return
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(location.href)
+    avisar('Link copiado')
+  } catch {
+    avisar('Não foi possível copiar o link')
+  }
+}
+
 // Aviso flutuante curto (substitui alert()).
 export function avisar(msg) {
   let el = document.getElementById('aviso')

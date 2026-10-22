@@ -3,7 +3,7 @@ import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
 import { miniCard } from '../biblioteca.js'
-import { esc, param, debug, avisar, MSG_SEM_ESPACO } from '../util.js'
+import { esc, param, debug, avisar, compartilhar, MSG_SEM_ESPACO } from '../util.js'
 import clipes from '../data/clips.json'
 
 montarShell({ rota: 'minhas-criacoes' })
@@ -60,22 +60,7 @@ function mostrar(c) {
   $('btn-baixar').setAttribute('download', `selfiemovie-${c.id}.jpg`)
   $('btn-baixar-texto').textContent = ehFoto ? 'Baixar foto' : 'Baixar vídeo'
 
-  $('btn-compartilhar').addEventListener('click', async () => {
-    const dadosShare = { title: c.titulo, text: 'Olha o que eu criei no SelfieMovie', url: location.href }
-    if (navigator.share) {
-      try {
-        return await navigator.share(dadosShare)
-      } catch (e) {
-        if (e.name === 'AbortError') return
-      }
-    }
-    try {
-      await navigator.clipboard.writeText(location.href)
-      avisar('Link copiado')
-    } catch {
-      avisar('Não foi possível copiar o link')
-    }
-  })
+  $('btn-compartilhar').addEventListener('click', () => compartilhar(c.titulo))
 
   // Avaliação: radios nativos (setas do teclado funcionam), estrelas pintadas até a nota.
   $('estrelas').innerHTML = [1, 2, 3, 4, 5]
