@@ -5,6 +5,7 @@ import * as api from '../api.js'
 import { miniCard } from '../biblioteca.js'
 import { esc, param, debug, avisar, compartilhar, MSG_SEM_ESPACO } from '../util.js'
 import clipes from '../data/clips.json'
+import { montarImagem, baixarArquivo } from '../foto-utils.js'
 
 montarShell({ rota: 'minhas-criacoes' })
 
@@ -55,10 +56,21 @@ function mostrar(c) {
     .map(([k, v]) => `<div class="p-space-sm rounded-xl bg-surface-container/70 flex flex-col gap-0.5"><dt class="font-label-sm text-label-sm text-outline">${k}</dt><dd class="font-label-md text-label-md text-on-surface">${v}</dd></div>`)
     .join('')
 
-  // Baixar: na fase 1 o arquivo é a imagem do poster.
+  // Baixar: na fase 1 o arquivo é a imagem do poster. Sem plano, sai com marca d'água.
+  const marca = !store.getPlano()
+  if (marca) $('quadro').insertAdjacentHTML('beforeend', '<span class="absolute bottom-3 right-3 font-extrabold text-white/75 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)] pointer-events-none" aria-hidden="true">SelfieMovie</span>')
+  $('aviso-marca').hidden = !marca
   $('btn-baixar').href = c.img
   $('btn-baixar').setAttribute('download', `selfiemovie-${c.id}.jpg`)
   $('btn-baixar-texto').textContent = ehFoto ? 'Baixar foto' : 'Baixar vídeo'
+  $('btn-baixar').addEventListener('click', async (e) => {
+    e.preventDefault()
+    try {
+      baixarArquivo(await montarImagem([c.img], { marca }), `selfiemovie-${c.id}.jpg`)
+    } catch {
+      avisar('Não foi possível preparar o download. Tente de novo.')
+    }
+  })
 
   $('btn-compartilhar').addEventListener('click', () => compartilhar(c.titulo))
 

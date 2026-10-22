@@ -33,3 +33,47 @@ export function destinoSeguro(url, padrao = '/inicio') {
     return padrao
   }
 }
+
+const carregar = (src) =>
+  new Promise((ok, falha) => {
+    const img = new Image()
+    img.onload = () => ok(img)
+    img.onerror = falha
+    img.src = src
+  })
+
+// Imagem para baixar: as fontes lado a lado na altura da menor (sem ampliar) e, se pedido, a marca d'água no canto.
+export async function montarImagem(fontes, { marca = false } = {}) {
+  const imgs = await Promise.all(fontes.map(carregar))
+  const altura = Math.min(...imgs.map((i) => i.naturalHeight))
+  const larguras = imgs.map((i) => Math.round((i.naturalWidth / i.naturalHeight) * altura))
+  const canvas = document.createElement('canvas')
+  canvas.width = larguras.reduce((a, b) => a + b, 0)
+  canvas.height = altura
+  const g = canvas.getContext('2d')
+  let x = 0
+  imgs.forEach((img, i) => {
+    g.drawImage(img, x, 0, larguras[i], altura)
+    x += larguras[i]
+  })
+  const u = altura / 100
+  if (marca) {
+    g.font = `800 ${3.2 * u}px "Plus Jakarta Sans", sans-serif`
+    g.textAlign = 'right'
+    g.textBaseline = 'bottom'
+    g.shadowColor = 'rgba(0,0,0,0.6)'
+    g.shadowBlur = u
+    g.fillStyle = 'rgba(255,255,255,0.75)'
+    g.fillText('SelfieMovie', canvas.width - 2 * u, altura - 2 * u)
+  }
+  return new Promise((ok, falha) => canvas.toBlob((b) => (b ? ok(b) : falha(new Error('CANVAS'))), 'image/jpeg', 0.9))
+}
+
+export function baixarArquivo(blob, nome) {
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = nome
+  a.click()
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
+}
