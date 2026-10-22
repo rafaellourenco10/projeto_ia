@@ -14,14 +14,24 @@ const estado = { modo: 'video', estilo: 'cinematic', duracao: '5', proporcao: '9
 const RASCUNHO = 'selfiemovie:rascunho-texto'
 
 const SUGESTOES = [
-  'eu descendo uma montanha nevada de esqui ao pôr do sol, com neve voando na câmera',
-  'eu como comandante de uma nave espacial, olhando Saturno pela janela da ponte',
-  'eu pilotando uma moto clássica na chuva em uma cidade cheia de neon à noite',
-  'eu chegando a um festival de cinema sob flashes de fotógrafos, em roupa de gala',
-  'eu surfando uma onda gigante no Havaí ao pôr do sol, em câmera lenta',
-  'eu dançando em um telhado de Nova York ao amanhecer, com a cidade ao fundo',
-  'eu explorando ruínas antigas na selva com uma lanterna, estilo filme de aventura',
+  ['Esqui', 'eu descendo uma montanha nevada de esqui ao pôr do sol, com neve voando na câmera'],
+  ['Nave espacial', 'eu como comandante de uma nave espacial, olhando Saturno pela janela da ponte'],
+  ['Moto neon', 'eu pilotando uma moto clássica na chuva em uma cidade cheia de neon à noite'],
+  ['Tapete vermelho', 'eu chegando a um festival de cinema sob flashes de fotógrafos, em roupa de gala'],
+  ['Surfe', 'eu surfando uma onda gigante no Havaí ao pôr do sol, em câmera lenta'],
+  ['Dança', 'eu dançando em um telhado de Nova York ao amanhecer, com a cidade ao fundo'],
+  ['Aventura', 'eu explorando ruínas antigas na selva com uma lanterna, estilo filme de aventura'],
 ]
+
+$('ideias').innerHTML = SUGESTOES.map(
+  ([rotulo], i) => `<button type="button" data-ideia="${i}" class="shrink-0 px-space-sm py-1.5 rounded-full bg-surface-container-high/70 hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">${rotulo}</button>`,
+).join('')
+$('ideias').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-ideia]')
+  if (!b) return
+  prompt.value = SUGESTOES[b.dataset.ideia][1]
+  render()
+})
 
 // Classes de selecionado por grupo de botões (o modo usa o gradiente do CTA).
 const ATIVO = {
@@ -95,7 +105,7 @@ document.addEventListener('click', (e) => {
 })
 prompt.addEventListener('input', render)
 $('btn-sugestao').addEventListener('click', () => {
-  const outras = SUGESTOES.filter((s) => s !== prompt.value)
+  const outras = SUGESTOES.map(([, s]) => s).filter((s) => s !== prompt.value)
   prompt.value = outras[Math.floor(Math.random() * outras.length)]
   render()
 })
