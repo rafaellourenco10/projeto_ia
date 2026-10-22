@@ -43,16 +43,24 @@ Primeiro lote: 1, 2, 3, 5, 6.
 
 Apps olhados: Higgsfield (face swap, presets de estilo, Soul ID), Reface (biblioteca de modelos, marca d'água no grátis), Viggle (Mix foto + vídeo, 8.000+ modelos, várias pessoas por vídeo, feed com remix, texto no vídeo), PixVerse (efeitos em alta, créditos diários grátis). Tudo abaixo é só front-end, sem API real.
 
-- [ ] **14. Em alta e Novidades no Início** — selos e fileira "Em alta" (Viggle, PixVerse). Valor alto, esforço baixo.
-- [ ] **15. Créditos diários grátis** — botão "Pegar créditos de hoje" uma vez por dia (PixVerse). Valor alto, esforço baixo.
-- [ ] **16. Marca d'água sem plano** — selo SelfieMovie na prévia e no download de quem não tem plano; plano tira (Reface, PixVerse). Valor médio, esforço baixo.
-- [ ] **17. Usar este prompt (remix)** — exemplos prontos em `/criar-com-texto` e botão que abre o criar já preenchido a partir de uma criação (Viggle). Valor médio, esforço baixo.
-- [ ] **18. Surpreenda-me e sugestões de prompt** — chips de ideias e prompt aleatório no criar. Valor médio, esforço baixo.
-- [ ] **19. Mais estilos com prévia** — galeria de presets visuais no criar, com imagens que já existem (Higgsfield). Valor médio, esforço baixo.
-- [ ] **20. Antes e depois** — sua selfie ao lado do resultado, para compartilhar. Valor médio, esforço baixo.
-- [ ] **21. Vários rostos salvos** — até 3 fotos com nome, escolher qual usar no clipe (Soul ID, Viggle). Valor alto, esforço médio.
-- [ ] **22. Clipes em dupla** — modelos com dois rostos (depende da 21) (Viggle). Valor médio, esforço médio a alto.
-- [ ] **23. Geração mais rápida no plano** — tempo de fila menor para quem tem plano, mostrado na página de planos (Higgsfield). Valor médio, esforço baixo.
-- [ ] **24. Legenda no vídeo** — texto opcional sobre a prévia do resultado (Viggle). Valor baixo, esforço médio.
+- [x] **14. Em alta e Novidades no Início** — selos e fileira "Em alta" (Viggle, PixVerse). Valor alto, esforço baixo.
+- [x] **15. Créditos diários grátis** — botão "Pegar créditos de hoje" uma vez por dia (PixVerse). Valor alto, esforço baixo.
+- [x] **16. Marca d'água sem plano** — selo SelfieMovie na prévia e no download de quem não tem plano; plano tira (Reface, PixVerse). Valor médio, esforço baixo.
+- [x] **17. Usar este prompt (remix)** — exemplos prontos em `/criar-com-texto` e botão que abre o criar já preenchido a partir de uma criação (Viggle). Valor médio, esforço baixo.
+- [x] **18. Surpreenda-me e sugestões de prompt** — chips de ideias e prompt aleatório no criar. Valor médio, esforço baixo.
+- [x] **19. Mais estilos com prévia** — galeria de presets visuais no criar, com imagens que já existem (Higgsfield). Valor médio, esforço baixo.
+- [x] **20. Antes e depois** — sua selfie ao lado do resultado, para compartilhar. Valor médio, esforço baixo.
+- [x] **21. Vários rostos salvos** — até 3 fotos com nome, escolher qual usar no clipe (Soul ID, Viggle). Valor alto, esforço médio.
+- [x] **22. Clipes em dupla** — modelos com dois rostos (depende da 21) (Viggle). Valor médio, esforço médio a alto.
+- [x] **23. Geração mais rápida no plano** — tempo de fila menor para quem tem plano, mostrado na página de planos (Higgsfield). Valor médio, esforço baixo.
+- [x] **24. Legenda no vídeo** — texto opcional sobre a prévia do resultado (Viggle). Valor baixo, esforço médio.
 
 Fora por exigir API real: enviar vídeo próprio, voz e lip-sync, câmera ao vivo.
+
+## Lote 2 feito em 2026-10-21
+
+Itens 14 a 24, plano em `docs/superpowers/plans/2026-10-21-selfiemovie-fase2-lote2.md`, commits até 8ea2a67 (um por task).
+
+- 18: "Sugestão da IA" já existia; entrou só a fileira de chips.
+- 20 e dupla: o antes e depois usa o rosto ativo, mesmo em clipe de dupla.
+- Rosto extra pede consentimento da pessoa da foto. Renomear rosto ficou de fora (nome padrão "Rosto 2", "Rosto 3").
