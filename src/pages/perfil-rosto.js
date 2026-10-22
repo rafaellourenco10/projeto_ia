@@ -3,6 +3,7 @@ import { montarShell, avatar, seletorRostos } from '../shell.js'
 import * as store from '../store.js'
 import { reais } from '../creditos.js'
 import { esc, avisar } from '../util.js'
+import { conquistas } from '../conquistas.js'
 
 montarShell({ rota: 'perfil-rosto' })
 
@@ -29,6 +30,18 @@ function atualizar() {
   $('rostos-contagem').textContent = `(${rostos.length} de ${store.MAX_ROSTOS})`
   $('add-rosto').hidden = rostos.length >= store.MAX_ROSTOS
   desenharRostos()
+
+  const selos = conquistas(store.getEstado())
+  $('conquistas-contagem').textContent = `(${selos.filter((c) => c.feita).length} de ${selos.length})`
+  $('lista-conquistas').innerHTML = selos
+    .map(
+      (c) => `<li class="flex flex-col items-center text-center gap-1 p-space-sm rounded-xl ${c.feita ? 'bg-surface-container-high' : 'bg-surface-container-low/60'}">
+  <span class="material-symbols-outlined text-3xl ${c.feita ? 'text-secondary' : 'text-outline'}" aria-hidden="true" ${c.feita ? `style="font-variation-settings: 'FILL' 1;"` : ''}>${c.icone}</span>
+  <span class="font-label-md text-label-md text-on-surface font-semibold">${c.nome}</span>
+  <span class="font-body-sm text-body-sm text-on-surface-variant">${c.feita ? 'Conquistada' : c.falta}</span>
+</li>`,
+    )
+    .join('')
 
   const compras = store.getCompras()
   $('sem-compras').hidden = compras.length > 0

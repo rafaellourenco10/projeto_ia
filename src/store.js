@@ -109,6 +109,7 @@ export function pegarBonusDiario(d) {
     e.saldo += creditos
     e.bonusDiario = diaLocal(d)
     e.sequencia = sequencia
+    e.melhorSequencia = Math.max(e.melhorSequencia ?? 0, sequencia) // a conquista de 7 dias não some quando a sequência quebra
   })
 }
 
