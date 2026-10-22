@@ -21,3 +21,6 @@ export const PACOTES = [
 ]
 
 export const reais = (n) => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 })
+
+// Aviso do teste grátis do plano (Créditos e Perfil).
+export const textoTeste = (t) => `Seu teste grátis acaba em ${t.diasRestantes} ${t.diasRestantes === 1 ? 'dia' : 'dias'}`

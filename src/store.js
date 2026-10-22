@@ -68,7 +68,37 @@ export function entrar({ email }) {
   return getUsuario()
 }
 
-export const getPlano = () => ler()?.plano ?? null
+// Teste grátis: Pro Creator por 7 dias, um por conta. Ao vencer, a leitura grava a volta ao sem plano.
+export const TESTE_PLANO = 'Pro Creator'
+export function getPlano(d = new Date()) {
+  const e = ler()
+  if (e?.teste && d.getTime() >= e.teste.fim) {
+    alterar((x) => {
+      x.plano = null
+      delete x.teste
+    })
+    return null
+  }
+  return e?.plano ?? null
+}
+export function getTeste(d = new Date()) {
+  const fim = getPlano(d) && ler()?.teste?.fim
+  return fim ? { fim, diasRestantes: Math.ceil((fim - d.getTime()) / 864e5) } : null
+}
+export const testeDisponivel = () => {
+  const e = ler()
+  return !!e && !e.testeUsado && !e.plano
+}
+export function iniciarTeste(d = new Date()) {
+  if (!testeDisponivel()) return false
+  const fim = new Date(d)
+  fim.setDate(fim.getDate() + 7)
+  return alterar((e) => {
+    e.plano = TESTE_PLANO
+    e.teste = { fim: fim.getTime() }
+    e.testeUsado = true
+  })
+}
 export const setPlano = (nome) => alterar((e) => (e.plano = nome))
 
 export const sair = () => alterar((e) => (e.logado = false))
@@ -117,7 +147,10 @@ export function pegarBonusDiario(d) {
 export const comprar = ({ creditos, plano = null, descricao, preco }) =>
   alterar((e) => {
     e.saldo += creditos
-    if (plano) e.plano = plano
+    if (plano) {
+      e.plano = plano
+      delete e.teste
+    }
     e.compras.unshift({ descricao, creditos, preco, data: Date.now() })
   })
 export const getCompras = () => ler()?.compras ?? []

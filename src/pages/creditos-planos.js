@@ -1,7 +1,7 @@
 import '../main.css'
 import { montarShell } from '../shell.js'
 import * as store from '../store.js'
-import { CUSTOS, PLANOS, PACOTES, reais } from '../creditos.js'
+import { CUSTOS, PLANOS, PACOTES, reais, textoTeste } from '../creditos.js'
 import { avisar, debug, MSG_SEM_ESPACO } from '../util.js'
 import { destinoSeguro } from '../foto-utils.js'
 
@@ -17,6 +17,13 @@ function atualizar() {
   $('plano-atual').textContent = plano ? `Plano atual: ${plano}` : 'Sem plano ativo'
   const n = clipes(store.getSaldoDisponivel())
   $('capacidade').textContent = `${n} ${n === 1 ? 'clipe' : 'clipes'}`
+  // Teste grátis: oferta para quem nunca testou nem assinou; aviso enquanto dura.
+  const teste = store.getTeste()
+  const oferta = store.testeDisponivel()
+  $('teste').hidden = !oferta && !teste
+  $('btn-teste').hidden = !oferta
+  $('teste-titulo').textContent = oferta ? `Teste 7 dias grátis do ${store.TESTE_PLANO}` : teste ? textoTeste(teste) : ''
+  $('teste-texto').textContent = oferta ? 'Geração 2× mais rápida e sem marca d’água. Sem cobrança e sem créditos extras.' : 'Depois disso você volta ao sem plano, sem cobrança.'
 }
 store.onChange(atualizar)
 atualizar()
@@ -83,6 +90,11 @@ $('tabela-custos').innerHTML = LINHAS.map(
   <td class="py-space-sm text-right whitespace-nowrap"><span class="font-headline-sm text-headline-sm font-bold text-tertiary">${n}</span><span class="font-label-sm text-label-sm text-outline ml-1">créditos</span></td>
 </tr>`,
 ).join('')
+
+$('btn-teste').addEventListener('click', () => {
+  if (!store.iniciarTeste()) return avisar(store.testeDisponivel() ? MSG_SEM_ESPACO : 'Você já usou o teste grátis')
+  avisar(`Teste do ${store.TESTE_PLANO} ativo por 7 dias`)
+})
 
 // Fase 1: sem pagamento real. Com ?debug a compra credita na hora, para testar o fluxo.
 document.querySelector('main').addEventListener('click', (e) => {

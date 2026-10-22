@@ -207,6 +207,48 @@ describe('sequência de dias', () => {
   })
 })
 
+describe('teste grátis do plano', () => {
+  const dia = (n) => new Date(2026, 9, n, 12)
+
+  it('dá o Pro Creator por 7 dias, sem créditos extras', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    const S = store.getSaldo()
+    expect(store.testeDisponivel()).toBe(true)
+    expect(store.iniciarTeste(dia(1))).toBe(true)
+    expect(store.getPlano(dia(7))).toBe('Pro Creator')
+    expect(store.getTeste(dia(7))).toEqual({ fim: dia(8).getTime(), diasRestantes: 1 })
+    expect(store.getSaldo()).toBe(S)
+  })
+
+  it('expira no fim e volta ao sem plano', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.iniciarTeste(dia(1))
+    expect(store.getPlano(dia(8))).toBe(null)
+    expect(store.getPlano(dia(2))).toBe(null) // gravou a volta
+    expect(store.getTeste(dia(2))).toBe(null)
+  })
+
+  it('não repete, nem para quem já tem plano', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.iniciarTeste(dia(1))
+    store.getPlano(dia(9))
+    expect(store.testeDisponivel()).toBe(false)
+    expect(store.iniciarTeste(dia(10))).toBe(false)
+    localStorage.clear()
+    store.cadastrar({ nome: 'Bia', email: 'bia@x.com' })
+    store.setPlano('Básico')
+    expect(store.iniciarTeste(dia(1))).toBe(false)
+  })
+
+  it('assinar um plano de verdade apaga o teste', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.iniciarTeste(dia(1))
+    store.comprar({ creditos: 50, plano: 'Básico', descricao: 'Plano Básico', preco: 29 })
+    expect(store.getTeste(dia(2))).toBe(null)
+    expect(store.getPlano(dia(20))).toBe('Básico')
+  })
+})
+
 describe('custo', () => {
   it('segue a tabela única', () => {
     expect(custo({ tipo: 'clipe' })).toBe(5)

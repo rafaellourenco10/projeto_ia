@@ -1,7 +1,7 @@
 import '../main.css'
 import { montarShell, avatar, seletorRostos } from '../shell.js'
 import * as store from '../store.js'
-import { reais } from '../creditos.js'
+import { reais, textoTeste } from '../creditos.js'
 import { esc, avisar } from '../util.js'
 import { conquistas } from '../conquistas.js'
 
@@ -17,6 +17,9 @@ function atualizar() {
   $('conta-nome').textContent = u.nome
   $('conta-email').textContent = u.email
   $('conta-plano').textContent = store.getPlano() ?? 'Sem plano ativo'
+  const teste = store.getTeste()
+  $('conta-teste').hidden = !teste
+  if (teste) $('conta-teste').textContent = textoTeste(teste)
 
   const foto = store.getFoto()
   $('foto').hidden = !foto
