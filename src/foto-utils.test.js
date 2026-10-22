@@ -19,7 +19,7 @@ describe('destinoSeguro', () => {
     expect(destinoSeguro('/clipe?id=abc')).toBe('/clipe?id=abc')
   })
   it('recusa outro site e cai no padrão', () => {
-    for (const url of ['//evil.com', '/\\evil.com', '/\t/evil.com', '/\n/evil.com', '/\r/evil.com','https://evil.com', 'javascript:alert(1)', '', null]) {
+    for (const url of ['//evil.com', '/.//evil.com', '/..//evil.com', '/%2e//evil.com', '/\\evil.com', '/\t/evil.com', '/\n/evil.com', '/\r/evil.com','https://evil.com', 'javascript:alert(1)', '', null]) {
       expect(destinoSeguro(url)).toBe('/inicio')
     }
   })

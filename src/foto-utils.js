@@ -28,7 +28,8 @@ export function destinoSeguro(url, padrao = '/inicio') {
   const base = 'https://selfiemovie.invalid'
   try {
     const u = new URL(url, base)
-    return u.origin === base ? u.pathname + u.search + u.hash : padrao
+    // '/.//evil.com' normaliza para o caminho '//evil.com', que o navegador lê como outro site.
+    return u.origin === base && !/^\/[/\\]/.test(u.pathname) ? u.pathname + u.search + u.hash : padrao
   } catch {
     return padrao
   }
