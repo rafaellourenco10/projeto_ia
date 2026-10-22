@@ -41,6 +41,7 @@ function card(c, s) {
   <div class="relative aspect-[9/14] w-full overflow-hidden bg-surface-container-lowest">
     <img alt="" loading="lazy" src="${c.img}" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105"/>
     <span class="absolute top-space-sm left-space-sm px-2.5 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md text-emerald-300 font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md"><span class="material-symbols-outlined text-xs" aria-hidden="true">check_circle</span>Pronto</span>
+    ${c.desafio ? '<span class="absolute top-space-sm right-space-sm px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md"><span class="material-symbols-outlined text-xs" aria-hidden="true">emoji_events</span>Desafio</span>' : ''}
   </div>
   ${rodape(c, `<span class="font-label-sm text-label-sm text-outline">${quando(c.criadoEm)}</span>`)}
 </a>`

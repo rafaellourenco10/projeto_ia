@@ -3,6 +3,7 @@
 import * as store from './store.js'
 import { custo } from './creditos.js'
 import clips from './data/clips.json'
+import { desafioDaSemana, entraNoDesafio } from './desafios.js'
 
 export const FASES = ['Na fila...', 'Detectando traços faciais...', 'Adequando iluminação da cena...', 'Finalizando renderização...']
 export const DURACAO_MS = 20000
@@ -21,6 +22,7 @@ export const IMG_ESTILO = {
 function criar(dados) {
   if (!store.getFoto()) throw new Error('SEM_FOTO')
   if (store.getSaldoDisponivel() < dados.custo) throw new Error('SEM_SALDO')
+  const des = desafioDaSemana()
   const c = {
     ...dados,
     id: crypto.randomUUID().slice(0, 8),
@@ -28,6 +30,7 @@ function criar(dados) {
     criadoEm: Date.now(),
     duracaoMs: store.getPlano() ? DURACAO_PLANO_MS : DURACAO_MS,
     falhar: new URLSearchParams(location.search).get('debug') === 'falha',
+    desafio: entraNoDesafio(des, dados) ? des.id : undefined,
   }
   if (!store.addCriacao(c)) throw new Error('SEM_ESPACO')
   return { jobId: c.id }

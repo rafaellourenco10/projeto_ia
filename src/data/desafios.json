@@ -1,0 +1,8 @@
+[
+  { "id": "agente-secreto", "tema": "Agente secreto", "texto": "Missão da semana: viva um espião de cinema. Vale clipe de ação ou vídeo cinemático.", "clipIds": ["agente-secreto", "fuga-noturna", "detetive-cyberpunk"], "estilo": "cinematic" },
+  { "id": "espaco", "tema": "Rumo às estrelas", "texto": "Saia da órbita: estrele uma aventura no espaço.", "clipIds": ["explorador", "horizonte-alienigena", "piloto-orbital"], "estilo": "cyberpunk" },
+  { "id": "realeza", "tema": "Realeza", "texto": "Coroa, trono e capa: mostre seu lado nobre.", "clipIds": ["trono-de-cinzas", "herdeira-trono", "guardiao-reino"], "estilo": "fantasia" },
+  { "id": "noir", "tema": "Mistério noir", "texto": "Chapéu, sombra e chuva: resolva o caso da semana.", "clipIds": ["detetive-noir", "detetive-cyberpunk", "fuga-noturna"], "estilo": "noir" },
+  { "id": "campeao", "tema": "Campeão", "texto": "Suba no pódio: pista, troféu e torcida.", "clipIds": ["piloto-corrida", "campeao-podio", "piloto-orbital"], "estilo": "realistic" },
+  { "id": "festa", "tema": "Festa e viagem", "texto": "Pista de dança ou pôr do sol na praia: escolha sua vibe.", "clipIds": ["danca-festival", "ferias-santorini", "noite-de-estreia"], "estilo": "vintage" }
+]

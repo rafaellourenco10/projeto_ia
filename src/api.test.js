@@ -1,6 +1,8 @@
 // @vitest-environment happy-dom
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import * as store from './store.js'
+import { desafioDaSemana } from './desafios.js'
+import clips from './data/clips.json'
 import { gerarClipe, gerarComTexto, refazer, statusJob, fecharVencidos, DURACAO_MS, DURACAO_PLANO_MS } from './api.js'
 
 function usuarioComFoto(saldo) {
@@ -89,6 +91,16 @@ describe('api simulada', () => {
     expect(store.getSaldo()).toBe(0)
     await expect(refazer(jobId, { gratis: true })).rejects.toThrow('GRATIS_USADO')
     await expect(refazer(novo, { gratis: true })).rejects.toThrow('GRATIS_USADO') // o refazer grátis não gera outro
+  })
+
+  it('criação com clipe ou estilo do tema entra no desafio da semana', async () => {
+    usuarioComFoto(20)
+    const des = desafioDaSemana()
+    const doTema = clips.find((c) => des.clipIds.includes(c.id) && c.pessoas !== 2)
+    const fora = clips.find((c) => !des.clipIds.includes(c.id) && c.pessoas !== 2)
+    expect(store.getCriacao((await gerarClipe(doTema.id)).jobId).desafio).toBe(des.id)
+    expect(store.getCriacao((await gerarClipe(fora.id)).jobId).desafio).toBeUndefined()
+    expect(store.getCriacao((await gerarComTexto({ modo: 'foto', prompt: 'x', estilo: des.estilo })).jobId).desafio).toBe(des.id)
   })
 
   it('clipe solo ignora rostos', async () => {

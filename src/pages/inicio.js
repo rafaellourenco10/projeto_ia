@@ -5,6 +5,7 @@ import { esc, param, avisar, MSG_SEM_ESPACO } from '../util.js'
 import { CUSTOS } from '../creditos.js'
 import { CATEGORIAS, filtrarClipes, miniCard, ehNovo, SELO_NOVO, SELO_DUPLA } from '../biblioteca.js'
 import clipes from '../data/clips.json'
+import { desafioDaSemana } from '../desafios.js'
 
 montarShell({ rota: 'inicio' })
 // A página tem a própria busca; a do header ficaria duplicada aqui.
@@ -90,6 +91,17 @@ $('em-alta-lista').innerHTML = filtrarClipes(clipes)
 // Dia N de 7 da sequência; o 7º dia vale o bônus da semana.
 const bonus = store.proximoBonus(store.getEstado())
 const diaSemana = ((bonus.sequencia - 1) % 7) + 1
+// Desafio da semana: os clipes do tema; o selo vai na criação feita nesta semana (api.criar).
+const desafio = desafioDaSemana()
+const feitas = store.getCriacoes().filter((c) => c.desafio === desafio.id && c.criadoEm >= desafio.inicio).length
+$('desafio-titulo').textContent = desafio.tema
+$('desafio-texto').textContent = desafio.texto
+$('desafio-prazo').textContent = `${feitas ? `Você fez ${feitas} · ` : ''}Até domingo`
+$('desafio-lista').innerHTML = desafio.clipIds
+  .map((id) => clipes.find((c) => c.id === id))
+  .map((c) => `<div class="w-36 md:w-44 shrink-0">${miniCard(c)}</div>`)
+  .join('')
+
 document.querySelector('[data-bonus-diario]').textContent = bonus.creditos
 $('bonus-dia').textContent = `Dia ${diaSemana} de 7 · ${diaSemana === 7 ? 'hoje vale' : 'o 7º dia vale'} +${CUSTOS.bonusSemana}`
 $('bonus-bolinhas').innerHTML = Array.from({ length: 7 }, (_, i) => `<span class="w-2 h-2 rounded-full ${i < diaSemana ? 'bg-secondary' : 'bg-outline-variant'}"></span>`).join('')
