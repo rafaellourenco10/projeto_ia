@@ -249,6 +249,18 @@ describe('teste grátis do plano', () => {
   })
 })
 
+describe('registro de bônus', () => {
+  it('cadastro e bônus diário entram em bonus', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    for (let n = 1; n <= 7; n++) store.pegarBonusDiario(new Date(2026, 9, n, 12))
+    const b = store.getEstado().bonus
+    expect(b).toHaveLength(8)
+    expect(b[0]).toEqual({ descricao: 'Bônus da semana (7 dias seguidos)', creditos: 5, data: new Date(2026, 9, 7, 12).getTime() })
+    expect(b[1].descricao).toBe('Bônus diário')
+    expect(b[7]).toMatchObject({ descricao: 'Bônus de cadastro', creditos: 10 })
+  })
+})
+
 describe('custo', () => {
   it('segue a tabela única', () => {
     expect(custo({ tipo: 'clipe' })).toBe(5)

@@ -52,7 +52,7 @@ export const getEmailSalvo = () => ler()?.usuario.email ?? null
 // Fase 1 guarda uma conta por navegador: trocar de conta apagaria fotos, criações e créditos.
 export function cadastrar({ nome, email }) {
   if (ler()) throw new Error('CONTA_EXISTENTE')
-  gravar(novoEstado({ nome, email }, CUSTOS.bonusCadastro))
+  gravar({ ...novoEstado({ nome, email }, CUSTOS.bonusCadastro), bonus: [{ descricao: 'Bônus de cadastro', creditos: CUSTOS.bonusCadastro, data: Date.now() }] })
   return getUsuario()
 }
 
@@ -140,6 +140,7 @@ export function pegarBonusDiario(d) {
     e.bonusDiario = diaLocal(d)
     e.sequencia = sequencia
     e.melhorSequencia = Math.max(e.melhorSequencia ?? 0, sequencia) // a conquista de 7 dias não some quando a sequência quebra
+    e.bonus = [{ descricao: sequencia % 7 === 0 ? 'Bônus da semana (7 dias seguidos)' : 'Bônus diário', creditos, data: (d ?? new Date()).getTime() }, ...(e.bonus ?? [])]
   })
 }
 

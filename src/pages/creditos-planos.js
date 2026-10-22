@@ -2,8 +2,9 @@ import '../main.css'
 import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import { CUSTOS, PLANOS, PACOTES, reais, textoTeste } from '../creditos.js'
-import { avisar, debug, MSG_SEM_ESPACO } from '../util.js'
+import { avisar, debug, esc, MSG_SEM_ESPACO } from '../util.js'
 import { destinoSeguro } from '../foto-utils.js'
+import { extrato } from '../extrato.js'
 
 montarShell({ rota: 'creditos-planos' })
 
@@ -11,12 +12,24 @@ const $ = (id) => document.getElementById(id)
 // Quem chegou sem saldo do /clipe ou do /criar-com-texto volta para o pedido depois de comprar.
 const voltar = destinoSeguro(new URLSearchParams(location.search).get('voltar'), null)
 const clipes = (creditos) => Math.floor(creditos / CUSTOS.clipe)
+const rendimento = (c) => `≈ ${clipes(c)} clipes · ${Math.floor(c / CUSTOS.video5)} vídeos de 5 s · ${Math.floor(c / CUSTOS.foto)} fotos`
+const dataCurta = (t) => new Date(t).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' })
 
 function atualizar() {
   const plano = store.getPlano()
   $('plano-atual').textContent = plano ? `Plano atual: ${plano}` : 'Sem plano ativo'
   const n = clipes(store.getSaldoDisponivel())
   $('capacidade').textContent = `${n} ${n === 1 ? 'clipe' : 'clipes'}`
+  const linhas = extrato(store.getEstado())
+  $('sem-extrato').hidden = linhas.length > 0
+  $('lista-extrato').innerHTML = linhas
+    .map(
+      (l) => `<li class="flex items-center justify-between gap-space-md py-space-sm">
+  <div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">${esc(l.descricao)}</span><span class="font-body-sm text-body-sm text-outline">${dataCurta(l.data)} • ${l.detalhe}</span></div>
+  <span class="font-label-lg text-label-lg font-bold whitespace-nowrap ${l.creditos > 0 ? 'text-tertiary' : l.creditos < 0 ? 'text-on-surface' : 'text-outline'}">${l.creditos > 0 ? '+' : ''}${l.creditos}</span>
+</li>`,
+    )
+    .join('')
   // Teste grátis: oferta para quem nunca testou nem assinou; aviso enquanto dura.
   const teste = store.getTeste()
   const oferta = store.testeDisponivel()
@@ -49,6 +62,7 @@ $('lista-planos').innerHTML = PLANOS.map(
     <div class="flex flex-col gap-1">
       <p class="flex items-baseline gap-1"><span class="font-headline-lg text-headline-lg font-extrabold text-on-surface tracking-tight">${reais(p.preco)}</span><span class="font-body-sm text-body-sm text-outline">/ mês</span></p>
       <p class="font-label-md text-label-md font-bold ${p.destaque ? 'text-secondary' : 'text-primary'}">${p.creditos} créditos por mês</p>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">${rendimento(p.creditos)}</p>
     </div>
     <div class="h-px w-full bg-surface-container-highest"></div>
     <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm ${p.destaque ? 'text-on-surface' : 'text-on-surface-variant'}">
@@ -67,7 +81,7 @@ $('lista-pacotes').innerHTML = PACOTES.map(
   <div class="flex items-start justify-between gap-space-sm">
     <div class="flex flex-col">
       <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">${p.creditos} créditos</h3>
-      <span class="font-body-sm text-body-sm ${i === 1 ? 'text-secondary' : 'text-on-surface-variant'}">≈ ${clipes(p.creditos)} clipes</span>
+      <span class="font-body-sm text-body-sm ${i === 1 ? 'text-secondary' : 'text-on-surface-variant'}">${rendimento(p.creditos)}</span>
     </div>
     <span class="font-headline-sm text-headline-sm font-extrabold ${i === 1 ? 'text-secondary' : 'text-primary'}">${reais(p.preco)}</span>
   </div>
