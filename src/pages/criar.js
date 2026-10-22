@@ -157,4 +157,15 @@ try {
   }
 } catch {}
 
+// "Editar e gerar de novo" do /resultado chega com o pedido na URL; vale mais que o rascunho.
+const pedido = new URLSearchParams(location.search)
+if (pedido.has('prompt')) {
+  prompt.value = pedido.get('prompt').slice(0, 500)
+  for (const campo of Object.keys(estado)) {
+    const v = pedido.get(campo)
+    if (v && document.querySelector(`[data-grupo="${campo}"][data-valor="${CSS.escape(v)}"]`)) estado[campo] = v
+  }
+  history.replaceState(null, '', location.pathname) // recarregar não apaga o que a pessoa editar depois
+}
+
 render()

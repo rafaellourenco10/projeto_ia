@@ -122,6 +122,12 @@ function mostrar(c) {
     }
   })
 
+  if (c.prompt) {
+    $('link-editar').hidden = false
+    const dadosPedido = { prompt: c.prompt, modo: c.tipo, estilo: c.estilo, duracao: c.duracao, proporcao: c.proporcao }
+    $('link-editar').href = `/criar-com-texto?${new URLSearchParams(Object.entries(dadosPedido).filter(([, v]) => v != null))}`
+  }
+
   const foto = store.getFoto()
   $('rosto').innerHTML = foto
     ? `<img alt="" class="w-full h-full object-cover" src="${foto}"/>`
