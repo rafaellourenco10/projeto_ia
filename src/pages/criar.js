@@ -33,6 +33,22 @@ $('ideias').addEventListener('click', (e) => {
   render()
 })
 
+const ESTILOS = [
+  ['cinematic', 'Cinemático', 'Iluminação dramática de cinema'],
+  ['realistic', 'Realista', 'Textura natural de câmera'],
+  ['cyberpunk', 'Cyberpunk', 'Futurista, cheio de neon'],
+  ['vintage', 'Vintage 80s', 'Grão de filme e tons quentes'],
+  ['noir', 'Noir', 'Preto e branco, sombras fortes'],
+  ['fantasia', 'Fantasia', 'Épico, com castelos e magia'],
+]
+$('estilos').innerHTML = ESTILOS.map(
+  ([valor, nome, descricao]) => `<button type="button" data-grupo="estilo" data-valor="${valor}" class="flex flex-col items-start gap-1 p-2 rounded-2xl text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+  <span class="relative w-full aspect-video rounded-xl overflow-hidden bg-surface-container-lowest"><img alt="" loading="lazy" src="${api.IMG_ESTILO[valor]}" class="w-full h-full object-cover"/><span class="material-symbols-outlined absolute top-1.5 right-1.5 text-primary text-base bg-surface-container-lowest/80 rounded-full" data-check aria-hidden="true">check_circle</span></span>
+  <span class="px-1 font-label-md text-label-md text-on-surface font-bold" data-nome>${nome}</span>
+  <span class="px-1 pb-1 font-body-sm text-body-sm text-on-surface-variant leading-tight">${descricao}</span>
+</button>`,
+).join('')
+
 // Classes de selecionado por grupo de botões (o modo usa o gradiente do CTA).
 const ATIVO = {
   modo: ['bg-gradient-to-r', 'from-primary-container', 'to-secondary-container', 'text-on-surface', 'shadow-[0_0_20px_rgba(160,120,255,0.4)]'],

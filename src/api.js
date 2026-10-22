@@ -8,11 +8,14 @@ export const FASES = ['Na fila...', 'Detectando traços faciais...', 'Adequando 
 export const DURACAO_MS = 20000
 export const DURACAO_PLANO_MS = 10000 // quem tem plano entra na fila prioritária
 
-const IMG_ESTILO = {
+// Também é a prévia de cada estilo no /criar-com-texto.
+export const IMG_ESTILO = {
   cinematic: '/img/resultado-agente.jpg',
-  cyberpunk: '/img/criacao-neo-tokyo.jpg',
   realistic: '/img/criacao-surfista.jpg',
+  cyberpunk: '/img/criacao-neo-tokyo.jpg',
   vintage: '/img/criacao-imperatriz.jpg',
+  noir: '/img/clipe-detetive-noir.jpg',
+  fantasia: '/img/clipe-guardiao-reino.jpg',
 }
 
 function criar(dados) {
