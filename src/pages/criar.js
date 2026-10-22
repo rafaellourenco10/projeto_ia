@@ -33,6 +33,31 @@ $('ideias').addEventListener('click', (e) => {
   render()
 })
 
+// Pedidos prontos que estão em alta: preenchem tudo de uma vez.
+const TENDENCIAS = [
+  { rotulo: 'Pôster de filme', modo: 'foto', estilo: 'cinematic', proporcao: '9:16', prompt: 'eu no pôster de um filme de ação de Hollywood, com o título em letras grandes e explosões ao fundo' },
+  { rotulo: 'Você daqui a 50 anos', modo: 'foto', estilo: 'realistic', proporcao: '9:16', prompt: 'eu daqui a 50 anos, com cabelos grisalhos e rugas, sorrindo em uma varanda ensolarada' },
+  { rotulo: 'Tempestade ao redor', modo: 'video', estilo: 'cinematic', proporcao: '9:16', prompt: 'eu parado no meio de uma tempestade, com raios caindo ao redor e o vento girando em volta de mim' },
+  { rotulo: 'Detetive noir', modo: 'video', estilo: 'noir', proporcao: '16:9', prompt: 'eu como detetive de chapéu e sobretudo, andando por uma rua molhada de chuva à noite' },
+  { rotulo: 'Herói de fantasia', modo: 'video', estilo: 'fantasia', proporcao: '16:9', prompt: 'eu como herói de fantasia erguendo uma espada diante de um castelo, com um dragão sobrevoando' },
+]
+$('tendencias').innerHTML = TENDENCIAS.map(
+  (t, i) => `<button type="button" data-tendencia="${i}" class="w-32 shrink-0 md:w-auto md:flex-1 md:shrink md:min-w-0 flex flex-col gap-1 rounded-xl text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary group">
+  <span class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container-lowest"><img alt="" loading="lazy" src="${api.IMG_ESTILO[t.estilo]}" class="w-full h-full object-cover group-hover:scale-105 transition-transform"/><span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-full bg-surface-container-lowest/80 text-on-surface font-label-sm text-label-sm">${t.modo === 'foto' ? 'Foto' : 'Vídeo'}</span></span>
+  <span class="px-1 font-label-md text-label-md text-on-surface font-semibold leading-tight">${t.rotulo}</span>
+</button>`,
+).join('')
+$('tendencias').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-tendencia]')
+  if (!b) return
+  const { prompt: texto, modo, estilo, proporcao } = TENDENCIAS[b.dataset.tendencia]
+  prompt.value = texto
+  Object.assign(estado, { modo, estilo, proporcao })
+  render()
+  $('btn-gerar').scrollIntoView({ behavior: 'smooth', block: 'center' })
+  $('btn-gerar').focus({ preventScroll: true })
+})
+
 const ESTILOS = [
   ['cinematic', 'Cinemático', 'Iluminação dramática de cinema'],
   ['realistic', 'Realista', 'Textura natural de câmera'],
