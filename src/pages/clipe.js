@@ -27,13 +27,18 @@ function preencher() {
 
   $('video').poster = clipe.img
   $('titulo').textContent = clipe.titulo
-  $('descricao').textContent = `Coloque seu rosto nesta cena de ${clipe.genero.toLowerCase()}. Você envia a foto, e o clipe fica pronto com você como protagonista.`
+  const dupla = clipe.pessoas === 2
+  $('descricao').textContent = dupla
+    ? `Cena em dupla de ${clipe.genero.toLowerCase()}: você e mais uma pessoa. Escolha os dois rostos e o clipe fica pronto com vocês como protagonistas.`
+    : `Coloque seu rosto nesta cena de ${clipe.genero.toLowerCase()}. Você envia a foto, e o clipe fica pronto com você como protagonista.`
   $('duracao').textContent = `${clipe.duracaoSeg} s`
   const selo = 'px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm'
   $('selos').innerHTML =
     (clipe.popularidade >= 90
       ? `<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 shadow-[0_0_12px_rgba(170,2,102,0.3)]"><span class="material-symbols-outlined text-xs" aria-hidden="true">local_fire_department</span>Popular</span>`
-      : '') + `<span class="${selo}">${esc(categoria)}</span><span class="${selo}">${esc(clipe.genero)}</span>`
+      : '') +
+    (dupla ? `<span class="${selo} flex items-center gap-1"><span class="material-symbols-outlined text-xs" aria-hidden="true">group</span>Dupla</span>` : '') +
+    `<span class="${selo}">${esc(categoria)}</span><span class="${selo}">${esc(clipe.genero)}</span>`
   document.querySelectorAll('[data-custo]').forEach((el) => (el.textContent = custo))
 
   function pintarFavorito() {
@@ -74,6 +79,7 @@ function preencher() {
   seletorRostos($('rostos'), () => {
     $('rosto-foto').querySelector('img').src = store.getFoto()
     $('rosto-nome').textContent = store.getRostoAtivo().nome
+    desenharParceiros()
   })
   if (foto) {
     $('rosto-foto').innerHTML = `<img alt="Sua foto" class="w-full h-full object-cover" src="${foto}"/>`
@@ -92,23 +98,50 @@ function preencher() {
     disponivel >= custo
       ? `Restarão: <strong class="text-tertiary font-label-md">${disponivel - custo} créditos</strong>`
       : `Faltam: <strong class="text-secondary font-label-md">${custo - disponivel} créditos</strong>`
-  $('btn-gerar-texto').textContent = !foto
-    ? 'Enviar minha foto para gerar'
-    : disponivel < custo
-      ? 'Comprar créditos para gerar'
-      : `Gerar com meu rosto (${custo} créditos)`
+  const textoBotao = () =>
+    !foto
+      ? 'Enviar minha foto para gerar'
+      : dupla && !parceiro
+        ? 'Adicionar o segundo rosto'
+        : disponivel < custo
+          ? 'Comprar créditos para gerar'
+          : `Gerar ${dupla ? 'a dupla' : 'com meu rosto'} (${custo} créditos)`
+
+  // Dupla: o rosto ativo e mais um rosto salvo, escolhido aqui.
+  let parceiro = null
+  $('dupla').hidden = !dupla || !foto
+  $('link-parceiro').href = `/perfil-rosto/foto?rosto=novo&voltar=${encodeURIComponent(location.pathname + location.search)}`
+  function desenharParceiros() {
+    const outros = store.getRostos().filter((r) => r.id !== store.getRostoAtivo()?.id)
+    if (!outros.some((r) => r.id === parceiro)) parceiro = outros[0]?.id ?? null
+    $('parceiros').innerHTML = outros
+      .map(
+        (r) => `<button type="button" data-parceiro="${esc(r.id)}" aria-pressed="${r.id === parceiro}" aria-label="Contracenar com ${esc(r.nome)}" title="${esc(r.nome)}" class="w-10 h-10 shrink-0 rounded-full overflow-hidden ring-2 ring-offset-2 ring-offset-surface-container-low transition ${r.id === parceiro ? 'ring-secondary' : 'ring-transparent opacity-60 hover:opacity-100'} focus-visible:outline-none focus-visible:ring-secondary"><img alt="" src="${r.foto}" class="w-full h-full object-cover"/></button>`,
+      )
+      .join('')
+    $('link-parceiro').hidden = !!outros.length
+    $('btn-gerar-texto').textContent = textoBotao()
+  }
+  $('parceiros').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-parceiro]')
+    if (!b) return
+    parceiro = b.dataset.parceiro
+    desenharParceiros()
+  })
+  desenharParceiros()
 
   $('btn-gerar').addEventListener('click', async () => {
     if (!store.getFoto()) return (location.href = $('link-foto').href)
+    if (dupla && !parceiro) return (location.href = $('link-parceiro').href)
     if (store.getSaldoDisponivel() < custo) return (location.href = '/creditos-planos')
     $('btn-gerar').disabled = true
     try {
-      const { jobId } = await api.gerarClipe(clipe.id, { proporcao })
+      const { jobId } = await api.gerarClipe(clipe.id, { proporcao, rostos: dupla ? [store.getRostoAtivo().id, parceiro] : undefined })
       location.href = `/gerando?job=${jobId}${debug() ? '&debug' : ''}`
     } catch (e) {
       $('btn-gerar').disabled = false
       $('msg').classList.remove('hidden')
-      $('msg').textContent = e.message === 'SEM_SALDO' ? 'Saldo insuficiente para este clipe.' : e.message === 'SEM_ESPACO' ? MSG_SEM_ESPACO : 'Não foi possível começar a geração. Tente de novo.'
+      $('msg').textContent = e.message === 'SEM_SALDO' ? 'Saldo insuficiente para este clipe.' : e.message === 'SEM_ESPACO' ? MSG_SEM_ESPACO : e.message === 'SEM_SEGUNDO_ROSTO' ? 'Escolha quem contracena com você.' : 'Não foi possível começar a geração. Tente de novo.'
     }
   })
 

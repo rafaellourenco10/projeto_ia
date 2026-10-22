@@ -74,7 +74,8 @@
     "custo": 5,
     "img": "/img/clipe-duelo-cerejeiras.jpg",
     "popularidade": 90,
-    "criadoEm": "2026-08-30"
+    "criadoEm": "2026-08-30",
+    "pessoas": 2
   },
   {
     "id": "trapalhao-cozinha",
@@ -130,7 +131,8 @@
     "custo": 5,
     "img": "/img/clipe-noite-de-estreia.jpg",
     "popularidade": 79,
-    "criadoEm": "2026-09-08"
+    "criadoEm": "2026-09-08",
+    "pessoas": 2
   },
   {
     "id": "horizonte-alienigena",

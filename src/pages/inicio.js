@@ -3,7 +3,7 @@ import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import { esc, param, avisar, MSG_SEM_ESPACO } from '../util.js'
 import { CUSTOS } from '../creditos.js'
-import { CATEGORIAS, filtrarClipes, miniCard, ehNovo, SELO_NOVO } from '../biblioteca.js'
+import { CATEGORIAS, filtrarClipes, miniCard, ehNovo, SELO_NOVO, SELO_DUPLA } from '../biblioteca.js'
 import clipes from '../data/clips.json'
 
 montarShell({ rota: 'inicio' })
@@ -43,6 +43,7 @@ function card(c) {
     <span class="absolute bottom-2.5 left-2.5 z-10 flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
       <span class="material-symbols-outlined text-xs" aria-hidden="true">timer</span><span class="sr-only">Duração</span>${duracao(c.duracaoSeg)}
     </span>
+    ${c.pessoas === 2 ? `<span class="absolute bottom-2.5 right-2.5 z-10">${SELO_DUPLA}</span>` : ''}
   </div>
   <div class="p-space-sm flex flex-col gap-1.5 flex-1 justify-between">
     <div>

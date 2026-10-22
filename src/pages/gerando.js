@@ -75,6 +75,7 @@ $('btn-tentar').addEventListener('click', async () => {
     const { jobId: novo } = await api.refazer(jobId)
     location.replace(`/gerando?job=${novo}${debug() ? '&debug' : ''}`)
   } catch (e) {
+    if (e.message === 'SEM_SEGUNDO_ROSTO') return location.replace(`/clipe?id=${encodeURIComponent(store.getCriacao(jobId).clipId)}`)
     $('btn-tentar').disabled = false
     $('erro-refazer').classList.remove('hidden')
     $('erro-refazer').innerHTML =

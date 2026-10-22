@@ -33,10 +33,16 @@ function criar(dados) {
   return { jobId: c.id }
 }
 
-export async function gerarClipe(clipId, { proporcao = '9:16' } = {}) {
+// Clipe em dupla (`pessoas: 2`) leva dois rostos salvos diferentes em `rostos`.
+export async function gerarClipe(clipId, { proporcao = '9:16', rostos } = {}) {
   const clip = clips.find((c) => c.id === clipId)
   if (!clip) throw new Error('CLIPE_INEXISTENTE')
-  return criar({ tipo: 'clipe', clipId, titulo: clip.titulo, img: clip.img, proporcao, custo: custo({ tipo: 'clipe' }) })
+  const dupla = clip.pessoas === 2
+  if (dupla) {
+    const salvos = store.getRostos().map((r) => r.id)
+    if (rostos?.length !== 2 || rostos[0] === rostos[1] || !rostos.every((id) => salvos.includes(id))) throw new Error('SEM_SEGUNDO_ROSTO')
+  }
+  return criar({ tipo: 'clipe', clipId, titulo: clip.titulo, img: clip.img, proporcao, rostos: dupla ? rostos : undefined, custo: custo({ tipo: 'clipe' }) })
 }
 
 export async function gerarComTexto({ modo, prompt, estilo = 'cinematic', duracao = 5, proporcao = '9:16' }) {
@@ -54,7 +60,7 @@ export async function gerarComTexto({ modo, prompt, estilo = 'cinematic', duraca
 export function refazer(jobId) {
   const c = store.getCriacao(jobId)
   if (!c) return Promise.reject(new Error('JOB_INEXISTENTE'))
-  if (c.tipo === 'clipe') return gerarClipe(c.clipId, { proporcao: c.proporcao })
+  if (c.tipo === 'clipe') return gerarClipe(c.clipId, { proporcao: c.proporcao, rostos: c.rostos })
   return gerarComTexto({ modo: c.tipo, prompt: c.prompt, estilo: c.estilo, duracao: c.duracao, proporcao: c.proporcao })
 }
 

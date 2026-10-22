@@ -1,7 +1,7 @@
 // @vitest-environment happy-dom
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import * as store from './store.js'
-import { gerarClipe, gerarComTexto, statusJob, fecharVencidos, DURACAO_MS, DURACAO_PLANO_MS } from './api.js'
+import { gerarClipe, gerarComTexto, refazer, statusJob, fecharVencidos, DURACAO_MS, DURACAO_PLANO_MS } from './api.js'
 
 function usuarioComFoto(saldo) {
   store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
@@ -60,6 +60,26 @@ describe('api simulada', () => {
     usuarioComFoto(10)
     await gerarComTexto({ modo: 'video', prompt: 'eu surfando', estilo: 'cinematic', duracao: 10, proporcao: '16:9' })
     expect(store.getSaldoDisponivel()).toBe(2)
+  })
+
+  it('clipe em dupla exige dois rostos salvos diferentes', async () => {
+    usuarioComFoto(10)
+    const [r1] = store.getRostos()
+    await expect(gerarClipe('noite-de-estreia')).rejects.toThrow('SEM_SEGUNDO_ROSTO')
+    await expect(gerarClipe('noite-de-estreia', { rostos: [r1.id, r1.id] })).rejects.toThrow('SEM_SEGUNDO_ROSTO')
+    await expect(gerarClipe('noite-de-estreia', { rostos: [r1.id, 'outro'] })).rejects.toThrow('SEM_SEGUNDO_ROSTO')
+    store.salvarFoto('data:image/jpeg;base64,BBB', { novo: true })
+    const r2 = store.getRostoAtivo()
+    const { jobId } = await gerarClipe('noite-de-estreia', { rostos: [r2.id, r1.id] })
+    expect(store.getCriacao(jobId).rostos).toEqual([r2.id, r1.id])
+    const { jobId: outro } = await refazer(jobId)
+    expect(store.getCriacao(outro).rostos).toEqual([r2.id, r1.id])
+  })
+
+  it('clipe solo ignora rostos', async () => {
+    usuarioComFoto(10)
+    const { jobId } = await gerarClipe('agente-secreto', { rostos: ['x', 'y'] })
+    expect(store.getCriacao(jobId).rostos).toBeUndefined()
   })
 
   it('com plano a geração leva metade do tempo', async () => {

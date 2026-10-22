@@ -129,6 +129,7 @@ function mostrar(c) {
       const { jobId: novo } = await api.refazer(c.id)
       location.href = `/gerando?job=${novo}${debug() ? '&debug' : ''}`
     } catch (e) {
+      if (e.message === 'SEM_SEGUNDO_ROSTO') return (location.href = `/clipe?id=${encodeURIComponent(c.clipId)}`)
       $('btn-variacao').disabled = false
       $('msg').classList.remove('hidden')
       $('msg').innerHTML =

@@ -142,6 +142,8 @@ $('grade').addEventListener('click', async (e) => {
   } catch (err) {
     if (err.message === 'SEM_FOTO') return (location.href = '/perfil-rosto/foto?voltar=%2Fminhas-criacoes')
     if (err.message === 'SEM_SALDO') return (location.href = '/creditos-planos')
+    // Um rosto da dupla foi apagado: escolhe de novo na página do clipe.
+    if (err.message === 'SEM_SEGUNDO_ROSTO') return (location.href = `/clipe?id=${encodeURIComponent(store.getCriacao(b.dataset.refazer).clipId)}`)
     b.disabled = false
     avisar(err.message === 'SEM_ESPACO' ? MSG_SEM_ESPACO : 'Não foi possível tentar de novo. Recarregue a página.')
   }
