@@ -149,6 +149,19 @@ function mostrar(c) {
   }
 
   const foto = store.getFoto()
+  // Antes e depois: a selfie atual ao lado do resultado.
+  $('antes-depois').hidden = !foto
+  if (foto) {
+    $('antes').src = foto
+    $('depois').src = c.img
+    $('btn-antes-depois').addEventListener('click', async () => {
+      try {
+        baixarArquivo(await montarImagem([store.getFoto() ?? foto, c.img], { marca }), `selfiemovie-${c.id}-antes-depois.jpg`)
+      } catch {
+        avisar('Não foi possível preparar o download. Tente de novo.')
+      }
+    })
+  }
   $('rosto').innerHTML = foto
     ? `<img alt="" class="w-full h-full object-cover" src="${foto}"/>`
     : '<span class="material-symbols-outlined text-sm text-on-surface-variant" aria-hidden="true">face</span>'

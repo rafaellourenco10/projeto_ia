@@ -72,6 +72,23 @@
             </div>
             <div id="estrelas" role="radiogroup" aria-labelledby="rotulo-nota" class="flex items-center gap-1"></div>
           </div>
+
+          <section id="antes-depois" hidden aria-labelledby="antes-depois-titulo" class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-space-sm shadow-md">
+            <h2 id="antes-depois-titulo" class="font-headline-sm text-headline-sm text-on-surface">Antes e depois</h2>
+            <div class="grid grid-cols-2 gap-space-sm">
+              <figure class="flex flex-col gap-1">
+                <img id="antes" alt="Sua selfie" class="w-full aspect-[3/4] object-cover rounded-xl bg-surface-container-high"/>
+                <figcaption class="font-label-sm text-label-sm text-outline text-center">Antes</figcaption>
+              </figure>
+              <figure class="flex flex-col gap-1">
+                <img id="depois" alt="Resultado" class="w-full aspect-[3/4] object-cover rounded-xl bg-surface-container-high"/>
+                <figcaption class="font-label-sm text-label-sm text-outline text-center">Depois</figcaption>
+              </figure>
+            </div>
+            <button id="btn-antes-depois" type="button" class="w-full py-3 rounded-xl bg-surface-container-highest hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+              <span class="material-symbols-outlined text-lg" aria-hidden="true">compare</span>Baixar antes e depois
+            </button>
+          </section>
         </div>
 
         <!-- Ações -->
