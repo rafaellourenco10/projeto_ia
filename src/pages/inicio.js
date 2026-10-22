@@ -2,7 +2,7 @@ import '../main.css'
 import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import { esc, param } from '../util.js'
-import { CATEGORIAS, filtrarClipes } from '../biblioteca.js'
+import { CATEGORIAS, filtrarClipes, miniCard, ehNovo, SELO_NOVO } from '../biblioteca.js'
 import clipes from '../data/clips.json'
 
 montarShell({ rota: 'inicio' })
@@ -34,7 +34,7 @@ function card(c) {
     <img alt="" loading="lazy" src="${c.img}" class="w-full h-full object-cover transition-all duration-500 md:group-hover:scale-105 md:group-hover:brightness-110"/>
     <div class="absolute inset-0 bg-gradient-to-t from-scrim via-scrim/30 to-black/40 pointer-events-none"></div>
     <div class="absolute top-2.5 inset-x-2.5 flex items-center justify-between gap-1 z-10">
-      ${c.popularidade >= 90 ? '<span class="px-2 py-0.5 rounded-md bg-gradient-to-r from-secondary-container to-primary-container text-on-primary-container dark:text-white font-label-sm text-label-sm shadow-md">Popular</span>' : '<span></span>'}
+      ${ehNovo(c) ? SELO_NOVO : c.popularidade >= 90 ? '<span class="px-2 py-0.5 rounded-md bg-gradient-to-r from-secondary-container to-primary-container text-on-primary-container dark:text-white font-label-sm text-label-sm shadow-md">Popular</span>' : '<span></span>'}
       <span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/85 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 whitespace-nowrap shadow-md">
         <span class="material-symbols-outlined text-xs" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">star</span>${c.custo}<span class="sr-only sm:not-sr-only"> créditos</span>
       </span>
@@ -80,6 +80,11 @@ $('destaque').innerHTML = `
   </div>
 </div>`
 
+$('em-alta-lista').innerHTML = filtrarClipes(clipes)
+  .slice(0, 6)
+  .map((c) => `<div class="w-36 md:w-44 shrink-0">${miniCard(c)}</div>`)
+  .join('')
+
 let gradeHtml = null
 
 function render() {
@@ -87,6 +92,7 @@ function render() {
   const lista = filtrarClipes(clipes, { q: busca.value, categoria: fav ? null : categoria, ordem: ordem.value, ids: fav ? store.getFavoritos() : null })
   const semFavoritos = fav && !store.getFavoritos().length
   $('destaque').hidden = fav // em Favoritos só aparece a lista do usuário; um destaque favorito já está na grade
+  $('em-alta').hidden = !!(categoria || busca.value.trim())
   $('vazio-titulo').textContent = semFavoritos ? 'Nenhum favorito ainda' : 'Nenhum clipe encontrado'
   $('vazio-texto').textContent = semFavoritos ? 'Você ainda não favoritou nenhum clipe. Toque no coração na página do clipe.' : 'Tente outra palavra ou outra categoria.'
   $('vazio-icone').textContent = semFavoritos ? 'favorite' : 'search_off'

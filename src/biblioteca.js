@@ -1,5 +1,6 @@
 // Categorias da biblioteca (rótulo e ícone dos chips) e filtro/ordenação dos clipes.
 import { esc } from './util.js'
+import clipes from './data/clips.json'
 
 export const CATEGORIAS = {
   danca: { nome: 'Dança', icone: 'graphic_eq' },
@@ -29,11 +30,18 @@ export function filtrarClipes(clipes, { q = '', categoria = null, ordem = 'popul
     .sort(ORDENS[ordem] ?? ORDENS.populares)
 }
 
-// Card 9:16 compacto, usado em "semelhantes" e "recomendados".
+// Os 3 clipes mais recentes ganham o selo "Novo".
+export const novos = (lista) => filtrarClipes(lista, { ordem: 'recentes' }).slice(0, 3).map((c) => c.id)
+const NOVOS = novos(clipes)
+export const ehNovo = (c) => NOVOS.includes(c.id)
+export const SELO_NOVO = '<span class="px-2 py-0.5 rounded-md bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow-md">Novo</span>'
+
+// Card 9:16 compacto, usado em "semelhantes", "recomendados" e "Em alta".
 export const miniCard = (c) => `<a href="/clipe?id=${encodeURIComponent(c.id)}" class="group relative rounded-2xl overflow-hidden bg-surface-container-low shadow-lg md:hover:shadow-[0_12px_40px_-10px_rgba(139,92,246,0.35)] transition-all duration-300 flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
   <div class="relative w-full aspect-[9/16] overflow-hidden bg-surface-container-lowest">
     <img alt="" loading="lazy" src="${c.img}" class="w-full h-full object-cover transition-all duration-500 md:group-hover:scale-105 md:group-hover:brightness-110"/>
     <div class="absolute inset-0 bg-gradient-to-t from-scrim via-scrim/30 to-transparent"></div>
+    ${ehNovo(c) ? `<span class="absolute top-2.5 left-2.5">${SELO_NOVO}</span>` : ''}
     <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary font-label-sm text-label-sm flex items-center gap-1 whitespace-nowrap shadow-md">
       <span class="material-symbols-outlined text-xs" aria-hidden="true">bolt</span>${c.custo}<span class="sr-only sm:not-sr-only"> créditos</span>
     </span>

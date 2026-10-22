@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { filtrarClipes } from './biblioteca.js'
+import { filtrarClipes, novos } from './biblioteca.js'
 import clipes from './data/clips.json'
 
 describe('filtrarClipes', () => {
@@ -22,6 +22,14 @@ describe('filtrarClipes', () => {
     expect(filtrarClipes(clipes, { q: 'zzz' })).toEqual([])
     filtrarClipes(clipes, { ordem: 'recentes' })
     expect(clipes.map((c) => c.id)).toEqual(antes)
+  })
+
+  it('novos são os 3 mais recentes', () => {
+    const r = novos(clipes)
+    expect(r).toHaveLength(3)
+    expect(r[0]).toBe('piloto-orbital')
+    const corte = Math.min(...clipes.filter((c) => r.includes(c.id)).map((c) => Date.parse(c.criadoEm)))
+    expect(clipes.filter((c) => !r.includes(c.id)).every((c) => Date.parse(c.criadoEm) <= corte)).toBe(true)
   })
 
   it('filtra por ids', () => {
