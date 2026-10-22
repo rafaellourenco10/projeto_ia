@@ -64,6 +64,7 @@ async function atualizar() {
   $('pct').textContent = `${s.progresso}%`
   $('legenda').textContent = api.FASES[s.fase]
   $('restante').textContent = `Cerca de ${s.restanteSeg} s`
+  $('dica-plano').hidden = !!store.getPlano()
   $('etapa').textContent = `Etapa ${s.fase + 1} de ${api.FASES.length}`
   $('etapas').innerHTML = etapas(s.fase)
 }

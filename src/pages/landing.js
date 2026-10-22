@@ -64,6 +64,7 @@ document.getElementById('lista-planos').innerHTML = PLANOS.map((p) => {
   const itens = [
     `Até ${Math.floor(p.creditos / CUSTOS.clipe)} clipes da biblioteca por mês`,
     'Vídeo e foto a partir de texto',
+    'Geração 2× mais rápida (fila prioritária)',
     'Resultados em HD, 9:16 ou 16:9',
     'Créditos devolvidos se a geração falhar',
   ]

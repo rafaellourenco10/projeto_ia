@@ -22,6 +22,7 @@ atualizar()
 const itens = (p) => [
   `Até ${clipes(p.creditos)} clipes da biblioteca por mês`,
   'Vídeo e foto a partir de texto',
+  'Geração 2× mais rápida (fila prioritária)',
   'Resultados em HD, 9:16 ou 16:9',
   'Créditos devolvidos se a geração falhar',
 ]

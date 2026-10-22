@@ -6,6 +6,7 @@ import clips from './data/clips.json'
 
 export const FASES = ['Na fila...', 'Detectando traços faciais...', 'Adequando iluminação da cena...', 'Finalizando renderização...']
 export const DURACAO_MS = 20000
+export const DURACAO_PLANO_MS = 10000 // quem tem plano entra na fila prioritária
 
 const IMG_ESTILO = {
   cinematic: '/img/resultado-agente.jpg',
@@ -22,6 +23,7 @@ function criar(dados) {
     id: crypto.randomUUID().slice(0, 8),
     status: 'gerando',
     criadoEm: Date.now(),
+    duracaoMs: store.getPlano() ? DURACAO_PLANO_MS : DURACAO_MS,
     falhar: new URLSearchParams(location.search).get('debug') === 'falha',
   }
   if (!store.addCriacao(c)) throw new Error('SEM_ESPACO')
@@ -58,16 +60,17 @@ export async function statusJob(jobId, agora = Date.now()) {
   let c = store.getCriacao(jobId)
   if (!c) return null
   const decorrido = agora - c.criadoEm
-  if (c.status === 'gerando' && decorrido >= DURACAO_MS) {
+  const total = c.duracaoMs ?? DURACAO_MS // criações de antes da fila prioritária não têm o campo
+  if (c.status === 'gerando' && decorrido >= total) {
     store.concluirCriacao(jobId, !c.falhar)
     c = store.getCriacao(jobId)
   }
   if (c.status !== 'gerando') return { status: c.status, fase: FASES.length - 1, progresso: 100, restanteSeg: 0, criacao: c }
   return {
     status: 'gerando',
-    fase: Math.min(FASES.length - 1, Math.floor(decorrido / (DURACAO_MS / FASES.length))),
-    progresso: Math.min(99, Math.floor((decorrido / DURACAO_MS) * 100)),
-    restanteSeg: Math.ceil((DURACAO_MS - decorrido) / 1000),
+    fase: Math.min(FASES.length - 1, Math.floor(decorrido / (total / FASES.length))),
+    progresso: Math.min(99, Math.floor((decorrido / total) * 100)),
+    restanteSeg: Math.ceil((total - decorrido) / 1000),
     criacao: c,
   }
 }

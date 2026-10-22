@@ -1,7 +1,7 @@
 // @vitest-environment happy-dom
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import * as store from './store.js'
-import { gerarClipe, gerarComTexto, statusJob, fecharVencidos, DURACAO_MS } from './api.js'
+import { gerarClipe, gerarComTexto, statusJob, fecharVencidos, DURACAO_MS, DURACAO_PLANO_MS } from './api.js'
 
 function usuarioComFoto(saldo) {
   store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
@@ -60,6 +60,24 @@ describe('api simulada', () => {
     usuarioComFoto(10)
     await gerarComTexto({ modo: 'video', prompt: 'eu surfando', estilo: 'cinematic', duracao: 10, proporcao: '16:9' })
     expect(store.getSaldoDisponivel()).toBe(2)
+  })
+
+  it('com plano a geração leva metade do tempo', async () => {
+    usuarioComFoto(10)
+    store.setPlano('Pro Creator')
+    const { jobId } = await gerarClipe('agente-secreto')
+    const t0 = store.getCriacao(jobId).criadoEm
+    expect((await statusJob(jobId, t0 + 5000)).progresso).toBe(50)
+    expect((await statusJob(jobId, t0 + DURACAO_PLANO_MS)).status).toBe('pronto')
+  })
+
+  it('criação antiga sem duracaoMs usa o tempo padrão', async () => {
+    usuarioComFoto(10)
+    const { jobId } = await gerarClipe('agente-secreto')
+    store.updateCriacao(jobId, { duracaoMs: undefined })
+    const t0 = store.getCriacao(jobId).criadoEm
+    expect((await statusJob(jobId, t0 + DURACAO_PLANO_MS)).status).toBe('gerando')
+    expect((await statusJob(jobId, t0 + DURACAO_MS)).status).toBe('pronto')
   })
 
   it('progresso segue o relógio, mesmo depois de recarregar', async () => {
