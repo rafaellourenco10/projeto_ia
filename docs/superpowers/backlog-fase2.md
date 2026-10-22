@@ -38,3 +38,21 @@ Primeiro lote: 1, 2, 3, 5, 6.
 - 2 e 3: já existiam desde a fase 1.5 (commit 8d308b5, `fecharVencidos` e `pageshow` no shell); conferidos no deploy.
 - 5: `/resultado` já tinha baixar e compartilhar; `/clipe` ganhou compartilhar (b484100). Baixar em `/clipe` ficou de fora: o clipe ainda não é do usuário.
 - 6: `404.html` na raiz, que a Vercel serve em rota inexistente.
+
+## Pesquisa de mercado (2026-10-21)
+
+Apps olhados: Higgsfield (face swap, presets de estilo, Soul ID), Reface (biblioteca de modelos, marca d'água no grátis), Viggle (Mix foto + vídeo, 8.000+ modelos, várias pessoas por vídeo, feed com remix, texto no vídeo), PixVerse (efeitos em alta, créditos diários grátis). Tudo abaixo é só front-end, sem API real.
+
+- [ ] **14. Em alta e Novidades no Início** — selos e fileira "Em alta" (Viggle, PixVerse). Valor alto, esforço baixo.
+- [ ] **15. Créditos diários grátis** — botão "Pegar créditos de hoje" uma vez por dia (PixVerse). Valor alto, esforço baixo.
+- [ ] **16. Marca d'água sem plano** — selo SelfieMovie na prévia e no download de quem não tem plano; plano tira (Reface, PixVerse). Valor médio, esforço baixo.
+- [ ] **17. Usar este prompt (remix)** — exemplos prontos em `/criar-com-texto` e botão que abre o criar já preenchido a partir de uma criação (Viggle). Valor médio, esforço baixo.
+- [ ] **18. Surpreenda-me e sugestões de prompt** — chips de ideias e prompt aleatório no criar. Valor médio, esforço baixo.
+- [ ] **19. Mais estilos com prévia** — galeria de presets visuais no criar, com imagens que já existem (Higgsfield). Valor médio, esforço baixo.
+- [ ] **20. Antes e depois** — sua selfie ao lado do resultado, para compartilhar. Valor médio, esforço baixo.
+- [ ] **21. Vários rostos salvos** — até 3 fotos com nome, escolher qual usar no clipe (Soul ID, Viggle). Valor alto, esforço médio.
+- [ ] **22. Clipes em dupla** — modelos com dois rostos (depende da 21) (Viggle). Valor médio, esforço médio a alto.
+- [ ] **23. Geração mais rápida no plano** — tempo de fila menor para quem tem plano, mostrado na página de planos (Higgsfield). Valor médio, esforço baixo.
+- [ ] **24. Legenda no vídeo** — texto opcional sobre a prévia do resultado (Viggle). Valor baixo, esforço médio.
+
+Fora por exigir API real: enviar vídeo próprio, voz e lip-sync, câmera ao vivo.
