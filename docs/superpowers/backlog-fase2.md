@@ -64,3 +64,20 @@ Itens 14 a 24, plano em `docs/superpowers/plans/2026-10-21-selfiemovie-fase2-lot
 - 18: "Sugestão da IA" já existia; entrou só a fileira de chips.
 - 20 e dupla: o antes e depois usa o rosto ativo, mesmo em clipe de dupla.
 - Rosto extra pede consentimento da pessoa da foto. Renomear rosto ficou de fora (nome padrão "Rosto 2", "Rosto 3").
+
+## Pesquisa de crescimento (2026-10-21)
+
+Foco em retenção e conversão. Dados (a maioria de blogs de fornecedores, citando o relatório 2026 da RevenueCat): apps de IA convertem 52% melhor, mas perdem assinantes 30% mais rápido; o abandono se concentra entre 30 e 90 dias, quando o app tem um único truque. O que segura: hábito com progresso visível, sequência de dias, modelos de tendência renovados. Na conversão: teste grátis, onboarding curto antes do paywall, regras de crédito claras e retomar o pedido depois da compra.
+
+- [ ] **25. Retomar o pedido depois da compra** — sem saldo no clipe ou no criar, a compra volta para o mesmo pedido, pronto para gerar. Valor alto, esforço baixo.
+- [ ] **26. Tendências no criar** — modelos de um clique inspirados em trends virais (pôster de filme, você daqui a 50 anos, tempestade ao redor), com estilo e prompt prontos. Valor alto, esforço baixo.
+- [ ] **27. Sequência de dias** — o bônus diário conta dias seguidos; no 7º dia vale mais. Valor alto, esforço baixo.
+- [ ] **28. Nota baixa vira refazer grátis** — nota 1 ou 2 no resultado oferece um refazer sem custo (uma vez por criação). Valor médio, esforço baixo.
+- [ ] **29. Teste grátis do plano** — 7 dias de Pro Creator simulados, com aviso de quando acaba e volta ao sem plano. Valor alto, esforço médio.
+- [ ] **30. Créditos às claras** — em `/creditos-planos`: o que cada pacote rende (clipes, vídeos, fotos), regra de reembolso e extrato (junta com o item 7). Valor médio, esforço médio.
+- [ ] **31. Desafio da semana** — tema que muda toda semana no Início, com selo em Minhas Criações para quem participa. Valor médio, esforço médio.
+- [ ] **32. Conquistas no Perfil** — marcos visíveis (primeiro clipe, primeira dupla, 5 criações, 7 dias seguidos). Valor médio, esforço baixo.
+- [ ] **33. Espera que entretém** — no `/gerando`, dicas e clipes para a próxima criação enquanto termina. Valor médio, esforço baixo.
+- [ ] **34. Exemplos na landing** — faixa "feito com SelfieMovie" com antes e depois usando as imagens que já existem, sem depoimento inventado. Valor médio, esforço baixo.
+
+Precisa de imagens novas (fora por agora): coleções sazonais (Halloween, Natal, verão) no estilo dos pacotes do Lensa.
