@@ -726,9 +726,9 @@
     "semantic_hash": ""
   },
   "src/util.js": {
-    "mtime": 1792578570.4324715,
-    "seen": 1792578689.1833506,
-    "ast_hash": "e727865c30b355a0ecf33017162c7d4a",
+    "mtime": 1792628470.8901205,
+    "seen": 1792628596.0279794,
+    "ast_hash": "2cc01f45a92d2ebd26d29d08bcfa8ffd",
     "semantic_hash": ""
   },
   "tailwind.config.js": {
@@ -2766,15 +2766,15 @@
     "semantic_hash": ""
   },
   "src/pages/clipe.js": {
-    "mtime": 1792585915.002013,
-    "seen": 1792586683.5020392,
-    "ast_hash": "37e81df8cae839c5bcf0df77f42916fb",
+    "mtime": 1792628478.5899687,
+    "seen": 1792628596.027933,
+    "ast_hash": "874aedb392261ebab6a2ffa0fa802195",
     "semantic_hash": ""
   },
   "clipe.html": {
-    "mtime": 1792593039.5627744,
-    "seen": 1792593271.0621655,
-    "ast_hash": "6f6bbe621cba7bf49b0d1946cd475fe9",
+    "mtime": 1792628473.3691137,
+    "seen": 1792628596.0286093,
+    "ast_hash": "2641167a80cd0aebee11e6e1029529b7",
     "semantic_hash": ""
   },
   "src/pages/criar.js": {
@@ -2802,9 +2802,9 @@
     "semantic_hash": ""
   },
   "src/pages/resultado.js": {
-    "mtime": 1792592812.5354753,
-    "seen": 1792593271.0610003,
-    "ast_hash": "7c3d82d2a98f6a7341925c2e485b2cf7",
+    "mtime": 1792628459.8351326,
+    "seen": 1792628596.0279665,
+    "ast_hash": "79120d0b963d7afc3373fd7a157f1513",
     "semantic_hash": ""
   },
   "resultado.html": {
@@ -2958,9 +2958,9 @@
     "semantic_hash": ""
   },
   "src/tema.test.js": {
-    "mtime": 1792585939.8978252,
-    "seen": 1792586683.502112,
-    "ast_hash": "eafeaf7029ca0bebbd9802c3e9efa312",
+    "mtime": 1792628563.187544,
+    "seen": 1792628596.0279775,
+    "ast_hash": "c77d9ce1c9120f9222ce258cdca7c9de",
     "semantic_hash": ""
   },
   "src/pages/minhas-criacoes.test.js": {
@@ -2976,9 +2976,27 @@
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-10-21-selfiemovie-fase1-6.md": {
-    "mtime": 1792593150.106504,
-    "seen": 1792593271.0621862,
-    "ast_hash": "f9e33ba2f466b62428578cdee7fecfa3",
+    "mtime": 1792593343.8458686,
+    "seen": 1792628596.0286207,
+    "ast_hash": "cc610dd417495b8794435beedbc3f3d3",
+    "semantic_hash": ""
+  },
+  "src/pages/nao-encontrada.js": {
+    "mtime": 1792628540.7466207,
+    "seen": 1792628596.027961,
+    "ast_hash": "ed41fd08ed24cf1a8764c4c81cbd26cb",
+    "semantic_hash": ""
+  },
+  "404.html": {
+    "mtime": 1792628539.6688194,
+    "seen": 1792628596.0286007,
+    "ast_hash": "feb787b52848ed62961ed1435596915c",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/backlog-fase2.md": {
+    "mtime": 1792628584.6857443,
+    "seen": 1792628596.0286152,
+    "ast_hash": "15375566ab90a8c354afd0464bc365e9",
     "semantic_hash": ""
   }
 }

@@ -1,17 +1,17 @@
 # Graph Report - projeto com ia  (2026-10-21)
 
 ## Corpus Check
-- 412 files · ~686,962 words
+- 414 files · ~687,801 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: .css 2, .zip 1, (none) 1)
 
 ## Summary
-- 2904 nodes · 4256 edges · 359 communities (199 shown, 160 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 92 edges (avg confidence: 0.92)
+- 2913 nodes · 4276 edges · 360 communities (198 shown, 162 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 97 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `89eb1522`
+- Built from commit: `6f0c19f0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -92,14 +92,14 @@
 - React Composition Patterns
 - gate-investigations.mjs
 - select-candidates.mjs
-- contract.mjs
+- impact-label.mjs
 - 3. Server-Side Performance
 - Section Definitions
 - React Composition Patterns
 - vercel-optimize/SKILL.md
 - Components
-- queries.mjs
-- devDependencies
+- rate-limit.mjs
+- Semaphore
 - Pipeline
 - React Best Practices
 - Sections
@@ -113,7 +113,7 @@
 - 2. List Performance
 - vercel-react-view-transitions/AGENTS.md
 - Gh Pr Checks Plan Fix
-- unoptimized-image.mjs
+- util.mjs
 - Forms & Inputs
 - count-correct.mjs
 - minhas-criacoes.js
@@ -121,13 +121,13 @@
 - Vercel Optimize
 - Implementation Workflow
 - Implementation Workflow
-- Review Focus
+- undeclared-dep.mjs
 - Adversarial Vulnerability Analysis (Phase 5)
 - Differential Review Methodology
 - ref_node_fs
 - framework-support.mjs
 - preencher
-- scripts
+- build-minutes-fanout.mjs
 - edge-heavy-import.mjs
 - turbo-force-bypass.mjs
 - large-static-asset.mjs
@@ -205,6 +205,8 @@
 - hard-gates.mjs
 - uncached-route.mjs
 - middleware-heavy.mjs
+- observability-events-attribution.mjs
+- function-duration-invocations.mjs
 - Support Topics
 - async-cheap-condition-before-await.md
 - Prefer Statically Analyzable Paths
@@ -368,7 +370,6 @@
 - middleware-broad-matcher.mjs
 - cwv-poor.mjs
 - missing-cache-headers.mjs
-- region-pin-in-config.mjs
 
 ## God Nodes (most connected - your core abstractions)
 1. `verifyClaim()` - 42 edges
@@ -385,19 +386,19 @@
 ## Surprising Connections (you probably didn't know these)
 - `Tarefa 8: Detalhe do clipe (`/clipe?id=`)` --references--> `gerarClipe()`  [INFERRED]
   docs/superpowers/specs/2026-10-20-selfiemovie-design.md → src/api.js
-- `Task 4: Estado vazio de Favoritos e meta description` --references--> `entrar()`  [INFERRED]
-  docs/superpowers/plans/2026-10-21-selfiemovie-fase1-6.md → src/store.js
 - `Task 13: Telas que faltam` --references--> `adicionarCreditos()`  [INFERRED]
   docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md → src/store.js
-- `Task 5: Favoritos` --references--> `getFavoritos()`  [INFERRED]
-  docs/superpowers/plans/2026-10-21-selfiemovie-fase1-5.md → src/store.js
 - `Task 1: Avisar quando o navegador não salva` --references--> `criar()`  [INFERRED]
   docs/superpowers/plans/2026-10-21-selfiemovie-fase1-5.md → src/api.js
+- `Task 2: Store e API simulada (TDD)` --references--> `gerarClipe()`  [INFERRED]
+  docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md → src/api.js
+- `Tasks 4–12: Porte das telas` --references--> `gerarClipe()`  [INFERRED]
+  docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md → src/api.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (359 total, 160 thin omitted)
+## Communities (360 total, 162 thin omitted)
 
 ### Community 0 - "merge-signals.mjs"
 Cohesion: 0.23
@@ -420,8 +421,8 @@ Cohesion: 0.07
 Nodes (54): buildPackageLookup(), buildResolver(), DEFAULT_RESOLVE_OPTIONS, detectMonorepoRoot(), escapeRegExp(), expandParts(), expandResolvedSpecifier(), expandPureBarrel() (+46 more)
 
 ### Community 5 - "sanitizers/index.mjs"
-Cohesion: 0.06
-Nodes (37): sanitizeCitations(), computeImpactLabel(), cwvIssue(), formatCwvIssue(), formatInteger(), joinEnglish(), parseSigNumber(), round1() (+29 more)
+Cohesion: 0.14
+Nodes (13): sanitizeCitations(), applyDollarStrip(), stripDollarLiterals(), metadata, STRING_FIELDS, metadata, STRING_FIELDS, applySanitizers() (+5 more)
 
 ### Community 6 - "inspect_pr_checks.py"
 Cohesion: 0.12
@@ -445,7 +446,7 @@ Nodes (31): Accessibility, Animation Triggers, Availability, Choosing Animation 
 
 ### Community 11 - "vercel.mjs"
 Cohesion: 0.11
-Nodes (25): isDailyQuotaExceeded(), aggregateServicesByName(), baselineStack(), categorizeError(), classifyObservabilityPlusConfiguration(), detectNextCacheComponents(), detectStack(), exec (+17 more)
+Nodes (27): aggregateServicesByName(), baselineStack(), checkAuth(), checkCliVersion(), classifyObservabilityPlusConfiguration(), detectNextCacheComponents(), detectStack(), exec (+19 more)
 
 ### Community 12 - "Vercel CLI with Tokens"
 Cohesion: 0.07
@@ -456,8 +457,8 @@ Cohesion: 0.05
 Nodes (85): buildBudgetSummary(), buildChatPreview(), buildExactChatMessage(), buildOptions(), buildPrintCheck(), buildQuestionPayload(), buildQuestionText(), renderBudgetSummaryMarkdown() (+77 more)
 
 ### Community 14 - "collect-signals.mjs"
-Cohesion: 0.20
-Nodes (23): checkAuth(), checkCliVersion(), checkObservabilityPlusConfiguration(), getContract(), getMetricsSchema(), getProjectConfig(), getUsage(), hasObservabilityPlus() (+15 more)
+Cohesion: 0.18
+Nodes (24): defaultNormalize(), normalizerFor(), QUERIES, TIME_WINDOW, checkObservabilityPlusConfiguration(), getContract(), getMetricsSchema(), getProjectConfig() (+16 more)
 
 ### Community 15 - "lib/reconcile-candidates.mjs"
 Cohesion: 0.26
@@ -468,8 +469,8 @@ Cohesion: 0.13
 Nodes (26): citationApplies(), HERE, KNOWN_CANDIDATE_KINDS, loadSupportTopics(), matchesCandidateKind(), matchesCandidateMetrics(), matchesCandidateRoutePatterns(), matchesFrameworks() (+18 more)
 
 ### Community 17 - "store.js"
-Cohesion: 0.15
-Nodes (32): Task 2: Store e API simulada (TDD), Tasks 4–12: Porte das telas, Global Constraints, Task 1: Avisar quando o navegador não salva, Task 3: Consertos pontuais, Global Constraints, SelfieMovie Fase 1.6: plano de implementação, Task 1: Gravações que falham sem aviso (+24 more)
+Cohesion: 0.11
+Nodes (41): Task 2: Store e API simulada (TDD), Tasks 4–12: Porte das telas, Global Constraints, Task 1: Avisar quando o navegador não salva, Task 3: Consertos pontuais, Global Constraints, Review Focus, SelfieMovie Fase 1.6: plano de implementação (+33 more)
 
 ### Community 18 - "citations.mjs"
 Cohesion: 0.18
@@ -496,8 +497,8 @@ Cohesion: 0.21
 Nodes (18): candidateKey(), canonicalizeBranchPrefix(), canonicalizeRoute(), decodeSegmentToken(), dedupeCandidates(), firstRouteSegment(), isBase64FlagState(), isDynamicPlaceholder() (+10 more)
 
 ### Community 24 - "package.json"
-Cohesion: 0.22
-Nodes (8): name, private, type, version, autoprefixer, happy-dom, postcss, tailwindcss
+Cohesion: 0.09
+Nodes (21): devDependencies, autoprefixer, happy-dom, postcss, tailwindcss, vite, vitest, name (+13 more)
 
 ### Community 25 - "Step 2: Choose a Deploy Method"
 Cohesion: 0.10
@@ -508,24 +509,24 @@ Cohesion: 0.10
 Nodes (17): Duplicate browser dependency, Fix patterns, Lazy interaction feature, Other attributed assets, Server-rendered display work, Clustering — find logical communities, Conditional min cut — detach a target, Graph methods (+9 more)
 
 ### Community 27 - "clipe.js"
-Cohesion: 0.15
-Nodes (19): CATEGORIAS, filtrarClipes(), miniCard(), normalizar(), ORDENS, clipe, preencher(), pintarFavorito() (+11 more)
+Cohesion: 0.13
+Nodes (27): CATEGORIAS, filtrarClipes(), miniCard(), normalizar(), ORDENS, clipe, preencher(), atualizar() (+19 more)
 
 ### Community 28 - "scanners/index.mjs"
-Cohesion: 0.16
-Nodes (13): isApplicable(), metadata, scan(), isApplicable(), metadata, scan(), metadata, scan() (+5 more)
+Cohesion: 0.13
+Nodes (16): isApplicable(), metadata, scan(), isApplicable(), metadata, scan(), metadata, scan() (+8 more)
 
 ### Community 29 - "throttle.mjs"
-Cohesion: 0.12
-Nodes (12): getMetricSemaphore, getMetricThrottle(), isRateLimited(), parsePositiveIntEnv(), resolveConcurrency(), resolveRateLimit(), retryOnRateLimit(), Semaphore (+4 more)
+Cohesion: 0.14
+Nodes (12): getMetricSemaphore, getMetricThrottle(), isDailyQuotaExceeded(), isRateLimited(), parsePositiveIntEnv(), resolveConcurrency(), resolveRateLimit(), retryOnRateLimit() (+4 more)
 
 ### Community 30 - "Rules"
 Cohesion: 0.10
 Nodes (19): Animation (HIGH), Core Rendering (CRITICAL), Creating a New Rule, Design System (MEDIUM), Fonts (LOW), JavaScript (LOW), List Performance (HIGH), Monorepo (LOW) (+11 more)
 
 ### Community 31 - "creditos.js"
-Cohesion: 0.15
-Nodes (14): CUSTOS, PACOTES, PLANOS, reais(), atualizar(), clipes(), itens(), LINHAS (+6 more)
+Cohesion: 0.10
+Nodes (17): CUSTOS, PACOTES, PLANOS, reais(), itens, atualizar(), clipes(), itens() (+9 more)
 
 ### Community 32 - "Gates"
 Cohesion: 0.11
@@ -592,8 +593,8 @@ Cohesion: 0.13
 Nodes (13): Common changes, Contributing to `vercel-optimize`, Output contracts, Rules, Contributing, Install, License, Requirements (+5 more)
 
 ### Community 48 - "Data collection"
-Cohesion: 0.17
-Nodes (13): inferPlan(), Data collection, Error states and fallbacks, Per-signal source matrix, Real JSON shapes, Table of contents, The `signals.json` shape, `vercel api /v9/projects/<id>` / `?teamId=<orgId>` (+5 more)
+Cohesion: 0.13
+Nodes (15): normalizeColdStart(), normalizeSummary(), Data collection, Error states and fallbacks, Per-signal source matrix, Real JSON shapes, Table of contents, The `signals.json` shape (+7 more)
 
 ### Community 49 - "Recommendations"
 Cohesion: 0.13
@@ -640,8 +641,8 @@ Cohesion: 0.14
 Nodes (14): Animation Timing, Card Expand/Collapse with `startTransition`, Composing with Activity, Cross-Fade Without Remount, Exclude Elements with `useOptimistic`, Isolate Elements from Parent Animations, Layout Displacement Morph, Patterns and Guidelines (+6 more)
 
 ### Community 60 - "api.js"
-Cohesion: 0.15
-Nodes (20): Task 2: Shell sempre atual, 4. Decisões técnicas da fase 1 (escolhas do Claude, revisáveis), Tabela única de créditos (escolha do Claude; as telas usam valores diferentes), vitest, criar(), DURACAO_MS, FASES, fecharVencidos() (+12 more)
+Cohesion: 0.13
+Nodes (21): Consertos (pendências antigas), Feito em 2026-10-21, Funcionalidades novas, Qualidade, Recomendação, SelfieMovie: candidatas da fase 2, Task 2: Shell sempre atual, 4. Decisões técnicas da fase 1 (escolhas do Claude, revisáveis) (+13 more)
 
 ### Community 61 - "Component Composition"
 Cohesion: 0.15
@@ -652,8 +653,8 @@ Cohesion: 0.15
 Nodes (13): Built-in variants first, className for layout only, Contents, No manual dark: color overrides, No manual z-index on overlay components, No raw color values for status/state indicators, No space-x-* / space-y-*, Prefer size-* over w-* h-* when equal (+5 more)
 
 ### Community 63 - "shell.js"
-Cohesion: 0.21
-Nodes (15): Task 3: Shell compartilhado, render(), atualizar(), dataCurta(), radios, avatar(), bottomNav(), header() (+7 more)
+Cohesion: 0.14
+Nodes (20): Task 3: Shell compartilhado, ATIVO, estado, foto, INATIVO, prompt, render(), SUGESTOES (+12 more)
 
 ### Community 64 - "Common Vulnerability Patterns"
 Cohesion: 0.17
@@ -696,16 +697,16 @@ Cohesion: 0.18
 Nodes (10): 1. Component Architecture (HIGH), 2. State Management (MEDIUM), 3. Implementation Patterns (MEDIUM), 4. React 19 APIs (MEDIUM), Full Compiled Document, How to Use, Quick Reference, React Composition Patterns (+2 more)
 
 ### Community 75 - "gate-investigations.mjs"
-Cohesion: 0.19
-Nodes (12): applyAuthDisqualifier(), AUTH_ROUTE_REGEX, isAuthRoute(), DEFAULT_MAX_CODE_CANDIDATES, GATE_VERSION, gates, metadata, attachDisplayRoute() (+4 more)
+Cohesion: 0.18
+Nodes (15): applyAuthDisqualifier(), AUTH_ROUTE_REGEX, isAuthRoute(), CandidateContractError, candidateLabel(), nonEmptyString(), VALID_SCOPES, validateCandidate() (+7 more)
 
 ### Community 76 - "select-candidates.mjs"
 Cohesion: 0.36
 Nodes (8): candidateIdentity(), DEFAULT_KIND_CAPS, DIVERSITY_ELIGIBILITY, durationMsFromSignal(), isDiversityEligible(), numberFromEvidence(), numberFromSignal(), selectLaunchCandidates()
 
-### Community 77 - "contract.mjs"
-Cohesion: 0.39
-Nodes (6): CandidateContractError, candidateLabel(), nonEmptyString(), VALID_SCOPES, validateCandidate(), validateCandidates()
+### Community 77 - "impact-label.mjs"
+Cohesion: 0.38
+Nodes (10): computeImpactLabel(), cwvIssue(), formatCwvIssue(), formatInteger(), joinEnglish(), parseSigNumber(), round1(), round2() (+2 more)
 
 ### Community 78 - "3. Server-Side Performance"
 Cohesion: 0.18
@@ -727,13 +728,9 @@ Nodes (4): Install, Procedure, Requirements, vercel-optimize
 Cohesion: 0.08
 Nodes (23): 1. Botões de Ação Cinematográfica (CTAs), 2. Cards de Template & Vídeo (Thumbnails 9:16 e 16:9), 3. Upload & Dropzone de Face / Selfie, 4. Chips & Seletores de Categoria, 5. Barra de Status de Renderização & IA Progress, 6. Campos de Texto & Prompts Adicionais, 7. Badge de Carteira de Créditos (Header Bar), Atmospheric Glow & Layered Glass (+15 more)
 
-### Community 83 - "queries.mjs"
+### Community 83 - "rate-limit.mjs"
 Cohesion: 0.36
-Nodes (7): defaultNormalize(), normalizeColdStart(), normalizerFor(), QUERIES, TIME_WINDOW, normalizeSummary(), `vercel metrics <id> --format json`
-
-### Community 84 - "devDependencies"
-Cohesion: 0.29
-Nodes (7): devDependencies, autoprefixer, happy-dom, postcss, tailwindcss, vite, vitest
+Nodes (7): apply(), collectText(), matchConcurrency(), matchProviders(), metadata, PROVIDER_LIMITS, PROVIDER_RE
 
 ### Community 85 - "Pipeline"
 Cohesion: 0.20
@@ -764,12 +761,12 @@ Cohesion: 0.36
 Nodes (8): candidateForGroup(), gate(), groupFindings(), metadata, observedCacheHitRate(), questionFor(), SCANNER_GATES, uniqueStrings()
 
 ### Community 92 - "ref_node_fs"
-Cohesion: 0.15
-Nodes (15): MAX_CODE_CANDIDATES, scanners, metadata, HERE, main(), REFS, renderCandidates(), renderScanners() (+7 more)
+Cohesion: 0.13
+Nodes (18): GATE_VERSION, gates, MAX_CODE_CANDIDATES, metadata, scanners, metadata, HERE, main() (+10 more)
 
 ### Community 93 - "ref_node_fs"
-Cohesion: 0.18
-Nodes (8): components, missing, source, [uiArg, ...roots], uiDir, walk(), vite, paginas
+Cohesion: 0.20
+Nodes (7): components, missing, source, [uiArg, ...roots], uiDir, walk(), paginas
 
 ### Community 94 - "scoring.md"
 Cohesion: 0.20
@@ -783,21 +780,21 @@ Nodes (9): 2.1 Avoid Inline Objects in renderItem, 2.2 Hoist callbacks to the ro
 Cohesion: 0.25
 Nodes (7): Bundled Resources, Gh Pr Checks Plan Fix, Inputs, Overview, Quick start, scripts/inspect_pr_checks.py, Workflow
 
-### Community 98 - "unoptimized-image.mjs"
-Cohesion: 0.53
-Nodes (5): isJsxLike(), isNextConfig(), metadata, scan(), snippet()
+### Community 98 - "util.mjs"
+Cohesion: 0.20
+Nodes (11): apply(), metadata, apply(), metadata, MODE_PATTERNS, isJsxLike(), isNextConfig(), metadata (+3 more)
 
 ### Community 99 - "Forms & Inputs"
 Cohesion: 0.25
 Nodes (8): Buttons inside inputs use InputGroup + InputGroupAddon, Contents, Field validation and disabled states, FieldSet + FieldLegend for grouping related fields, Forms & Inputs, Forms use FieldGroup + Field, InputGroup requires InputGroupInput/InputGroupTextarea, Option sets (2–7 choices) use ToggleGroup
 
 ### Community 100 - "count-correct.mjs"
-Cohesion: 0.16
-Nodes (14): apply(), COUNT_CLAIM_TYPES, metadata, rewriteCount(), apply(), metadata, apply(), metadata (+6 more)
+Cohesion: 0.27
+Nodes (8): apply(), COUNT_CLAIM_TYPES, metadata, rewriteCount(), apply(), metadata, STRIP_DIRECTIVES, escapeRegex()
 
 ### Community 101 - "minhas-criacoes.js"
-Cohesion: 0.09
-Nodes (26): itens, ATIVO, estado, foto, INATIVO, prompt, SUGESTOES, erro (+18 more)
+Cohesion: 0.26
+Nodes (11): ATIVO, card(), ehDaAba, INATIVO, quando(), render(), rodape(), rotuloTipo() (+3 more)
 
 ### Community 102 - "docs-library.json"
 Cohesion: 0.25
@@ -815,9 +812,9 @@ Nodes (8): Implementation Workflow, Step 1: Audit the App, Step 2: Add CSS Recip
 Cohesion: 0.25
 Nodes (8): Implementation Workflow, Step 1: Audit the App, Step 2: Add CSS Recipes, Step 3: Isolate Persistent Elements, Step 4: Add Directional Page Transitions, Step 5: Add Suspense Reveals, Step 6: Add Shared Element Transitions, Step 7: Verify Each Navigation Path
 
-### Community 106 - "Review Focus"
-Cohesion: 0.33
-Nodes (6): Review Focus, Task 2: Foco não se perde no `/inicio`, Task 3: Rascunho do `/criar-com-texto` sobrevive ao Voltar, Task 4: Estado vazio de Favoritos e meta description, Task 5: Conferir o `/entrar`, Task 6: Revisão final
+### Community 106 - "undeclared-dep.mjs"
+Cohesion: 0.47
+Nodes (5): apply(), extractCodeBlocks(), metadata, NODE_BUILTINS, pkgRoot()
 
 ### Community 107 - "Adversarial Vulnerability Analysis (Phase 5)"
 Cohesion: 0.29
@@ -836,12 +833,12 @@ Cohesion: 0.43
 Nodes (6): classifyFrameworkSupport(), CORE_SUPPORTED_FRAMEWORKS, frameworkLabel(), LABELS, LIMITED_FRAMEWORKS, normalizeFramework()
 
 ### Community 111 - "preencher"
-Cohesion: 0.25
-Nodes (7): Review Focus, SelfieMovie Fase 1.5: plano de implementação, Task 4: Apagar uma criação, Task 5: Favoritos, Task 6: Tema claro, Task 7: Demo pública na Vercel, Task 8: Revisão final
+Cohesion: 0.20
+Nodes (9): Review Focus, SelfieMovie Fase 1.5: plano de implementação, Task 4: Apagar uma criação, Task 5: Favoritos, Task 6: Tema claro, Task 7: Demo pública na Vercel, Task 8: Revisão final, pintarFavorito() (+1 more)
 
-### Community 112 - "scripts"
-Cohesion: 0.40
-Nodes (5): scripts, build, dev, preview, test
+### Community 112 - "build-minutes-fanout.mjs"
+Cohesion: 0.67
+Nodes (3): gate(), metadata, unique()
 
 ### Community 113 - "edge-heavy-import.mjs"
 Cohesion: 0.48
@@ -940,8 +937,8 @@ Cohesion: 0.60
 Nodes (4): extractCallCounts(), extractExternalApis(), gate(), metadata
 
 ### Community 141 - "platform-bot-protection.mjs"
-Cohesion: 0.18
-Nodes (10): gate(), metadata, unique(), gate(), metadata, sumBilled(), computeBotShare(), gate() (+2 more)
+Cohesion: 0.60
+Nodes (4): computeBotShare(), gate(), metadata, totalRequestsFromSignals()
 
 ### Community 142 - "isr-overrevalidation.mjs"
 Cohesion: 0.67
@@ -1143,6 +1140,10 @@ Nodes (8): Candidate, CandidateScope, GateMetadata, Signals, extractCacheHitRate
 Cohesion: 0.67
 Nodes (3): gate(), metadata, sumRows()
 
+### Community 192 - "observability-events-attribution.mjs"
+Cohesion: 0.67
+Nodes (3): gate(), metadata, sumBilled()
+
 ### Community 194 - "Support Topics"
 Cohesion: 0.50
 Nodes (3): Add A Topic, Rules, Support Topics
@@ -1191,29 +1192,25 @@ Nodes (6): byRoute(), gate(), metadata, ratioOverThreshold(), round2(), sumRows(
 Cohesion: 0.67
 Nodes (3): isApplicable(), metadata, scan()
 
-### Community 365 - "region-pin-in-config.mjs"
-Cohesion: 0.67
-Nodes (3): metadata, parseRegionList(), scan()
-
 ## Knowledge Gaps
 - **5 isolated node(s):** `cmd`, `autoprefixer`, `happy-dom`, `postcss`, `tailwindcss`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1610 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **160 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1613 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **162 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `vitest` connect `api.js` to `ref_node_fs`, `foto.js`, `package.json`, `clipe.js`, `shell.js`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `inferPlaybook()` connect `prepare-investigation-brief.mjs` to `investigation-brief.mjs`, `scoring.md`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `cmd`, `autoprefixer`, `happy-dom` to the rest of the system?**
   _5 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify-claim.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.0577324973876698 - nodes in this community are weakly interconnected._
-- **Why does `inferPlaybook()` connect `prepare-investigation-brief.mjs` to `investigation-brief.mjs`, `scoring.md`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Playbook selection matrix` connect `scoring.md` to `prepare-investigation-brief.mjs`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Should `scripts/render-report.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.07796610169491526 - nodes in this community are weakly interconnected._
-- **Why does `Playbook selection matrix` connect `scoring.md` to `prepare-investigation-brief.mjs`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `vitest` connect `api.js` to `ref_node_fs`, `foto.js`, `package.json`, `clipe.js`, `shell.js`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Should `extract-claims.mjs` be split into smaller, more focused modules?**
   _Cohesion score 0.08825248392752776 - nodes in this community are weakly interconnected._
