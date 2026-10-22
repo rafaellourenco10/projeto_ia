@@ -1,7 +1,8 @@
 import '../main.css'
 import { montarShell } from '../shell.js'
 import * as store from '../store.js'
-import { esc, param } from '../util.js'
+import { esc, param, avisar, MSG_SEM_ESPACO } from '../util.js'
+import { CUSTOS } from '../creditos.js'
 import { CATEGORIAS, filtrarClipes, miniCard, ehNovo, SELO_NOVO } from '../biblioteca.js'
 import clipes from '../data/clips.json'
 
@@ -84,6 +85,14 @@ $('em-alta-lista').innerHTML = filtrarClipes(clipes)
   .slice(0, 6)
   .map((c) => `<div class="w-36 md:w-44 shrink-0">${miniCard(c)}</div>`)
   .join('')
+
+document.querySelector('[data-bonus-diario]').textContent = CUSTOS.bonusDiario
+$('bonus').hidden = !store.bonusDiarioDisponivel()
+$('btn-bonus').addEventListener('click', () => {
+  if (!store.pegarBonusDiario()) return avisar(store.bonusDiarioDisponivel() ? MSG_SEM_ESPACO : 'Você já pegou os créditos de hoje')
+  $('bonus').hidden = true
+  avisar(`+${CUSTOS.bonusDiario} créditos no seu saldo`)
+})
 
 let gradeHtml = null
 

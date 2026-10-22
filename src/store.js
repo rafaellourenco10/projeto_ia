@@ -86,6 +86,19 @@ export function getSaldoDisponivel() {
 
 export const adicionarCreditos = (n) => alterar((e) => (e.saldo += n))
 
+// Créditos grátis uma vez por dia, contando o dia no fuso de quem usa ('sv' dá AAAA-MM-DD).
+const diaLocal = (d = new Date()) => d.toLocaleDateString('sv')
+export const bonusDiarioDisponivel = (d) => {
+  const e = ler()
+  return !!e && e.bonusDiario !== diaLocal(d)
+}
+export const pegarBonusDiario = (d) =>
+  bonusDiarioDisponivel(d) &&
+  alterar((e) => {
+    e.saldo += CUSTOS.bonusDiario
+    e.bonusDiario = diaLocal(d)
+  })
+
 // Uma gravação só: se o navegador recusar, saldo, plano e histórico ficam como estavam.
 export const comprar = ({ creditos, plano = null, descricao, preco }) =>
   alterar((e) => {

@@ -52,6 +52,18 @@
       <div id="chips" role="group" aria-label="Categorias" class="flex items-center gap-space-xs overflow-x-auto pb-1 [scrollbar-width:none]"></div>
     </div>
 
+    <!-- Créditos grátis do dia -->
+    <div id="bonus" hidden class="mb-space-md p-space-sm md:p-space-md rounded-2xl bg-surface-container-low/80 flex items-center justify-between gap-space-sm shadow-lg">
+      <div class="flex items-center gap-space-sm min-w-0">
+        <span class="material-symbols-outlined text-secondary text-3xl" aria-hidden="true">redeem</span>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-lg text-label-lg text-on-surface">Seus créditos grátis de hoje</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">Todo dia tem mais.</span>
+        </div>
+      </div>
+      <button id="btn-bonus" type="button" class="shrink-0 px-space-md py-2 rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md hover:brightness-110 transition-[filter] shadow-[0_0_12px_rgba(170,2,102,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">Pegar +<span data-bonus-diario></span></button>
+    </div>
+
     <!-- Clipe em destaque -->
     <div id="destaque" class="relative w-full rounded-2xl overflow-hidden mb-space-xl bg-scrim shadow-[0_16px_40px_rgba(0,0,0,0.6)]"></div>
 

@@ -1,5 +1,5 @@
 // Tabela única de créditos (spec seção 4). Toda tela lê daqui.
-export const CUSTOS = { clipe: 5, video5: 5, video10: 8, foto: 2, bonusCadastro: 10 }
+export const CUSTOS = { clipe: 5, video5: 5, video10: 8, foto: 2, bonusCadastro: 10, bonusDiario: 2 }
 
 export function custo({ tipo, duracao = 5 }) {
   if (tipo === 'foto') return CUSTOS.foto

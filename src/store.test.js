@@ -100,6 +100,35 @@ describe('store', () => {
   })
 })
 
+describe('bônus diário', () => {
+  it('soma uma vez por dia e volta no dia seguinte', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    const S = store.getSaldo()
+    const hoje = new Date(2026, 9, 21, 23, 50)
+    expect(store.pegarBonusDiario(hoje)).toBe(true)
+    expect(store.getSaldo()).toBe(S + 2)
+    expect(store.bonusDiarioDisponivel(hoje)).toBe(false)
+    expect(store.pegarBonusDiario(new Date(2026, 9, 21, 8))).toBe(false)
+    expect(store.getSaldo()).toBe(S + 2)
+    expect(store.pegarBonusDiario(new Date(2026, 9, 22, 0, 5))).toBe(true)
+    expect(store.getSaldo()).toBe(S + 4)
+  })
+
+  it('não conta o dia quando o navegador não grava, nem sem conta', () => {
+    expect(store.pegarBonusDiario()).toBe(false)
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    const spy = vi.spyOn(localStorage, 'setItem').mockImplementation(() => {
+      throw new Error('QuotaExceededError')
+    })
+    try {
+      expect(store.pegarBonusDiario()).toBe(false)
+    } finally {
+      spy.mockRestore()
+    }
+    expect(store.bonusDiarioDisponivel()).toBe(true)
+  })
+})
+
 describe('custo', () => {
   it('segue a tabela única', () => {
     expect(custo({ tipo: 'clipe' })).toBe(5)
