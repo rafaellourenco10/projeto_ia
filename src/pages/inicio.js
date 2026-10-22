@@ -87,12 +87,17 @@ $('em-alta-lista').innerHTML = filtrarClipes(clipes)
   .map((c) => `<div class="w-36 md:w-44 shrink-0">${miniCard(c)}</div>`)
   .join('')
 
-document.querySelector('[data-bonus-diario]').textContent = CUSTOS.bonusDiario
+// Dia N de 7 da sequência; o 7º dia vale o bônus da semana.
+const bonus = store.proximoBonus(store.getEstado())
+const diaSemana = ((bonus.sequencia - 1) % 7) + 1
+document.querySelector('[data-bonus-diario]').textContent = bonus.creditos
+$('bonus-dia').textContent = `Dia ${diaSemana} de 7 · ${diaSemana === 7 ? 'hoje vale' : 'o 7º dia vale'} +${CUSTOS.bonusSemana}`
+$('bonus-bolinhas').innerHTML = Array.from({ length: 7 }, (_, i) => `<span class="w-2 h-2 rounded-full ${i < diaSemana ? 'bg-secondary' : 'bg-outline-variant'}"></span>`).join('')
 $('bonus').hidden = !store.bonusDiarioDisponivel()
 $('btn-bonus').addEventListener('click', () => {
   if (!store.pegarBonusDiario()) return avisar(store.bonusDiarioDisponivel() ? MSG_SEM_ESPACO : 'Você já pegou os créditos de hoje')
   $('bonus').hidden = true
-  avisar(`+${CUSTOS.bonusDiario} créditos no seu saldo`)
+  avisar(`+${bonus.creditos} créditos no seu saldo`)
 })
 
 let gradeHtml = null

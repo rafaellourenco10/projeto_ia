@@ -37,6 +37,9 @@ export function onChange(fn) {
   window.addEventListener('storage', (e) => e.key === CHAVE && fn())
 }
 
+// Estado inteiro, só para leitura (funções puras como conquistas e extrato).
+export const getEstado = () => ler()
+
 // Conta
 export const getUsuario = () => {
   const e = ler()
@@ -92,12 +95,22 @@ export const bonusDiarioDisponivel = (d) => {
   const e = ler()
   return !!e && e.bonusDiario !== diaLocal(d)
 }
-export const pegarBonusDiario = (d) =>
-  bonusDiarioDisponivel(d) &&
-  alterar((e) => {
-    e.saldo += CUSTOS.bonusDiario
+// Sequência: +1 se o último bônus foi ontem, senão volta a 1. Todo 7º dia seguido vale o bônus da semana.
+export function proximoBonus(e, d) {
+  const ontem = new Date(d ?? Date.now())
+  ontem.setDate(ontem.getDate() - 1)
+  const sequencia = e?.bonusDiario === diaLocal(ontem) ? (e.sequencia ?? 1) + 1 : 1
+  return { creditos: sequencia % 7 === 0 ? CUSTOS.bonusSemana : CUSTOS.bonusDiario, sequencia }
+}
+export function pegarBonusDiario(d) {
+  if (!bonusDiarioDisponivel(d)) return false
+  const { creditos, sequencia } = proximoBonus(ler(), d)
+  return alterar((e) => {
+    e.saldo += creditos
     e.bonusDiario = diaLocal(d)
+    e.sequencia = sequencia
   })
+}
 
 // Uma gravação só: se o navegador recusar, saldo, plano e histórico ficam como estavam.
 export const comprar = ({ creditos, plano = null, descricao, preco }) =>

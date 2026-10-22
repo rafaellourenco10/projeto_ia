@@ -170,6 +170,43 @@ describe('bônus diário', () => {
   })
 })
 
+describe('sequência de dias', () => {
+  const dia = (n) => new Date(2026, 9, n, 12)
+  const pegar = (d) => {
+    store.pegarBonusDiario(d)
+    return store.getEstado().sequencia
+  }
+
+  it('soma em dias seguidos e volta a 1 quando pula um dia', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    expect(pegar(dia(20))).toBe(1)
+    expect(pegar(dia(21))).toBe(2)
+    expect(pegar(dia(23))).toBe(1)
+  })
+
+  it('conta a virada do mês como dia seguido', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    expect(pegar(new Date(2026, 9, 31, 22))).toBe(1)
+    expect(pegar(new Date(2026, 10, 1, 9))).toBe(2)
+  })
+
+  it('o 7º dia seguido vale o bônus da semana', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    for (let n = 1; n <= 6; n++) store.pegarBonusDiario(dia(n))
+    expect(store.proximoBonus(store.getEstado(), dia(7))).toEqual({ creditos: 5, sequencia: 7 })
+    const S = store.getSaldo()
+    store.pegarBonusDiario(dia(7))
+    expect(store.getSaldo()).toBe(S + 5)
+    expect(store.proximoBonus(store.getEstado(), dia(8))).toEqual({ creditos: 2, sequencia: 8 })
+  })
+
+  it('estado sem sequencia conta o último bônus como dia 1', () => {
+    expect(store.proximoBonus({ bonusDiario: '2026-10-20' }, dia(21))).toEqual({ creditos: 2, sequencia: 2 })
+    expect(store.proximoBonus({}, dia(21))).toEqual({ creditos: 2, sequencia: 1 })
+    expect(store.proximoBonus(null, dia(21))).toEqual({ creditos: 2, sequencia: 1 })
+  })
+})
+
 describe('custo', () => {
   it('segue a tabela única', () => {
     expect(custo({ tipo: 'clipe' })).toBe(5)
