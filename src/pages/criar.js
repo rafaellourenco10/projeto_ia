@@ -1,5 +1,5 @@
 import '../main.css'
-import { montarShell } from '../shell.js'
+import { montarShell, seletorRostos } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
 import { CUSTOS, custo } from '../creditos.js'
@@ -64,7 +64,11 @@ document.querySelector('[data-custo-video10]').textContent = CUSTOS.video10
 
 // Rosto
 const foto = store.getFoto()
-$('rosto-nome').textContent = store.getUsuario()?.nome ?? ''
+$('rosto-nome').textContent = store.getRostoAtivo()?.nome ?? store.getUsuario()?.nome ?? ''
+seletorRostos($('rostos'), () => {
+  $('rosto-foto').querySelector('img').src = store.getFoto()
+  $('rosto-nome').textContent = store.getRostoAtivo().nome
+})
 if (foto) {
   $('rosto-foto').innerHTML = `<img alt="Sua foto" class="w-full h-full object-cover" src="${foto}"/>`
   $('rosto-texto').textContent = 'Sua foto será usada nesta criação'

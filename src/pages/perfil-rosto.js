@@ -1,5 +1,5 @@
 import '../main.css'
-import { montarShell, avatar } from '../shell.js'
+import { montarShell, avatar, seletorRostos } from '../shell.js'
 import * as store from '../store.js'
 import { reais } from '../creditos.js'
 import { esc, avisar } from '../util.js'
@@ -23,6 +23,12 @@ function atualizar() {
   $('sem-foto').hidden = !!foto
   $('trocar-texto').textContent = foto ? 'Trocar foto' : 'Enviar foto'
   $('apagar-foto').hidden = !foto
+  const rostos = store.getRostos()
+  $('apagar-foto-texto').textContent = rostos.length > 1 ? 'Apagar este rosto' : 'Apagar minha foto'
+  $('bloco-rostos').hidden = !foto
+  $('rostos-contagem').textContent = `(${rostos.length} de ${store.MAX_ROSTOS})`
+  $('add-rosto').hidden = rostos.length >= store.MAX_ROSTOS
+  desenharRostos()
 
   const compras = store.getCompras()
   $('sem-compras').hidden = compras.length > 0
@@ -35,6 +41,8 @@ function atualizar() {
     )
     .join('')
 }
+// Com um rosto só, o seletor fica escondido e o bloco mostra só o botão de adicionar.
+const desenharRostos = seletorRostos($('rostos'))
 store.onChange(atualizar)
 atualizar()
 

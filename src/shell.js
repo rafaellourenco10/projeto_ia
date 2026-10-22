@@ -1,7 +1,7 @@
 // Shell das rotas internas: sidebar (desktop), header e bottom nav (celular).
 // Markup portado de telas/in_cio_biblioteca_de_clipes. A página só escreve o <main>.
 import * as store from './store.js'
-import { esc } from './util.js'
+import { esc, avisar, MSG_SEM_ESPACO } from './util.js'
 import { fecharVencidos } from './api.js'
 
 const LINKS = [
@@ -19,6 +19,30 @@ export function avatar(tamanho) {
   return foto
     ? `<img alt="Sua foto" class="${tamanho} rounded-full object-cover" src="${foto}"/>`
     : `<span class="${tamanho} rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant"><span class="material-symbols-outlined text-lg" aria-hidden="true">face</span></span>`
+}
+
+// Rostos salvos para escolher o ativo (só aparece com mais de um). `aoMudar` roda depois da troca.
+// Devolve a função que redesenha, para quem precisa atualizar depois de outra mudança.
+export function seletorRostos(el, aoMudar) {
+  const desenhar = () => {
+    const rostos = store.getRostos()
+    const ativo = store.getRostoAtivo()?.id
+    el.hidden = rostos.length < 2
+    el.innerHTML = rostos
+      .map(
+        (r) => `<button type="button" data-rosto="${esc(r.id)}" aria-pressed="${r.id === ativo}" aria-label="Usar ${esc(r.nome)}" title="${esc(r.nome)}" class="w-10 h-10 shrink-0 rounded-full overflow-hidden ring-2 ring-offset-2 ring-offset-surface-container-low transition ${r.id === ativo ? 'ring-primary' : 'ring-transparent opacity-60 hover:opacity-100'} focus-visible:outline-none focus-visible:ring-primary"><img alt="" src="${r.foto}" class="w-full h-full object-cover"/></button>`,
+      )
+      .join('')
+  }
+  el.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-rosto]')
+    if (!b) return
+    if (!store.usarRosto(b.dataset.rosto)) return avisar(MSG_SEM_ESPACO)
+    desenhar()
+    aoMudar?.()
+  })
+  desenhar()
+  return desenhar
 }
 
 function sidebar(rota) {

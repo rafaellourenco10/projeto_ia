@@ -112,8 +112,16 @@
               <span class="material-symbols-outlined text-[18px]" aria-hidden="true">photo_camera</span><span id="trocar-texto">Trocar foto</span>
             </a>
             <button id="apagar-foto" type="button" aria-expanded="false" aria-controls="confirma-foto" class="text-error font-label-md text-label-md font-medium inline-flex items-center gap-1.5 transition-colors underline-offset-4 hover:underline rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-error">
-              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">delete_outline</span><span>Apagar minha foto</span>
+              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">delete_outline</span><span id="apagar-foto-texto">Apagar minha foto</span>
             </button>
+          </div>
+          <div id="bloco-rostos" hidden class="flex flex-col gap-2">
+            <span id="rotulo-rostos" class="font-label-md text-label-md text-on-surface-variant">Seus rostos <span id="rostos-contagem" class="text-outline"></span></span>
+            <div class="flex flex-wrap items-center gap-space-sm">
+              <div id="rostos" role="group" aria-labelledby="rotulo-rostos" class="flex flex-wrap gap-space-sm"></div>
+              <a id="add-rosto" href="/perfil-rosto/foto?rosto=novo&amp;voltar=/perfil-rosto" class="w-10 h-10 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-primary flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label="Adicionar rosto" title="Adicionar rosto"><span class="material-symbols-outlined" aria-hidden="true">add</span></a>
+            </div>
+            <span class="font-body-sm text-body-sm text-outline">Até 3 rostos: o seu, de um amigo ou de quem vai contracenar com você.</span>
           </div>
         </div>
       </div>

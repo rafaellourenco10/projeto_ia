@@ -100,6 +100,47 @@ describe('store', () => {
   })
 })
 
+describe('rostos', () => {
+  it('estado antigo com só `foto` vira o primeiro rosto', () => {
+    localStorage.setItem('selfiemovie:v1', JSON.stringify({ usuario: { nome: 'Ana', email: 'a@x' }, logado: true, saldo: 10, foto: 'F1', consentimento: true, criacoes: [], compras: [] }))
+    expect(store.getRostos()).toEqual([{ id: 'r1', nome: 'Ana', foto: 'F1' }])
+    expect(store.getFoto()).toBe('F1')
+    expect(store.salvarFoto('F2', { novo: true })).toBe(true)
+    expect(store.getRostos().map((r) => r.foto)).toEqual(['F1', 'F2'])
+    expect(store.usarRosto('r1')).toBe(true)
+    expect(store.getFoto()).toBe('F1')
+  })
+
+  it('adiciona até 3, troca o ativo e salvar sem `novo` troca só a foto do ativo', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.salvarFoto('F1')
+    store.salvarFoto('F2', { novo: true })
+    store.salvarFoto('F3', { novo: true })
+    expect(store.salvarFoto('F4', { novo: true })).toBe(false)
+    expect(store.getRostos().map((r) => r.nome)).toEqual(['Ana', 'Rosto 2', 'Rosto 3'])
+    expect(store.getFoto()).toBe('F3')
+    const [primeiro] = store.getRostos()
+    expect(store.usarRosto(primeiro.id)).toBe(true)
+    store.salvarFoto('F1b')
+    expect(store.getRostos().map((r) => r.foto)).toEqual(['F1b', 'F2', 'F3'])
+    expect(store.usarRosto('nao-existe')).toBe(false)
+  })
+
+  it('apagar tira só o rosto ativo e mantém o consentimento enquanto sobrar rosto', () => {
+    store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })
+    store.salvarFoto('F1')
+    store.salvarFoto('F2', { novo: true })
+    store.setConsentimento(true)
+    store.apagarFoto()
+    expect(store.getRostos().map((r) => r.foto)).toEqual(['F1'])
+    expect(store.getFoto()).toBe('F1')
+    expect(store.getConsentimento()).toBe(true)
+    store.apagarFoto()
+    expect(store.getFoto()).toBeNull()
+    expect(store.getConsentimento()).toBe(false)
+  })
+})
+
 describe('bônus diário', () => {
   it('soma uma vez por dia e volta no dia seguinte', () => {
     store.cadastrar({ nome: 'Ana', email: 'ana@x.com' })

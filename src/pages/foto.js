@@ -8,6 +8,12 @@ montarShell({ rota: 'perfil-rosto' })
 
 const $ = (id) => document.getElementById(id)
 const destino = destinoSeguro(param('voltar'))
+const novo = param('rosto') === 'novo'
+if (novo) {
+  $('titulo-foto').textContent = 'Adicione outro rosto'
+  // O rosto extra pode ser de outra pessoa: o consentimento tem que ser dela.
+  $('texto-consentimento').textContent = 'Confirmo que esta foto é minha ou que a pessoa da foto autorizou o uso para gerar vídeos.'
+}
 let stream = null
 let fotoAtual = null // dataURL da prévia (ainda não salva)
 
@@ -109,7 +115,8 @@ $('btn-trocar').addEventListener('click', () => {
 $('consentimento').addEventListener('change', atualizarUsar)
 
 $('btn-usar').addEventListener('click', () => {
-  if (!store.salvarFoto(fotoAtual)) return mensagem('Não foi possível salvar a foto. Tente outra imagem.')
+  if (novo && store.getRostos().length >= store.MAX_ROSTOS) return mensagem(`Você já tem ${store.MAX_ROSTOS} rostos. Apague um no Perfil para adicionar outro.`)
+  if (!store.salvarFoto(fotoAtual, { novo })) return mensagem('Não foi possível salvar a foto. Tente outra imagem.')
   store.setConsentimento(true)
   location.href = destino
 })
@@ -131,6 +138,7 @@ for (const alvo of [visor, $('btn-galeria')]) {
 
 window.addEventListener('pagehide', pararCamera)
 
-const salva = store.getFoto()
+// ?rosto=novo adiciona um rosto em vez de trocar a foto do rosto ativo.
+const salva = novo ? null : store.getFoto()
 if (salva) mostrarPreview(salva, store.getConsentimento())
 else mostrar('vazio')

@@ -30,7 +30,7 @@ function alterar(fn) {
   return gravar(estado)
 }
 
-const novoEstado = (usuario, saldo, plano = null) => ({ usuario, logado: true, plano, saldo, foto: null, consentimento: false, criacoes: [], compras: [] })
+const novoEstado = (usuario, saldo, plano = null) => ({ usuario, logado: true, plano, saldo, rostos: [], rostoAtivo: null, consentimento: false, criacoes: [], compras: [] })
 
 export function onChange(fn) {
   ouvintes.add(fn)
@@ -108,13 +108,54 @@ export const comprar = ({ creditos, plano = null, descricao, preco }) =>
   })
 export const getCompras = () => ler()?.compras ?? []
 
-// Foto (fica salva até o usuário apagar)
-export const getFoto = () => ler()?.foto ?? null
-export const salvarFoto = (dataUrl) => alterar((e) => (e.foto = dataUrl))
+// Rostos (ficam salvos até o usuário apagar). A "foto" é a do rosto ativo.
+// Estado de antes dos rostos só tem `foto`: na leitura ele vira o primeiro rosto.
+export const MAX_ROSTOS = 3
+const rostosDe = (e) => e?.rostos ?? (e?.foto ? [{ id: 'r1', nome: e.usuario.nome, foto: e.foto }] : [])
+const ativoDe = (e) => {
+  const r = rostosDe(e)
+  return r.find((x) => x.id === e?.rostoAtivo) ?? r[0] ?? null
+}
+// Passa o estado antigo para `rostos` antes de alterar.
+function normalizarRostos(e) {
+  e.rostos = rostosDe(e)
+  delete e.foto
+}
+
+export const getRostos = () => rostosDe(ler())
+export const getRostoAtivo = () => ativoDe(ler())
+export const getFoto = () => getRostoAtivo()?.foto ?? null
+
+// Troca a foto do rosto ativo; com `novo`, adiciona um rosto e o deixa ativo.
+export function salvarFoto(dataUrl, { novo = false } = {}) {
+  if (novo && getRostos().length >= MAX_ROSTOS) return false
+  return alterar((e) => {
+    normalizarRostos(e)
+    let rosto = novo ? null : e.rostos.find((x) => x.id === ativoDe(e)?.id)
+    if (!rosto) {
+      rosto = { id: crypto.randomUUID().slice(0, 8), nome: e.rostos.length ? `Rosto ${e.rostos.length + 1}` : e.usuario.nome }
+      e.rostos.push(rosto)
+    }
+    rosto.foto = dataUrl
+    e.rostoAtivo = rosto.id
+  })
+}
+
+export const usarRosto = (id) =>
+  getRostos().some((r) => r.id === id) &&
+  alterar((e) => {
+    normalizarRostos(e)
+    e.rostoAtivo = id
+  })
+
+// Apaga o rosto ativo; o consentimento só cai quando não sobra nenhum.
 export const apagarFoto = () =>
   alterar((e) => {
-    e.foto = null
-    e.consentimento = false
+    const ativo = ativoDe(e)
+    normalizarRostos(e)
+    e.rostos = e.rostos.filter((r) => r.id !== ativo?.id)
+    e.rostoAtivo = e.rostos[0]?.id ?? null
+    if (!e.rostos.length) e.consentimento = false
   })
 export const getConsentimento = () => ler()?.consentimento ?? false
 export const setConsentimento = (v) => alterar((e) => (e.consentimento = !!v))
