@@ -3,6 +3,8 @@ import { montarShell } from '../shell.js'
 import * as store from '../store.js'
 import * as api from '../api.js'
 import { param, debug, avisar, MSG_SEM_ESPACO } from '../util.js'
+import { miniCard } from '../biblioteca.js'
+import clipes from '../data/clips.json'
 
 montarShell({ rota: 'minhas-criacoes' })
 
@@ -10,6 +12,27 @@ const $ = (id) => document.getElementById(id)
 const jobId = param('job')
 const CIRCUNFERENCIA = 596.9
 let timer = null
+
+// Uma dica por fase da geração (foto e texto).
+const DICAS = [
+  'Dica de foto: rosto de frente, bem iluminado e sem óculos escuros dá o melhor resultado.',
+  'Dica de texto: diga onde você está, o que está fazendo e a luz da cena ("ao pôr do sol", "na chuva").',
+  'Dica de foto: evite fotos em grupo; com um rosto só, a IA não se confunde.',
+  'Dica de texto: palavras de câmera ajudam, como "câmera lenta", "close" ou "vista aérea".',
+]
+let sugeridos = false
+function enquantoIsso(c, fase) {
+  $('dica').textContent = DICAS[fase % DICAS.length]
+  if (sugeridos) return
+  sugeridos = true
+  const categoria = clipes.find((x) => x.id === c.clipId)?.categoria
+  $('sugeridos').innerHTML = clipes
+    .filter((x) => x.id !== c.clipId)
+    .sort((a, b) => (b.categoria === categoria) - (a.categoria === categoria))
+    .slice(0, 3)
+    .map(miniCard)
+    .join('')
+}
 
 function etapas(fase) {
   return api.FASES.map((nome, i) => {
@@ -67,6 +90,7 @@ async function atualizar() {
   $('dica-plano').hidden = !!store.getPlano()
   $('etapa').textContent = `Etapa ${s.fase + 1} de ${api.FASES.length}`
   $('etapas').innerHTML = etapas(s.fase)
+  enquantoIsso(c, s.fase)
 }
 
 $('btn-tentar').addEventListener('click', async () => {
