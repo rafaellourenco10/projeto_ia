@@ -1,8 +1,8 @@
 {
   ".claude/settings.json": {
-    "mtime": 1792520861.5448177,
-    "seen": 1792543605.2679598,
-    "ast_hash": "f00b63afbeee0dc3f06219a824e33db9",
+    "mtime": 1793107501.5382097,
+    "seen": 1793108307.531583,
+    "ast_hash": "e4004ade8e6ea8ff8f8dfd90a1fc194f",
     "semantic_hash": ""
   },
   ".claude/skills/deploy-to-vercel/resources/deploy-codex.sh": {
@@ -2376,9 +2376,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1792521731.8707013,
-    "seen": 1792543605.2683418,
-    "ast_hash": "037ec87388df992d472606c157a60fa0",
+    "mtime": 1793107586.9757645,
+    "seen": 1793108307.533042,
+    "ast_hash": "1f1f8feb7485fc8e6fbaa72db10f8a00",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-10-20-selfiemovie-fase1.md": {
@@ -2994,9 +2994,9 @@
     "semantic_hash": ""
   },
   "docs/superpowers/backlog-fase2.md": {
-    "mtime": 1792632960.2662334,
-    "seen": 1792632971.295277,
-    "ast_hash": "950ce6aadec2d0de8cd5d49ae223f767",
+    "mtime": 1792632977.7935953,
+    "seen": 1793108307.5330613,
+    "ast_hash": "ca4ca50d86ad8dd76e33491db08a166a",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-10-21-selfiemovie-fase2-lote2.md": {
