@@ -123,8 +123,8 @@ O app vai vender, então o texto precisa ser honesto. Por causa do Código de De
 Requisito: Node.js 20 ou mais novo.
 
 ```bash
-git clone https://github.com/rafaellourenco10/projeto_ia.git
-cd projeto_ia
+git clone https://github.com/rafaellourenco10/selfiemovie.git
+cd selfiemovie
 npm install
 npm run dev
 ```
